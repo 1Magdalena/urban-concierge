@@ -23,179 +23,661 @@ html, body, #page, #siteWrapper, .Main, main {
   box-shadow: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F5F1EB !important;
+  color: #3A2F2A;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 #page {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.uc-wrap {
-  max-width: 1180px;
-  margin: 0 auto;
+:root{
+  --bg:#F5F1EB;
+  --white:#FFFFFF;
+  --text:#3A2F2A;
+  --muted:#6E6056;
+  --soft:#88786D;
+  --line:#E7DDD2;
+  --gold:#B8955A;
+  --gold-soft:#C2A46D;
+  --choco:#2B221F;
+  --choco-2:#3A2F2A;
+  --hover:#473934;
 }
 
-.uc-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-  max-width: 1060px;
-  margin: 0 auto;
+.uc-topbar{
+  width:100%;
+  height:14px;
+  background:var(--choco);
 }
 
-.uc-card {
-  background: #FFFFFF;
-  border: 1px solid #E8DED3;
-  padding: 34px 32px;
-  text-align: left;
+.uc-shell{
+  max-width:1340px;
+  margin:0 auto;
+  padding:0 34px;
 }
 
-@media (max-width: 900px) {
-  .uc-cards {
-    grid-template-columns: 1fr;
+.uc-brandbar{
+  padding:34px 0 0 0;
+  text-align:center;
+}
+
+.uc-brand{
+  font-family:'Cormorant Garamond', serif;
+  font-size:31px;
+  line-height:1.1;
+  font-weight:600;
+  color:var(--gold);
+  letter-spacing:0.25px;
+}
+
+.uc-hero{
+  min-height:calc(100vh - 14px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:34px 0 74px 0;
+  position:relative;
+}
+
+.uc-hero-inner{
+  max-width:1060px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.uc-kicker{
+  font-family:'Libre Baskerville', serif;
+  font-size:11px;
+  line-height:1.8;
+  letter-spacing:2.8px;
+  text-transform:uppercase;
+  color:var(--soft);
+  margin-bottom:34px;
+}
+
+.uc-h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:92px;
+  line-height:0.95;
+  font-weight:500;
+  color:var(--text);
+  margin:0 0 34px 0;
+  letter-spacing:-1.1px;
+}
+
+.uc-sub{
+  font-family:'Libre Baskerville', serif;
+  font-size:24px;
+  line-height:1.95;
+  color:var(--muted);
+  margin:0 0 28px 0;
+}
+
+.uc-copy{
+  max-width:850px;
+  margin:0 auto;
+  font-family:'Libre Baskerville', serif;
+  font-size:15px;
+  line-height:2.08;
+  color:var(--muted);
+}
+
+.uc-copy-small{
+  font-family:'Libre Baskerville', serif;
+  font-size:13px;
+  line-height:2;
+  color:var(--soft);
+  margin-top:24px;
+}
+
+.uc-actions{
+  margin-top:56px;
+}
+
+.uc-btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:18px 38px;
+  font-family:'Libre Baskerville', serif;
+  font-size:13px;
+  letter-spacing:0.35px;
+  transition:all 0.26s ease;
+  margin:0 8px 12px 8px;
+}
+
+.uc-btn-primary{
+  background:var(--choco-2);
+  color:#FFFFFF;
+  border:1px solid var(--choco-2);
+}
+
+.uc-btn-primary:hover{
+  background:var(--hover);
+  border-color:var(--hover);
+  transform:translateY(-1px);
+}
+
+.uc-btn-secondary{
+  background:transparent;
+  color:var(--text);
+  border:1px solid #CCB8A2;
+}
+
+.uc-btn-secondary:hover{
+  background:#EEE6DD;
+  border-color:var(--gold);
+  transform:translateY(-1px);
+}
+
+.uc-band{
+  background:var(--choco);
+  color:#F5F1EB;
+  padding:94px 34px;
+  text-align:center;
+}
+
+.uc-band-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:50px;
+  line-height:1.08;
+  font-weight:500;
+  margin:0 0 18px 0;
+  color:#F5F1EB;
+}
+
+.uc-band-rule{
+  width:84px;
+  height:1px;
+  background:rgba(245,241,235,0.42);
+  margin:0 auto 30px auto;
+}
+
+.uc-band-copy{
+  max-width:820px;
+  margin:0 auto;
+  font-family:'Libre Baskerville', serif;
+  font-size:15px;
+  line-height:2.02;
+  color:rgba(245,241,235,0.82);
+}
+
+.uc-section{
+  padding:116px 0;
+  position:relative;
+}
+
+.uc-section + .uc-section{
+  border-top:1px solid var(--line);
+}
+
+.uc-title{
+  text-align:center;
+  font-family:'Cormorant Garamond', serif;
+  font-size:58px;
+  line-height:1.03;
+  font-weight:500;
+  color:var(--text);
+  margin:0 0 14px 0;
+  letter-spacing:-0.35px;
+}
+
+.uc-rule{
+  width:84px;
+  height:1px;
+  background:var(--gold);
+  margin:0 auto 34px auto;
+}
+
+.uc-intro{
+  max-width:860px;
+  margin:0 auto 48px auto;
+  text-align:center;
+  font-family:'Libre Baskerville', serif;
+  font-size:15px;
+  line-height:2;
+  color:var(--muted);
+}
+
+.uc-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  max-width:1100px;
+  margin:0 auto 46px auto;
+}
+
+.uc-card{
+  background:rgba(255,255,255,0.72);
+  border:1px solid #E5DBCF;
+  padding:36px 34px;
+  text-align:left;
+  transition:all 0.28s ease;
+}
+
+.uc-card:hover{
+  border-color:#D2BCA4;
+  box-shadow:0 16px 46px rgba(58,47,42,0.05);
+  transform:translateY(-2px);
+}
+
+.uc-card-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:33px;
+  line-height:1.03;
+  color:var(--text);
+  margin:0 0 10px 0;
+}
+
+.uc-card-price{
+  font-family:'Libre Baskerville', serif;
+  font-size:14px;
+  line-height:1.7;
+  color:var(--gold);
+  margin:0 0 12px 0;
+}
+
+.uc-card-copy{
+  font-family:'Libre Baskerville', serif;
+  font-size:14px;
+  line-height:1.88;
+  color:var(--muted);
+}
+
+.uc-steps{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+  max-width:1120px;
+  margin:0 auto;
+}
+
+.uc-step{
+  background:transparent;
+  border:1px solid var(--line);
+  padding:30px 26px;
+  text-align:left;
+}
+
+.uc-step-no{
+  font-family:'Libre Baskerville', serif;
+  font-size:11px;
+  line-height:1.6;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.uc-step-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:28px;
+  line-height:1.05;
+  color:var(--text);
+  margin:0 0 10px 0;
+}
+
+.uc-step-copy{
+  font-family:'Libre Baskerville', serif;
+  font-size:13px;
+  line-height:1.9;
+  color:var(--muted);
+}
+
+.uc-list{
+  max-width:860px;
+  margin:0 auto;
+  text-align:center;
+  font-family:'Libre Baskerville', serif;
+  font-size:16px;
+  line-height:2.15;
+  color:var(--text);
+}
+
+.uc-quiet{
+  max-width:900px;
+  margin:28px auto 0 auto;
+  text-align:center;
+  font-family:'Libre Baskerville', serif;
+  font-size:14px;
+  line-height:1.95;
+  color:var(--muted);
+}
+
+.uc-contact-box{
+  max-width:860px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.uc-contact-main{
+  font-family:'Cormorant Garamond', serif;
+  font-size:48px;
+  line-height:1.1;
+  font-weight:500;
+  color:var(--text);
+  margin:0 0 16px 0;
+}
+
+.uc-contact-copy{
+  max-width:760px;
+  margin:0 auto 26px auto;
+  font-family:'Libre Baskerville', serif;
+  font-size:15px;
+  line-height:2;
+  color:var(--muted);
+}
+
+.uc-contact-note{
+  margin-top:6px;
+  font-family:'Libre Baskerville', serif;
+  font-size:13px;
+  line-height:2;
+  color:var(--soft);
+}
+
+.uc-cta{
+  max-width:980px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.uc-cta-title{
+  font-family:'Cormorant Garamond', serif;
+  font-size:58px;
+  line-height:1.07;
+  font-weight:500;
+  color:var(--text);
+  margin:0 0 28px 0;
+  letter-spacing:-0.35px;
+}
+
+.uc-footer{
+  background:#241C19;
+  padding:38px 34px 42px 34px;
+  text-align:center;
+  border-top:1px solid rgba(245,241,235,0.08);
+}
+
+.uc-footer-brand{
+  font-family:'Cormorant Garamond', serif;
+  font-size:24px;
+  line-height:1.2;
+  color:#F5F1EB;
+  margin-bottom:6px;
+}
+
+.uc-footer-sub{
+  font-family:'Libre Baskerville', serif;
+  font-size:12px;
+  line-height:1.5;
+  color:#D9CEC4;
+  margin-bottom:16px;
+}
+
+.uc-footer-links{
+  font-family:'Libre Baskerville', serif;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.uc-footer-links a{
+  color:#F5F1EB;
+  text-decoration:none;
+  margin:0 8px;
+  opacity:0.92;
+}
+
+.uc-footer-links a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+@media (max-width: 1100px){
+  .uc-steps{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 980px){
+  .uc-grid{
+    grid-template-columns:1fr;
+  }
+
+  .uc-h1{
+    font-size:66px;
+    line-height:1.01;
+  }
+
+  .uc-title,
+  .uc-cta-title{
+    font-size:46px;
+  }
+
+  .uc-band-title,
+  .uc-contact-main{
+    font-size:42px;
+  }
+}
+
+@media (max-width: 768px){
+  .uc-shell{
+    padding:0 20px;
+  }
+
+  .uc-brand{
+    font-size:28px;
+  }
+
+  .uc-hero{
+    min-height:auto;
+    padding:24px 0 58px 0;
+  }
+
+  .uc-h1{
+    font-size:50px;
+    line-height:1.04;
+  }
+
+  .uc-sub{
+    font-size:20px;
+  }
+
+  .uc-title,
+  .uc-cta-title,
+  .uc-band-title,
+  .uc-contact-main{
+    font-size:38px;
+  }
+
+  .uc-section{
+    padding:84px 0;
+  }
+
+  .uc-steps{
+    grid-template-columns:1fr;
+  }
+
+  .uc-btn{
+    display:block;
+    max-width:320px;
+    margin:0 auto 12px auto;
   }
 }
 </style>
 
+<div class="uc-topbar"></div>
+
+<section class="uc-shell uc-brandbar">
+  <div class="uc-brand">Urban Concierge</div>
+</section>
+
 <!-- HERO -->
-<section style="background:#F5F1EB; min-height:100vh; display:flex; align-items:flex-start; justify-content:center; text-align:center; padding:88px 20px 42px 20px;">
-  <div style="max-width:980px; width:100%; margin:0 auto; display:flex; flex-direction:column; min-height:calc(100vh - 130px); justify-content:space-between;">
+<section class="uc-hero">
+  <div class="uc-shell">
+    <div class="uc-hero-inner">
+      <div class="uc-kicker">Private concierge • Kraków • Polish &amp; English</div>
 
-    <div>
-      <div style="font-family:'Cormorant Garamond', serif; font-size:34px; line-height:1.2; color:#B8955A; margin:0 0 78px 0; font-weight:600;">
-        Urban Concierge
-      </div>
-
-      <h1 style="font-family:'Cormorant Garamond', serif; font-size:68px; line-height:1.12; font-weight:500; color:#3A2F2A; margin:0 0 74px 0;">
-        Oddaj sprawy, które zabierają<br>
-        Twój czas
+      <h1 class="uc-h1">
+        Oddaj sprawy,<br>
+        które zabierają Twój czas
       </h1>
 
-      <div style="font-family:'Libre Baskerville', serif; font-size:23px; line-height:1.85; color:#6E6056; margin:0 0 56px 0;">
+      <div class="uc-sub">
         Odzyskaj spokój i godziny życia.
       </div>
 
-      <div style="max-width:860px; margin:0 auto 38px auto; font-family:'Libre Baskerville', serif; font-size:17px; line-height:2; color:#6E6056;">
-        Zajmuję się organizacją codziennych spraw — od jednej konkretnej rzeczy po stałe wsparcie.
+      <div class="uc-copy">
+        Zajmuję się organizacją codziennych spraw — od jednej konkretnej rzeczy po stałe wsparcie. Działam dyskretnie, spokojnie i z pełną odpowiedzialnością za dopięcie tematu od początku do końca.
       </div>
 
-      <div style="font-family:'Libre Baskerville', serif; font-size:15px; line-height:2; color:#6E6056; margin:0 0 6px 0;">
-        Pracuję z ograniczoną liczbą klientów.
-      </div>
-
-      <div style="font-family:'Libre Baskerville', serif; font-size:15px; line-height:2; color:#6E6056; margin:0;">
+      <div class="uc-copy-small">
+        Pracuję z ograniczoną liczbą klientów.<br>
         Obsługa również w języku angielskim.
       </div>
+
+      <div class="uc-actions">
+        <a href="mailto:info@urbanconcierge.pl?subject=Rozpoczęcie%20współpracy" class="uc-btn uc-btn-primary">
+          Rozpocznij współpracę
+        </a>
+
+        <a href="mailto:info@urbanconcierge.pl?subject=Zlecenie%20pierwszej%20sprawy" class="uc-btn uc-btn-secondary">
+          Zleć pierwszą sprawę
+        </a>
+      </div>
     </div>
-
-    <div style="padding-top:58px;">
-      <a href="mailto:urbanconcierge.krk@gmail.com?subject=Rozpoczęcie%20współpracy" style="display:inline-block; background:#C2A46D; color:#FFFFFF; text-decoration:none; padding:18px 42px; font-family:'Libre Baskerville', serif; font-size:16px; margin:0 10px 12px 10px;">
-        Rozpocznij współpracę
-      </a>
-
-      <a href="mailto:urbanconcierge.krk@gmail.com?subject=Rozpoczęcie%20współpracy" style="display:inline-block; background:transparent; color:#3A2F2A; text-decoration:none; padding:18px 42px; font-family:'Libre Baskerville', serif; font-size:16px; border:1px solid #D8C7A3; margin:0 10px 12px 10px;">
-        Zleć pierwszą sprawę
-      </a>
-    </div>
-
   </div>
 </section>
 
+<!-- DARK EDITORIAL BAND -->
+<section class="uc-band">
+  <div class="uc-shell">
+    <div class="uc-band-title">Oddaj wszystko, co zabiera Ci czas</div>
+    <div class="uc-band-rule"></div>
+    <div class="uc-band-copy">
+      Urban Concierge to spokojna, dyskretna pomoc dla osób, które wolą delegować niż zajmować się detalami. Nie sprzedajemy chaosu, tylko jego brak.
+    </div>
+  </div>
+</section>
 
+<!-- SERVICES -->
+<section class="uc-section">
+  <div class="uc-shell">
 
-<!-- JAK MOGĘ POMÓC -->
-<section style="background:#F5F1EB; padding:82px 20px 72px 20px; text-align:center;">
-  <div style="max-width:1180px; margin:0 auto;">
+    <h2 class="uc-title">Jak mogę Ci pomóc</h2>
+    <div class="uc-rule"></div>
 
-    <h2 style="font-family:'Cormorant Garamond', serif; font-size:46px; line-height:1.08; font-weight:500; color:#3A2F2A; margin:0 0 12px 0;">
-      Jak mogę Ci pomóc
-    </h2>
-
-    <div style="width:62px; height:1px; background:#C2A46D; margin:0 auto 26px auto;"></div>
-
-    <div style="max-width:900px; margin:0 auto 38px auto; font-family:'Libre Baskerville', serif; font-size:16px; line-height:1.85; color:#6E6056;">
+    <div class="uc-intro">
       Przejmuję sprawy, które wymagają czasu, organizacji i zaangażowania — od codziennych tematów po bardziej złożone zadania.
     </div>
 
-    <table style="width:100%; max-width:1000px; margin:0 auto 34px auto; border-collapse:separate; border-spacing:18px 18px;">
-      <tr>
-        <td style="width:50%; background:#FFFFFF; border:1px solid #E8DED3; padding:26px 26px; text-align:left; vertical-align:top;">
-          <div style="font-family:'Cormorant Garamond', serif; font-size:28px; line-height:1.1; color:#3A2F2A; margin:0 0 8px 0;">
-            Concierge Signature
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:15px; line-height:1.6; color:#B8955A; margin:0 0 10px 0;">
-            2000 zł / miesiąc
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:14px; line-height:1.75; color:#6E6056;">
-            Stałe wsparcie i bezpośredni kontakt — bieżące sprawy ogarniane na co dzień.
-          </div>
-        </td>
+    <div class="uc-grid">
+      <div class="uc-card">
+        <div class="uc-card-title">Concierge Signature</div>
+        <div class="uc-card-price">2000 zł / miesiąc</div>
+        <div class="uc-card-copy">
+          Stałe wsparcie i bezpośredni kontakt — bieżące sprawy ogarniane na co dzień.
+        </div>
+      </div>
 
-        <td style="width:50%; background:#FFFFFF; border:1px solid #E8DED3; padding:26px 26px; text-align:left; vertical-align:top;">
-          <div style="font-family:'Cormorant Garamond', serif; font-size:28px; line-height:1.1; color:#3A2F2A; margin:0 0 8px 0;">
-            Bieżące sprawy
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:15px; line-height:1.6; color:#B8955A; margin:0 0 10px 0;">
-            400–600 zł / zlecenie
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:14px; line-height:1.75; color:#6E6056;">
-            Jednorazowe ogarnięcie konkretnej sprawy.
-          </div>
-        </td>
-      </tr>
+      <div class="uc-card">
+        <div class="uc-card-title">Bieżące sprawy</div>
+        <div class="uc-card-price">400–600 zł / zlecenie</div>
+        <div class="uc-card-copy">
+          Jednorazowe ogarnięcie konkretnej sprawy.
+        </div>
+      </div>
 
-      <tr>
-        <td style="width:50%; background:#FFFFFF; border:1px solid #E8DED3; padding:26px 26px; text-align:left; vertical-align:top;">
-          <div style="font-family:'Cormorant Garamond', serif; font-size:28px; line-height:1.1; color:#3A2F2A; margin:0 0 8px 0;">
-            Personal Assistance
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:15px; line-height:1.6; color:#B8955A; margin:0 0 10px 0;">
-            od 900 zł
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:14px; line-height:1.75; color:#6E6056;">
-            Wsparcie wymagające mojej obecności — załatwianie spraw w mieście.
-          </div>
-        </td>
+      <div class="uc-card">
+        <div class="uc-card-title">Personal Assistance</div>
+        <div class="uc-card-price">od 900 zł</div>
+        <div class="uc-card-copy">
+          Wsparcie wymagające mojej obecności — załatwianie spraw w mieście.
+        </div>
+      </div>
 
-        <td style="width:50%; background:#FFFFFF; border:1px solid #E8DED3; padding:26px 26px; text-align:left; vertical-align:top;">
-          <div style="font-family:'Cormorant Garamond', serif; font-size:28px; line-height:1.1; color:#3A2F2A; margin:0 0 8px 0;">
-            City Task
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:15px; line-height:1.6; color:#B8955A; margin:0 0 10px 0;">
-            od 400 zł
-          </div>
-          <div style="font-family:'Libre Baskerville', serif; font-size:14px; line-height:1.75; color:#6E6056;">
-            Jedna konkretna sprawa załatwiona w Twoim imieniu.
-          </div>
-        </td>
-      </tr>
-    </table>
+      <div class="uc-card">
+        <div class="uc-card-title">City Task</div>
+        <div class="uc-card-price">od 400 zł</div>
+        <div class="uc-card-copy">
+          Jedna konkretna sprawa załatwiona w Twoim imieniu.
+        </div>
+      </div>
+    </div>
 
-    <div style="max-width:860px; margin:0 auto 18px auto; font-family:'Libre Baskerville', serif; font-size:14px; line-height:1.9; color:#3A2F2A;">
+    <div class="uc-list">
       kontaktuję się w Twoim imieniu<br>
       organizuję i koordynuję działania<br>
       realizuję zadania w mieście<br>
       dopinam sprawy od początku do końca
     </div>
 
-    <div style="max-width:900px; margin:24px auto 0 auto; font-family:'Libre Baskerville', serif; font-size:14px; line-height:1.85; color:#6E6056;">
+    <div class="uc-quiet">
       Od umówienia wizyty, przez znalezienie specjalisty, po organizację kilku spraw jednego dnia.<br><br>
       Nie tracisz czasu. Wszystko jest załatwione.
     </div>
 
   </div>
+</section>
 
-<!-- DLA KOGO -->
-<section style="background:#F5F1EB; padding:88px 20px 72px 20px; text-align:center;">
-  <div class="uc-wrap" style="max-width:840px;">
+<!-- HOW IT WORKS -->
+<section class="uc-section">
+  <div class="uc-shell">
+    <h2 class="uc-title">Jak to działa</h2>
+    <div class="uc-rule"></div>
 
-    <h2 style="font-family:'Cormorant Garamond', serif; font-size:46px; line-height:1.12; font-weight:500; color:#3A2F2A; margin:0 0 14px 0;">
-      Dla kogo jest ta usługa
-    </h2>
+    <div class="uc-steps">
+      <div class="uc-step">
+        <div class="uc-step-no">Krok 01</div>
+        <div class="uc-step-title">Piszesz lub dzwonisz</div>
+        <div class="uc-step-copy">
+          Opisujesz sprawę w sposób, który jest dla Ciebie najwygodniejszy — mailowo, telefonicznie lub wiadomością.
+        </div>
+      </div>
 
-    <div style="width:72px; height:1px; background:#C2A46D; margin:0 auto 28px auto;"></div>
+      <div class="uc-step">
+        <div class="uc-step-no">Krok 02</div>
+        <div class="uc-step-title">Ustalamy zakres</div>
+        <div class="uc-step-copy">
+          Wracam z informacją, potwierdzam możliwość realizacji i ustalamy najwygodniejszy model współpracy.
+        </div>
+      </div>
 
-    <div style="font-family:'Libre Baskerville', serif; font-size:17px; line-height:2.05; color:#3A2F2A;">
+      <div class="uc-step">
+        <div class="uc-step-no">Krok 03</div>
+        <div class="uc-step-title">Przejmuję sprawę</div>
+        <div class="uc-step-copy">
+          Kontaktuję się, organizuję, koordynuję i doprowadzam temat do końca — bez angażowania Cię w detale.
+        </div>
+      </div>
+
+      <div class="uc-step">
+        <div class="uc-step-no">Krok 04</div>
+        <div class="uc-step-title">Masz to z głowy</div>
+        <div class="uc-step-copy">
+          Wracam z informacją, potwierdzeniem lub gotowym rozwiązaniem. Ty oszczędzasz czas i nie musisz o tym pamiętać.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="uc-section">
+  <div class="uc-shell" style="max-width:920px;">
+
+    <h2 class="uc-title">Dla kogo jest ta usługa</h2>
+    <div class="uc-rule"></div>
+
+    <div class="uc-list">
       Dla osób, które:<br><br>
       mają dużo obowiązków i mało czasu<br>
       chcą mieć wszystko ogarnięte bez angażowania się<br>
@@ -205,38 +687,43 @@ html, body, #page, #siteWrapper, .Main, main {
 
   </div>
 </section>
+<!-- CONTACT -->
+<section class="uc-section">
+  <div class="uc-shell">
+    <div class="uc-contact-box">
+      <h2 class="uc-contact-main">Skontaktuj się ze mną</h2>
+      <div class="uc-rule"></div>
 
-<!-- CTA -->
-<section style="background:#F5F1EB; padding:78px 20px 42px 20px; text-align:center;">
-  <div class="uc-wrap" style="max-width:940px;">
+      <div class="uc-contact-copy">
+        Możemy zacząć od jednej sprawy lub od razu ustawić stałą współpracę.<br>
+        Możesz napisać w dowolnym momencie — wracam z odpowiedzią tak szybko, jak to możliwe.
+      </div>
 
-    <h2 style="font-family:'Cormorant Garamond', serif; font-size:44px; line-height:1.2; font-weight:500; color:#3A2F2A; margin:0 0 28px 0;">
-      Możemy zacząć od jednej sprawy — lub od razu ustawić stałą współpracę
-    </h2>
+      <div class="uc-contact-note">
+        Pierwszy kontakt odbywa się mailowo.
+      </div>
 
-    <a href="mailto:urbanconcierge.krk@gmail.com?subject=Zlecenie%20pierwszej%20sprawy" style="display:inline-block; background:#C2A46D; color:#FFFFFF; text-decoration:none; padding:20px 42px; font-family:'Libre Baskerville', serif; font-size:16px; margin:0 10px 12px 10px;">
-      Rozpocznij współpracę
-    </a>
+      <div class="uc-actions" style="margin-top:34px;">
+        <a href="mailto:info@urbanconcierge.pl?subject=Rozpoczęcie%20współpracy" class="uc-btn uc-btn-primary">
+          Rozpocznij współpracę
+        </a>
 
-    <a href="mailto:urbanconcierge.krk@gmail.com?subject=Zlecenie%20pierwszej%20sprawy" style="display:inline-block; background:transparent; color:#3A2F2A; text-decoration:none; padding:20px 42px; font-family:'Libre Baskerville', serif; font-size:16px; border:1px solid #D8C7A3; margin:0 10px 12px 10px;">
-      Zleć pierwszą sprawę
-    </a>
-
+        <a href="mailto:info@urbanconcierge.pl?subject=Zlecenie%20pierwszej%20sprawy" class="uc-btn uc-btn-secondary">
+          Zleć pierwszą sprawę
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- LEKKA STOPKA -->
-<section id="kontakt" style="background:#F5F1EB; padding:18px 20px 24px 20px; text-align:center; border-top:1px solid #E6DED3;">
-  <div style="font-family:'Cormorant Garamond', serif; font-size:20px; line-height:1.2; color:#3A2F2A; margin-bottom:4px;">
-    Urban Concierge
-  </div>
-  <div style="font-family:'Libre Baskerville', serif; font-size:12px; line-height:1.4; color:#7A6A5F; margin-bottom:10px;">
-    Polish &amp; English service available
-  </div>
-  <div style="font-family:'Libre Baskerville', serif; font-size:11px; line-height:1.7;">
-    <a href="#" style="color:#3A2F2A; text-decoration:none; margin:0 8px;">Regulamin</a>
-    <a href="#" style="color:#3A2F2A; text-decoration:none; margin:0 8px;">Polityka prywatności</a>
-    <a href=mailto:urbanconcierge.krk@gmail.com"" style="color:#3A2F2A; text-decoration:none; margin:0 8px;">Kontakt</a>
+<!-- FOOTER -->
+<section id="kontakt" class="uc-footer">
+  <div class="uc-footer-brand">Urban Concierge</div>
+  <div class="uc-footer-sub">Polish &amp; English service available</div>
+
+  <div class="uc-footer-links">
+    <a href="REGULAMIN_PDF_LINK" target="_blank" rel="noopener">Regulamin</a>
+    <a href="POLITYKA_PDF_LINK" target="_blank" rel="noopener">Polityka prywatności</a>
+    <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
   </div>
 </section>
-
