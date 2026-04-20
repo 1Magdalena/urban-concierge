@@ -1,210 +1,226 @@
-<section class="uc-hero">
-  <div class="uc-shell">
-    <div class="uc-hero-inner">
-      <div class="uc-kicker">Private concierge • Kraków • English-speaking support</div>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-      <h1 class="uc-h1">
-        You don’t have to manage life in Kraków.<br>
-        Get your time back.
-      </h1>
+<style>
+header,
+.Header,
+.site-header,
+#header,
+[data-header-style],
+.sqs-announcement-bar-dropzone + div header,
+#siteWrapper footer,
+.site-footer,
+#footer-sections,
+.FooterBlocks,
+.sqs-footer,
+section[data-section-theme] footer {
+  display: none !important;
+}
 
-      <div class="uc-sub">
-        Discreet, on-the-ground support for expats, professionals and international clients who prefer not to deal with daily matters themselves.
-      </div>
+html, body, #page, #siteWrapper, .Main, main {
+  background: #F5F1EB !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
 
-      <div class="uc-copy">
-        Private matters. Organization. Local coordination. Ongoing support or single requests.
-      </div>
+html {
+  scroll-behavior: smooth;
+}
 
-      <div class="uc-copy-small">
-        I work with a limited number of clients.<br>
-        English-speaking support in Kraków.
-      </div>
+body {
+  background: #F5F1EB !important;
+  color: #3A2F2A;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
-      <div class="uc-actions">
-        <a href="mailto:info@urbanconcierge.pl?subject=Start%20cooperation" class="uc-btn uc-btn-primary">Get support</a>
-        <a href="mailto:info@urbanconcierge.pl?subject=First%20request" class="uc-btn uc-btn-secondary">Send a request</a>
-      </div>
+#page {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-      <div class="uc-premium-note">
-        This is not a service for everyone. Urban Concierge is designed for people who value time more than involvement.
-      </div>
-    </div>
-  </div>
-</section>
+:root {
+  --bg: #F5F1EB;
+  --bg-soft: #F8F4EE;
+  --text: #3A2F2A;
+  --muted: #6E6056;
+  --soft: #8B7B70;
+  --line: #E7DDD2;
+  --gold: #B8955A;
+  --gold-soft: #C2A46D;
+  --choco: #2B221F;
+  --choco-2: #3A2F2A;
+  --footer: #1E1714;
+  --hover: #473934;
+}
 
-<section class="uc-band">
-  <div class="uc-shell">
-    <div class="uc-band-title">Hand over everything that takes your time</div>
-    <div class="uc-band-rule"></div>
-    <div class="uc-band-copy">
-      Urban Concierge is calm, discreet support<br>
-      for matters that require time,<br>
-      coordination and follow-through.
-    </div>
-  </div>
-</section>
+/* TOP BAR */
+.uc-topbar {
+  width: 100%;
+  height: 14px;
+  background: linear-gradient(90deg, #2B221F 0%, #3A2F2A 50%, #2B221F 100%);
+}
 
-<section class="uc-quote">
-  <div class="uc-shell">
-    <div class="uc-quote-text">
-      Luxury is not things.<br><br>
-      Luxury is not having to think about them.
-    </div>
-  </div>
-</section>
+/* CONTAINER */
+.uc-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
 
-<section class="uc-section">
-  <div class="uc-shell">
-    <h2 class="uc-title">How I can help</h2>
-    <div class="uc-rule"></div>
+/* BRAND */
+.uc-brandbar {
+  padding: 34px 0 0 0;
+  text-align: center;
+}
 
-    <div class="uc-intro">
-      I take over matters that require time, contacts, organization and attention to detail — from single requests to ongoing support.
-    </div>
+.uc-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 31px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.25px;
+}
 
-    <div class="uc-grid">
-      <div class="uc-card">
-        <div class="uc-card-title">Ongoing Support</div>
-        <div class="uc-card-price">2000 PLN / month</div>
-        <div class="uc-card-copy">Continuous support and direct contact — day-to-day matters handled with continuity.</div>
-      </div>
+/* HERO */
+.uc-hero {
+  min-height: calc(100vh - 14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 0 88px 0;
+  position: relative;
+  overflow: hidden;
+}
 
-      <div class="uc-card">
-        <div class="uc-card-title">Single Request</div>
-        <div class="uc-card-price">400–600 PLN / request</div>
-        <div class="uc-card-copy">One specific matter handled fully on your behalf, without involving you in the details.</div>
-      </div>
+.uc-hero:before {
+  content: "";
+  position: absolute;
+  width: 720px;
+  height: 720px;
+  border: 1px solid rgba(184,149,90,0.10);
+  border-radius: 50%;
+  top: -250px;
+  right: -230px;
+  pointer-events: none;
+}
 
-      <div class="uc-card">
-        <div class="uc-card-title">On-Site Assistance</div>
-        <div class="uc-card-price">from 900 PLN</div>
-        <div class="uc-card-copy">Matters that require my presence and local execution — appointments, visits, coordination.</div>
-      </div>
+.uc-hero:after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(58,47,42,0.06);
+  border-radius: 50%;
+  bottom: -150px;
+  left: -120px;
+  pointer-events: none;
+}
 
-      <div class="uc-card">
-        <div class="uc-card-title">Relocation & Setup</div>
-        <div class="uc-card-price">custom</div>
-        <div class="uc-card-copy">Support with settling into Kraków — schools, doctors, services and local setup.</div>
-      </div>
-    </div>
+.uc-hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
 
-    <div class="uc-list">
-      communication on your behalf<br>
-      local coordination and organization<br>
-      city-based errands and tasks<br>
-      full follow-through from start to finish
-    </div>
-  </div>
-</section>
+.uc-kicker {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #9C8F84;
+  margin-bottom: 34px;
+}
 
-<section class="uc-section">
-  <div class="uc-shell">
-    <h2 class="uc-title">How it works</h2>
-    <div class="uc-rule"></div>
+.uc-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 102px;
+  line-height: 0.94;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0 0 32px 0;
+  letter-spacing: -1.35px;
+}
 
-    <div class="uc-steps">
-      <div class="uc-step">
-        <div class="uc-step-no">Step 01</div>
-        <div class="uc-step-title">Contact</div>
-        <div class="uc-step-copy">You describe what you need — by email or message.</div>
-      </div>
+.uc-sub {
+  max-width: 620px;
+  margin: 0 auto 22px auto;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  line-height: 1.9;
+  color: var(--muted);
+}
 
-      <div class="uc-step">
-        <div class="uc-step-no">Step 02</div>
-        <div class="uc-step-title">Scope</div>
-        <div class="uc-step-copy">I confirm whether it can be handled and define the scope.</div>
-      </div>
+.uc-copy {
+  max-width: 560px;
+  margin: 0 auto;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 13px;
+  line-height: 2;
+  color: var(--muted);
+}
 
-      <div class="uc-step">
-        <div class="uc-step-no">Step 03</div>
-        <div class="uc-step-title">Execution</div>
-        <div class="uc-step-copy">I take over the matter and bring it to completion.</div>
-      </div>
+.uc-copy-small {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  line-height: 2;
+  color: var(--soft);
+  margin-top: 24px;
+}
 
-      <div class="uc-step">
-        <div class="uc-step-no">Step 04</div>
-        <div class="uc-step-title">Confirmation</div>
-        <div class="uc-step-copy">You receive confirmation or a completed solution.</div>
-      </div>
-    </div>
-  </div>
-</section>
+.uc-premium-note {
+  max-width: 720px;
+  margin: 28px auto 0 auto;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  line-height: 2;
+  color: var(--soft);
+}
 
-<section class="uc-section">
-  <div class="uc-shell">
-    <h2 class="uc-title">Why Urban Concierge</h2>
-    <div class="uc-rule"></div>
+.uc-actions {
+  margin-top: 54px;
+}
 
-    <div class="uc-why-grid">
-      <div class="uc-why-item">
-        <div class="uc-why-title">Discretion</div>
-        <div class="uc-why-copy">Your matters remain private. Always.</div>
-      </div>
+.uc-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 18px 38px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  letter-spacing: 0.55px;
+  transition: all 0.24s ease;
+  margin: 0 8px 12px 8px;
+}
 
-      <div class="uc-why-item">
-        <div class="uc-why-title">Trust</div>
-        <div class="uc-why-copy">I act on your behalf and see things through to the end.</div>
-      </div>
+.uc-btn-primary {
+  background: var(--choco-2);
+  color: #FFFFFF;
+  border: 1px solid var(--choco-2);
+}
 
-      <div class="uc-why-item">
-        <div class="uc-why-title">Time saving</div>
-        <div class="uc-why-copy">You decide. I organize, manage and execute.</div>
-      </div>
+.uc-btn-primary:hover {
+  background: var(--hover);
+  border-color: var(--hover);
+  transform: translateY(-1px);
+}
 
-      <div class="uc-why-item">
-        <div class="uc-why-title">Limited clients</div>
-        <div class="uc-why-copy">I work with a selected number of clients to ensure full support.</div>
-      </div>
-    </div>
-  </div>
-</section>
+.uc-btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #CCB8A2;
+}
 
-<section class="uc-section">
-  <div class="uc-shell" style="max-width:920px;">
-    <h2 class="uc-title">Who this service is for</h2>
-    <div class="uc-rule"></div>
+.uc-btn-secondary:hover {
+  background: #EEE6DD;
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
 
-    <div class="uc-list">
-      For people who:<br><br>
-      prefer to delegate rather than handle details<br>
-      value calm, order and reliable execution<br>
-      have little time and many responsibilities<br>
-      want matters handled without being involved
-    </div>
-  </div>
-</section>
-
-<section class="uc-section">
-  <div class="uc-shell">
-    <div class="uc-contact-box">
-      <h2 class="uc-contact-main">Get in touch</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-contact-copy">
-        We can start with one request or ongoing support.<br>
-        I work with a limited number of clients.
-      </div>
-
-      <div class="uc-contact-note">
-        First contact takes place by email.
-      </div>
-
-      <div class="uc-actions" style="margin-top:34px;">
-        <a href="mailto:info@urbanconcierge.pl?subject=Start%20cooperation" class="uc-btn uc-btn-primary">Get support</a>
-        <a href="mailto:info@urbanconcierge.pl?subject=First%20request" class="uc-btn uc-btn-secondary">Send a request</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="kontakt" class="uc-footer">
-  <div class="uc-footer-brand">Urban Concierge</div>
-  <div class="uc-footer-sub">Private concierge services | Kraków | English-speaking</div>
-
-  <div class="uc-footer-links">
-    <a href="Regulamin UC.pdf" target="_blank" rel="noopener">Terms</a>
-    <a href="polityka prywatności UC.pdf" target="_blank" rel="noopener">Privacy policy</a>
-    <a href="mailto:info@urbanconcierge.pl">Contact</a>
-  </div>
-</section>
+/* DARK BAND */
+.uc-band
