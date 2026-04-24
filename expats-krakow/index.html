@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Urban Concierge | Private Concierge & Relocation in Kraków</title>
-  <meta name="description" content="Private concierge and relocation support in Kraków for clients who value time, discretion and reliable execution." />
+  <meta name="description" content="Private concierge and relocation support for clients who value time, discretion and reliable execution." />
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
@@ -35,16 +35,20 @@
     :root {
       --bg: #F5F1EB;
       --bg-soft: #F8F4EE;
+      --bg-card: #F7F2EB;
       --text: #3A2F2A;
       --muted: #6E6056;
       --soft: #8B7B70;
       --line: #E7DDD2;
+      --line-strong: #DDCFBF;
       --gold: #B8955A;
       --gold-soft: #C2A46D;
+      --gold-pale: #E8DBC8;
       --choco: #2B221F;
       --choco-2: #3A2F2A;
       --footer: #1E1714;
       --hover: #473934;
+      --shadow: 0 20px 55px rgba(58,47,42,0.05);
     }
 
     .uc-topbar {
@@ -57,6 +61,7 @@
       max-width: 1180px;
       margin: 0 auto;
       padding: 0 40px;
+      box-sizing: border-box;
     }
 
     .uc-brandbar {
@@ -144,23 +149,6 @@
       color: var(--muted);
     }
 
-    .uc-copy {
-      max-width: 620px;
-      margin: 0 auto;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 2;
-      color: var(--muted);
-    }
-
-    .uc-copy-small {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
-      line-height: 2;
-      color: var(--soft);
-      margin-top: 24px;
-    }
-
     .uc-premium-note {
       max-width: 720px;
       margin: 28px auto 0 auto;
@@ -211,17 +199,24 @@
       transform: translateY(-1px);
     }
 
-    .uc-btn-tertiary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid #D8C8B8;
-      padding: 14px 24px;
-      margin: 22px 0 0 0;
+    .uc-btn-card {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      letter-spacing: 0.45px;
+      background: var(--gold);
+      color: #FFFFFF;
+      border: 1px solid var(--gold);
+      transition: all 0.24s ease;
+      align-self: flex-start;
     }
 
-    .uc-btn-tertiary:hover {
-      background: #EFE7DE;
-      border-color: var(--gold);
+    .uc-btn-card:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold-soft);
       transform: translateY(-1px);
     }
 
@@ -231,7 +226,7 @@
         radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
         linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
       color: #F5F1EB;
-      padding: 96px 36px;
+      padding: 88px 36px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -254,7 +249,7 @@
     }
 
     .uc-band-copy {
-      max-width: 680px;
+      max-width: 660px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
@@ -263,7 +258,7 @@
     }
 
     .uc-quote {
-      padding: 200px 36px;
+      padding: 170px 36px;
       text-align: center;
       background: var(--bg);
     }
@@ -280,7 +275,7 @@
     }
 
     .uc-section {
-      padding: 180px 0;
+      padding: 140px 0;
       position: relative;
     }
 
@@ -306,7 +301,7 @@
     }
 
     .uc-intro {
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto 54px auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
@@ -319,34 +314,45 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px;
-      max-width: 900px;
-      margin: 0 auto 58px auto;
+      max-width: 980px;
+      margin: 0 auto 34px auto;
     }
 
     .uc-card {
-      background: #F7F3ED;
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
-      padding: 46px 40px;
+      padding: 42px 38px;
       text-align: left;
       transition: all 0.26s ease;
       display: flex;
       flex-direction: column;
-      min-height: 255px;
+      min-height: 280px;
       box-sizing: border-box;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .uc-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 38px;
+      width: 70px;
+      height: 2px;
+      background: var(--gold);
     }
 
     .uc-card:hover {
       border-color: #D2BCA4;
-      box-shadow: 0 18px 50px rgba(58,47,42,0.045);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     .uc-card-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-size: 36px;
       line-height: 1.05;
       color: var(--text);
-      margin: 0 0 14px 0;
+      margin: 8px 0 14px 0;
     }
 
     .uc-card-copy {
@@ -355,30 +361,43 @@
       line-height: 1.95;
       color: var(--muted);
       margin: 0;
+      max-width: 92%;
     }
 
-    .uc-list {
-      max-width: 760px;
+    .uc-service-points {
+      max-width: 980px;
       margin: 0 auto;
-      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 22px;
+    }
+
+    .uc-service-point {
+      background: #FBF8F3;
+      border: 1px solid var(--line);
+      padding: 18px 20px;
       font-family: 'Libre Baskerville', serif;
-      font-size: 15px;
-      line-height: 2.2;
+      font-size: 12px;
+      line-height: 1.8;
       color: var(--text);
+      text-align: center;
     }
 
     .uc-steps {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 24px;
-      max-width: 960px;
+      gap: 22px;
+      max-width: 1020px;
       margin: 0 auto;
     }
 
     .uc-step {
-      border-top: 1px solid var(--line);
-      padding: 30px 8px 0 0;
+      background: #FBF8F3;
+      border: 1px solid var(--line);
+      padding: 28px 24px 26px 24px;
       text-align: left;
+      box-sizing: border-box;
+      min-height: 200px;
     }
 
     .uc-step-no {
@@ -388,15 +407,15 @@
       letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .uc-step-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 30px;
+      font-size: 31px;
       line-height: 1.04;
       color: var(--text);
-      margin: 0 0 10px 0;
+      margin: 0 0 12px 0;
     }
 
     .uc-step-copy {
@@ -408,26 +427,26 @@
 
     .uc-why-grid {
       display: grid;
-      grid-template-columns: 260px 260px;
-      justify-content: center;
-      gap: 40px 80px;
-      max-width: 700px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 860px;
       margin: 0 auto;
-      text-align: center;
     }
 
     .uc-why-item {
-      border-top: 1px solid var(--line);
-      padding: 28px 0 0 0;
+      background: #FBF8F3;
+      border: 1px solid var(--line);
+      padding: 34px 30px;
       text-align: center;
+      box-sizing: border-box;
     }
 
     .uc-why-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
+      font-size: 28px;
       line-height: 1.06;
       color: var(--text);
-      margin: 0 0 10px 0;
+      margin: 0 0 12px 0;
     }
 
     .uc-why-copy {
@@ -435,12 +454,51 @@
       font-size: 13px;
       line-height: 1.95;
       color: var(--muted);
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    .uc-fit-box {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #FBF8F3;
+      border: 1px solid var(--line);
+      padding: 54px 46px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .uc-fit-lead {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--soft);
+      margin-bottom: 24px;
+    }
+
+    .uc-fit-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .uc-fit-list li {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 16px;
+      line-height: 1.95;
+      color: var(--text);
     }
 
     .uc-contact-box {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
       text-align: center;
+      background: #FBF8F3;
+      border: 1px solid var(--line);
+      padding: 56px 42px;
+      box-sizing: border-box;
     }
 
     .uc-contact-main {
@@ -507,16 +565,12 @@
       .uc-steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
-      .uc-why-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        max-width: 760px;
-        gap: 32px 40px;
-      }
     }
 
     @media (max-width: 980px) {
-      .uc-grid {
+      .uc-grid,
+      .uc-service-points,
+      .uc-why-grid {
         grid-template-columns: 1fr;
       }
 
@@ -563,15 +617,16 @@
         font-size: 38px;
       }
 
-      .uc-quote,
-      .uc-section {
-        padding: 95px 0;
+      .uc-quote {
+        padding: 110px 20px;
       }
 
-      .uc-steps,
-      .uc-why-grid {
+      .uc-section {
+        padding: 90px 0;
+      }
+
+      .uc-steps {
         grid-template-columns: 1fr;
-        max-width: 360px;
       }
 
       .uc-btn {
@@ -580,8 +635,27 @@
         margin: 0 auto 12px auto;
       }
 
-      .uc-btn-tertiary {
+      .uc-btn-card {
+        display: inline-block;
+        max-width: none;
+        margin: 20px 0 0 0;
+      }
+
+      .uc-card,
+      .uc-fit-box,
+      .uc-contact-box,
+      .uc-step,
+      .uc-why-item {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .uc-card-copy {
         max-width: 100%;
+      }
+
+      .uc-fit-list li {
+        font-size: 15px;
       }
 
       .uc-quote-text {
@@ -603,7 +677,8 @@
         <div class="uc-kicker">Private concierge • Kraków</div>
 
         <h1 class="uc-h1">
-          Hand over everything that takes your time.<br>
+          Hand over everything<br>
+          that takes your time.<br>
           Get your time back.
         </h1>
 
@@ -628,7 +703,7 @@
       <div class="uc-band-title">Everything handled for you.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Urban Concierge offers calm, discreet support for matters that require time, coordination and follow-through — from ongoing monthly support to in-person assistance and relocation to Kraków.
+        Urban Concierge offers calm, discreet support for matters that require time, coordination and follow-through.
       </div>
     </div>
   </section>
@@ -644,11 +719,11 @@
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">Services</h2>
+      <h2 class="uc-title">Ways to work together</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        Four clear ways to work together — depending on whether you need ongoing support, one focused day, in-person presence or relocation help in Kraków.
+        Four clear ways to work together — depending on whether you need ongoing support, one focused day, in-person presence or relocation help.
       </div>
 
       <div class="uc-grid">
@@ -657,7 +732,7 @@
           <p class="uc-card-copy">
             Ongoing support for clients who want one trusted person to handle recurring tasks, coordination and follow-ups.
           </p>
-          <a href="/monthly-support" class="uc-btn uc-btn-tertiary">Learn more</a>
+          <a href="/monthly-support" class="uc-btn-card">Learn more</a>
         </div>
 
         <div class="uc-card">
@@ -665,7 +740,7 @@
           <p class="uc-card-copy">
             Several matters handled within one day — for clients who want to offload a specific list of tasks at once.
           </p>
-          <a href="/one-day-support" class="uc-btn uc-btn-tertiary">Learn more</a>
+          <a href="/one-day-support" class="uc-btn-card">Learn more</a>
         </div>
 
         <div class="uc-card">
@@ -673,7 +748,7 @@
           <p class="uc-card-copy">
             On-site support in Kraków — appointments, pick-ups, meetings, presence and coordination whenever something needs to be handled in person.
           </p>
-          <a href="/in-person-assistance" class="uc-btn uc-btn-tertiary">Learn more</a>
+          <a href="/in-person-assistance" class="uc-btn-card">Learn more</a>
         </div>
 
         <div class="uc-card">
@@ -681,15 +756,15 @@
           <p class="uc-card-copy">
             Support for people moving to Kraków — from pre-arrival preparation to handling key matters after arrival.
           </p>
-          <a href="/relocation-krakow" class="uc-btn uc-btn-tertiary">Learn more</a>
+          <a href="/relocation-krakow" class="uc-btn-card">Learn more</a>
         </div>
       </div>
 
-      <div class="uc-list">
-        recurring coordination and follow-ups<br>
-        one-day task handling and local errands<br>
-        on-site appointments, pick-ups and presence<br>
-        relocation support before and after arrival
+      <div class="uc-service-points">
+        <div class="uc-service-point">Recurring coordination and follow-ups</div>
+        <div class="uc-service-point">One-day task handling and local errands</div>
+        <div class="uc-service-point">On-site appointments, pick-ups and presence</div>
+        <div class="uc-service-point">Relocation support before and after arrival</div>
       </div>
     </div>
   </section>
@@ -757,16 +832,18 @@
   </section>
 
   <section class="uc-section">
-    <div class="uc-shell" style="max-width:920px;">
+    <div class="uc-shell" style="max-width: 920px;">
       <h2 class="uc-title">Who this service is for</h2>
       <div class="uc-rule"></div>
 
-      <div class="uc-list">
-        For people who:<br><br>
-        prefer to delegate rather than handle details<br>
-        value calm, order and reliable execution<br>
-        have little time and many responsibilities<br>
-        want matters handled without being involved
+      <div class="uc-fit-box">
+        <div class="uc-fit-lead">For people who:</div>
+        <ul class="uc-fit-list">
+          <li>prefer to delegate rather than handle details</li>
+          <li>value calm, order and reliable execution</li>
+          <li>have little time and many responsibilities</li>
+          <li>want matters handled without being involved</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -778,10 +855,11 @@
         <div class="uc-rule"></div>
 
         <div class="uc-contact-copy">
-          Start with a single request, one focused day, monthly support or relocation help in Kraków.<br>
+          Start with a single request, one focused day, monthly support or relocation help.<br>
           I work with a limited number of clients to ensure discretion and continuity.
         </div>
-        <div class="uc-actions" style="margin-top:34px;">
+
+        <div class="uc-actions" style="margin-top: 34px;">
           <a href="mailto:info@urbanconcierge.pl?subject=Get%20support" class="uc-btn uc-btn-primary">Request support</a>
           <a href="mailto:info@urbanconcierge.pl?subject=Send%20a%20request" class="uc-btn uc-btn-secondary">Make a request</a>
         </div>
