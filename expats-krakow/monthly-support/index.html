@@ -68,10 +68,20 @@
 
     .uc-brandbar {
       padding: 34px 0 0 0;
-      text-align: center;
+    }
+
+    .uc-headerbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .uc-header-spacer {
+      min-height: 1px;
     }
 
     .uc-brand {
+      justify-self: center;
       font-family: 'Cormorant Garamond', serif;
       font-size: 31px;
       line-height: 1.1;
@@ -80,6 +90,54 @@
       letter-spacing: 0.25px;
       text-decoration: none;
       display: inline-block;
+    }
+
+    .uc-lang-switch {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      background: rgba(255,255,255,0.32);
+      border: 1px solid #D8C8B6;
+    }
+
+    .uc-lang-current,
+    .uc-lang-switch a {
+      display: inline-block;
+      min-width: 44px;
+      text-align: center;
+      padding: 8px 12px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .uc-lang-current {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-lang-switch a {
+      color: var(--text);
+      border: 1px solid transparent;
+      transition: all 0.22s ease;
+    }
+
+    .uc-lang-switch a:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+    }
+
+    .uc-lang-divider {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      color: #8B7B70;
+      line-height: 1;
     }
 
     .uc-hero {
@@ -639,8 +697,21 @@
         padding: 0 20px;
       }
 
+      .uc-headerbar {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .uc-header-spacer {
+        display: none;
+      }
+
       .uc-brand {
         font-size: 28px;
+      }
+
+      .uc-lang-switch {
+        justify-self: center;
       }
 
       .uc-hero {
@@ -697,7 +768,15 @@
   <div class="uc-topbar"></div>
 
   <section class="uc-shell uc-brandbar">
-    <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+    <div class="uc-headerbar">
+      <div class="uc-header-spacer"></div>
+      <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+      <div class="uc-lang-switch">
+        <a href="/abonament/">PL</a>
+        <span class="uc-lang-divider">|</span>
+        <span class="uc-lang-current">ENG</span>
+      </div>
+    </div>
   </section>
 
   <section class="uc-hero">
@@ -787,7 +866,7 @@
     </div>
   </section>
 
-    <section id="examples" class="uc-section">
+  <section id="examples" class="uc-section">
     <div class="uc-shell">
       <h2 class="uc-title">Example situations</h2>
       <div class="uc-rule"></div>
