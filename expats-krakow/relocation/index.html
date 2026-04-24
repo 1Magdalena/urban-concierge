@@ -68,10 +68,20 @@
 
     .uc-brandbar {
       padding: 34px 0 0 0;
-      text-align: center;
+    }
+
+    .uc-headerbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .uc-header-spacer {
+      min-height: 1px;
     }
 
     .uc-brand {
+      justify-self: center;
       font-family: 'Cormorant Garamond', serif;
       font-size: 31px;
       line-height: 1.1;
@@ -80,6 +90,54 @@
       letter-spacing: 0.25px;
       text-decoration: none;
       display: inline-block;
+    }
+
+    .uc-lang-switch {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      background: rgba(255,255,255,0.32);
+      border: 1px solid #D8C8B6;
+    }
+
+    .uc-lang-current,
+    .uc-lang-switch a {
+      display: inline-block;
+      min-width: 44px;
+      text-align: center;
+      padding: 8px 12px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .uc-lang-current {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-lang-switch a {
+      color: var(--text);
+      border: 1px solid transparent;
+      transition: all 0.22s ease;
+    }
+
+    .uc-lang-switch a:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+    }
+
+    .uc-lang-divider {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      color: #8B7B70;
+      line-height: 1;
     }
 
     .uc-hero {
@@ -423,7 +481,6 @@
       margin: 0;
     }
 
-    /* PRICING SECTION STYLES */
     .uc-pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -654,8 +711,21 @@
         padding: 0 20px;
       }
 
+      .uc-headerbar {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .uc-header-spacer {
+        display: none;
+      }
+
       .uc-brand {
         font-size: 28px;
+      }
+
+      .uc-lang-switch {
+        justify-self: center;
       }
 
       .uc-hero {
@@ -712,7 +782,15 @@
   <div class="uc-topbar"></div>
 
   <section class="uc-shell uc-brandbar">
-    <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+    <div class="uc-headerbar">
+      <div class="uc-header-spacer"></div>
+      <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+      <div class="uc-lang-switch">
+        <a href="/relokacja-krakow/">PL</a>
+        <span class="uc-lang-divider">|</span>
+        <span class="uc-lang-current">ENG</span>
+      </div>
+    </div>
   </section>
 
   <section class="uc-hero">
@@ -858,7 +936,6 @@
     </div>
   </section>
 
-  <!-- PRICING SECTION START -->
   <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">Typical levels of support</h2>
@@ -902,37 +979,33 @@
       </div>
     </div>
   </section>
-  <!-- PRICING SECTION END -->
 
- <section class="uc-section">
-  <div class="uc-shell">
-    <h2 class="uc-title">Real estate partner</h2>
-    <div class="uc-rule"></div>
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Real estate partner</h2>
+      <div class="uc-rule"></div>
 
-    <div class="uc-intro">
-      When property-related support is needed, relocation may include coordination with a trusted real estate partner. This is not a mass-market portal experience — the goal is a smoother, more guided process aligned with your move.
+      <div class="uc-intro">
+        When property-related support is needed, relocation may include coordination with a trusted real estate partner. This is not a mass-market portal experience — the goal is a smoother, more guided process aligned with your move.
+      </div>
+
+      <div class="uc-simple-list">
+        support around the practical side of finding or preparing a place<br>
+        smoother coordination between property matters and daily setup<br>
+        one relocation process, not disconnected tasks handled separately
+      </div>
+
+      <div class="uc-note">
+        The exact property-related scope depends on the situation and may be arranged as part of a broader relocation service.
+      </div>
+
+      <div class="uc-actions" style="margin-top: 34px; text-align: center;">
+        <a href="https://www.veryhome.pl/en" class="uc-btn uc-btn-secondary" target="_blank" rel="noopener">
+          Explore trusted property partner
+        </a>
+      </div>
     </div>
-
-    <div class="uc-simple-list">
-      support around the practical side of finding or preparing a place<br>
-      smoother coordination between property matters and daily setup<br>
-      one relocation process, not disconnected tasks handled separately
-    </div>
-
-    <div class="uc-note">
-      The exact property-related scope depends on the situation and may be arranged as part of a broader relocation service.
-    </div>
-
-    <div class="uc-actions" style="margin-top: 34px; text-align: center;">
-      <a href="https://www.veryhome.pl/en"
-         class="uc-btn uc-btn-secondary"
-         target="_blank"
-         rel="noopener">
-        Explore trusted property partner
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="uc-section uc-section-soft">
     <div class="uc-shell">
