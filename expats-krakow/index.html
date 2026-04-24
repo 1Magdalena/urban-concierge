@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Concierge | Kraków </title>
+  <title>Urban Concierge | Private Concierge & Relocation in Kraków</title>
+  <meta name="description" content="Private concierge and relocation support in Kraków for clients who value time, discretion and reliable execution." />
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18108841323');
+  </script>
 
-  gtag('config', 'AW-18108841323');
-</script>
-  
   <style>
     html, body {
       background: #F5F1EB;
@@ -137,7 +136,7 @@
     }
 
     .uc-sub {
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto 22px auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 20px;
@@ -185,6 +184,7 @@
       letter-spacing: 0.55px;
       transition: all 0.24s ease;
       margin: 0 8px 12px 8px;
+      box-sizing: border-box;
     }
 
     .uc-btn-primary {
@@ -207,6 +207,20 @@
 
     .uc-btn-secondary:hover {
       background: #EEE6DD;
+      border-color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    .uc-btn-tertiary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #D8C8B8;
+      padding: 14px 24px;
+      margin: 22px 0 0 0;
+    }
+
+    .uc-btn-tertiary:hover {
+      background: #EFE7DE;
       border-color: var(--gold);
       transform: translateY(-1px);
     }
@@ -240,7 +254,7 @@
     }
 
     .uc-band-copy {
-      max-width: 640px;
+      max-width: 680px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
@@ -292,7 +306,7 @@
     }
 
     .uc-intro {
-      max-width: 660px;
+      max-width: 700px;
       margin: 0 auto 54px auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
@@ -315,6 +329,10 @@
       padding: 46px 40px;
       text-align: left;
       transition: all 0.26s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 255px;
+      box-sizing: border-box;
     }
 
     .uc-card:hover {
@@ -328,17 +346,7 @@
       font-size: 34px;
       line-height: 1.05;
       color: var(--text);
-      margin: 0 0 10px 0;
-    }
-
-    .uc-card-price {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 11px;
-      line-height: 1.7;
-      color: var(--gold);
       margin: 0 0 14px 0;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
     }
 
     .uc-card-copy {
@@ -346,10 +354,11 @@
       font-size: 13px;
       line-height: 1.95;
       color: var(--muted);
+      margin: 0;
     }
 
     .uc-list {
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
@@ -450,14 +459,6 @@
       font-size: 14px;
       line-height: 2;
       color: var(--muted);
-    }
-
-    .uc-contact-note {
-      margin-top: 6px;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
-      line-height: 2;
-      color: var(--soft);
     }
 
     .uc-footer {
@@ -579,6 +580,10 @@
         margin: 0 auto 12px auto;
       }
 
+      .uc-btn-tertiary {
+        max-width: 100%;
+      }
+
       .uc-quote-text {
         line-height: 1.12;
       }
@@ -603,11 +608,12 @@
         </h1>
 
         <div class="uc-sub">
-          Discreet, on-the-ground support in Kraków for people who value time over involvement.
+          Private concierge and relocation support in Kraków for clients who value time, discretion and reliable execution.
         </div>
+
         <div class="uc-actions">
           <a href="mailto:info@urbanconcierge.pl?subject=Get%20support" class="uc-btn uc-btn-primary">Request support</a>
-          <a href="mailto:info@urbanconcierge.pl?subject=Send%20a%20request" class="uc-btn uc-btn-secondary">Make a request</a>
+          <a href="/relocation-krakow" class="uc-btn uc-btn-secondary">Explore relocation</a>
         </div>
 
         <div class="uc-premium-note">
@@ -622,9 +628,7 @@
       <div class="uc-band-title">Everything handled for you.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Urban Concierge is calm, discreet support<br>
-        for matters that require time,<br>
-        coordination and follow-through.
+        Urban Concierge offers calm, discreet support for matters that require time, coordination and follow-through — from ongoing monthly support to in-person assistance and relocation to Kraków.
       </div>
     </div>
   </section>
@@ -640,44 +644,52 @@
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">What I handle</h2>
+      <h2 class="uc-title">Services</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        I take over matters that require time, contacts, organization and attention to detail — from single requests to ongoing support.
+        Four clear ways to work together — depending on whether you need ongoing support, one focused day, in-person presence or relocation help in Kraków.
       </div>
 
       <div class="uc-grid">
         <div class="uc-card">
-          <div class="uc-card-title">Ongoing Support</div>
-          <div class="uc-card-price">2000 PLN / month</div>
-          <div class="uc-card-copy">Continuous support and direct contact — day-to-day matters handled with continuity.</div>
+          <div class="uc-card-title">Monthly Support</div>
+          <p class="uc-card-copy">
+            Ongoing support for clients who want one trusted person to handle recurring tasks, coordination and follow-ups.
+          </p>
+          <a href="/monthly-support" class="uc-btn uc-btn-tertiary">Learn more</a>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Single Request</div>
-          <div class="uc-card-price">400–600 PLN / request</div>
-          <div class="uc-card-copy">One specific matter handled fully on your behalf, without involving you in the details.</div>
+          <div class="uc-card-title">One-Day Support</div>
+          <p class="uc-card-copy">
+            Several matters handled within one day — for clients who want to offload a specific list of tasks at once.
+          </p>
+          <a href="/one-day-support" class="uc-btn uc-btn-tertiary">Learn more</a>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">On-Site Assistance</div>
-          <div class="uc-card-price">from 900 PLN</div>
-          <div class="uc-card-copy">Matters that require my presence and local execution — appointments, visits, coordination.</div>
+          <div class="uc-card-title">In-Person Assistance</div>
+          <p class="uc-card-copy">
+            On-site support in Kraków — appointments, pick-ups, meetings, presence and coordination whenever something needs to be handled in person.
+          </p>
+          <a href="/in-person-assistance" class="uc-btn uc-btn-tertiary">Learn more</a>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Private Relocation & Setup</div>
-          <div class="uc-card-price">custom</div>
-          <div class="uc-card-copy">End-to-end support with settling into Kraków — housing, services, doctors, schools and local setup.</div>
+          <div class="uc-card-title">Relocation to Kraków</div>
+          <p class="uc-card-copy">
+            Support for people moving to Kraków — from pre-arrival preparation to handling key matters after arrival.
+          </p>
+          <a href="/relocation-krakow" class="uc-btn uc-btn-tertiary">Learn more</a>
         </div>
       </div>
 
       <div class="uc-list">
-        communication on your behalf<br>
-        local coordination and organization<br>
-        city-based errands and tasks<br>
-        full follow-through from start to finish
+        recurring coordination and follow-ups<br>
+        one-day task handling and local errands<br>
+        on-site appointments, pick-ups and presence<br>
+        relocation support before and after arrival
       </div>
     </div>
   </section>
@@ -697,7 +709,7 @@
         <div class="uc-step">
           <div class="uc-step-no">Step 02</div>
           <div class="uc-step-title">Scope</div>
-          <div class="uc-step-copy">I confirm whether it can be handled and define the scope.</div>
+          <div class="uc-step-copy">I confirm the most suitable service and define the scope.</div>
         </div>
 
         <div class="uc-step">
@@ -709,7 +721,7 @@
         <div class="uc-step">
           <div class="uc-step-no">Step 04</div>
           <div class="uc-step-title">Confirmation</div>
-          <div class="uc-step-copy">You receive confirmation or a completed solution.</div>
+          <div class="uc-step-copy">You receive confirmation, updates or a completed solution.</div>
         </div>
       </div>
     </div>
@@ -766,10 +778,9 @@
         <div class="uc-rule"></div>
 
         <div class="uc-contact-copy">
-          Start with a single request or ongoing support.<br>
+          Start with a single request, one focused day, monthly support or relocation help in Kraków.<br>
           I work with a limited number of clients to ensure discretion and continuity.
         </div>
-        
         <div class="uc-actions" style="margin-top:34px;">
           <a href="mailto:info@urbanconcierge.pl?subject=Get%20support" class="uc-btn uc-btn-primary">Request support</a>
           <a href="mailto:info@urbanconcierge.pl?subject=Send%20a%20request" class="uc-btn uc-btn-secondary">Make a request</a>
@@ -783,6 +794,14 @@
     <div class="uc-footer-sub">Private concierge services | Kraków</div>
 
     <div class="uc-footer-links">
+      <a href="/monthly-support">Monthly Support</a>
+      <a href="/one-day-support">One-Day Support</a>
+      <a href="/in-person-assistance">In-Person Assistance</a>
+      <a href="/relocation-krakow">Relocation to Kraków</a>
       <a href="/expats-krakow/Regulamin%20UC%20eng.pdf" target="_blank" rel="noopener">Terms</a>
       <a href="/expats-krakow/polityka%20prywatności%20UC%20eng.pdf" target="_blank" rel="noopener">Privacy policy</a>
       <a href="mailto:info@urbanconcierge.pl">Contact</a>
+    </div>
+  </section>
+</body>
+</html>
