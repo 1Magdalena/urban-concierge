@@ -1,1 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One-Day Support | Urban Concierge</title>
+  <meta name="description" content="One-day concierge support in Kraków for clients who want several practical matters handled within one focused day." />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18108841323');
+  </script>
+
+  <style>
+    html, body {
+      background: #F5F1EB;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      color: #3A2F2A;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #F5F1EB;
+      --bg-soft: #F8F4EE;
+      --card: #F7F2EB;
+      --text: #3A2F2A;
+      --muted: #6E6056;
+      --soft: #8B7B70;
+      --line: #E7DDD2;
+      --line-strong: #DDCFBF;
+      --gold: #B8955A;
+      --gold-soft: #C2A46D;
+      --choco: #2B221F;
+      --choco-2: #3A2F2A;
+      --hover: #473934;
+      --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
+    }
+
+    .uc-topbar {
+      width: 100%;
+      height: 14px;
+      background: linear-gradient(90deg, #2B221F 0%, #3A2F2A 50%, #2B221F 100%);
+    }
+
+    .uc-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .uc-brandbar {
+      padding: 34px 0 0 0;
+      text-align: center;
+    }
+
+    .uc-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 31px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.25px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .uc-hero {
+      min-height: calc(100vh - 14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 34px 0 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uc-hero:before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 720px;
+      border: 1px solid rgba(184,149,90,0.10);
+      border-radius: 50%;
+      top: -250px;
+      right: -230px;
+      pointer-events: none;
+    }
+
+    .uc-hero:after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(58,47,42,0.06);
+      border-radius: 50%;
+      bottom: -150px;
+      left: -120px;
+      pointer-events: none;
+    }
+
+    .uc-hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .uc-kicker {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.8;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #9C8F84;
+      margin-bottom: 34px;
+    }
+
+    .uc-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 96px;
+      line-height: 0.96;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 28px 0;
+      letter-spacing: -1.2px;
+    }
+
+    .uc-sub {
+      max-width: 780px;
+      margin: 0 auto 22px auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 20px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .uc-premium-note {
+      max-width: 760px;
+      margin: 28px auto 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 2;
+      color: var(--soft);
+    }
+
+    .uc-actions {
+      margin-top: 52px;
+    }
+
+    .uc-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 18px 38px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      letter-spacing: 0.55px;
+      transition: all 0.24s ease;
+      margin: 0 8px 12px 8px;
+    }
+
+    .uc-btn-primary {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-btn-primary:hover {
+      background: var(--hover);
+      border-color: var(--hover);
+      transform: translateY(-1px);
+    }
+
+    .uc-btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #CCB8A2;
+    }
+
+    .uc-btn-secondary:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    .uc-band {
+      background:
+        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
+        radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
+        linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
+      color: #F5F1EB;
+      padding: 88px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uc-band-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 54px;
+      line-height: 1.06;
+      font-weight: 500;
+      margin: 0 0 16px 0;
+      color: #F5F1EB;
+    }
+
+    .uc-band-rule {
+      width: 86px;
+      height: 1px;
+      background: rgba(245,241,235,0.40);
+      margin: 0 auto 26px auto;
+    }
+
+    .uc-band-copy {
+      max-width: 720px;
+      margin: 0 auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 2;
+      color: rgba(245,241,235,0.84);
+    }
+
+    .uc-section {
+      padding: 145px 0;
+      position: relative;
+    }
+
+    .uc-section + .uc-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .uc-section-soft {
+      background: var(--bg-soft);
+    }
+
+    .uc-title {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 58px;
+      line-height: 1.03;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 14px 0;
+    }
+
+    .uc-rule {
+      width: 84px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 34px auto;
+    }
+
+    .uc-intro {
+      max-width: 760px;
+      margin: 0 auto 56px auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .uc-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .uc-card {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 42px 38px;
+      text-align: left;
+      transition: all 0.26s ease;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+      min-height: 100%;
+    }
+
+    .uc-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 38px;
+      width: 68px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-card:hover {
+      border-color: #D2BCA4;
+      transform: translateY(-3px);
+    }
+
+    .uc-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      line-height: 1.05;
+      color: var(--text);
+      margin: 10px 0 14px 0;
+    }
+
+    .uc-card-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .uc-list-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 48px 44px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .uc-list-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 44px;
+      width: 68px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-list-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      line-height: 1.05;
+      color: var(--text);
+      margin: 8px 0 18px 0;
+      text-align: center;
+    }
+
+    .uc-list-card-copy {
+      max-width: 720px;
+      margin: 0 auto 28px auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--muted);
+    }
+
+    .uc-feature-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .uc-feature-list li {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+      text-align: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .uc-feature-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .uc-example-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .uc-example {
+      background: #FBF8F3;
+      border: 1px solid var(--line);
+      padding: 32px 28px;
+      min-height: 100%;
+    }
+
+    .uc-example-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      line-height: 1.06;
+      color: var(--text);
+      margin: 0 0 12px 0;
+    }
+
+    .uc-example-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .uc-price-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .uc-price-card-single {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 44px 34px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .uc-price-card-single:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 34px;
+      width: 58px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-price-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      line-height: 1.05;
+      color: var(--text);
+      margin: 8px 0 14px 0;
+    }
+
+    .uc-price-from {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      line-height: 1.8;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .uc-price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      line-height: 1;
+      color: var(--text);
+      margin: 0 0 16px 0;
+    }
+
+    .uc-price-copy {
+      max-width: 620px;
+      margin: 0 auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--muted);
+    }
+
+    .uc-price-note {
+      max-width: 720px;
+      margin: 24px auto 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 2;
+      color: var(--soft);
+    }
+
+    .uc-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .uc-step {
+      text-align: left;
+      padding-top: 24px;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    .uc-step-no {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .uc-step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      line-height: 1.04;
+      color: var(--text);
+      margin: 0 0 10px 0;
+    }
+
+    .uc-step-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 1.95;
+      color: var(--muted);
+    }
+
+    .uc-simple-list {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 2.15;
+      color: var(--text);
+    }
+
+    .uc-contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .uc-contact-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 54px;
+      line-height: 1.06;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 16px 0;
+    }
+
+    .uc-contact-copy {
+      max-width: 680px;
+      margin: 0 auto 24px auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .uc-footer {
+      background:
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04), transparent 26%),
+        linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
+      padding: 58px 34px 62px 34px;
+      text-align: center;
+      border-top: 1px solid rgba(245,241,235,0.08);
+    }
+
+    .uc-footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: #F5F1EB;
+      margin-bottom: 6px;
+    }
+
+    .uc-footer-sub {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      color: #D9CEC4;
+      margin-bottom: 16px;
+    }
+
+    .uc-footer-links {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.9;
+      letter-spacing: 0.25px;
+    }
+
+    .uc-footer-links a {
+      color: #F5F1EB;
+      text-decoration: none;
+      margin: 0 10px;
+      opacity: 0.92;
+    }
+
+    .uc-footer-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1100px) {
+      .uc-grid-2,
+      .uc-example-grid,
+      .uc-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .uc-h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+
+      .uc-title,
+      .uc-band-title,
+      .uc-contact-main {
+        font-size: 46px;
+      }
+
+      .uc-grid-2,
+      .uc-example-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .uc-shell {
+        padding: 0 20px;
+      }
+
+      .uc-brand {
+        font-size: 28px;
+      }
+
+      .uc-hero {
+        min-height: auto;
+        padding: 30px 0 60px 0;
+      }
+
+      .uc-h1 {
+        font-size: 54px;
+        line-height: 1.02;
+      }
+
+      .uc-sub {
+        font-size: 18px;
+      }
+
+      .uc-title,
+      .uc-band-title,
+      .uc-contact-main {
+        font-size: 38px;
+      }
+
+      .uc-section {
+        padding: 95px 0;
+      }
+
+      .uc-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .uc-btn {
+        display: block;
+        max-width: 320px;
+        margin: 0 auto 12px auto;
+      }
+
+      .uc-card,
+      .uc-list-card,
+      .uc-example,
+      .uc-price-card-single {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .uc-card:before,
+      .uc-list-card:before,
+      .uc-price-card-single:before {
+        left: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="uc-topbar"></div>
+
+  <section class="uc-shell uc-brandbar">
+    <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+  </section>
+
+  <section class="uc-hero">
+    <div class="uc-shell">
+      <div class="uc-hero-inner">
+        <div class="uc-kicker">Focused one-day support • Kraków</div>
+
+        <h1 class="uc-h1">
+          Several matters.<br>
+          One focused day.<br>
+          Less to carry.
+        </h1>
+
+        <div class="uc-sub">
+          One-Day Support is for clients who want a specific list of practical matters handled within one dedicated day instead of spreading them over their own week.
+        </div>
+
+        <div class="uc-actions">
+          <a href="#contact" class="uc-btn uc-btn-primary">Request one-day support</a>
+          <a href="#examples" class="uc-btn uc-btn-secondary">See example situations</a>
+        </div>
+
+        <div class="uc-premium-note">
+          This is for moments when you do not need ongoing support — you need one concentrated block of execution that clears a practical list off your head.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-band">
+    <div class="uc-shell">
+      <div class="uc-band-title">One day. Real relief.</div>
+      <div class="uc-band-rule"></div>
+      <div class="uc-band-copy">
+        One-Day Support is designed for clients who have several practical matters to handle and would rather have them organized within one focused day than keep postponing them, splitting them up or losing more attention to them than they deserve.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">What this service is</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        One-Day Support is a concentrated concierge service built around one practical day of handling selected matters. Instead of one isolated task, it works best when you want several things dealt with efficiently in one block.
+      </div>
+
+      <div class="uc-grid-2">
+        <div class="uc-card">
+          <div class="uc-card-title">Focused execution</div>
+          <p class="uc-card-copy">
+            This service is not about long-term continuity. It is about taking a specific list of matters and dealing with them within one agreed day in a calm, organized way.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Practical relief</div>
+          <p class="uc-card-copy">
+            It works particularly well when what you need is not strategic planning, but a strong reduction of immediate practical burden.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">What this may include</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-list-card">
+        <div class="uc-list-card-title">Several matters, handled in one block.</div>
+        <div class="uc-list-card-copy">
+          The exact scope depends on the day, location and what needs to be completed. One-Day Support may include:
+        </div>
+
+        <ul class="uc-feature-list">
+          <li>city tasks and practical errands handled within one day</li>
+          <li>larger shopping or selected purchase-related support</li>
+          <li>selected special requests requiring coordination and execution</li>
+          <li>combining several separate matters into one focused support day</li>
+          <li>handling tasks that would otherwise keep returning to your list</li>
+          <li>practical support for getting a short-term backlog off your head</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="examples" class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Example situations</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        This service is most useful when one day of proper execution saves you many smaller interruptions, delays and unnecessary mental load.
+      </div>
+
+      <div class="uc-example-grid">
+        <div class="uc-example">
+          <div class="uc-example-title">You have a list, but no time</div>
+          <p class="uc-example-copy">
+            There are several practical matters that need doing, but not enough time, margin or energy in your week to keep moving them yourself.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">You want several errands done at once</div>
+          <p class="uc-example-copy">
+            Instead of fitting separate tasks into separate days, you want one concentrated block where multiple matters are handled efficiently.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">You are arriving in Kraków briefly</div>
+          <p class="uc-example-copy">
+            You only have limited time in the city and want several selected matters organized during that window instead of spending it on logistics.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">You need practical support, not a monthly arrangement</div>
+          <p class="uc-example-copy">
+            The issue is not continuity — it is simply that too many practical things need to be handled now, and you want them done properly.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">You want to clear a backlog</div>
+          <p class="uc-example-copy">
+            There are selected tasks that keep sitting in the background and taking up attention. One focused day is enough to remove a meaningful part of that pressure.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">You value efficiency over involvement</div>
+          <p class="uc-example-copy">
+            You do not need to be involved in every practical detail. You just want the list handled with clarity and discretion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">Pricing</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        One-Day Support is designed as a focused premium block of practical execution rather than a low-cost errand model.
+      </div>
+
+      <div class="uc-price-wrap">
+        <div class="uc-price-card-single">
+          <div class="uc-price-title">One-Day Support</div>
+          <div class="uc-price-from">starts from</div>
+          <div class="uc-price-amount">400–600 PLN</div>
+          <p class="uc-price-copy">
+            Final pricing depends on the number of matters involved, timing, level of coordination required and whether the scope remains realistic within one day.
+          </p>
+        </div>
+
+        <div class="uc-price-note">
+          The aim is not to stretch one small matter into a package. The aim is to make one practical day genuinely useful.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">How one-day support works</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-steps">
+        <div class="uc-step">
+          <div class="uc-step-no">Step 01</div>
+          <div class="uc-step-title">Request</div>
+          <div class="uc-step-copy">You send the list of matters you want handled and indicate the preferred timeframe.</div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Step 02</div>
+          <div class="uc-step-title">Assessment</div>
+          <div class="uc-step-copy">I confirm what can realistically be handled within one day and define the practical scope.</div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Step 03</div>
+          <div class="uc-step-title">Execution</div>
+          <div class="uc-step-copy">The agreed matters are handled within one focused day of support.</div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Step 04</div>
+          <div class="uc-step-title">Completion</div>
+          <div class="uc-step-copy">You receive confirmation of what has been completed and what, if anything, remains outside the day’s scope.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell" style="max-width: 920px;">
+      <h2 class="uc-title">Who this service is for</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-simple-list">
+        for people who want several selected matters handled without entering a monthly arrangement<br><br>
+        for clients who value short-term relief, clarity and efficient execution<br><br>
+        for people who need one focused day of support rather than ongoing concierge continuity<br><br>
+        for those who want to get a practical list off their head quickly and properly
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="uc-section">
+    <div class="uc-shell">
+      <div class="uc-contact-box">
+        <h2 class="uc-contact-main">Request one-day support</h2>
+        <div class="uc-rule"></div>
+
+        <div class="uc-contact-copy">
+          If you have a specific list of practical matters that would be best handled in one focused day, start with a message outlining the scope.
+        </div>
+
+        <div class="uc-actions" style="margin-top: 34px;">
+          <a href="mailto:info@urbanconcierge.pl?subject=One-Day%20Support" class="uc-btn uc-btn-primary">Request one-day support</a>
+          <a href="/expats-krakow/" class="uc-btn uc-btn-secondary">Back to homepage</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-footer">
+    <div class="uc-footer-brand">Urban Concierge</div>
+    <div class="uc-footer-sub">Private concierge services | Kraków</div>
+
+    <div class="uc-footer-links">
+      <a href="/expats-krakow/monthly-support/">Monthly Support</a>
+      <a href="/expats-krakow/one-day-support/">One-Day Support</a>
+      <a href="/expats-krakow/in-person-assistance/">In-Person Assistance</a>
+      <a href="/expats-krakow/relocation/">Relocation to Kraków</a>
+      <a href="/expats-krakow/Regulamin%20UC%20eng.pdf" target="_blank" rel="noopener">Terms</a>
+      <a href="/expats-krakow/polityka%20prywatności%20UC%20eng.pdf" target="_blank" rel="noopener">Privacy policy</a>
+      <a href="mailto:info@urbanconcierge.pl">Contact</a>
+    </div>
+  </section>
+</body>
+</html>
 
