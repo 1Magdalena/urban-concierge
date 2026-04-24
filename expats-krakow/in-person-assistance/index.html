@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>In-Person Assistance | Urban Concierge</title>
-  <meta name="description" content="In-person assistance in Kraków for clients who need trusted on-the-ground presence, coordination and support during appointments, meetings, pick-ups and important practical situations." />
+  <title>One-Day Support | Urban Concierge</title>
+  <meta name="description" content="One-day concierge support in Kraków for clients who want several practical matters handled within one focused day." />
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
@@ -68,10 +68,20 @@
 
     .uc-brandbar {
       padding: 34px 0 0 0;
-      text-align: center;
+    }
+
+    .uc-headerbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .uc-header-spacer {
+      min-height: 1px;
     }
 
     .uc-brand {
+      justify-self: center;
       font-family: 'Cormorant Garamond', serif;
       font-size: 31px;
       line-height: 1.1;
@@ -80,6 +90,54 @@
       letter-spacing: 0.25px;
       text-decoration: none;
       display: inline-block;
+    }
+
+    .uc-lang-switch {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      background: rgba(255,255,255,0.32);
+      border: 1px solid #D8C8B6;
+    }
+
+    .uc-lang-current,
+    .uc-lang-switch a {
+      display: inline-block;
+      min-width: 44px;
+      text-align: center;
+      padding: 8px 12px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .uc-lang-current {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-lang-switch a {
+      color: var(--text);
+      border: 1px solid transparent;
+      transition: all 0.22s ease;
+    }
+
+    .uc-lang-switch a:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+    }
+
+    .uc-lang-divider {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      color: #8B7B70;
+      line-height: 1;
     }
 
     .uc-hero {
@@ -145,7 +203,7 @@
     }
 
     .uc-sub {
-      max-width: 790px;
+      max-width: 780px;
       margin: 0 auto 22px auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 20px;
@@ -639,8 +697,21 @@
         padding: 0 20px;
       }
 
+      .uc-headerbar {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .uc-header-spacer {
+        display: none;
+      }
+
       .uc-brand {
         font-size: 28px;
+      }
+
+      .uc-lang-switch {
+        justify-self: center;
       }
 
       .uc-hero {
@@ -697,31 +768,39 @@
   <div class="uc-topbar"></div>
 
   <section class="uc-shell uc-brandbar">
-    <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+    <div class="uc-headerbar">
+      <div class="uc-header-spacer"></div>
+      <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+      <div class="uc-lang-switch">
+        <a href="/1-dzien-wsparcia/">PL</a>
+        <span class="uc-lang-divider">|</span>
+        <span class="uc-lang-current">ENG</span>
+      </div>
+    </div>
   </section>
 
   <section class="uc-hero">
     <div class="uc-shell">
       <div class="uc-hero-inner">
-        <div class="uc-kicker">On-the-ground presence • Kraków</div>
+        <div class="uc-kicker">Focused one-day support • Kraków</div>
 
         <h1 class="uc-h1">
-          When presence matters,<br>
-          someone trusted<br>
-          is already there.
+          Several matters.<br>
+          One focused day.<br>
+          Less to carry.
         </h1>
 
         <div class="uc-sub">
-          In-Person Assistance is for situations that require real presence, practical support and someone reliable on the ground — not just messages, calls or remote coordination.
+          One-Day Support is for clients who want a specific list of practical matters handled within one dedicated day instead of spreading them over their own week.
         </div>
 
         <div class="uc-actions">
-          <a href="#contact" class="uc-btn uc-btn-primary">Request in-person assistance</a>
+          <a href="#contact" class="uc-btn uc-btn-primary">Request one-day support</a>
           <a href="#examples" class="uc-btn uc-btn-secondary">See example situations</a>
         </div>
 
         <div class="uc-premium-note">
-          This service is about trusted physical presence in Kraków — when something important needs to be attended, accompanied, received or handled in person.
+          This is for moments when you do not need ongoing support — you need one concentrated block of execution that clears a practical list off your head.
         </div>
       </div>
     </div>
@@ -729,10 +808,10 @@
 
   <section class="uc-band">
     <div class="uc-shell">
-      <div class="uc-band-title">Not everything can be done remotely.</div>
+      <div class="uc-band-title">One day. Real relief.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Some matters need a real person there: showing up, accompanying someone, overseeing a situation, receiving something important or making sure a practical matter is actually handled on site.
+        One-Day Support is designed for clients who have several practical matters to handle and would rather have them organized within one focused day than keep postponing them, splitting them up or losing more attention to them than they deserve.
       </div>
     </div>
   </section>
@@ -743,45 +822,45 @@
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        In-Person Assistance is a premium support service for clients who need trusted on-the-ground presence in Kraków. It is designed for situations where remote help is not enough and physical attendance, coordination or calm supervision matters.
+        One-Day Support is a concentrated concierge service built around one practical day of handling selected matters. Instead of one isolated task, it works best when you want several things dealt with efficiently in one block.
       </div>
 
       <div class="uc-grid-2">
         <div class="uc-card">
-          <div class="uc-card-title">Physical presence</div>
+          <div class="uc-card-title">Focused execution</div>
           <p class="uc-card-copy">
-            This service is about actually being there — attending, accompanying, receiving, supporting or helping something move forward in person.
+            This service is not about long-term continuity. It is about taking a specific list of matters and dealing with them within one agreed day in a calm, organized way.
           </p>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Calm support on the ground</div>
+          <div class="uc-card-title">Practical relief</div>
           <p class="uc-card-copy">
-            It is especially valuable when a matter feels too important, too personal or too impractical to leave to calls, messages and remote arrangements alone.
+            It works particularly well when what you need is not strategic planning, but a strong reduction of immediate practical burden.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft">
+    <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">What this may include</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-list-card">
-        <div class="uc-list-card-title">Trusted presence where it matters.</div>
+        <div class="uc-list-card-title">Several matters, handled in one block.</div>
         <div class="uc-list-card-copy">
-          The exact scope depends on the situation, timing and level of involvement needed. In-Person Assistance may include:
+          The exact scope depends on the day, location and what needs to be completed. One-Day Support may include:
         </div>
 
         <ul class="uc-feature-list">
-          <li>on-site coordination and practical presence in Kraków</li>
-          <li>pick-ups and selected handovers</li>
-          <li>assistance during appointments or meetings</li>
-          <li>support when a parent, mother or loved one needs practical help on the ground</li>
-          <li>being there when something important should not be left unattended</li>
-          <li>calm local support in situations requiring trust, not just logistics</li>
+          <li>city tasks and practical errands handled within one day</li>
+          <li>larger shopping or selected purchase-related support</li>
+          <li>selected special requests requiring coordination and execution</li>
+          <li>combining several separate matters into one focused support day</li>
+          <li>handling tasks that would otherwise keep returning to your list</li>
+          <li>practical support for getting a short-term backlog off your head</li>
         </ul>
       </div>
     </div>
@@ -793,49 +872,49 @@
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        This service is most useful when someone needs to show up, stay present, support a situation calmly or make sure something is properly handled in person.
+        This service is most useful when one day of proper execution saves you many smaller interruptions, delays and unnecessary mental load.
       </div>
 
       <div class="uc-example-grid">
         <div class="uc-example">
-          <div class="uc-example-title">A parent or loved one needs support</div>
+          <div class="uc-example-title">You have a list, but no time</div>
           <p class="uc-example-copy">
-            You cannot be physically present, but you want someone reliable there to accompany, support or help manage a practical situation in Kraków.
+            There are several practical matters that need doing, but not enough time, margin or energy in your week to keep moving them yourself.
           </p>
         </div>
 
         <div class="uc-example">
-          <div class="uc-example-title">An appointment matters</div>
+          <div class="uc-example-title">You want several errands done at once</div>
           <p class="uc-example-copy">
-            There is a meeting, visit or important situation where being present, helping with logistics or simply not leaving the person alone makes a real difference.
+            Instead of fitting separate tasks into separate days, you want one concentrated block where multiple matters are handled efficiently.
           </p>
         </div>
 
         <div class="uc-example">
-          <div class="uc-example-title">Something important needs receiving or overseeing</div>
+          <div class="uc-example-title">You are arriving in Kraków briefly</div>
           <p class="uc-example-copy">
-            A practical matter requires someone on the ground to be there, receive, coordinate or make sure the situation is actually handled properly.
+            You only have limited time in the city and want several selected matters organized during that window instead of spending it on logistics.
           </p>
         </div>
 
         <div class="uc-example">
-          <div class="uc-example-title">You live abroad</div>
+          <div class="uc-example-title">You need practical support, not a monthly arrangement</div>
           <p class="uc-example-copy">
-            You need trusted presence in Kraków for something that cannot realistically be managed through distance, calls or general remote support.
+            The issue is not continuity — it is simply that too many practical things need to be handled now, and you want them done properly.
           </p>
         </div>
 
         <div class="uc-example">
-          <div class="uc-example-title">A person needs calm support, not just instructions</div>
+          <div class="uc-example-title">You want to clear a backlog</div>
           <p class="uc-example-copy">
-            Sometimes what matters is not only logistics, but knowing someone dependable is physically there to help a situation feel handled.
+            There are selected tasks that keep sitting in the background and taking up attention. One focused day is enough to remove a meaningful part of that pressure.
           </p>
         </div>
 
         <div class="uc-example">
-          <div class="uc-example-title">The issue is not complexity, but presence</div>
+          <div class="uc-example-title">You value efficiency over involvement</div>
           <p class="uc-example-copy">
-            The matter itself may be simple, but it still requires someone to show up. That is exactly where this service becomes valuable.
+            You do not need to be involved in every practical detail. You just want the list handled with clarity and discretion.
           </p>
         </div>
       </div>
@@ -848,21 +927,21 @@
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        In-Person Assistance is a premium on-the-ground service and is priced accordingly, especially where trust, time and presence are part of the value.
+        One-Day Support is designed as a focused premium block of practical execution rather than a low-cost errand model.
       </div>
 
       <div class="uc-price-wrap">
         <div class="uc-price-card-single">
-          <div class="uc-price-title">In-Person Assistance</div>
+          <div class="uc-price-title">One-Day Support</div>
           <div class="uc-price-from">starts from</div>
-          <div class="uc-price-amount">900 PLN</div>
+          <div class="uc-price-amount">400–600 PLN</div>
           <p class="uc-price-copy">
-            Final pricing depends on the type of assistance, timing, duration, location and the level of presence or coordination required.
+            Final pricing depends on the number of matters involved, timing, level of coordination required and whether the scope remains realistic within one day.
           </p>
         </div>
 
         <div class="uc-price-note">
-          This service is not about standing by as a courier substitute. It is about trusted, real-world presence when the situation calls for it.
+          The aim is not to stretch one small matter into a package. The aim is to make one practical day genuinely useful.
         </div>
       </div>
     </div>
@@ -870,32 +949,32 @@
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">How in-person assistance works</h2>
+      <h2 class="uc-title">How one-day support works</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-steps">
         <div class="uc-step">
           <div class="uc-step-no">Step 01</div>
           <div class="uc-step-title">Request</div>
-          <div class="uc-step-copy">You explain what kind of presence or support is needed, where and when it should happen.</div>
+          <div class="uc-step-copy">You send the list of matters you want handled and indicate the preferred timeframe.</div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Step 02</div>
           <div class="uc-step-title">Assessment</div>
-          <div class="uc-step-copy">I confirm whether the situation is suitable for In-Person Assistance and define the practical scope.</div>
+          <div class="uc-step-copy">I confirm what can realistically be handled within one day and define the practical scope.</div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Step 03</div>
-          <div class="uc-step-title">Presence</div>
-          <div class="uc-step-copy">The agreed situation is handled on the ground with the level of support and presence required.</div>
+          <div class="uc-step-title">Execution</div>
+          <div class="uc-step-copy">The agreed matters are handled within one focused day of support.</div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Step 04</div>
-          <div class="uc-step-title">Follow-up</div>
-          <div class="uc-step-copy">You receive confirmation of what took place and any practical next steps that may matter afterwards.</div>
+          <div class="uc-step-title">Completion</div>
+          <div class="uc-step-copy">You receive confirmation of what has been completed and what, if anything, remains outside the day’s scope.</div>
         </div>
       </div>
     </div>
@@ -907,10 +986,10 @@
       <div class="uc-rule"></div>
 
       <div class="uc-simple-list">
-        for people who need trusted presence in Kraków rather than only remote coordination<br><br>
-        for clients who want someone reliable to be there when something important should not be handled alone<br><br>
-        for those supporting a parent, family member or loved one from a distance<br><br>
-        for people who value discretion, trust and practical calm when physical presence matters
+        for people who want several selected matters handled without entering a monthly arrangement<br><br>
+        for clients who value short-term relief, clarity and efficient execution<br><br>
+        for people who need one focused day of support rather than ongoing concierge continuity<br><br>
+        for those who want to get a practical list off their head quickly and properly
       </div>
     </div>
   </section>
@@ -918,15 +997,15 @@
   <section id="contact" class="uc-section">
     <div class="uc-shell">
       <div class="uc-contact-box">
-        <h2 class="uc-contact-main">Request in-person assistance</h2>
+        <h2 class="uc-contact-main">Request one-day support</h2>
         <div class="uc-rule"></div>
 
         <div class="uc-contact-copy">
-          If you need trusted on-the-ground support in Kraków, start with a message outlining the situation, timing and type of presence required.
+          If you have a specific list of practical matters that would be best handled in one focused day, start with a message outlining the scope.
         </div>
 
         <div class="uc-actions" style="margin-top: 34px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=In-Person%20Assistance" class="uc-btn uc-btn-primary">Request in-person assistance</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=One-Day%20Support" class="uc-btn uc-btn-primary">Request one-day support</a>
           <a href="/expats-krakow/" class="uc-btn uc-btn-secondary">Back to homepage</a>
         </div>
       </div>
@@ -949,5 +1028,3 @@
   </section>
 </body>
 </html>
-
-
