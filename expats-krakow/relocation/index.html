@@ -371,13 +371,11 @@
 
     .uc-feature-list {
       list-style: none;
-      margin: 0;
       padding: 0;
       display: grid;
       gap: 16px;
       max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
     }
 
     .uc-feature-list li {
@@ -424,6 +422,78 @@
       line-height: 1.95;
       color: var(--muted);
       margin: 0;
+    }
+
+    .uc-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .uc-price-card {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 38px 30px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      min-height: 100%;
+    }
+
+    .uc-price-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 58px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-price-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      line-height: 1.06;
+      color: var(--text);
+      margin: 8px 0 14px 0;
+    }
+
+    .uc-price-from {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      line-height: 1.8;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .uc-price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      line-height: 1;
+      color: var(--text);
+      margin: 0 0 14px 0;
+    }
+
+    .uc-price-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .uc-price-note {
+      max-width: 760px;
+      margin: 26px auto 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 2;
+      color: var(--soft);
     }
 
     .uc-steps {
@@ -501,7 +571,7 @@
     }
 
     .uc-contact-copy {
-      max-width: 640px;
+      max-width: 680px;
       margin: 0 auto 24px auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
@@ -554,7 +624,8 @@
     @media (max-width: 1100px) {
       .uc-grid-2,
       .uc-example-grid,
-      .uc-steps {
+      .uc-steps,
+      .uc-pricing-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
@@ -572,7 +643,8 @@
       }
 
       .uc-grid-2,
-      .uc-example-grid {
+      .uc-example-grid,
+      .uc-pricing-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -622,13 +694,15 @@
 
       .uc-card,
       .uc-list-card,
-      .uc-example {
+      .uc-example,
+      .uc-price-card {
         padding-left: 24px;
         padding-right: 24px;
       }
 
       .uc-card:before,
-      .uc-list-card:before {
+      .uc-list-card:before,
+      .uc-price-card:before {
         left: 24px;
       }
     }
@@ -784,7 +858,51 @@
     </div>
   </section>
 
-    <section class="uc-section uc-section-soft">
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">Typical levels of support</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        Relocation support is tailored individually, but these starting scopes give a practical idea of the level of support involved.
+      </div>
+
+      <div class="uc-pricing-grid">
+        <div class="uc-price-card">
+          <div class="uc-price-title">Remote Preparation</div>
+          <div class="uc-price-from">starts from</div>
+          <div class="uc-price-amount">900 PLN</div>
+          <p class="uc-price-copy">
+            For clients who need focused pre-arrival planning, selected coordination and practical setup support before the move.
+          </p>
+        </div>
+
+        <div class="uc-price-card">
+          <div class="uc-price-title">Arrival & Setup</div>
+          <div class="uc-price-from">starts from</div>
+          <div class="uc-price-amount">1,500 PLN</div>
+          <p class="uc-price-copy">
+            For clients who need more active on-the-ground coordination around arrival, apartment readiness and settling-in support.
+          </p>
+        </div>
+
+        <div class="uc-price-card">
+          <div class="uc-price-title">Full Relocation Support</div>
+          <div class="uc-price-from">starts from</div>
+          <div class="uc-price-amount">2,500 PLN</div>
+          <p class="uc-price-copy">
+            For broader relocation scopes involving preparation, local coordination, multiple practical matters and a more hands-on level of support.
+          </p>
+        </div>
+      </div>
+
+      <div class="uc-price-note">
+        Final pricing depends on timing, complexity, number of matters involved and the level of on-the-ground support required.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
     <div class="uc-shell">
       <h2 class="uc-title">Real estate partner</h2>
       <div class="uc-rule"></div>
@@ -802,10 +920,12 @@
       <div class="uc-note">
         The exact property-related scope depends on the situation and may be arranged as part of a broader relocation service.
       </div>
+
+      <!-- add partner link here later -->
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">How relocation works</h2>
       <div class="uc-rule"></div>
@@ -838,7 +958,7 @@
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft">
+  <section class="uc-section">
     <div class="uc-shell" style="max-width: 920px;">
       <h2 class="uc-title">Who this service is for</h2>
       <div class="uc-rule"></div>
@@ -852,7 +972,7 @@
     </div>
   </section>
 
-  <section id="contact" class="uc-section">
+  <section id="contact" class="uc-section uc-section-soft">
     <div class="uc-shell">
       <div class="uc-contact-box">
         <h2 class="uc-contact-main">Request relocation support</h2>
@@ -886,3 +1006,4 @@
   </section>
 </body>
 </html>
+
