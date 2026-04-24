@@ -35,7 +35,7 @@
     :root {
       --bg: #F5F1EB;
       --bg-soft: #F8F4EE;
-      --bg-card: #F7F2EB;
+      --card: #F7F2EB;
       --text: #3A2F2A;
       --muted: #6E6056;
       --soft: #8B7B70;
@@ -43,12 +43,19 @@
       --line-strong: #DDCFBF;
       --gold: #B8955A;
       --gold-soft: #C2A46D;
-      --gold-pale: #E8DBC8;
       --choco: #2B221F;
       --choco-2: #3A2F2A;
       --footer: #1E1714;
       --hover: #473934;
-      --shadow: 0 20px 55px rgba(58,47,42,0.05);
+      --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      overflow-x: hidden;
     }
 
     .uc-topbar {
@@ -61,7 +68,6 @@
       max-width: 1180px;
       margin: 0 auto;
       padding: 0 40px;
-      box-sizing: border-box;
     }
 
     .uc-brandbar {
@@ -172,7 +178,6 @@
       letter-spacing: 0.55px;
       transition: all 0.24s ease;
       margin: 0 8px 12px 8px;
-      box-sizing: border-box;
     }
 
     .uc-btn-primary {
@@ -249,7 +254,7 @@
     }
 
     .uc-band-copy {
-      max-width: 660px;
+      max-width: 620px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
@@ -258,7 +263,7 @@
     }
 
     .uc-quote {
-      padding: 170px 36px;
+      padding: 180px 36px;
       text-align: center;
       background: var(--bg);
     }
@@ -275,12 +280,16 @@
     }
 
     .uc-section {
-      padding: 140px 0;
+      padding: 145px 0;
       position: relative;
     }
 
     .uc-section + .uc-section {
       border-top: 1px solid var(--line);
+    }
+
+    .uc-section-soft {
+      background: var(--bg-soft);
     }
 
     .uc-title {
@@ -301,8 +310,8 @@
     }
 
     .uc-intro {
-      max-width: 720px;
-      margin: 0 auto 54px auto;
+      max-width: 710px;
+      margin: 0 auto 56px auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
@@ -315,7 +324,7 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px;
       max-width: 980px;
-      margin: 0 auto 34px auto;
+      margin: 0 auto;
     }
 
     .uc-card {
@@ -326,10 +335,9 @@
       transition: all 0.26s ease;
       display: flex;
       flex-direction: column;
-      min-height: 280px;
-      box-sizing: border-box;
+      min-height: 270px;
       position: relative;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
     }
 
     .uc-card:before {
@@ -337,7 +345,7 @@
       position: absolute;
       top: 0;
       left: 38px;
-      width: 70px;
+      width: 68px;
       height: 2px;
       background: var(--gold);
     }
@@ -352,7 +360,7 @@
       font-size: 36px;
       line-height: 1.05;
       color: var(--text);
-      margin: 8px 0 14px 0;
+      margin: 10px 0 14px 0;
     }
 
     .uc-card-copy {
@@ -364,40 +372,28 @@
       max-width: 92%;
     }
 
-    .uc-service-points {
-      max-width: 980px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px 22px;
-    }
-
-    .uc-service-point {
-      background: #FBF8F3;
-      border: 1px solid var(--line);
-      padding: 18px 20px;
+    .uc-services-note {
+      max-width: 700px;
+      margin: 34px auto 0 auto;
+      text-align: center;
       font-family: 'Libre Baskerville', serif;
       font-size: 12px;
-      line-height: 1.8;
-      color: var(--text);
-      text-align: center;
+      line-height: 2;
+      color: var(--soft);
     }
 
     .uc-steps {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 22px;
-      max-width: 1020px;
+      gap: 28px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
     .uc-step {
-      background: #FBF8F3;
-      border: 1px solid var(--line);
-      padding: 28px 24px 26px 24px;
       text-align: left;
-      box-sizing: border-box;
-      min-height: 200px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line-strong);
     }
 
     .uc-step-no {
@@ -407,15 +403,15 @@
       letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .uc-step-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 31px;
+      font-size: 30px;
       line-height: 1.04;
       color: var(--text);
-      margin: 0 0 12px 0;
+      margin: 0 0 10px 0;
     }
 
     .uc-step-copy {
@@ -427,26 +423,26 @@
 
     .uc-why-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      max-width: 860px;
+      grid-template-columns: 260px 260px;
+      justify-content: center;
+      gap: 40px 80px;
+      max-width: 700px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .uc-why-item {
-      background: #FBF8F3;
-      border: 1px solid var(--line);
-      padding: 34px 30px;
+      border-top: 1px solid var(--line-strong);
+      padding: 28px 0 0 0;
       text-align: center;
-      box-sizing: border-box;
     }
 
     .uc-why-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
+      font-size: 26px;
       line-height: 1.06;
       color: var(--text);
-      margin: 0 0 12px 0;
+      margin: 0 0 10px 0;
     }
 
     .uc-why-copy {
@@ -454,51 +450,22 @@
       font-size: 13px;
       line-height: 1.95;
       color: var(--muted);
-      max-width: 280px;
-      margin: 0 auto;
     }
 
-    .uc-fit-box {
-      max-width: 760px;
+    .uc-list {
+      max-width: 720px;
       margin: 0 auto;
-      background: #FBF8F3;
-      border: 1px solid var(--line);
-      padding: 54px 46px;
       text-align: center;
-      box-sizing: border-box;
-    }
-
-    .uc-fit-lead {
       font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--soft);
-      margin-bottom: 24px;
-    }
-
-    .uc-fit-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 14px;
-    }
-
-    .uc-fit-list li {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 16px;
-      line-height: 1.95;
+      font-size: 15px;
+      line-height: 2.15;
       color: var(--text);
     }
 
     .uc-contact-box {
-      max-width: 760px;
+      max-width: 720px;
       margin: 0 auto;
       text-align: center;
-      background: #FBF8F3;
-      border: 1px solid var(--line);
-      padding: 56px 42px;
-      box-sizing: border-box;
     }
 
     .uc-contact-main {
@@ -565,12 +532,16 @@
       .uc-steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .uc-why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 760px;
+        gap: 32px 40px;
+      }
     }
 
     @media (max-width: 980px) {
-      .uc-grid,
-      .uc-service-points,
-      .uc-why-grid {
+      .uc-grid {
         grid-template-columns: 1fr;
       }
 
@@ -617,16 +588,15 @@
         font-size: 38px;
       }
 
-      .uc-quote {
-        padding: 110px 20px;
-      }
-
+      .uc-quote,
       .uc-section {
-        padding: 90px 0;
+        padding: 95px 0;
       }
 
-      .uc-steps {
+      .uc-steps,
+      .uc-why-grid {
         grid-template-columns: 1fr;
+        max-width: 360px;
       }
 
       .uc-btn {
@@ -638,24 +608,20 @@
       .uc-btn-card {
         display: inline-block;
         max-width: none;
-        margin: 20px 0 0 0;
+        margin: 22px 0 0 0;
       }
 
-      .uc-card,
-      .uc-fit-box,
-      .uc-contact-box,
-      .uc-step,
-      .uc-why-item {
-        padding-left: 24px;
-        padding-right: 24px;
+      .uc-card {
+        min-height: auto;
+        padding: 36px 26px;
+      }
+
+      .uc-card:before {
+        left: 26px;
       }
 
       .uc-card-copy {
         max-width: 100%;
-      }
-
-      .uc-fit-list li {
-        font-size: 15px;
       }
 
       .uc-quote-text {
@@ -677,8 +643,7 @@
         <div class="uc-kicker">Private concierge • Kraków</div>
 
         <h1 class="uc-h1">
-          Hand over everything<br>
-          that takes your time.<br>
+          Hand over everything that takes your time.<br>
           Get your time back.
         </h1>
 
@@ -760,16 +725,13 @@
         </div>
       </div>
 
-      <div class="uc-service-points">
-        <div class="uc-service-point">Recurring coordination and follow-ups</div>
-        <div class="uc-service-point">One-day task handling and local errands</div>
-        <div class="uc-service-point">On-site appointments, pick-ups and presence</div>
-        <div class="uc-service-point">Relocation support before and after arrival</div>
+      <div class="uc-services-note">
+        Each service is tailored to the scope, timing and level of involvement required.
       </div>
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">How it works</h2>
       <div class="uc-rule"></div>
@@ -831,19 +793,17 @@
     </div>
   </section>
 
-  <section class="uc-section">
-    <div class="uc-shell" style="max-width: 920px;">
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell" style="max-width:920px;">
       <h2 class="uc-title">Who this service is for</h2>
       <div class="uc-rule"></div>
 
-      <div class="uc-fit-box">
-        <div class="uc-fit-lead">For people who:</div>
-        <ul class="uc-fit-list">
-          <li>prefer to delegate rather than handle details</li>
-          <li>value calm, order and reliable execution</li>
-          <li>have little time and many responsibilities</li>
-          <li>want matters handled without being involved</li>
-        </ul>
+      <div class="uc-list">
+        For people who:<br><br>
+        prefer to delegate rather than handle details<br>
+        value calm, order and reliable execution<br>
+        have little time and many responsibilities<br>
+        want matters handled without being involved
       </div>
     </div>
   </section>
@@ -859,7 +819,7 @@
           I work with a limited number of clients to ensure discretion and continuity.
         </div>
 
-        <div class="uc-actions" style="margin-top: 34px;">
+        <div class="uc-actions" style="margin-top:34px;">
           <a href="mailto:info@urbanconcierge.pl?subject=Get%20support" class="uc-btn uc-btn-primary">Request support</a>
           <a href="mailto:info@urbanconcierge.pl?subject=Send%20a%20request" class="uc-btn uc-btn-secondary">Make a request</a>
         </div>
