@@ -369,6 +369,7 @@
 
     .uc-grid-2,
     .uc-grid-4,
+    .uc-pricing-grid,
     .uc-steps {
       display: grid;
       gap: 24px;
@@ -384,9 +385,14 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
+    .uc-pricing-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .uc-card,
     .uc-step,
-    .uc-callout {
+    .uc-callout,
+    .uc-price-card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
       padding: 34px 32px;
@@ -395,7 +401,8 @@
     }
 
     .uc-card:before,
-    .uc-callout:before {
+    .uc-callout:before,
+    .uc-price-card:before {
       content: "";
       position: absolute;
       top: 0;
@@ -407,7 +414,8 @@
 
     .uc-card-title,
     .uc-step-title,
-    .uc-callout-title {
+    .uc-callout-title,
+    .uc-list-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 34px;
       line-height: 1.06;
@@ -515,6 +523,32 @@
       text-transform: uppercase;
     }
 
+    .uc-price-label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .uc-price-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      line-height: 1;
+      color: var(--text);
+      margin: 0 0 12px 0;
+    }
+
+    .uc-price-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 0;
+    }
+
     .uc-list-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -542,10 +576,6 @@
     }
 
     .uc-list-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      line-height: 1.06;
-      color: var(--text);
       margin: 10px 0 16px 0;
     }
 
@@ -668,7 +698,8 @@
 
       .uc-grid-2,
       .uc-list-grid,
-      .uc-dark-block {
+      .uc-dark-block,
+      .uc-pricing-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -760,13 +791,15 @@
 
       .uc-card,
       .uc-list-box,
-      .uc-dark-block {
+      .uc-dark-block,
+      .uc-price-card {
         padding: 32px 24px;
       }
 
       .uc-card:before,
       .uc-list-box:before,
-      .uc-dark-block:before {
+      .uc-dark-block:before,
+      .uc-price-card:before {
         left: 24px;
       }
     }
@@ -803,8 +836,8 @@
         </div>
 
         <div class="uc-actions">
-          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Wyślij listę spraw</a>
-          <a href="#jak-to-dziala" class="uc-btn uc-btn-secondary">Zobacz jak to działa</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia%20-%20termin%20i%20cena" class="uc-btn uc-btn-primary">Sprawdź termin i cenę</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-secondary">Wyślij listę spraw</a>
         </div>
       </div>
     </div>
@@ -816,6 +849,47 @@
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
         Kupujesz przygotowanie, potwierdzony zakres i priorytet dla wybranych spraw w ustalonym dniu. To spokojna, prywatna forma wsparcia dla osób, które chcą odciążyć się realnie — bez zaczynania od stałej współpracy.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">Cena i forma wsparcia</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        Dzień Wsparcia nie jest rozliczaniem każdej minuty osobno. To uporządkowana usługa z potwierdzonym zakresem i priorytetem dla wybranych spraw w ustalonym dniu.
+      </div>
+
+      <div class="uc-pricing-grid">
+        <div class="uc-price-card">
+          <div class="uc-price-label">Zdalnie w całej Polsce</div>
+          <div class="uc-price-value">od 490 zł</div>
+          <p class="uc-price-copy">
+            dla wybranej listy spraw realizowanych zdalnie w formule Dnia Wsparcia
+          </p>
+        </div>
+
+        <div class="uc-price-card">
+          <div class="uc-price-label">Kraków i okolice</div>
+          <div class="uc-price-value">od 690 zł</div>
+          <p class="uc-price-copy">
+            gdy zakres obejmuje działania na miejscu i wymaga obecności lokalnej
+          </p>
+        </div>
+
+        <div class="uc-price-card">
+          <div class="uc-price-label">Poza Krakowem</div>
+          <div class="uc-price-value">od 900 zł</div>
+          <p class="uc-price-copy">
+            wycena indywidualna dla wsparcia lokalnego poza Krakowem i okolicami
+          </p>
+        </div>
+      </div>
+
+      <div class="uc-note">
+        Ostateczna cena zależy od zakresu, liczby spraw, lokalizacji i konieczności działań na miejscu. Zakres jest zawsze potwierdzany przed startem.
       </div>
     </div>
   </section>
@@ -870,7 +944,7 @@
           <div class="uc-dark-copy">
             Dzień Wsparcia jest wygodnym wejściem do współpracy dla klientów, którzy chcą sprawdzić styl Urban Concierge bez wiązania się abonamentem. To rozwiązanie dla intensywnych tygodni, nagromadzonych spraw i momentów, w których potrzebujesz realnego odciążenia, a nie kolejnej listy rzeczy do zrobienia samodzielnie.
           </div>
-          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia" class="uc-btn-card uc-btn-card-light">Zapytaj o termin</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia%20-%20termin%20i%20cena" class="uc-btn-card uc-btn-card-light">Zapytaj o termin</a>
         </div>
 
         <div>
@@ -1011,11 +1085,11 @@
         <div class="uc-rule"></div>
 
         <div class="uc-contact-copy">
-          Napisz, czego potrzebujesz, a potwierdzimy, czy to dobry zakres dla Dnia Wsparcia. Jeśli tak — ustalimy termin i przejmiemy wybrane sprawy w uporządkowany sposób.
+          Napisz, czego potrzebujesz, a potwierdzimy, czy to dobry zakres dla Dnia Wsparcia oraz jaka będzie właściwa cena. Jeśli tak — ustalimy termin i przejmiemy wybrane sprawy w uporządkowany sposób.
         </div>
 
         <div class="uc-actions" style="margin-top: 30px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Wyślij zapytanie</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia%20-%20termin%20i%20cena" class="uc-btn uc-btn-primary">Sprawdź termin i cenę</a>
           <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-secondary">Wyślij listę spraw</a>
         </div>
       </div>
@@ -1038,4 +1112,3 @@
   </section>
 </body>
 </html>
-
