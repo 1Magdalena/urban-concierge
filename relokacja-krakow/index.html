@@ -4,22 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Relokacja do Krakowa | Urban Concierge</title>
-  <meta name="description" content="Relokacja do Krakowa bez chaosu. Premium wsparcie przed przyjazdem i po nim: przygotowanie mieszkania, lokalna koordynacja, internet, terminy i pomoc w osadzaniu się na miejscu." />
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Premium wsparcie przy relokacji do Krakowa dla ekspatów, klientów międzynarodowych, par i rodzin. Przygotowanie mieszkania, lokalna koordynacja i wsparcie po przyjeździe."
+  />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18108841323');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "AW-18108841323");
   </script>
 
   <style>
-    html, body {
-      background: #F5F1EB;
+    html,
+    body {
+      background: #f5f1eb;
       margin: 0;
       padding: 0;
       box-shadow: none;
@@ -28,7 +37,7 @@
     }
 
     body {
-      color: #3A2F2A;
+      color: #3a2f2a;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -38,27 +47,26 @@
     }
 
     :root {
-      --bg: #F5F1EB;
-      --bg-soft: #F8F4EE;
-      --card: #F7F2EB;
-      --text: #3A2F2A;
-      --muted: #5F534B;
-      --soft: #7B6C61;
-      --line: #E7DDD2;
-      --line-strong: #DDCFBF;
-      --gold: #B8955A;
-      --gold-soft: #C2A46D;
-      --choco: #2B221F;
-      --choco-2: #3A2F2A;
+      --bg: #f5f1eb;
+      --bg-soft: #f8f4ee;
+      --card: #f7f2eb;
+      --text: #3a2f2a;
+      --muted: #5f534b;
+      --soft: #7b6c61;
+      --line: #e7ddd2;
+      --line-strong: #ddcfbf;
+      --gold: #b8955a;
+      --gold-soft: #c2a46d;
+      --choco: #2b221f;
+      --choco-2: #3a2f2a;
       --hover: #473934;
-      --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
-      --shadow-strong: 0 20px 54px rgba(43,34,31,0.10);
+      --shadow-soft: 0 16px 40px rgba(58, 47, 42, 0.04);
     }
 
     .uc-topbar {
       width: 100%;
       height: 14px;
-      background: linear-gradient(90deg, #2B221F 0%, #3A2F2A 50%, #2B221F 100%);
+      background: linear-gradient(90deg, #2b221f 0%, #3a2f2a 50%, #2b221f 100%);
     }
 
     .uc-shell {
@@ -83,7 +91,7 @@
 
     .uc-brand {
       justify-self: center;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 31px;
       line-height: 1.1;
       font-weight: 600;
@@ -99,8 +107,8 @@
       align-items: center;
       gap: 8px;
       padding: 6px;
-      background: rgba(255,255,255,0.32);
-      border: 1px solid #D8C8B6;
+      background: rgba(255, 255, 255, 0.32);
+      border: 1px solid #d8c8b6;
     }
 
     .uc-lang-current,
@@ -109,7 +117,7 @@
       min-width: 44px;
       text-align: center;
       padding: 8px 12px;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 10px;
       line-height: 1.4;
       letter-spacing: 1.2px;
@@ -119,7 +127,7 @@
 
     .uc-lang-current {
       background: var(--choco-2);
-      color: #FFFFFF;
+      color: #ffffff;
       border: 1px solid var(--choco-2);
     }
 
@@ -130,23 +138,23 @@
     }
 
     .uc-lang-switch a:hover {
-      background: #EEE6DD;
+      background: #eee6dd;
       border-color: var(--gold);
     }
 
     .uc-lang-divider {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 10px;
-      color: #8B7B70;
+      color: #8b7b70;
       line-height: 1;
     }
 
     .uc-hero {
-      min-height: calc(90vh - 14px);
+      min-height: calc(92vh - 14px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 54px 0 92px 0;
+      padding: 28px 0 68px 0;
       position: relative;
       overflow: hidden;
     }
@@ -156,7 +164,7 @@
       position: absolute;
       width: 720px;
       height: 720px;
-      border: 1px solid rgba(184,149,90,0.10);
+      border: 1px solid rgba(184, 149, 90, 0.1);
       border-radius: 50%;
       top: -250px;
       right: -230px;
@@ -168,7 +176,7 @@
       position: absolute;
       width: 420px;
       height: 420px;
-      border: 1px solid rgba(58,47,42,0.06);
+      border: 1px solid rgba(58, 47, 42, 0.06);
       border-radius: 50%;
       bottom: -150px;
       left: -120px;
@@ -184,41 +192,41 @@
     }
 
     .uc-kicker {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 10px;
       line-height: 1.8;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: #9C8F84;
+      color: #9c8f84;
       margin-bottom: 28px;
     }
 
     .uc-h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 84px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 86px;
       line-height: 0.95;
       font-weight: 500;
       color: var(--text);
-      margin: 0 0 26px 0;
-      letter-spacing: -1px;
+      margin: 0 0 22px 0;
+      letter-spacing: -1.1px;
       text-wrap: balance;
     }
 
     .uc-sub {
-      max-width: 840px;
-      margin: 0 auto 18px auto;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 20px;
-      line-height: 1.9;
+      max-width: 820px;
+      margin: 0 auto 16px auto;
+      font-family: "Libre Baskerville", serif;
+      font-size: 21px;
+      line-height: 1.85;
       color: var(--muted);
       text-wrap: balance;
     }
 
     .uc-premium-note {
       max-width: 760px;
-      margin: 26px auto 0 auto;
+      margin: 24px auto 0 auto;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 13px;
       line-height: 2;
       color: var(--soft);
@@ -233,7 +241,7 @@
       display: inline-block;
       text-decoration: none;
       padding: 18px 38px;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 12px;
       letter-spacing: 0.55px;
       transition: all 0.24s ease;
@@ -242,7 +250,7 @@
 
     .uc-btn-primary {
       background: var(--choco-2);
-      color: #FFFFFF;
+      color: #ffffff;
       border: 1px solid var(--choco-2);
     }
 
@@ -255,21 +263,21 @@
     .uc-btn-secondary {
       background: transparent;
       color: var(--text);
-      border: 1px solid #CCB8A2;
+      border: 1px solid #ccb8a2;
     }
 
     .uc-btn-secondary:hover {
-      background: #EEE6DD;
+      background: #eee6dd;
       border-color: var(--gold);
       transform: translateY(-1px);
     }
 
     .uc-band {
       background:
-        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
-        radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
-        linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
-      color: #F5F1EB;
+        radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.05), transparent 28%),
+        radial-gradient(circle at 85% 50%, rgba(255, 255, 255, 0.03), transparent 22%),
+        linear-gradient(180deg, #3a2f2a 0%, #2b221f 100%);
+      color: #f5f1eb;
       padding: 72px 36px;
       text-align: center;
       position: relative;
@@ -277,34 +285,34 @@
     }
 
     .uc-band-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 50px;
-      line-height: 1.08;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      line-height: 1.06;
       font-weight: 500;
       margin: 0 0 14px 0;
-      color: #F5F1EB;
+      color: #f5f1eb;
       text-wrap: balance;
     }
 
     .uc-band-rule {
       width: 86px;
       height: 1px;
-      background: rgba(245,241,235,0.40);
+      background: rgba(245, 241, 235, 0.4);
       margin: 0 auto 22px auto;
     }
 
     .uc-band-copy {
       max-width: 760px;
       margin: 0 auto;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 15px;
       line-height: 2;
-      color: rgba(245,241,235,0.88);
+      color: rgba(245, 241, 235, 0.88);
       text-wrap: balance;
     }
 
     .uc-section {
-      padding: 104px 0;
+      padding: 112px 0;
       position: relative;
     }
 
@@ -318,7 +326,7 @@
 
     .uc-title {
       text-align: center;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 56px;
       line-height: 1.03;
       font-weight: 500;
@@ -338,7 +346,7 @@
       max-width: 820px;
       margin: 0 auto 48px auto;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 15px;
       line-height: 2;
       color: var(--muted);
@@ -354,8 +362,8 @@
     }
 
     .uc-card {
-      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
-      border: 1px solid #E3D8CB;
+      background: linear-gradient(180deg, #f8f4ee 0%, #f4eee6 100%);
+      border: 1px solid #e3d8cb;
       padding: 40px 36px;
       text-align: left;
       transition: all 0.26s ease;
@@ -375,12 +383,12 @@
     }
 
     .uc-card:hover {
-      border-color: #D2BCA4;
+      border-color: #d2bca4;
       transform: translateY(-3px);
     }
 
     .uc-card-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 36px;
       line-height: 1.05;
       color: var(--text);
@@ -389,7 +397,7 @@
     }
 
     .uc-card-copy {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 14px;
       line-height: 2;
       color: var(--muted);
@@ -422,8 +430,8 @@
     .uc-example,
     .uc-price-card,
     .uc-faq-card {
-      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
-      border: 1px solid #E3D8CB;
+      background: linear-gradient(180deg, #f8f4ee 0%, #f4eee6 100%);
+      border: 1px solid #e3d8cb;
       padding: 36px 28px;
       box-shadow: var(--shadow-soft);
       position: relative;
@@ -443,7 +451,7 @@
     }
 
     .uc-example {
-      background: #FBF8F3;
+      background: #fbf8f3;
       border: 1px solid var(--line);
       padding: 30px 26px;
     }
@@ -452,7 +460,7 @@
     .uc-example-title,
     .uc-price-title,
     .uc-faq-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 30px;
       line-height: 1.06;
       color: var(--text);
@@ -473,7 +481,7 @@
     }
 
     .uc-mini-list li {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 14px;
       line-height: 1.9;
       color: var(--muted);
@@ -489,7 +497,7 @@
     .uc-example-copy,
     .uc-price-copy,
     .uc-faq-copy {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 14px;
       line-height: 2;
       color: var(--muted);
@@ -498,7 +506,7 @@
     }
 
     .uc-price-from {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 11px;
       line-height: 1.8;
       letter-spacing: 1.2px;
@@ -508,7 +516,7 @@
     }
 
     .uc-price-amount {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 42px;
       line-height: 1;
       color: var(--text);
@@ -519,7 +527,7 @@
       max-width: 760px;
       margin: 22px auto 0 auto;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 12px;
       line-height: 2;
       color: var(--soft);
@@ -541,7 +549,7 @@
     }
 
     .uc-step-no {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 10px;
       line-height: 1.6;
       letter-spacing: 2.2px;
@@ -551,7 +559,7 @@
     }
 
     .uc-step-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 30px;
       line-height: 1.04;
       color: var(--text);
@@ -560,7 +568,7 @@
     }
 
     .uc-step-copy {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 13px;
       line-height: 1.95;
       color: var(--muted);
@@ -571,7 +579,7 @@
       max-width: 820px;
       margin: 0 auto;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 16px;
       line-height: 2.15;
       color: var(--text);
@@ -582,7 +590,7 @@
       max-width: 760px;
       margin: 24px auto 0 auto;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 12px;
       line-height: 2;
       color: var(--soft);
@@ -596,7 +604,7 @@
     }
 
     .uc-contact-main {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 54px;
       line-height: 1.06;
       font-weight: 500;
@@ -608,7 +616,7 @@
     .uc-contact-copy {
       max-width: 700px;
       margin: 0 auto 24px auto;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 15px;
       line-height: 2;
       color: var(--muted);
@@ -617,36 +625,36 @@
 
     .uc-footer {
       background:
-        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04), transparent 26%),
-        linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.04), transparent 26%),
+        linear-gradient(180deg, #261e1b 0%, #1e1714 100%);
       padding: 54px 34px 58px 34px;
       text-align: center;
-      border-top: 1px solid rgba(245,241,235,0.08);
+      border-top: 1px solid rgba(245, 241, 235, 0.08);
     }
 
     .uc-footer-brand {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
       font-size: 24px;
-      color: #F5F1EB;
+      color: #f5f1eb;
       margin-bottom: 6px;
     }
 
     .uc-footer-sub {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 11px;
-      color: #D9CEC4;
+      color: #d9cec4;
       margin-bottom: 16px;
     }
 
     .uc-footer-links {
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 10px;
       line-height: 1.9;
       letter-spacing: 0.25px;
     }
 
     .uc-footer-links a {
-      color: #F5F1EB;
+      color: #f5f1eb;
       text-decoration: none;
       margin: 0 10px;
       opacity: 0.92;
@@ -670,7 +678,7 @@
 
     @media (max-width: 980px) {
       .uc-h1 {
-        font-size: 68px;
+        font-size: 70px;
         line-height: 1;
       }
 
@@ -713,17 +721,16 @@
 
       .uc-hero {
         min-height: auto;
-        padding: 30px 0 60px 0;
+        padding: 26px 0 54px 0;
       }
 
       .uc-h1 {
-        font-size: 50px;
+        font-size: 52px;
         line-height: 1.02;
       }
 
       .uc-sub {
-        font-size: 17px;
-        line-height: 1.85;
+        font-size: 18px;
       }
 
       .uc-title,
@@ -782,24 +789,20 @@
   <section class="uc-hero">
     <div class="uc-shell">
       <div class="uc-hero-inner">
-        <div class="uc-kicker">Relokacja do Krakowa • wsparcie przed przyjazdem i po nim</div>
-
-        <h1 class="uc-h1">
-          Relokacja do Krakowa<br>
-          bez chaosu.
-        </h1>
-
+        <div class="uc-kicker">Relokacja do Krakowa • wsparcie przed przyjazdem i po przyjeździe</div>
+        <h1 class="uc-h1">Relokacja do Krakowa<br />bez chaosu.</h1>
         <div class="uc-sub">
-          Dyskretne, uporządkowane wsparcie dla ekspatów, klientów międzynarodowych, par i rodzin, które chcą mieć przygotowane kluczowe sprawy jeszcze przed przyjazdem i spokojniejsze wejście w życie na miejscu.
+          Dyskretne, uporządkowane wsparcie dla ekspatów, klientów międzynarodowych, par i rodzin,
+          które chcą mieć przygotowane kluczowe sprawy jeszcze przed przyjazdem i spokojniejsze
+          wejście w życie na miejscu.
         </div>
-
         <div class="uc-actions">
           <a href="#contact" class="uc-btn uc-btn-primary">Poproś o wsparcie relokacyjne</a>
-          <a href="#scope" class="uc-btn uc-btn-secondary">Zobacz zakres wsparcia</a>
+          <a href="#what-can-be-handled" class="uc-btn uc-btn-secondary">Zobacz zakres wsparcia</a>
         </div>
-
         <div class="uc-premium-note">
-          Zacznij od krótkiej wiadomości z terminem przeprowadzki, planowaną datą przyjazdu i zakresem wsparcia, którego potrzebujesz. Resztę uporządkujemy dalej.
+          Zacznij od krótkiej wiadomości z terminem przeprowadzki, planowaną datą przyjazdu i
+          zakresem wsparcia, którego potrzebujesz. Resztę uporządkujemy dalej.
         </div>
       </div>
     </div>
@@ -810,7 +813,9 @@
       <div class="uc-band-title">Zanim dotrzesz do Krakowa, kluczowe sprawy mogą już być w ruchu.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Relokacja nie musi oznaczać chaosu, niedopiętych tematów i biegania po wszystkim od pierwszego dnia. Urban Concierge przejmuje wybrane praktyczne elementy procesu i prowadzi je dalej z lokalną koordynacją.
+        Relokacja nie musi oznaczać chaosu, niedopiętych tematów i biegania po wszystkim od
+        pierwszego dnia. Urban Concierge przejmuje wybrane praktyczne elementy procesu i prowadzi je
+        dalej z lokalną koordynacją.
       </div>
     </div>
   </section>
@@ -824,28 +829,34 @@
         <div class="uc-card">
           <div class="uc-card-title">Lokalna realizacja na miejscu</div>
           <p class="uc-card-copy">
-            To nie jest wyłącznie lista porad. To realne wsparcie w Krakowie tam, gdzie potrzebna jest koordynacja, obecność, dopięcie terminów i spokojne prowadzenie spraw dalej.
+            To nie jest wyłącznie lista porad. To realne wsparcie w Krakowie tam, gdzie potrzebna
+            jest koordynacja, obecność, dopięcie terminów i spokojne prowadzenie spraw dalej.
           </p>
         </div>
 
         <div class="uc-card">
           <div class="uc-card-title">Mniej administracyjnego chaosu</div>
           <p class="uc-card-copy">
-            Zamiast samodzielnie pilnować mieszkania, internetu, dostaw, terminów i drobnych końcówek, masz jeden uporządkowany punkt kontaktu, który zbiera i prowadzi wybrane tematy.
+            Zamiast samodzielnie pilnować mieszkania, internetu, dostaw, terminów i drobnych
+            końcówek, masz jeden uporządkowany punkt kontaktu, który zbiera i prowadzi wybrane
+            tematy.
           </p>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Wsparcie przed przyjazdem i po nim</div>
+          <div class="uc-card-title">Wsparcie przed przyjazdem i po przyjeździe</div>
           <p class="uc-card-copy">
-            Usługa może zacząć się jeszcze przed przeprowadzką i płynnie przejść w lokalne wsparcie po przyjeździe — zależnie od tego, czego naprawdę potrzebujesz.
+            Usługa może zacząć się jeszcze przed przeprowadzką i płynnie przejść w lokalne wsparcie
+            po przyjeździe — zależnie od tego, czego naprawdę potrzebujesz.
           </p>
         </div>
 
         <div class="uc-card">
           <div class="uc-card-title">Zaufana sieć lokalnych partnerów</div>
           <p class="uc-card-copy">
-            Tam, gdzie sytuacja tego wymaga, wsparcie może być koordynowane także z zaufanymi partnerami lokalnymi, w tym z partnerem nieruchomości, aby cały proces był bardziej spójny.
+            Tam, gdzie sytuacja tego wymaga, wsparcie może być koordynowane także z zaufanymi
+            partnerami lokalnymi, w tym z partnerem nieruchomości, aby cały proces był bardziej
+            spójny.
           </p>
         </div>
       </div>
@@ -856,36 +867,39 @@
     <div class="uc-shell">
       <h2 class="uc-title">Na czym polega ta usługa</h2>
       <div class="uc-rule"></div>
-
       <div class="uc-intro">
-        To wsparcie dla osób, które nie chcą po przyjeździe zaczynać wszystkiego od zera. Zakres może obejmować przygotowanie przed przeprowadzką, lokalną koordynację po przyjeździe i pomoc w pierwszym etapie osadzania się w Krakowie.
+        To wsparcie dla osób, które nie chcą po przyjeździe zaczynać wszystkiego od zera. Zakres
+        może obejmować przygotowanie przed przeprowadzką, lokalną koordynację po przyjeździe i
+        pomoc w pierwszych tygodniach na miejscu.
       </div>
 
       <div class="uc-grid-2">
         <div class="uc-card">
           <div class="uc-card-title">Przed przyjazdem</div>
           <p class="uc-card-copy">
-            Wybrane sprawy mogą być przygotowane wcześniej, tak aby pierwsze dni w Krakowie nie były poświęcone na gonienie internetu, dostaw, terminów i brakujących elementów codzienności.
+            Wybrane sprawy mogą być przygotowane wcześniej, tak aby pierwsze dni w Krakowie nie były
+            poświęcone na gonienie internetu, dostaw, terminów i brakujących elementów codzienności.
           </p>
         </div>
 
         <div class="uc-card">
           <div class="uc-card-title">Po przyjeździe</div>
           <p class="uc-card-copy">
-            Gdy jesteś już na miejscu, przejmujemy wybrane lokalne tematy, które nadal wymagają obecności, potwierdzeń, koordynacji lub po prostu spokojnego doprowadzenia do końca.
+            Gdy jesteś już na miejscu, przejmujemy wybrane lokalne tematy, które nadal wymagają
+            obecności, potwierdzeń, koordynacji lub po prostu spokojnego doprowadzenia do końca.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="scope" class="uc-section">
+  <section class="uc-section">
     <div class="uc-shell">
       <h2 class="uc-title">Co może obejmować</h2>
       <div class="uc-rule"></div>
-
       <div class="uc-intro">
-        Dokładny zakres zależy od sytuacji, terminu i tego, co chcesz delegować. Wsparcie relokacyjne może obejmować między innymi:
+        Dokładny zakres zależy od sytuacji, terminu i tego, co chcesz delegować. Wsparcie
+        relokacyjne może obejmować między innymi:
       </div>
 
       <div class="uc-mini-grid">
@@ -912,24 +926,23 @@
         </div>
 
         <div class="uc-mini-card">
-          <div class="uc-mini-title">Osadzanie się w Krakowie</div>
+          <div class="uc-mini-title">Pierwsze sprawy po przyjeździe</div>
           <ul class="uc-mini-list">
             <li>wsparcie przy PESEL, jeśli dotyczy</li>
             <li>wsparcie przy zameldowaniu, jeśli dotyczy</li>
             <li>wsparcie przy założeniu konta bankowego, jeśli dotyczy</li>
-            <li>praktyczną pomoc dla obcokrajowców w Krakowie</li>
-            <li>lokalne wsparcie w pierwszym etapie życia w Polsce</li>
+            <li>praktyczna pomoc dla obcokrajowców w Krakowie</li>
+            <li>lokalne wsparcie w pierwszych tygodniach po przyjeździe</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft">
+  <section id="what-can-be-handled" class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">Przykłady tego, co może zostać załatwione</h2>
       <div class="uc-rule"></div>
-
       <div class="uc-intro">
         Poniżej widzisz przykładowe obszary, w których ta usługa sprawdza się najlepiej:
       </div>
@@ -938,42 +951,48 @@
         <div class="uc-example">
           <div class="uc-example-title">Przygotowanie mieszkania</div>
           <p class="uc-example-copy">
-            Przygotowanie mieszkania przed przyjazdem tak, aby od pierwszego dnia było bardziej gotowe do codziennego funkcjonowania.
+            Przygotowanie mieszkania przed przyjazdem tak, aby od pierwszego dnia było bardziej
+            gotowe do codziennego funkcjonowania.
           </p>
         </div>
 
         <div class="uc-example">
           <div class="uc-example-title">Internet, media i podstawy</div>
           <p class="uc-example-copy">
-            Koordynacja wybranych praktycznych kwestii związanych z internetem, mediami i podstawową logistyką po przeprowadzce.
+            Koordynacja wybranych praktycznych kwestii związanych z internetem, mediami i podstawową
+            logistyką po przeprowadzce.
           </p>
         </div>
 
         <div class="uc-example">
           <div class="uc-example-title">Wybrane terminy</div>
           <p class="uc-example-copy">
-            Umawianie wybranych terminów i praktycznych follow-upów związanych z pierwszym etapem osadzania się na miejscu.
+            Umawianie wybranych terminów i praktycznych follow-upów związanych z pierwszym etapem po
+            przeprowadzce.
           </p>
         </div>
 
         <div class="uc-example">
           <div class="uc-example-title">Dostawy i dostęp</div>
           <p class="uc-example-copy">
-            Odbiór wybranych dostaw lub koordynacja praktycznego dostępu tam, gdzie lokalna obecność naprawdę robi różnicę.
+            Odbiór wybranych dostaw lub koordynacja praktycznego dostępu tam, gdzie lokalna obecność
+            naprawdę robi różnicę.
           </p>
         </div>
 
         <div class="uc-example">
-          <div class="uc-example-title">Move-in i pierwsze dni</div>
+          <div class="uc-example-title">Wprowadzenie i pierwsze dni</div>
           <p class="uc-example-copy">
-            Pomoc w koordynacji wybranych praktycznych tematów związanych z wprowadzeniem się do nowego miejsca i pierwszym etapem po nim.
+            Pomoc w koordynacji wybranych praktycznych tematów związanych z wprowadzeniem się do
+            nowego miejsca i pierwszym etapem po nim.
           </p>
         </div>
 
         <div class="uc-example">
-          <div class="uc-example-title">Osadzanie się w Polsce</div>
+          <div class="uc-example-title">Start po przeprowadzce</div>
           <p class="uc-example-copy">
-            Wsparcie na miejscu w początkowym etapie osadzania się w Krakowie i porządkowania pierwszych lokalnych spraw.
+            Wsparcie na miejscu w początkowym etapie po przeprowadzce i uporządkowaniu pierwszych
+            lokalnych spraw.
           </p>
         </div>
       </div>
@@ -984,15 +1003,15 @@
     <div class="uc-shell" style="max-width: 920px;">
       <h2 class="uc-title">Dla kogo jest ta usługa</h2>
       <div class="uc-rule"></div>
-
       <div class="uc-intro" style="margin-bottom: 34px;">
-        Ta usługa najlepiej sprawdza się u klientów, którzy chcą mniej końcówek do pilnowania samodzielnie i mocniejszego lokalnego wykonania wokół przeprowadzki.
+        Ta usługa najlepiej sprawdza się u klientów, którzy chcą mniej końcówek do pilnowania
+        samodzielnie i mocniejszego lokalnego wykonania wokół przeprowadzki.
       </div>
 
       <div class="uc-simple-list">
-        dla ekspatów przeprowadzających się do Krakowa<br><br>
-        dla klientów międzynarodowych przenoszących się do Polski<br><br>
-        dla par i rodzin, które chcą praktycznej lokalnej koordynacji, a nie tylko porad<br><br>
+        dla ekspatów przeprowadzających się do Krakowa<br /><br />
+        dla klientów międzynarodowych przenoszących się do Polski<br /><br />
+        dla par i rodzin, które chcą praktycznej lokalnej koordynacji, a nie tylko porad<br /><br />
         dla osób, które cenią spokój, dyskrecję i rzetelne wsparcie na miejscu
       </div>
     </div>
@@ -1002,42 +1021,46 @@
     <div class="uc-shell">
       <h2 class="uc-title">Poziomy wsparcia relokacyjnego</h2>
       <div class="uc-rule"></div>
-
       <div class="uc-intro">
-        Wsparcie może zostać zbudowane wokół jednego etapu albo obejmować szerszą pomoc przed przyjazdem i po nim.
+        Wsparcie może zostać zbudowane wokół jednego etapu albo obejmować szerszą pomoc przed
+        przyjazdem i po nim.
       </div>
 
       <div class="uc-pricing-grid">
         <div class="uc-price-card">
           <div class="uc-price-title">Przed przyjazdem</div>
           <div class="uc-price-from">od</div>
-          <div class="uc-price-amount">1 800 PLN</div>
+          <div class="uc-price-amount">1 800 zł</div>
           <p class="uc-price-copy">
-            Dla klientów, którzy chcą uporządkować wybrane praktyczne sprawy jeszcze przed pojawieniem się w Krakowie.
+            Dla klientów, którzy chcą uporządkować wybrane praktyczne sprawy jeszcze przed
+            pojawieniem się w Krakowie.
           </p>
         </div>
 
         <div class="uc-price-card">
           <div class="uc-price-title">Przyjazd i pierwszy etap</div>
           <div class="uc-price-from">od</div>
-          <div class="uc-price-amount">2 800 PLN</div>
+          <div class="uc-price-amount">2 800 zł</div>
           <p class="uc-price-copy">
-            Dla klientów, którzy potrzebują lokalnego wsparcia i praktycznej koordynacji w pierwszym etapie po przyjeździe.
+            Dla klientów, którzy potrzebują lokalnego wsparcia i praktycznej koordynacji w
+            pierwszym etapie po przyjeździe.
           </p>
         </div>
 
         <div class="uc-price-card">
           <div class="uc-price-title">Szersze wsparcie relokacyjne</div>
           <div class="uc-price-from">od</div>
-          <div class="uc-price-amount">4 500 PLN</div>
+          <div class="uc-price-amount">4 500 zł</div>
           <p class="uc-price-copy">
-            Dla bardziej złożonych relokacji obejmujących kilka etapów, szerszą koordynację i wyższy poziom wsparcia.
+            Dla bardziej złożonych relokacji obejmujących kilka etapów, szerszą koordynację i
+            wyższy poziom wsparcia.
           </p>
         </div>
       </div>
 
       <div class="uc-price-note">
-        Ostateczna wycena zależy od terminu, zakresu, liczby spraw do koordynacji i poziomu lokalnego wsparcia potrzebnego w danej sytuacji.
+        Ostateczna wycena zależy od terminu, zakresu, liczby spraw do koordynacji i poziomu
+        lokalnego wsparcia potrzebnego w danej sytuacji.
       </div>
     </div>
   </section>
@@ -1046,33 +1069,40 @@
     <div class="uc-shell" style="max-width: 980px;">
       <h2 class="uc-title">Partner nieruchomości</h2>
       <div class="uc-rule"></div>
-
       <div class="uc-intro">
-        Gdy relokacja obejmuje również kwestie związane z mieszkaniem lub domem, wsparcie może być koordynowane także z zaufanym partnerem nieruchomości — tak, aby praktyczna strona znalezienia albo przygotowania miejsca była częścią jednego, spójniejszego procesu.
+        Gdy relokacja obejmuje również kwestie związane z mieszkaniem lub domem, wsparcie może być
+        koordynowane także z zaufanym partnerem nieruchomości — tak, aby praktyczna strona
+        znalezienia albo przygotowania miejsca była częścią jednego, spójniejszego procesu.
       </div>
 
       <div class="uc-grid-2" style="max-width: 920px;">
         <div class="uc-card">
           <div class="uc-card-title">Dlaczego to ma znaczenie</div>
           <p class="uc-card-copy">
-            Sprawy nieruchomości często łączą się z dostępem, internetem, dostawami, terminem move-in i wczesną logistyką po przeprowadzce. Koordynacja tych elementów razem daje spokojniejszy start.
+            Sprawy nieruchomości często łączą się z dostępem, internetem, dostawami, terminem
+            move-in i wczesną logistyką po przeprowadzce. Koordynacja tych elementów razem daje
+            spokojniejszy start.
           </p>
         </div>
 
         <div class="uc-card">
           <div class="uc-card-title">Jak to wpisuje się w usługę</div>
           <p class="uc-card-copy">
-            Zakres związany z nieruchomością zależy od sytuacji i może stanowić część szerszego wsparcia relokacyjnego zamiast funkcjonować jako odłączone, niezależne zadania.
+            Zakres związany z nieruchomością zależy od sytuacji i może stanowić część szerszego
+            wsparcia relokacyjnego zamiast funkcjonować jako odłączone, niezależne zadania.
           </p>
         </div>
       </div>
 
-      <div class="uc-note">
-        Zaufany partner nieruchomości: Very Home.
-      </div>
+      <div class="uc-note">Zaufany partner nieruchomości: Very Home.</div>
 
       <div class="uc-actions" style="margin-top: 30px; text-align: center;">
-        <a href="https://www.veryhome.pl/" class="uc-btn uc-btn-secondary" target="_blank" rel="noopener">
+        <a
+          href="https://www.veryhome.pl/"
+          class="uc-btn uc-btn-secondary"
+          target="_blank"
+          rel="noopener"
+        >
           Poznaj zaufanego partnera nieruchomości
         </a>
       </div>
@@ -1088,25 +1118,37 @@
         <div class="uc-step">
           <div class="uc-step-no">Krok 01</div>
           <div class="uc-step-title">Pierwsza wiadomość</div>
-          <div class="uc-step-copy">Opisujesz termin przeprowadzki, planowaną datę przyjazdu i rodzaj wsparcia, którego potrzebujesz.</div>
+          <div class="uc-step-copy">
+            Opisujesz termin przeprowadzki, planowaną datę przyjazdu i rodzaj wsparcia, którego
+            potrzebujesz.
+          </div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Krok 02</div>
           <div class="uc-step-title">Zakres</div>
-          <div class="uc-step-copy">Ustalamy, co może zostać zorganizowane przed przyjazdem, po przyjeździe i w ramach lokalnej koordynacji.</div>
+          <div class="uc-step-copy">
+            Ustalamy, co może zostać zorganizowane przed przyjazdem, po przyjeździe i w ramach
+            lokalnej koordynacji.
+          </div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Krok 03</div>
           <div class="uc-step-title">Przygotowanie</div>
-          <div class="uc-step-copy">Uzgodnione sprawy są organizowane, potwierdzane i przygotowywane z wyprzedzeniem tam, gdzie to możliwe.</div>
+          <div class="uc-step-copy">
+            Uzgodnione sprawy są organizowane, potwierdzane i przygotowywane z wyprzedzeniem tam,
+            gdzie to możliwe.
+          </div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Krok 04</div>
-          <div class="uc-step-title">Osadzanie się</div>
-          <div class="uc-step-copy">Po przyjeździe otrzymujesz praktyczne wsparcie w pierwszym etapie życia i działania na miejscu w Krakowie.</div>
+          <div class="uc-step-title">Pierwszy etap po przyjeździe</div>
+          <div class="uc-step-copy">
+            Po przyjeździe otrzymujesz praktyczne wsparcie w pierwszych tygodniach na miejscu i przy
+            porządkowaniu lokalnych spraw.
+          </div>
         </div>
       </div>
     </div>
@@ -1121,56 +1163,64 @@
         <div class="uc-faq-card">
           <div class="uc-faq-title">Czy wspieracie relokację do Krakowa z zagranicy?</div>
           <p class="uc-faq-copy">
-            Tak. Wsparcie może zacząć się jeszcze przed przyjazdem do Polski i być kontynuowane w pierwszym etapie po nim.
+            Tak. Wsparcie może zacząć się jeszcze przed przyjazdem do Polski i być kontynuowane w
+            pierwszym etapie po przyjeździe.
           </p>
         </div>
 
         <div class="uc-faq-card">
           <div class="uc-faq-title">Czy możecie pomóc jeszcze przed moim przyjazdem do Polski?</div>
           <p class="uc-faq-copy">
-            Tak. Wybrane praktyczne sprawy mogą być koordynowane przed przyjazdem — zależnie od terminu i zakresu.
+            Tak. Wybrane praktyczne sprawy mogą być koordynowane przed przyjazdem — zależnie od
+            terminu i zakresu.
           </p>
         </div>
 
         <div class="uc-faq-card">
           <div class="uc-faq-title">Czy pomagacie w przygotowaniu mieszkania przed przyjazdem?</div>
           <p class="uc-faq-copy">
-            Tak. Wybrane elementy przygotowania mieszkania mogą być częścią wsparcia relokacyjnego, jeśli są potrzebne w danej sytuacji.
+            Tak. Wybrane elementy przygotowania mieszkania mogą być częścią wsparcia relokacyjnego,
+            jeśli są potrzebne w danej sytuacji.
           </p>
         </div>
 
         <div class="uc-faq-card">
           <div class="uc-faq-title">Czy wsparcie może obejmować internet, media i terminy?</div>
           <p class="uc-faq-copy">
-            Tak. W zależności od zakresu możemy koordynować wybrane kwestie praktyczne, takie jak internet, media czy wybrane terminy.
+            Tak. W zależności od zakresu możemy koordynować wybrane kwestie praktyczne, takie jak
+            internet, media czy wybrane terminy.
           </p>
         </div>
 
         <div class="uc-faq-card">
           <div class="uc-faq-title">Czy to usługa tylko dla ekspatów?</div>
           <p class="uc-faq-copy">
-            Nie. Może być odpowiednia także dla klientów międzynarodowych, par, rodzin i osób przenoszących się do Krakowa z innych miejsc.
+            Nie. Może być odpowiednia także dla klientów międzynarodowych, par, rodzin i osób
+            przenoszących się do Krakowa z innych miejsc.
           </p>
         </div>
 
         <div class="uc-faq-card">
           <div class="uc-faq-title">Czy wsparcie jest dostępne tylko w Krakowie?</div>
           <p class="uc-faq-copy">
-            Głównym obszarem działania jest Kraków. Wybrane elementy wsparcia poza Krakowem mogą być możliwe zależnie od sytuacji.
+            Głównym obszarem działania jest Kraków. Wybrane elementy wsparcia poza Krakowem mogą być
+            możliwe zależnie od sytuacji.
           </p>
         </div>
 
         <div class="uc-faq-card">
           <div class="uc-faq-title">Jak liczone są ceny?</div>
           <p class="uc-faq-copy">
-            Ceny zależą od terminu, zakresu, złożoności i liczby praktycznych spraw, które wymagają lokalnej koordynacji.
+            Ceny zależą od terminu, zakresu, złożoności i liczby praktycznych spraw, które wymagają
+            lokalnej koordynacji.
           </p>
         </div>
 
         <div class="uc-faq-card">
           <div class="uc-faq-title">Czy możecie koordynować działania z partnerem nieruchomości?</div>
           <p class="uc-faq-copy">
-            Tak. Jeśli sytuacja tego wymaga, wsparcie relokacyjne może być koordynowane także z zaufanym partnerem nieruchomości.
+            Tak. Jeśli sytuacja tego wymaga, wsparcie relokacyjne może być koordynowane także z
+            zaufanym partnerem nieruchomości.
           </p>
         </div>
       </div>
@@ -1182,14 +1232,19 @@
       <div class="uc-contact-box">
         <h2 class="uc-contact-main">Poproś o wsparcie relokacyjne</h2>
         <div class="uc-rule"></div>
-
         <div class="uc-contact-copy">
-          Zacznij od krótkiej wiadomości z terminem przeprowadzki, planowaną datą przyjazdu i zakresem wsparcia, którego możesz potrzebować. Na tej podstawie dopasujemy zakres do Twojej relokacji.
+          Zacznij od krótkiej wiadomości z terminem przeprowadzki, planowaną datą przyjazdu i
+          zakresem wsparcia, którego możesz potrzebować. Na tej podstawie dopasujemy zakres do
+          Twojej relokacji.
         </div>
-
         <div class="uc-actions" style="margin-top: 34px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=Relokacja%20do%20Krakowa" class="uc-btn uc-btn-primary">Poproś o wsparcie relokacyjne</a>
-          <a href="/" class="uc-btn uc-btn-secondary">Powrót na stronę główną</a>
+          <a
+            href="mailto:info@urbanconcierge.pl?subject=Relokacja%20do%20Krakowa"
+            class="uc-btn uc-btn-primary"
+          >
+            Poproś o wsparcie relokacyjne
+          </a>
+          <a href="/" class="uc-btn uc-btn-secondary">Poznaj całą ofertę</a>
         </div>
       </div>
     </div>
@@ -1198,11 +1253,10 @@
   <section class="uc-footer">
     <div class="uc-footer-brand">Urban Concierge</div>
     <div class="uc-footer-sub">Prywatne wsparcie concierge | Kraków i okolice</div>
-
     <div class="uc-footer-links">
       <a href="/abonament/">Abonament</a>
-      <a href="/1-dzien-wsparcia/">1 dzień wsparcia</a>
-      <a href="/asysty/">Asysty</a>
+      <a href="/1-dzien-wsparcia/">Dzień Wsparcia</a>
+      <a href="/asysty/">Asysta na miejscu</a>
       <a href="/relokacja-krakow/">Relokacja do Krakowa</a>
       <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Regulamin</a>
       <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Polityka prywatności</a>
