@@ -68,7 +68,7 @@
     }
 
     .uc-brandbar {
-      padding: 28px 0 0 0;
+      padding: 34px 0 0 0;
     }
 
     .uc-headerbar {
@@ -142,11 +142,11 @@
     }
 
     .uc-hero {
-      min-height: calc(76vh - 14px);
+      min-height: calc(90vh - 14px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px 0 44px 0;
+      padding: 46px 0 86px 0;
       position: relative;
       overflow: hidden;
     }
@@ -176,7 +176,7 @@
     }
 
     .uc-hero-inner {
-      max-width: 860px;
+      max-width: 920px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -190,42 +190,42 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #9C8F84;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
     }
 
     .uc-h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 74px;
-      line-height: 0.94;
+      font-size: 80px;
+      line-height: 0.96;
       font-weight: 500;
       color: var(--text);
-      margin: 0 0 18px 0;
+      margin: 0 0 26px 0;
       letter-spacing: -0.9px;
       text-wrap: balance;
     }
 
     .uc-sub {
-      max-width: 720px;
-      margin: 0 auto 10px auto;
+      max-width: 760px;
+      margin: 0 auto 16px auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 18px;
-      line-height: 1.85;
+      line-height: 1.95;
       color: var(--muted);
       text-wrap: balance;
     }
 
     .uc-hero-note {
-      max-width: 660px;
+      max-width: 680px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 12px;
-      line-height: 1.9;
+      line-height: 2;
       color: var(--soft);
       text-wrap: balance;
     }
 
     .uc-actions {
-      margin-top: 28px;
+      margin-top: 38px;
     }
 
     .uc-btn {
@@ -302,7 +302,7 @@
         radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
         linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
       color: #F5F1EB;
-      padding: 60px 36px;
+      padding: 74px 36px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -336,7 +336,7 @@
     }
 
     .uc-quote {
-      padding: 96px 36px;
+      padding: 108px 36px;
       text-align: center;
       background: var(--bg);
     }
@@ -354,7 +354,7 @@
     }
 
     .uc-section {
-      padding: 88px 0;
+      padding: 96px 0;
       position: relative;
     }
 
@@ -664,6 +664,11 @@
     }
 
     @media (max-width: 980px) {
+      .uc-hero {
+        min-height: calc(84vh - 14px);
+        padding: 38px 0 74px 0;
+      }
+
       .uc-feature-card,
       .uc-why-grid {
         grid-template-columns: 1fr;
@@ -674,7 +679,7 @@
       }
 
       .uc-h1 {
-        font-size: 62px;
+        font-size: 68px;
         line-height: 0.98;
       }
 
@@ -690,6 +695,10 @@
     @media (max-width: 768px) {
       .uc-shell {
         padding: 0 20px;
+      }
+
+      .uc-brandbar {
+        padding: 26px 0 0 0;
       }
 
       .uc-headerbar {
@@ -711,16 +720,39 @@
 
       .uc-hero {
         min-height: auto;
-        padding: 18px 0 38px 0;
+        padding: 30px 0 60px 0;
+      }
+
+      .uc-kicker {
+        margin-bottom: 22px;
       }
 
       .uc-h1 {
-        font-size: 46px;
+        font-size: 50px;
         line-height: 1.02;
+        margin: 0 0 20px 0;
       }
 
       .uc-sub {
         font-size: 16px;
+        line-height: 1.9;
+        margin: 0 auto 14px auto;
+      }
+
+      .uc-actions {
+        margin-top: 30px;
+      }
+
+      .uc-band {
+        padding: 62px 24px;
+      }
+
+      .uc-quote {
+        padding: 84px 24px;
+      }
+
+      .uc-section {
+        padding: 76px 0;
       }
 
       .uc-title,
@@ -729,11 +761,6 @@
       .uc-quote-text,
       .uc-feature-title {
         font-size: 36px;
-      }
-
-      .uc-quote,
-      .uc-section {
-        padding: 72px 0;
       }
 
       .uc-steps {
