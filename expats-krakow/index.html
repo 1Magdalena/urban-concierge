@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Concierge | Private Concierge & Relocation in Kraków</title>
-  <meta name="description" content="Private concierge and relocation support in Kraków for clients who value time, discretion and reliable execution." />
+  <title>Urban Concierge | Prywatny concierge, asysta i relokacja w Krakowie</title>
+  <meta name="description" content="Urban Concierge to prywatne wsparcie concierge na miejscu w Krakowie i okolicach oraz zdalnie w całej Polsce. Dzień Wsparcia, asysta na miejscu, abonament i relokacja." />
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
@@ -52,6 +52,7 @@
       --choco-2: #3A2F2A;
       --hover: #473934;
       --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
+      --shadow-strong: 0 20px 54px rgba(43,34,31,0.10);
     }
 
     .uc-topbar {
@@ -145,7 +146,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 28px 0 68px 0;
+      padding: 56px 0 96px 0;
       position: relative;
       overflow: hidden;
     }
@@ -175,7 +176,7 @@
     }
 
     .uc-hero-inner {
-      max-width: 940px;
+      max-width: 980px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -189,40 +190,32 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #9C8F84;
-      margin-bottom: 28px;
+      margin-bottom: 34px;
     }
 
     .uc-h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 92px;
-      line-height: 0.94;
+      font-size: 88px;
+      line-height: 0.97;
       font-weight: 500;
       color: var(--text);
-      margin: 0 0 24px 0;
-      letter-spacing: -1.25px;
+      margin: 0 0 30px 0;
+      letter-spacing: -0.9px;
+      text-wrap: balance;
     }
 
     .uc-sub {
-      max-width: 780px;
-      margin: 0 auto 16px auto;
+      max-width: 800px;
+      margin: 0 auto 34px auto;
       font-family: 'Libre Baskerville', serif;
-      font-size: 21px;
-      line-height: 1.85;
-      color: var(--muted);
-    }
-
-    .uc-premium-note {
-      max-width: 760px;
-      margin: 24px auto 0 auto;
-      text-align: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
+      font-size: 19px;
       line-height: 2;
-      color: var(--soft);
+      color: var(--muted);
+      text-wrap: balance;
     }
 
     .uc-actions {
-      margin-top: 42px;
+      margin-top: 0;
     }
 
     .uc-btn {
@@ -233,7 +226,7 @@
       font-size: 12px;
       letter-spacing: 0.55px;
       transition: all 0.24s ease;
-      margin: 0 8px 12px 8px;
+      margin: 0 10px 12px 10px;
     }
 
     .uc-btn-primary {
@@ -262,7 +255,7 @@
 
     .uc-btn-card {
       display: inline-block;
-      margin-top: 24px;
+      margin-top: 20px;
       padding: 14px 22px;
       text-decoration: none;
       font-family: 'Libre Baskerville', serif;
@@ -281,13 +274,25 @@
       transform: translateY(-1px);
     }
 
+    .uc-btn-card-light {
+      background: transparent;
+      color: #F5F1EB;
+      border: 1px solid rgba(245,241,235,0.46);
+    }
+
+    .uc-btn-card-light:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(245,241,235,0.72);
+      transform: translateY(-1px);
+    }
+
     .uc-band {
       background:
         radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
         radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
         linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
       color: #F5F1EB;
-      padding: 72px 36px;
+      padding: 74px 36px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -295,48 +300,51 @@
 
     .uc-band-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 52px;
-      line-height: 1.06;
+      font-size: 48px;
+      line-height: 1.08;
       font-weight: 500;
-      margin: 0 0 14px 0;
+      margin: 0 0 12px 0;
       color: #F5F1EB;
+      text-wrap: balance;
     }
 
     .uc-band-rule {
       width: 86px;
       height: 1px;
       background: rgba(245,241,235,0.40);
-      margin: 0 auto 22px auto;
+      margin: 0 auto 18px auto;
     }
 
     .uc-band-copy {
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 15px;
-      line-height: 2;
+      line-height: 1.95;
       color: rgba(245,241,235,0.88);
+      text-wrap: balance;
     }
 
     .uc-quote {
-      padding: 132px 36px;
+      padding: 108px 36px;
       text-align: center;
       background: var(--bg);
     }
 
     .uc-quote-text {
-      max-width: 820px;
+      max-width: 760px;
       margin: 0 auto;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 66px;
-      line-height: 1.14;
+      font-size: 56px;
+      line-height: 1.16;
       font-weight: 500;
       color: var(--text);
-      letter-spacing: -0.5px;
+      letter-spacing: -0.3px;
+      text-wrap: balance;
     }
 
     .uc-section {
-      padding: 112px 0;
+      padding: 96px 0;
       position: relative;
     }
 
@@ -351,40 +359,106 @@
     .uc-title {
       text-align: center;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 56px;
-      line-height: 1.03;
+      font-size: 52px;
+      line-height: 1.04;
       font-weight: 500;
       color: var(--text);
-      margin: 0 0 14px 0;
+      margin: 0 0 12px 0;
+      text-wrap: balance;
     }
 
     .uc-rule {
       width: 84px;
       height: 1px;
       background: var(--gold);
-      margin: 0 auto 28px auto;
+      margin: 0 auto 24px auto;
     }
 
     .uc-intro {
-      max-width: 780px;
-      margin: 0 auto 48px auto;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
       font-size: 15px;
-      line-height: 2;
+      line-height: 1.95;
       color: var(--muted);
+      text-wrap: balance;
     }
 
-    .uc-grid,
-    .uc-why-grid {
+    .uc-feature-wrap {
+      max-width: 1020px;
+      margin: 0 auto 48px auto;
+    }
+
+    .uc-feature-card {
+      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
+      border: 1px solid rgba(194,164,109,0.42);
+      box-shadow: var(--shadow-strong);
+      padding: 38px 38px;
+      position: relative;
       display: grid;
-      gap: 28px;
-      max-width: 980px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .uc-feature-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 38px;
+      width: 74px;
+      height: 2px;
+      background: var(--gold-soft);
+    }
+
+    .uc-feature-badge {
+      display: inline-block;
+      margin: 6px 0 14px 0;
+      padding: 8px 12px;
+      border: 1px solid rgba(194,164,109,0.38);
+      color: var(--gold-soft);
+      font-family: 'Libre Baskerville', serif;
+      font-size: 9px;
+      line-height: 1.4;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .uc-feature-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      line-height: 1.02;
+      font-weight: 500;
+      color: #F5F1EB;
+      margin: 0 0 14px 0;
+      text-wrap: balance;
+    }
+
+    .uc-feature-copy,
+    .uc-feature-side {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: rgba(245,241,235,0.86);
+      text-wrap: balance;
+    }
+
+    .uc-feature-side {
+      padding-top: 52px;
+    }
+
+    .uc-grid-3,
+    .uc-why-grid,
+    .uc-steps {
+      display: grid;
+      gap: 24px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
-    .uc-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .uc-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .uc-why-grid {
@@ -395,7 +469,7 @@
     .uc-why-card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
-      padding: 40px 36px;
+      padding: 34px 32px;
       text-align: left;
       transition: all 0.26s ease;
       display: flex;
@@ -410,7 +484,7 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 36px;
+      left: 32px;
       width: 68px;
       height: 2px;
       background: var(--gold);
@@ -425,42 +499,41 @@
     .uc-card-title,
     .uc-why-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 36px;
-      line-height: 1.05;
+      font-size: 34px;
+      line-height: 1.06;
       color: var(--text);
-      margin: 10px 0 14px 0;
+      margin: 10px 0 12px 0;
+      text-wrap: balance;
     }
 
     .uc-card-copy,
     .uc-why-copy {
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
-      line-height: 2;
+      line-height: 1.9;
       color: var(--muted);
       margin: 0;
+      text-wrap: balance;
     }
 
-    .uc-services-note {
-      max-width: 740px;
-      margin: 30px auto 0 auto;
+    .uc-note {
+      max-width: 720px;
+      margin: 24px auto 0 auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
       font-size: 12px;
-      line-height: 2;
+      line-height: 1.9;
       color: var(--soft);
+      text-wrap: balance;
     }
 
     .uc-steps {
-      display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 28px;
-      max-width: 1040px;
-      margin: 0 auto;
     }
 
     .uc-step {
       text-align: left;
-      padding-top: 22px;
+      padding-top: 18px;
       border-top: 1px solid var(--line-strong);
     }
 
@@ -471,7 +544,7 @@
       letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .uc-step-title {
@@ -480,54 +553,59 @@
       line-height: 1.04;
       color: var(--text);
       margin: 0 0 10px 0;
+      text-wrap: balance;
     }
 
     .uc-step-copy {
       font-family: 'Libre Baskerville', serif;
       font-size: 13px;
-      line-height: 1.95;
+      line-height: 1.9;
       color: var(--muted);
+      text-wrap: balance;
     }
 
     .uc-list {
-      max-width: 820px;
+      max-width: 900px;
       margin: 0 auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
       font-size: 16px;
-      line-height: 2.15;
+      line-height: 2;
       color: var(--text);
+      text-wrap: balance;
     }
 
     .uc-contact-box {
-      max-width: 760px;
+      max-width: 740px;
       margin: 0 auto;
       text-align: center;
     }
 
     .uc-contact-main {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 54px;
-      line-height: 1.06;
+      font-size: 50px;
+      line-height: 1.08;
       font-weight: 500;
       color: var(--text);
-      margin: 0 0 16px 0;
+      margin: 0 0 14px 0;
+      text-wrap: balance;
     }
 
     .uc-contact-copy {
       max-width: 700px;
-      margin: 0 auto 24px auto;
+      margin: 0 auto 20px auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 15px;
-      line-height: 2;
+      line-height: 1.95;
       color: var(--muted);
+      text-wrap: balance;
     }
 
     .uc-footer {
       background:
         radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04), transparent 26%),
         linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
-      padding: 54px 34px 58px 34px;
+      padding: 44px 34px 48px 34px;
       text-align: center;
       border-top: 1px solid rgba(245,241,235,0.08);
     }
@@ -543,7 +621,7 @@
       font-family: 'Libre Baskerville', serif;
       font-size: 11px;
       color: #D9CEC4;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .uc-footer-links {
@@ -569,30 +647,48 @@
       .uc-steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .uc-grid-3 {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 980px) {
-      .uc-grid,
+      .uc-hero {
+        min-height: calc(84vh - 14px);
+        padding: 38px 0 74px 0;
+      }
+
+      .uc-feature-card,
       .uc-why-grid {
         grid-template-columns: 1fr;
       }
 
+      .uc-feature-side {
+        padding-top: 0;
+      }
+
       .uc-h1 {
-        font-size: 72px;
-        line-height: 1;
+        font-size: 68px;
+        line-height: 0.98;
       }
 
       .uc-title,
       .uc-band-title,
       .uc-contact-main,
-      .uc-quote-text {
-        font-size: 46px;
+      .uc-quote-text,
+      .uc-feature-title {
+        font-size: 44px;
       }
     }
 
     @media (max-width: 768px) {
       .uc-shell {
         padding: 0 20px;
+      }
+
+      .uc-brandbar {
+        padding: 26px 0 0 0;
       }
 
       .uc-headerbar {
@@ -614,28 +710,47 @@
 
       .uc-hero {
         min-height: auto;
-        padding: 26px 0 54px 0;
+        padding: 30px 0 60px 0;
+      }
+
+      .uc-kicker {
+        margin-bottom: 22px;
       }
 
       .uc-h1 {
-        font-size: 56px;
+        font-size: 50px;
         line-height: 1.02;
+        margin: 0 0 20px 0;
       }
 
       .uc-sub {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.9;
+        margin: 0 auto 14px auto;
+      }
+
+      .uc-actions {
+        margin-top: 30px;
+      }
+
+      .uc-band {
+        padding: 62px 24px;
+      }
+
+      .uc-quote {
+        padding: 84px 24px;
+      }
+
+      .uc-section {
+        padding: 76px 0;
       }
 
       .uc-title,
       .uc-band-title,
       .uc-contact-main,
-      .uc-quote-text {
-        font-size: 38px;
-      }
-
-      .uc-quote,
-      .uc-section {
-        padding: 86px 0;
+      .uc-quote-text,
+      .uc-feature-title {
+        font-size: 36px;
       }
 
       .uc-steps {
@@ -651,22 +766,20 @@
       .uc-btn-card {
         display: inline-block;
         max-width: none;
-        margin: 22px 0 0 0;
+        margin: 20px 0 0 0;
       }
 
       .uc-card,
-      .uc-why-card {
+      .uc-why-card,
+      .uc-feature-card {
         min-height: auto;
-        padding: 36px 26px;
+        padding: 32px 24px;
       }
 
       .uc-card:before,
-      .uc-why-card:before {
-        left: 26px;
-      }
-
-      .uc-quote-text {
-        line-height: 1.12;
+      .uc-why-card:before,
+      .uc-feature-card:before {
+        left: 24px;
       }
     }
   </style>
@@ -677,11 +790,11 @@
   <section class="uc-shell uc-brandbar">
     <div class="uc-headerbar">
       <div class="uc-header-spacer"></div>
-      <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+      <a href="/" class="uc-brand">Urban Concierge</a>
       <div class="uc-lang-switch">
-        <a href="/">PL</a>
+        <span class="uc-lang-current">PL</span>
         <span class="uc-lang-divider">|</span>
-        <span class="uc-lang-current">ENG</span>
+        <a href="/expats-krakow/">ENG</a>
       </div>
     </div>
   </section>
@@ -689,24 +802,20 @@
   <section class="uc-hero">
     <div class="uc-shell">
       <div class="uc-hero-inner">
-        <div class="uc-kicker">Private concierge • Kraków</div>
+        <div class="uc-kicker">Prywatny concierge • Kraków i okolice • zdalnie w całej Polsce</div>
 
         <h1 class="uc-h1">
-          Hand over everything that takes your time.<br>
-          Get your time back.
+          Oddaj sprawy.<br>
+          Odzyskaj czas.
         </h1>
 
         <div class="uc-sub">
-          Private concierge and relocation support in Kraków for clients who value time, discretion and reliable execution.
+          Urban Concierge to prywatne wsparcie na miejscu w Krakowie i okolicach oraz zdalnie w całej Polsce — od Dnia Wsparcia i asysty na miejscu po abonament i relokację do Krakowa.
         </div>
 
         <div class="uc-actions">
-          <a href="mailto:info@urbanconcierge.pl?subject=Get%20support" class="uc-btn uc-btn-primary">Request support</a>
-          <a href="/expats-krakow/relocation/" class="uc-btn uc-btn-secondary">Explore relocation</a>
-        </div>
-
-        <div class="uc-premium-note">
-          Urban Concierge is designed for clients who value time more than involvement.
+          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-primary">Zobacz Dzień Wsparcia</a>
+          <a href="#modele" class="uc-btn uc-btn-secondary">Poznaj modele współpracy</a>
         </div>
       </div>
     </div>
@@ -714,10 +823,10 @@
 
   <section class="uc-band">
     <div class="uc-shell">
-      <div class="uc-band-title">Everything handled for you.</div>
+      <div class="uc-band-title">Spokojne wsparcie dla spraw, których nie chcesz już trzymać na sobie.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Calm, discreet support for matters that require time, coordination and proper follow-through.
+        To nie jest przypadkowa pomoc do wszystkiego. To prywatna, uporządkowana forma wsparcia dla klientów, którzy oczekują dyskrecji, ciągłości i właściwego wykonania.
       </div>
     </div>
   </section>
@@ -725,96 +834,105 @@
   <section class="uc-quote">
     <div class="uc-shell">
       <div class="uc-quote-text">
-        Luxury is not things.<br><br>
-        Luxury is not having to think about them.
+        Luksus to nie rzeczy.<br><br>
+        Luksus to nie musieć o nich myśleć.
       </div>
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section" id="modele">
     <div class="uc-shell">
-      <h2 class="uc-title">Ways to work together</h2>
+      <h2 class="uc-title">Modele współpracy</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        Four clear ways to work together — depending on whether you need ongoing support, one focused day, in-person presence or relocation help.
+        Urban Concierge działa w kilku formach — w zależności od tego, czy potrzebujesz jednego konkretnego dnia wsparcia, obecności na miejscu, stałej współpracy czy pomocy przy relokacji.
       </div>
 
-      <div class="uc-grid">
-        <div class="uc-card">
-          <div class="uc-card-title">Monthly Support</div>
-          <p class="uc-card-copy">
-            Ongoing support for clients who want one trusted point of contact to handle recurring matters, coordination and follow-ups.
-          </p>
-          <a href="/expats-krakow/monthly-support/" class="uc-btn-card">Learn more</a>
-        </div>
+      <div class="uc-feature-wrap">
+        <div class="uc-feature-card">
+          <div>
+            <div class="uc-feature-badge">Najczęściej wybierany pierwszy krok</div>
+            <div class="uc-feature-title">Dzień Wsparcia</div>
+            <div class="uc-feature-copy">
+              To uporządkowana forma rozpoczęcia współpracy dla klientów, którzy chcą przekazać wybrane sprawy do organizacji bez zaczynania od stałego abonamentu. Klient może przesłać listę tematów wcześniej, zakres jest potwierdzany przed startem, a w ustalonym dniu jego sprawy otrzymują priorytet.
+            </div>
+            <a href="/1-dzien-wsparcia/" class="uc-btn-card uc-btn-card-light">Przejdź do Dnia Wsparcia</a>
+          </div>
 
-        <div class="uc-card">
-          <div class="uc-card-title">One-Day Support</div>
-          <p class="uc-card-copy">
-            Several matters handled within one focused day — for clients who want to offload a specific practical list at once.
-          </p>
-          <a href="/expats-krakow/one-day-support/" class="uc-btn-card">Learn more</a>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">In-Person Assistance</div>
-          <p class="uc-card-copy">
-            On-site support in Kraków — appointments, pick-ups, meetings, presence and coordination whenever something needs to be handled in person.
-          </p>
-          <a href="/expats-krakow/in-person-assistance/" class="uc-btn-card">Learn more</a>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Relocation to Kraków</div>
-          <p class="uc-card-copy">
-            Support for clients moving to Kraków — from pre-arrival preparation to practical local coordination after arrival.
-          </p>
-          <a href="/expats-krakow/relocation/" class="uc-btn-card">Learn more</a>
+          <div class="uc-feature-side">
+            Dzień Wsparcia sprawdza się szczególnie wtedy, gdy dzień lub tydzień staje się wyjątkowo intensywny — w pracy, w domu albo pomiędzy obowiązkami. Na miejscu w Krakowie i okolicach, zdalnie w całej Polsce.
+          </div>
         </div>
       </div>
 
-      <div class="uc-services-note">
-        Each service is shaped around the scope, timing and level of involvement your situation requires.
+      <div class="uc-grid-3">
+        <div class="uc-card">
+          <div class="uc-card-title">Asysta na miejscu</div>
+          <p class="uc-card-copy">
+            Wsparcie lokalne wszędzie tam, gdzie potrzebna jest obecność, koordynacja i spokojne doprowadzenie sprawy do końca — spotkania, odbiory, wizyty i wybrane tematy wymagające działania na miejscu.
+          </p>
+          <a href="/asysta-na-miejscu/" class="uc-btn-card">Dowiedz się więcej</a>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Abonament</div>
+          <p class="uc-card-copy">
+            Stałe wsparcie dla klientów, którzy chcą mieć jeden zaufany punkt kontaktu do bieżących spraw, koordynacji, follow-upów i tematów wymagających ciągłości.
+          </p>
+          <a href="/abonament/" class="uc-btn-card">Dowiedz się więcej</a>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Relokacja do Krakowa</div>
+          <p class="uc-card-copy">
+            Wsparcie dla klientów przeprowadzających się do Krakowa — od przygotowania przed przyjazdem po praktyczną lokalną koordynację po nim.
+          </p>
+          <a href="/relokacja-krakow/" class="uc-btn-card">Dowiedz się więcej</a>
+        </div>
+      </div>
+
+      <div class="uc-note">
+        Każda współpraca jest układana wokół zakresu, terminu, poziomu zaangażowania oraz realnej formy wsparcia potrzebnej w danej sytuacji.
       </div>
     </div>
   </section>
 
   <section class="uc-section uc-section-soft">
     <div class="uc-shell">
-      <h2 class="uc-title">Why Urban Concierge</h2>
+      <h2 class="uc-title">Dlaczego Urban Concierge</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        Designed for clients who want practical execution, discretion and continuity — without having to stay involved in every detail.
+        To model dla klientów, którzy chcą praktycznego wykonania, dyskrecji i ciągłości — bez konieczności pozostawania w każdym detalu.
       </div>
 
       <div class="uc-why-grid">
         <div class="uc-why-card">
-          <div class="uc-why-title">Discretion</div>
+          <div class="uc-why-title">Dyskrecja</div>
           <p class="uc-why-copy">
-            Your matters remain private. Always.
+            Twoje sprawy pozostają prywatne. Zawsze.
           </p>
         </div>
 
         <div class="uc-why-card">
-          <div class="uc-why-title">Trust</div>
+          <div class="uc-why-title">Porządek</div>
           <p class="uc-why-copy">
-            We act on your behalf and see things through properly.
+            Zakres jest potwierdzany jasno, a współpraca prowadzona w spokojny i realistyczny sposób.
           </p>
         </div>
 
         <div class="uc-why-card">
-          <div class="uc-why-title">Time back</div>
+          <div class="uc-why-title">Odzyskany czas</div>
           <p class="uc-why-copy">
-            You decide what matters. We organize, manage and execute.
+            Ty decydujesz, co jest potrzebne. My organizujemy, koordynujemy i prowadzimy sprawy dalej.
           </p>
         </div>
 
         <div class="uc-why-card">
-          <div class="uc-why-title">Selective client base</div>
+          <div class="uc-why-title">Selektywna baza klientów</div>
           <p class="uc-why-copy">
-            We work with a limited number of clients to maintain continuity and a premium standard of support.
+            Pracujemy z ograniczoną liczbą klientów, aby utrzymać ciągłość i standard wsparcia.
           </p>
         </div>
       </div>
@@ -823,32 +941,40 @@
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">How it works</h2>
+      <h2 class="uc-title">Jak to działa</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-steps">
         <div class="uc-step">
-          <div class="uc-step-no">Step 01</div>
-          <div class="uc-step-title">Contact</div>
-          <div class="uc-step-copy">You describe what you need — by email or message.</div>
+          <div class="uc-step-no">Krok 01</div>
+          <div class="uc-step-title">Kontakt</div>
+          <div class="uc-step-copy">
+            Opisujesz, czego potrzebujesz — mailowo lub w wiadomości.
+          </div>
         </div>
 
         <div class="uc-step">
-          <div class="uc-step-no">Step 02</div>
-          <div class="uc-step-title">Scope</div>
-          <div class="uc-step-copy">We confirm the most suitable service and define the scope clearly.</div>
+          <div class="uc-step-no">Krok 02</div>
+          <div class="uc-step-title">Dobór formy</div>
+          <div class="uc-step-copy">
+            Potwierdzamy, czy najlepszym rozwiązaniem będzie Dzień Wsparcia, asysta na miejscu, abonament czy relokacja.
+          </div>
         </div>
 
         <div class="uc-step">
-          <div class="uc-step-no">Step 03</div>
-          <div class="uc-step-title">Execution</div>
-          <div class="uc-step-copy">We take over the matter and move it forward with proper coordination.</div>
+          <div class="uc-step-no">Krok 03</div>
+          <div class="uc-step-title">Realizacja</div>
+          <div class="uc-step-copy">
+            Przejmujemy sprawę i prowadzimy ją dalej z właściwą koordynacją.
+          </div>
         </div>
 
         <div class="uc-step">
-          <div class="uc-step-no">Step 04</div>
-          <div class="uc-step-title">Confirmation</div>
-          <div class="uc-step-copy">You receive updates, confirmation or a completed solution.</div>
+          <div class="uc-step-no">Krok 04</div>
+          <div class="uc-step-title">Potwierdzenie</div>
+          <div class="uc-step-copy">
+            Otrzymujesz update, potwierdzenie albo gotowe rozwiązanie.
+          </div>
         </div>
       </div>
     </div>
@@ -856,14 +982,14 @@
 
   <section class="uc-section uc-section-soft">
     <div class="uc-shell" style="max-width: 920px;">
-      <h2 class="uc-title">Who this service is for</h2>
+      <h2 class="uc-title">Dla kogo jest Urban Concierge</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-list">
-        for clients who prefer to delegate rather than handle details themselves<br><br>
-        for people who value calm, order and reliable execution<br><br>
-        for those with little time and many responsibilities<br><br>
-        for clients who want matters handled without constant involvement
+        dla klientów, którzy wolą delegować niż samodzielnie zajmować się detalami<br><br>
+        dla osób, które cenią spokój, porządek i rzetelne wykonanie<br><br>
+        dla tych, którzy mają mało czasu i dużo odpowiedzialności<br><br>
+        dla klientów, którzy chcą mieć sprawy załatwione bez stałego angażowania się
       </div>
     </div>
   </section>
@@ -871,16 +997,16 @@
   <section class="uc-section">
     <div class="uc-shell">
       <div class="uc-contact-box">
-        <h2 class="uc-contact-main">Get in touch</h2>
+        <h2 class="uc-contact-main">Zacznij od właściwej formy wsparcia</h2>
         <div class="uc-rule"></div>
 
         <div class="uc-contact-copy">
-          Start with a single request, one focused day, monthly support or relocation help. We work with a limited number of clients to maintain discretion and continuity.
+          Możesz zacząć od Dnia Wsparcia, jeśli chcesz przekazać konkretną listę spraw bez wchodzenia od razu w stałą współpracę. Jeśli potrzebujesz obecności na miejscu, ciągłości albo relokacji do Krakowa, dobierzemy odpowiedni model.
         </div>
 
-        <div class="uc-actions" style="margin-top: 34px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=Get%20support" class="uc-btn uc-btn-primary">Request support</a>
-          <a href="mailto:info@urbanconcierge.pl?subject=Send%20a%20request" class="uc-btn uc-btn-secondary">Make a request</a>
+        <div class="uc-actions" style="margin-top: 30px;">
+          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-primary">Zobacz Dzień Wsparcia</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Popro%C5%9B%20o%20wsparcie" class="uc-btn uc-btn-secondary">Poproś o wsparcie</a>
         </div>
       </div>
     </div>
@@ -888,16 +1014,16 @@
 
   <section class="uc-footer">
     <div class="uc-footer-brand">Urban Concierge</div>
-    <div class="uc-footer-sub">Private concierge services | Kraków</div>
+    <div class="uc-footer-sub">Prywatne wsparcie concierge | Kraków i okolice | zdalnie w całej Polsce</div>
 
     <div class="uc-footer-links">
-      <a href="/expats-krakow/monthly-support/">Monthly Support</a>
-      <a href="/expats-krakow/one-day-support/">One-Day Support</a>
-      <a href="/expats-krakow/in-person-assistance/">In-Person Assistance</a>
-      <a href="/expats-krakow/relocation/">Relocation to Kraków</a>
-      <a href="/expats-krakow/Regulamin%20UC%20eng.pdf" target="_blank" rel="noopener">Terms</a>
-      <a href="/expats-krakow/polityka%20prywatności%20UC%20eng.pdf" target="_blank" rel="noopener">Privacy policy</a>
-      <a href="mailto:info@urbanconcierge.pl">Contact</a>
+      <a href="/1-dzien-wsparcia/">Dzień Wsparcia</a>
+      <a href="/asysta-na-miejscu/">Asysta na miejscu</a>
+      <a href="/abonament/">Abonament</a>
+      <a href="/relokacja-krakow/">Relokacja do Krakowa</a>
+      <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Regulamin</a>
+      <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Polityka prywatności</a>
+      <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
     </div>
   </section>
 </body>
