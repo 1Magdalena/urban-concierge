@@ -8,7 +8,6 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -370,7 +369,7 @@
     .uc-grid-2,
     .uc-grid-4,
     .uc-pricing-grid,
-    .uc-steps {
+    .uc-steps-compact {
       display: grid;
       gap: 24px;
       max-width: 1040px;
@@ -389,10 +388,13 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    .uc-steps-compact {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .uc-card,
-    .uc-step,
-    .uc-callout,
-    .uc-price-card {
+    .uc-price-card,
+    .uc-step-card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
       padding: 34px 32px;
@@ -401,8 +403,8 @@
     }
 
     .uc-card:before,
-    .uc-callout:before,
-    .uc-price-card:before {
+    .uc-price-card:before,
+    .uc-step-card:before {
       content: "";
       position: absolute;
       top: 0;
@@ -413,9 +415,8 @@
     }
 
     .uc-card-title,
-    .uc-step-title,
-    .uc-callout-title,
-    .uc-list-title {
+    .uc-list-title,
+    .uc-step-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 34px;
       line-height: 1.06;
@@ -425,23 +426,13 @@
     }
 
     .uc-card-copy,
-    .uc-step-copy,
-    .uc-callout-copy,
-    .uc-list-copy {
+    .uc-step-copy {
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
       line-height: 1.9;
       color: var(--muted);
       margin: 0;
       text-wrap: balance;
-    }
-
-    .uc-step {
-      text-align: left;
-      padding-top: 18px;
-      border-top: 1px solid var(--line-strong);
-      box-shadow: none;
-      background: transparent;
     }
 
     .uc-step-no {
@@ -465,11 +456,12 @@
       background: linear-gradient(180deg, #332925 0%, #241C19 100%);
       border: 1px solid rgba(194,164,109,0.42);
       box-shadow: var(--shadow-strong);
-      padding: 40px 38px;
+      padding: 42px 38px;
       position: relative;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 30px;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 42px;
+      align-items: start;
     }
 
     .uc-dark-block:before {
@@ -492,8 +484,7 @@
       text-wrap: balance;
     }
 
-    .uc-dark-copy,
-    .uc-dark-list {
+    .uc-dark-copy {
       font-family: 'Libre Baskerville', serif;
       font-size: 13px;
       line-height: 1.95;
@@ -501,9 +492,39 @@
       text-wrap: balance;
     }
 
+    .uc-dark-side {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 6px;
+    }
+
     .uc-dark-list {
-      padding-left: 18px;
+      list-style: none;
+      padding: 0;
       margin: 0;
+      width: 100%;
+      max-width: 360px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: rgba(245,241,235,0.90);
+    }
+
+    .uc-dark-list li {
+      position: relative;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .uc-dark-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: rgba(245,241,235,0.90);
+      font-size: 14px;
+      line-height: 1.95;
     }
 
     .uc-dark-list li + li {
@@ -672,8 +693,7 @@
     }
 
     @media (max-width: 1100px) {
-      .uc-grid-4,
-      .uc-steps {
+      .uc-grid-4 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
@@ -699,8 +719,17 @@
       .uc-grid-2,
       .uc-list-grid,
       .uc-dark-block,
-      .uc-pricing-grid {
+      .uc-pricing-grid,
+      .uc-steps-compact {
         grid-template-columns: 1fr;
+      }
+
+      .uc-dark-side {
+        padding-top: 0;
+      }
+
+      .uc-dark-list {
+        max-width: none;
       }
     }
 
@@ -773,7 +802,7 @@
       }
 
       .uc-grid-4,
-      .uc-steps {
+      .uc-steps-compact {
         grid-template-columns: 1fr;
       }
 
@@ -792,14 +821,16 @@
       .uc-card,
       .uc-list-box,
       .uc-dark-block,
-      .uc-price-card {
+      .uc-price-card,
+      .uc-step-card {
         padding: 32px 24px;
       }
 
       .uc-card:before,
       .uc-list-box:before,
       .uc-dark-block:before,
-      .uc-price-card:before {
+      .uc-price-card:before,
+      .uc-step-card:before {
         left: 24px;
       }
     }
@@ -947,7 +978,7 @@
           <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia%20-%20termin%20i%20cena" class="uc-btn-card uc-btn-card-light">Zapytaj o termin</a>
         </div>
 
-        <div>
+        <div class="uc-dark-side">
           <ul class="uc-dark-list">
             <li>na miejscu w Krakowie i okolicach</li>
             <li>zdalnie w całej Polsce</li>
@@ -1005,8 +1036,8 @@
       <h2 class="uc-title">Jak to działa</h2>
       <div class="uc-rule"></div>
 
-      <div class="uc-steps">
-        <div class="uc-step">
+      <div class="uc-steps-compact">
+        <div class="uc-step-card">
           <div class="uc-step-no">Krok 01</div>
           <div class="uc-step-title">Wiadomość</div>
           <div class="uc-step-copy">
@@ -1014,7 +1045,7 @@
           </div>
         </div>
 
-        <div class="uc-step">
+        <div class="uc-step-card">
           <div class="uc-step-no">Krok 02</div>
           <div class="uc-step-title">Lista spraw</div>
           <div class="uc-step-copy">
@@ -1022,7 +1053,7 @@
           </div>
         </div>
 
-        <div class="uc-step">
+        <div class="uc-step-card">
           <div class="uc-step-no">Krok 03</div>
           <div class="uc-step-title">Potwierdzenie zakresu</div>
           <div class="uc-step-copy">
@@ -1030,7 +1061,7 @@
           </div>
         </div>
 
-        <div class="uc-step">
+        <div class="uc-step-card">
           <div class="uc-step-no">Krok 04</div>
           <div class="uc-step-title">Realizacja</div>
           <div class="uc-step-copy">
