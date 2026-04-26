@@ -1,1 +1,1041 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dzień Wsparcia | Urban Concierge</title>
+  <meta name="description" content="Dzień Wsparcia Urban Concierge to prywatne, uporządkowane wsparcie na miejscu w Krakowie i okolicach oraz zdalnie w całej Polsce. Pierwszy krok bez abonamentu." />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18108841323');
+  </script>
+
+  <style>
+    html, body {
+      background: #F5F1EB;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      color: #3A2F2A;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #F5F1EB;
+      --bg-soft: #F8F4EE;
+      --card: #F7F2EB;
+      --text: #3A2F2A;
+      --muted: #5F534B;
+      --soft: #7B6C61;
+      --line: #E7DDD2;
+      --line-strong: #DDCFBF;
+      --gold: #B8955A;
+      --gold-soft: #C2A46D;
+      --choco: #2B221F;
+      --choco-2: #3A2F2A;
+      --hover: #473934;
+      --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
+      --shadow-strong: 0 20px 54px rgba(43,34,31,0.10);
+    }
+
+    .uc-topbar {
+      width: 100%;
+      height: 14px;
+      background: linear-gradient(90deg, #2B221F 0%, #3A2F2A 50%, #2B221F 100%);
+    }
+
+    .uc-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .uc-brandbar {
+      padding: 34px 0 0 0;
+    }
+
+    .uc-headerbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .uc-header-spacer {
+      min-height: 1px;
+    }
+
+    .uc-brand {
+      justify-self: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 31px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.25px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .uc-lang-switch {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      background: rgba(255,255,255,0.32);
+      border: 1px solid #D8C8B6;
+    }
+
+    .uc-lang-current,
+    .uc-lang-switch a {
+      display: inline-block;
+      min-width: 44px;
+      text-align: center;
+      padding: 8px 12px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .uc-lang-current {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-lang-switch a {
+      color: var(--text);
+      border: 1px solid transparent;
+      transition: all 0.22s ease;
+    }
+
+    .uc-lang-switch a:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+    }
+
+    .uc-lang-divider {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      color: #8B7B70;
+      line-height: 1;
+    }
+
+    .uc-hero {
+      min-height: calc(92vh - 14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 0 96px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uc-hero:before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 720px;
+      border: 1px solid rgba(184,149,90,0.10);
+      border-radius: 50%;
+      top: -250px;
+      right: -230px;
+      pointer-events: none;
+    }
+
+    .uc-hero:after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(58,47,42,0.06);
+      border-radius: 50%;
+      bottom: -150px;
+      left: -120px;
+      pointer-events: none;
+    }
+
+    .uc-hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .uc-kicker {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.8;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #9C8F84;
+      margin-bottom: 34px;
+    }
+
+    .uc-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 84px;
+      line-height: 0.97;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 28px 0;
+      letter-spacing: -0.9px;
+      text-wrap: balance;
+    }
+
+    .uc-sub {
+      max-width: 820px;
+      margin: 0 auto 34px auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 19px;
+      line-height: 2;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-actions {
+      margin-top: 0;
+    }
+
+    .uc-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 18px 38px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      letter-spacing: 0.55px;
+      transition: all 0.24s ease;
+      margin: 0 10px 12px 10px;
+    }
+
+    .uc-btn-primary {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-btn-primary:hover {
+      background: var(--hover);
+      border-color: var(--hover);
+      transform: translateY(-1px);
+    }
+
+    .uc-btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #CCB8A2;
+    }
+
+    .uc-btn-secondary:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    .uc-btn-card {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      letter-spacing: 0.45px;
+      background: var(--gold);
+      color: #FFFFFF;
+      border: 1px solid var(--gold);
+      transition: all 0.24s ease;
+      align-self: flex-start;
+    }
+
+    .uc-btn-card:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold-soft);
+      transform: translateY(-1px);
+    }
+
+    .uc-btn-card-light {
+      background: transparent;
+      color: #F5F1EB;
+      border: 1px solid rgba(245,241,235,0.46);
+    }
+
+    .uc-btn-card-light:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(245,241,235,0.72);
+      transform: translateY(-1px);
+    }
+
+    .uc-band {
+      background:
+        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
+        radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
+        linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
+      color: #F5F1EB;
+      padding: 74px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uc-band-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 50px;
+      line-height: 1.08;
+      font-weight: 500;
+      margin: 0 0 12px 0;
+      color: #F5F1EB;
+      text-wrap: balance;
+    }
+
+    .uc-band-rule {
+      width: 86px;
+      height: 1px;
+      background: rgba(245,241,235,0.40);
+      margin: 0 auto 18px auto;
+    }
+
+    .uc-band-copy {
+      max-width: 780px;
+      margin: 0 auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 1.95;
+      color: rgba(245,241,235,0.88);
+      text-wrap: balance;
+    }
+
+    .uc-section {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .uc-section + .uc-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .uc-section-soft {
+      background: var(--bg-soft);
+    }
+
+    .uc-title {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      line-height: 1.04;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 12px 0;
+      text-wrap: balance;
+    }
+
+    .uc-rule {
+      width: 84px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 24px auto;
+    }
+
+    .uc-intro {
+      max-width: 820px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 1.95;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-grid-2,
+    .uc-grid-4,
+    .uc-steps {
+      display: grid;
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .uc-grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .uc-grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .uc-card,
+    .uc-step,
+    .uc-callout {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 34px 32px;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .uc-card:before,
+    .uc-callout:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 32px;
+      width: 68px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-card-title,
+    .uc-step-title,
+    .uc-callout-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      line-height: 1.06;
+      color: var(--text);
+      margin: 10px 0 12px 0;
+      text-wrap: balance;
+    }
+
+    .uc-card-copy,
+    .uc-step-copy,
+    .uc-callout-copy,
+    .uc-list-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    .uc-step {
+      text-align: left;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-strong);
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .uc-step-no {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .uc-step-title {
+      font-size: 30px;
+      margin: 0 0 10px 0;
+    }
+
+    .uc-dark-block {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
+      border: 1px solid rgba(194,164,109,0.42);
+      box-shadow: var(--shadow-strong);
+      padding: 40px 38px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 30px;
+    }
+
+    .uc-dark-block:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 38px;
+      width: 74px;
+      height: 2px;
+      background: var(--gold-soft);
+    }
+
+    .uc-dark-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      line-height: 1.02;
+      font-weight: 500;
+      color: #F5F1EB;
+      margin: 0 0 14px 0;
+      text-wrap: balance;
+    }
+
+    .uc-dark-copy,
+    .uc-dark-list {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: rgba(245,241,235,0.86);
+      text-wrap: balance;
+    }
+
+    .uc-dark-list {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .uc-dark-list li + li {
+      margin-top: 10px;
+    }
+
+    .uc-badge {
+      display: inline-block;
+      margin: 6px 0 14px 0;
+      padding: 8px 12px;
+      border: 1px solid rgba(194,164,109,0.38);
+      color: var(--gold-soft);
+      font-family: 'Libre Baskerville', serif;
+      font-size: 9px;
+      line-height: 1.4;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .uc-list-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .uc-list-box {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 34px 32px;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .uc-list-box:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 32px;
+      width: 68px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-list-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      line-height: 1.06;
+      color: var(--text);
+      margin: 10px 0 16px 0;
+    }
+
+    .uc-ul {
+      margin: 0;
+      padding-left: 18px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .uc-ul li + li {
+      margin-top: 10px;
+    }
+
+    .uc-note {
+      max-width: 760px;
+      margin: 24px auto 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 1.9;
+      color: var(--soft);
+      text-wrap: balance;
+    }
+
+    .uc-contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .uc-contact-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 50px;
+      line-height: 1.08;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 14px 0;
+      text-wrap: balance;
+    }
+
+    .uc-contact-copy {
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 1.95;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-footer {
+      background:
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04), transparent 26%),
+        linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
+      padding: 44px 34px 48px 34px;
+      text-align: center;
+      border-top: 1px solid rgba(245,241,235,0.08);
+    }
+
+    .uc-footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: #F5F1EB;
+      margin-bottom: 6px;
+    }
+
+    .uc-footer-sub {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      color: #D9CEC4;
+      margin-bottom: 14px;
+    }
+
+    .uc-footer-links {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.9;
+      letter-spacing: 0.25px;
+    }
+
+    .uc-footer-links a {
+      color: #F5F1EB;
+      text-decoration: none;
+      margin: 0 10px;
+      opacity: 0.92;
+    }
+
+    .uc-footer-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1100px) {
+      .uc-grid-4,
+      .uc-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .uc-hero {
+        min-height: calc(84vh - 14px);
+        padding: 38px 0 74px 0;
+      }
+
+      .uc-h1 {
+        font-size: 66px;
+        line-height: 0.98;
+      }
+
+      .uc-title,
+      .uc-band-title,
+      .uc-contact-main,
+      .uc-dark-title {
+        font-size: 44px;
+      }
+
+      .uc-grid-2,
+      .uc-list-grid,
+      .uc-dark-block {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .uc-shell {
+        padding: 0 20px;
+      }
+
+      .uc-brandbar {
+        padding: 26px 0 0 0;
+      }
+
+      .uc-headerbar {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .uc-header-spacer {
+        display: none;
+      }
+
+      .uc-brand {
+        font-size: 28px;
+      }
+
+      .uc-lang-switch {
+        justify-self: center;
+      }
+
+      .uc-hero {
+        min-height: auto;
+        padding: 30px 0 60px 0;
+      }
+
+      .uc-kicker {
+        margin-bottom: 22px;
+      }
+
+      .uc-h1 {
+        font-size: 50px;
+        line-height: 1.02;
+        margin: 0 0 20px 0;
+      }
+
+      .uc-sub {
+        font-size: 16px;
+        line-height: 1.9;
+        margin: 0 auto 14px auto;
+      }
+
+      .uc-actions {
+        margin-top: 30px;
+      }
+
+      .uc-band {
+        padding: 62px 24px;
+      }
+
+      .uc-section {
+        padding: 76px 0;
+      }
+
+      .uc-title,
+      .uc-band-title,
+      .uc-contact-main,
+      .uc-dark-title,
+      .uc-list-title,
+      .uc-card-title {
+        font-size: 36px;
+      }
+
+      .uc-grid-4,
+      .uc-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .uc-btn {
+        display: block;
+        max-width: 340px;
+        margin: 0 auto 12px auto;
+      }
+
+      .uc-btn-card {
+        display: inline-block;
+        max-width: none;
+        margin: 20px 0 0 0;
+      }
+
+      .uc-card,
+      .uc-list-box,
+      .uc-dark-block {
+        padding: 32px 24px;
+      }
+
+      .uc-card:before,
+      .uc-list-box:before,
+      .uc-dark-block:before {
+        left: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="uc-topbar"></div>
+
+  <section class="uc-shell uc-brandbar">
+    <div class="uc-headerbar">
+      <div class="uc-header-spacer"></div>
+      <a href="/" class="uc-brand">Urban Concierge</a>
+      <div class="uc-lang-switch">
+        <span class="uc-lang-current">PL</span>
+        <span class="uc-lang-divider">|</span>
+        <a href="/expats-krakow/one-day-support/">ENG</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-hero">
+    <div class="uc-shell">
+      <div class="uc-hero-inner">
+        <div class="uc-kicker">Dzień Wsparcia Urban Concierge • Kraków i okolice • zdalnie w całej Polsce</div>
+
+        <h1 class="uc-h1">
+          Dla dni, w których<br>
+          spraw jest po prostu<br>
+          za dużo.
+        </h1>
+
+        <div class="uc-sub">
+          Dzień Wsparcia to uporządkowany pierwszy krok dla klientów, którzy chcą przekazać wybrane sprawy do organizacji bez zaczynania od abonamentu. Na miejscu w Krakowie i okolicach lub zdalnie w całej Polsce.
+        </div>
+
+        <div class="uc-actions">
+          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Wyślij listę spraw</a>
+          <a href="#jak-to-dziala" class="uc-btn uc-btn-secondary">Zobacz jak to działa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-band">
+    <div class="uc-shell">
+      <div class="uc-band-title">Nie kupujesz pojedynczych godzin.</div>
+      <div class="uc-band-rule"></div>
+      <div class="uc-band-copy">
+        Kupujesz przygotowanie, potwierdzony zakres i priorytet dla wybranych spraw w ustalonym dniu. To spokojna, prywatna forma wsparcia dla osób, które chcą odciążyć się realnie — bez zaczynania od stałej współpracy.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Na czym polega Dzień Wsparcia</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        To model zaprojektowany dla dni, w których zadań, terminów i tematów jest po prostu za dużo. Zamiast rozliczania każdej minuty klient otrzymuje jeden uporządkowany dzień wsparcia z jasno potwierdzonym zakresem.
+      </div>
+
+      <div class="uc-grid-4">
+        <div class="uc-card">
+          <div class="uc-card-title">Lista spraw wcześniej</div>
+          <p class="uc-card-copy">
+            Możesz przesłać listę tematów dzień wcześniej, aby dzień był przygotowany z wyprzedzeniem.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Potwierdzony zakres</div>
+          <p class="uc-card-copy">
+            Przed startem potwierdzamy, co wchodzi w usługę, a co wymaga osobnej wyceny lub innego modelu współpracy.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Priorytet w danym dniu</div>
+          <p class="uc-card-copy">
+            W ustalonym dniu Twoje sprawy mają priorytet i są prowadzone w uporządkowany sposób.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Spokojne aktualizacje</div>
+          <p class="uc-card-copy">
+            Otrzymujesz potwierdzenia, update albo gotowe rozwiązania — bez konieczności pozostawania w każdym detalu.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <div class="uc-dark-block">
+        <div>
+          <div class="uc-badge">Najprostszy pierwszy krok</div>
+          <div class="uc-dark-title">Dlaczego ta forma działa</div>
+          <div class="uc-dark-copy">
+            Dzień Wsparcia jest wygodnym wejściem do współpracy dla klientów, którzy chcą sprawdzić styl Urban Concierge bez wiązania się abonamentem. To rozwiązanie dla intensywnych tygodni, nagromadzonych spraw i momentów, w których potrzebujesz realnego odciążenia, a nie kolejnej listy rzeczy do zrobienia samodzielnie.
+          </div>
+          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia" class="uc-btn-card uc-btn-card-light">Zapytaj o termin</a>
+        </div>
+
+        <div>
+          <ul class="uc-dark-list">
+            <li>na miejscu w Krakowie i okolicach</li>
+            <li>zdalnie w całej Polsce</li>
+            <li>bez abonamentu na start</li>
+            <li>z możliwością przejścia na stałą współpracę później</li>
+            <li>z zakresem potwierdzanym przed rozpoczęciem</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Przykładowe sprawy</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        Zakres zawsze zależy od konkretnej sytuacji, ale poniżej widzisz typ tematów, dla których ta usługa sprawdza się najlepiej.
+      </div>
+
+      <div class="uc-list-grid">
+        <div class="uc-list-box">
+          <div class="uc-list-title">Najczęściej wchodzi</div>
+          <ul class="uc-ul">
+            <li>koordynacja wybranych spraw z jednej listy</li>
+            <li>research i porównanie opcji</li>
+            <li>kontakt z usługodawcami w ustalonym zakresie</li>
+            <li>rezerwacje, ustalenia, potwierdzenia i follow-upy</li>
+            <li>organizacja dnia wokół priorytetowych tematów</li>
+            <li>wybrane działania na miejscu w Krakowie i okolicach</li>
+          </ul>
+        </div>
+
+        <div class="uc-list-box">
+          <div class="uc-list-title">Zwykle nie wchodzi</div>
+          <ul class="uc-ul">
+            <li>duże projekty sprzedażowe lub wielodniowe</li>
+            <li>masowy outreach, cold calling lub działania na skalę</li>
+            <li>tematy, które całkowicie zmieniają ustalony zakres w trakcie dnia</li>
+            <li>sprawy wymagające osobnej, pełnej obsługi projektowej</li>
+            <li>zadania, które wykraczają poza realny model tej usługi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="uc-note">
+        Jeśli coś wykracza poza tę formułę, po prostu powiemy o tym jasno przed startem i zaproponujemy właściwszy model.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft" id="jak-to-dziala">
+    <div class="uc-shell">
+      <h2 class="uc-title">Jak to działa</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-steps">
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 01</div>
+          <div class="uc-step-title">Wiadomość</div>
+          <div class="uc-step-copy">
+            Wysyłasz krótką wiadomość i opisujesz, czego potrzebujesz.
+          </div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 02</div>
+          <div class="uc-step-title">Lista spraw</div>
+          <div class="uc-step-copy">
+            Możesz przesłać listę tematów wcześniej, najlepiej dzień przed planowanym wsparciem.
+          </div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 03</div>
+          <div class="uc-step-title">Potwierdzenie zakresu</div>
+          <div class="uc-step-copy">
+            Potwierdzamy, co wchodzi w Dzień Wsparcia, a co wykracza poza tę formułę.
+          </div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 04</div>
+          <div class="uc-step-title">Realizacja</div>
+          <div class="uc-step-copy">
+            W ustalonym dniu Twoje sprawy otrzymują priorytet, a Ty dostajesz update i potwierdzenia.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Dla kogo jest ta usługa</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-grid-2">
+        <div class="uc-card">
+          <div class="uc-card-title">Dla intensywnych dni</div>
+          <p class="uc-card-copy">
+            Dla osób, którym kilka tematów nałożyło się naraz i które chcą realnie odciążyć się bez chaosu.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Dla pracy poza schematem</div>
+          <p class="uc-card-copy">
+            Dla osób pracujących w niestandardowym rytmie, na dyżurach lub w godzinach, które nie zawsze pozwalają zajmować się wszystkim samodzielnie.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Dla klientów ceniących spokój</div>
+          <p class="uc-card-copy">
+            Dla tych, którzy wolą delegować niż zajmować się każdym telefonem, terminem i detalem samodzielnie.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Dla pierwszego kontaktu z UC</div>
+          <p class="uc-card-copy">
+            Dla klientów, którzy chcą zacząć od jednej usługi i dopiero później zdecydować, czy potrzebują asyst, abonamentu lub dalszego wsparcia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <div class="uc-contact-box">
+        <h2 class="uc-contact-main">Zacznij od jednej dobrze przygotowanej listy</h2>
+        <div class="uc-rule"></div>
+
+        <div class="uc-contact-copy">
+          Napisz, czego potrzebujesz, a potwierdzimy, czy to dobry zakres dla Dnia Wsparcia. Jeśli tak — ustalimy termin i przejmiemy wybrane sprawy w uporządkowany sposób.
+        </div>
+
+        <div class="uc-actions" style="margin-top: 30px;">
+          <a href="mailto:info@urbanconcierge.pl?subject=Zapytanie%20o%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Wyślij zapytanie</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-secondary">Wyślij listę spraw</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-footer">
+    <div class="uc-footer-brand">Urban Concierge</div>
+    <div class="uc-footer-sub">Prywatne wsparcie concierge | Kraków i okolice | zdalnie w całej Polsce</div>
+
+    <div class="uc-footer-links">
+      <a href="/">Strona główna</a>
+      <a href="/asysty/">Asysty na miejscu</a>
+      <a href="/abonament/">Abonament</a>
+      <a href="/relokacja-krakow/">Relokacja do Krakowa</a>
+      <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Regulamin</a>
+      <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Polityka prywatności</a>
+      <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
+    </div>
+  </section>
+</body>
+</html>
 
