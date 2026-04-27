@@ -1,1 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asysty na miejscu | Urban Concierge</title>
+  <meta name="description" content="Prywatne asysty na miejscu w Krakowie i okolicach. Dyskretne wsparcie podczas wybranych wizyt, formalności, spotkań, odbiorów i sytuacji wymagających obecności oraz spokojnej koordynacji." />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18108841323');
+  </script>
+
+  <style>
+    html, body {
+      background: #F5F1EB;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      color: #3A2F2A;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #F5F1EB;
+      --bg-soft: #F8F4EE;
+      --card: #F7F2EB;
+      --text: #3A2F2A;
+      --muted: #5F534B;
+      --soft: #7B6C61;
+      --line: #E7DDD2;
+      --line-strong: #DDCFBF;
+      --gold: #B8955A;
+      --gold-soft: #C2A46D;
+      --choco: #2B221F;
+      --choco-2: #3A2F2A;
+      --hover: #473934;
+      --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
+    }
+
+    .uc-topbar {
+      width: 100%;
+      height: 14px;
+      background: linear-gradient(90deg, #2B221F 0%, #3A2F2A 50%, #2B221F 100%);
+    }
+
+    .uc-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .uc-brandbar {
+      padding: 34px 0 0 0;
+    }
+
+    .uc-headerbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .uc-header-spacer {
+      min-height: 1px;
+    }
+
+    .uc-brand {
+      justify-self: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 31px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.25px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .uc-lang-switch {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      background: rgba(255,255,255,0.32);
+      border: 1px solid #D8C8B6;
+    }
+
+    .uc-lang-current,
+    .uc-lang-switch a {
+      display: inline-block;
+      min-width: 44px;
+      text-align: center;
+      padding: 8px 12px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .uc-lang-current {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-lang-switch a {
+      color: var(--text);
+      border: 1px solid transparent;
+      transition: all 0.22s ease;
+    }
+
+    .uc-lang-switch a:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+    }
+
+    .uc-lang-divider {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      color: #8B7B70;
+      line-height: 1;
+    }
+
+    .uc-hero {
+      min-height: calc(92vh - 14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 0 68px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uc-hero:before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 720px;
+      border: 1px solid rgba(184,149,90,0.10);
+      border-radius: 50%;
+      top: -250px;
+      right: -230px;
+      pointer-events: none;
+    }
+
+    .uc-hero:after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(58,47,42,0.06);
+      border-radius: 50%;
+      bottom: -150px;
+      left: -120px;
+      pointer-events: none;
+    }
+
+    .uc-hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .uc-kicker {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.8;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #9C8F84;
+      margin-bottom: 28px;
+    }
+
+    .uc-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 82px;
+      line-height: 0.96;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 24px 0;
+      letter-spacing: -1.05px;
+      text-wrap: balance;
+    }
+
+    .uc-sub {
+      max-width: 860px;
+      margin: 0 auto 16px auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 20px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-premium-note {
+      max-width: 760px;
+      margin: 24px auto 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 2;
+      color: var(--soft);
+      text-wrap: balance;
+    }
+
+    .uc-actions {
+      margin-top: 42px;
+    }
+
+    .uc-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 18px 38px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      letter-spacing: 0.55px;
+      transition: all 0.24s ease;
+      margin: 0 8px 12px 8px;
+    }
+
+    .uc-btn-primary {
+      background: var(--choco-2);
+      color: #FFFFFF;
+      border: 1px solid var(--choco-2);
+    }
+
+    .uc-btn-primary:hover {
+      background: var(--hover);
+      border-color: var(--hover);
+      transform: translateY(-1px);
+    }
+
+    .uc-btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #CCB8A2;
+    }
+
+    .uc-btn-secondary:hover {
+      background: #EEE6DD;
+      border-color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    .uc-band {
+      background:
+        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
+        radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
+        linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
+      color: #F5F1EB;
+      padding: 72px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .uc-band-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      line-height: 1.06;
+      font-weight: 500;
+      margin: 0 0 14px 0;
+      color: #F5F1EB;
+      text-wrap: balance;
+    }
+
+    .uc-band-rule {
+      width: 86px;
+      height: 1px;
+      background: rgba(245,241,235,0.40);
+      margin: 0 auto 22px auto;
+    }
+
+    .uc-band-copy {
+      max-width: 760px;
+      margin: 0 auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 2;
+      color: rgba(245,241,235,0.88);
+      text-wrap: balance;
+    }
+
+    .uc-section {
+      padding: 112px 0;
+      position: relative;
+    }
+
+    .uc-section + .uc-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .uc-section-soft {
+      background: var(--bg-soft);
+    }
+
+    .uc-title {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      line-height: 1.03;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 14px 0;
+      text-wrap: balance;
+    }
+
+    .uc-rule {
+      width: 84px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 28px auto;
+    }
+
+    .uc-intro {
+      max-width: 820px;
+      margin: 0 auto 48px auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 2;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .uc-card {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 40px 36px;
+      text-align: left;
+      transition: all 0.26s ease;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+      min-height: 100%;
+    }
+
+    .uc-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 36px;
+      width: 68px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-card:hover {
+      border-color: #D2BCA4;
+      transform: translateY(-3px);
+    }
+
+    .uc-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      line-height: 1.05;
+      color: var(--text);
+      margin: 10px 0 14px 0;
+      text-wrap: balance;
+    }
+
+    .uc-card-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 2;
+      color: var(--muted);
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    .uc-mini-grid,
+    .uc-example-grid,
+    .uc-pricing-grid,
+    .uc-faq-grid {
+      display: grid;
+      gap: 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .uc-mini-grid,
+    .uc-pricing-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .uc-example-grid,
+    .uc-faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 1040px;
+    }
+
+    .uc-mini-card,
+    .uc-example,
+    .uc-price-card,
+    .uc-faq-card {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 36px 28px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      min-height: 100%;
+    }
+
+    .uc-mini-card:before,
+    .uc-price-card:before,
+    .uc-faq-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 28px;
+      width: 58px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .uc-example {
+      background: #FBF8F3;
+      border: 1px solid var(--line);
+      padding: 30px 26px;
+    }
+
+    .uc-mini-title,
+    .uc-example-title,
+    .uc-price-title,
+    .uc-faq-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      line-height: 1.06;
+      color: var(--text);
+      margin: 8px 0 14px 0;
+      text-wrap: balance;
+    }
+
+    .uc-price-title {
+      font-size: 32px;
+    }
+
+    .uc-mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .uc-mini-list li {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--muted);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .uc-mini-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .uc-example-copy,
+    .uc-price-copy,
+    .uc-faq-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 2;
+      color: var(--muted);
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    .uc-price-from {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      line-height: 1.8;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .uc-price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      line-height: 1;
+      color: var(--text);
+      margin: 0 0 14px 0;
+    }
+
+    .uc-price-note {
+      max-width: 760px;
+      margin: 22px auto 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 2;
+      color: var(--soft);
+      text-wrap: balance;
+    }
+
+    .uc-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .uc-step {
+      text-align: left;
+      padding-top: 22px;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    .uc-step-no {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .uc-step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      line-height: 1.04;
+      color: var(--text);
+      margin: 0 0 10px 0;
+      text-wrap: balance;
+    }
+
+    .uc-step-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-simple-list {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 16px;
+      line-height: 2.15;
+      color: var(--text);
+      text-wrap: balance;
+    }
+
+    .uc-contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .uc-contact-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 54px;
+      line-height: 1.06;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 16px 0;
+      text-wrap: balance;
+    }
+
+    .uc-contact-copy {
+      max-width: 700px;
+      margin: 0 auto 24px auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      line-height: 2;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-footer {
+      background:
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04), transparent 26%),
+        linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
+      padding: 54px 34px 58px 34px;
+      text-align: center;
+      border-top: 1px solid rgba(245,241,235,0.08);
+    }
+
+    .uc-footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: #F5F1EB;
+      margin-bottom: 6px;
+    }
+
+    .uc-footer-sub {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      color: #D9CEC4;
+      margin-bottom: 16px;
+    }
+
+    .uc-footer-links {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.9;
+      letter-spacing: 0.25px;
+    }
+
+    .uc-footer-links a {
+      color: #F5F1EB;
+      text-decoration: none;
+      margin: 0 10px;
+      opacity: 0.92;
+    }
+
+    .uc-footer-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1100px) {
+      .uc-grid-2,
+      .uc-mini-grid,
+      .uc-example-grid,
+      .uc-pricing-grid,
+      .uc-faq-grid,
+      .uc-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .uc-h1 {
+        font-size: 68px;
+        line-height: 1;
+      }
+
+      .uc-title,
+      .uc-band-title,
+      .uc-contact-main {
+        font-size: 46px;
+      }
+
+      .uc-grid-2,
+      .uc-mini-grid,
+      .uc-example-grid,
+      .uc-pricing-grid,
+      .uc-faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .uc-shell {
+        padding: 0 20px;
+      }
+
+      .uc-headerbar {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .uc-header-spacer {
+        display: none;
+      }
+
+      .uc-brand {
+        font-size: 28px;
+      }
+
+      .uc-lang-switch {
+        justify-self: center;
+      }
+
+      .uc-hero {
+        min-height: auto;
+        padding: 26px 0 54px 0;
+      }
+
+      .uc-h1 {
+        font-size: 50px;
+        line-height: 1.02;
+      }
+
+      .uc-sub {
+        font-size: 18px;
+      }
+
+      .uc-title,
+      .uc-band-title,
+      .uc-contact-main {
+        font-size: 38px;
+      }
+
+      .uc-section {
+        padding: 86px 0;
+      }
+
+      .uc-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .uc-btn {
+        display: block;
+        max-width: 320px;
+        margin: 0 auto 12px auto;
+      }
+
+      .uc-card,
+      .uc-mini-card,
+      .uc-example,
+      .uc-price-card,
+      .uc-faq-card {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .uc-card:before,
+      .uc-mini-card:before,
+      .uc-price-card:before,
+      .uc-faq-card:before {
+        left: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="uc-topbar"></div>
+
+  <section class="uc-shell uc-brandbar">
+    <div class="uc-headerbar">
+      <div class="uc-header-spacer"></div>
+      <a href="/" class="uc-brand">Urban Concierge</a>
+      <div class="uc-lang-switch">
+        <span class="uc-lang-current">PL</span>
+        <span class="uc-lang-divider">|</span>
+        <a href="/expats-krakow/on-site-assistance/">ENG</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-hero">
+    <div class="uc-shell">
+      <div class="uc-hero-inner">
+        <div class="uc-kicker">Asysty concierge • Kraków i okolice • prywatne wsparcie na miejscu</div>
+        <h1 class="uc-h1">Asysta na miejscu wtedy, gdy sama obecność naprawdę robi różnicę.</h1>
+        <div class="uc-sub">
+          Prywatne, dyskretne wsparcie podczas wybranych wizyt, formalności, spotkań, odbiorów i sytuacji, które wymagają obecności, koordynacji oraz spokojnego przeprowadzenia na miejscu.
+        </div>
+        <div class="uc-actions">
+          <a href="#contact" class="uc-btn uc-btn-primary">Poproś o asystę</a>
+          <a href="#scope" class="uc-btn uc-btn-secondary">Zobacz zakres wsparcia</a>
+        </div>
+        <div class="uc-premium-note">
+          Zacznij od krótkiej wiadomości z terminem, miejscem i kontekstem sytuacji. Na tej podstawie potwierdzimy, czy to właściwy model i jaki zakres asysty będzie potrzebny.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-band">
+    <div class="uc-shell">
+      <div class="uc-band-title">Nie chodzi tylko o obecność. Chodzi o spokojne przeprowadzenie sytuacji.</div>
+      <div class="uc-band-rule"></div>
+      <div class="uc-band-copy">
+        Asysta sprawdza się tam, gdzie ważne jest nie tylko to, co trzeba zrobić, ale też kto ma być na miejscu, dopilnować przebiegu, przejąć napięcie operacyjne i domknąć wybrany temat w uporządkowany sposób.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Dlaczego Urban Concierge</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-grid-2">
+        <div class="uc-card">
+          <div class="uc-card-title">Obecność na miejscu</div>
+          <p class="uc-card-copy">
+            To model dla spraw, w których sama koordynacja zdalna nie wystarcza. Gdy trzeba być na miejscu, przejąć przebieg sytuacji i zadbać o spokojne doprowadzenie jej dalej.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Mniej napięcia operacyjnego</div>
+          <p class="uc-card-copy">
+            Klient nie musi sam prowadzić wszystkiego w biegu. Asysta porządkuje przebieg, potwierdzenia, obecność i komunikację tam, gdzie sytuacja wymaga realnego wsparcia.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Dyskretne wsparcie premium</div>
+          <p class="uc-card-copy">
+            To nie jest przypadkowa pomoc. To prywatna forma wsparcia dla klientów, którzy cenią spokój, dyskrecję, właściwe zachowanie i spokojne dopięcie spraw na miejscu.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Także dla wybranej bliskiej osoby</div>
+          <p class="uc-card-copy">
+            W ustalonych sytuacjach asysta może dotyczyć także bliskiej osoby klienta, jeśli potrzebne jest spokojne wsparcie, obecność i praktyczna koordynacja na miejscu.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">Na czym polega ta usługa</h2>
+      <div class="uc-rule"></div>
+      <div class="uc-intro">
+        Asysta jest zaprojektowana dla sytuacji, w których potrzebna jest realna obecność, uporządkowanie przebiegu i spokojne wsparcie w konkretnym miejscu i czasie.
+      </div>
+
+      <div class="uc-grid-2">
+        <div class="uc-card">
+          <div class="uc-card-title">Przed asystą</div>
+          <p class="uc-card-copy">
+            Ustalamy kontekst, termin, miejsce, oczekiwany przebieg i to, co dokładnie ma zostać dopilnowane. Dzięki temu sama asysta nie zaczyna się od chaosu, tylko od jasnego planu.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Podczas asysty</div>
+          <p class="uc-card-copy">
+            Jesteśmy na miejscu, pilnujemy przebiegu, wspieramy komunikację, przejmujemy wybrane elementy koordynacji i pomagamy spokojnie przeprowadzić sytuację od początku do końca.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scope" class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Co może obejmować</h2>
+      <div class="uc-rule"></div>
+      <div class="uc-intro">
+        Dokładny zakres zależy od sytuacji, miejsca i tego, czego realnie potrzebujesz. Asysta może obejmować między innymi:
+      </div>
+
+      <div class="uc-mini-grid">
+        <div class="uc-mini-card">
+          <div class="uc-mini-title">Wizyty i formalności</div>
+          <ul class="uc-mini-list">
+            <li>asystę podczas wybranych wizyt</li>
+            <li>obecność przy formalnościach wymagających wsparcia</li>
+            <li>spokojne przeprowadzenie ustalonego terminu</li>
+            <li>potwierdzenia i koordynację przebiegu na miejscu</li>
+            <li>pilnowanie ustalonego zakresu sytuacji</li>
+          </ul>
+        </div>
+
+        <div class="uc-mini-card">
+          <div class="uc-mini-title">Spotkania, odbiory i przekazania</div>
+          <ul class="uc-mini-list">
+            <li>asystę przy wybranych spotkaniach</li>
+            <li>obecność przy odbiorach i przekazaniach</li>
+            <li>lokalne dopięcie tematów wymagających obecności</li>
+            <li>wsparcie przy koordynacji dostępu lub wejścia</li>
+            <li>uporządkowanie sytuacji w czasie rzeczywistym</li>
+          </ul>
+        </div>
+
+        <div class="uc-mini-card">
+          <div class="uc-mini-title">Klient lub bliska osoba</div>
+          <ul class="uc-mini-list">
+            <li>asystę bezpośrednio dla klienta</li>
+            <li>wybrane wsparcie dla bliskiej osoby klienta</li>
+            <li>obecność wtedy, gdy klient nie może być osobiście</li>
+            <li>spokojny punkt kontaktu na miejscu</li>
+            <li>dyskretne wsparcie przy bardziej wrażliwych sytuacjach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">Przykłady tego, co może zostać przeprowadzone</h2>
+      <div class="uc-rule"></div>
+      <div class="uc-intro">
+        Poniżej widzisz przykładowe sytuacje, w których ta forma wsparcia sprawdza się najlepiej:
+      </div>
+
+      <div class="uc-example-grid">
+        <div class="uc-example">
+          <div class="uc-example-title">Wybrana wizyta lub termin</div>
+          <p class="uc-example-copy">
+            Asysta podczas sytuacji, w której ważne są obecność, porządek, punktualność i spokojne przejście przez ustalony przebieg.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">Formalność na miejscu</div>
+          <p class="uc-example-copy">
+            Wsparcie przy wybranych formalnościach, kiedy sama obecność i spokojna koordynacja pomagają przejść przez sytuację bez dodatkowego chaosu.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">Odbiór lub przekazanie</div>
+          <p class="uc-example-copy">
+            Obecność przy ustalonym odbiorze, przekazaniu lub sytuacji, w której trzeba dopilnować przebiegu, potwierdzeń i finalizacji na miejscu.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">Spotkanie wymagające obecności</div>
+          <p class="uc-example-copy">
+            Asysta wtedy, gdy klient potrzebuje nie tylko organizacji, ale też realnej obecności, wsparcia i przejęcia części napięcia operacyjnego.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">Wsparcie dla bliskiej osoby</div>
+          <p class="uc-example-copy">
+            Wybrane wsparcie na miejscu dla bliskiej osoby klienta, gdy sytuacja wymaga obecności, dopilnowania i spokojnego przeprowadzenia.
+          </p>
+        </div>
+
+        <div class="uc-example">
+          <div class="uc-example-title">Lokalne domknięcie sprawy</div>
+          <p class="uc-example-copy">
+            Sytuacje, w których temat jest już rozpoczęty, ale do prawdziwego domknięcia nadal potrzebna jest obecność i lokalna koordynacja.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell" style="max-width: 920px;">
+      <h2 class="uc-title">Dla kogo jest ta usługa</h2>
+      <div class="uc-rule"></div>
+      <div class="uc-intro" style="margin-bottom: 34px;">
+        Asysta najlepiej sprawdza się u klientów, którzy potrzebują nie tylko organizacji, ale też realnej obecności i spokojnego wsparcia w konkretnej sytuacji.
+      </div>
+
+      <div class="uc-simple-list">
+        dla klientów, którzy nie chcą przechodzić przez wybraną sytuację samodzielnie<br><br>
+        dla osób pracujących intensywnie i niemogących być osobiście na każdym terminie<br><br>
+        dla klientów, którzy chcą zapewnić spokojne wsparcie bliskiej osobie<br><br>
+        dla tych, którzy cenią dyskrecję, porządek i właściwe zachowanie na miejscu
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">Forma i wycena asysty</h2>
+      <div class="uc-rule"></div>
+      <div class="uc-intro">
+        Asysta może dotyczyć jednej, konkretnej sytuacji albo bardziej złożonego zakresu wymagającego dłuższej obecności i szerszej koordynacji.
+      </div>
+
+      <div class="uc-pricing-grid">
+        <div class="uc-price-card">
+          <div class="uc-price-title">Krótka asysta na miejscu</div>
+          <div class="uc-price-from">od</div>
+          <div class="uc-price-amount">490 PLN</div>
+          <p class="uc-price-copy">
+            Dla wybranych sytuacji na miejscu o prostszym, potwierdzonym zakresie.
+          </p>
+        </div>
+
+        <div class="uc-price-card">
+          <div class="uc-price-title">Asysta rozszerzona</div>
+          <div class="uc-price-from">od</div>
+          <div class="uc-price-amount">690 PLN</div>
+          <p class="uc-price-copy">
+            Dla sytuacji wymagających większej obecności, szerszej koordynacji lub bardziej złożonego przebiegu.
+          </p>
+        </div>
+
+        <div class="uc-price-card">
+          <div class="uc-price-title">Zakres indywidualny</div>
+          <div class="uc-price-from">od</div>
+          <div class="uc-price-amount">900 PLN</div>
+          <p class="uc-price-copy">
+            Dla asyst poza podstawowym modelem, poza Krakowem lub przy bardziej wymagających okolicznościach.
+          </p>
+        </div>
+      </div>
+
+      <div class="uc-price-note">
+        Ostateczna cena zależy od miejsca, czasu trwania, złożoności sytuacji, poziomu zaangażowania i tego, czy asysta obejmuje także wcześniejsze przygotowanie lub dalsze follow-upy.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Jak wygląda współpraca</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-steps">
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 01</div>
+          <div class="uc-step-title">Pierwsza wiadomość</div>
+          <div class="uc-step-copy">
+            Opisujesz termin, miejsce, kontekst i to, czego potrzebujesz w ramach asysty.
+          </div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 02</div>
+          <div class="uc-step-title">Zakres</div>
+          <div class="uc-step-copy">
+            Potwierdzamy, co dokładnie obejmuje asysta, jaki jest jej przebieg i czego można realnie oczekiwać na miejscu.
+          </div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 03</div>
+          <div class="uc-step-title">Obecność</div>
+          <div class="uc-step-copy">
+            W ustalonym czasie jesteśmy na miejscu, wspieramy przebieg i przejmujemy wybrane elementy koordynacji sytuacji.
+          </div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 04</div>
+          <div class="uc-step-title">Domknięcie</div>
+          <div class="uc-step-copy">
+            Po zakończeniu potwierdzamy przebieg, przekazujemy ustalone informacje i pomagamy spokojnie zamknąć wybrany temat.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell">
+      <h2 class="uc-title">FAQ</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-faq-grid">
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Czy asysta oznacza pełną opiekę bez ograniczeń?</div>
+          <p class="uc-faq-copy">
+            Nie. Zakres asysty zawsze jest potwierdzany konkretnie przed startem, tak aby sytuacja była prowadzona spokojnie, realnie i we właściwych granicach.
+          </p>
+        </div>
+
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Czy możliwa jest asysta dla bliskiej osoby?</div>
+          <p class="uc-faq-copy">
+            Tak, w ustalonych sytuacjach. Zakres i forma wsparcia są zawsze potwierdzane wcześniej, aby wszystko było jasne i odpowiednio dopasowane.
+          </p>
+        </div>
+
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Czy możecie asystować podczas formalności lub wybranych wizyt?</div>
+          <p class="uc-faq-copy">
+            Tak. To jeden z najbardziej naturalnych scenariuszy dla tej usługi, jeśli sytuacja wymaga obecności, potwierdzeń i spokojnej koordynacji.
+          </p>
+        </div>
+
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Czy działacie tylko w Krakowie?</div>
+          <p class="uc-faq-copy">
+            Głównym obszarem działania są Kraków i okolice. Wybrane asysty poza tym obszarem mogą być możliwe zależnie od sytuacji i terminu.
+          </p>
+        </div>
+
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Jak liczone są ceny?</div>
+          <p class="uc-faq-copy">
+            Cena zależy od miejsca, czasu trwania, złożoności sytuacji, wymaganego poziomu obecności oraz tego, czy potrzebne są także wcześniejsze ustalenia lub dalsze follow-upy.
+          </p>
+        </div>
+
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Czy mogę zacząć od jednej asysty?</div>
+          <p class="uc-faq-copy">
+            Tak. To często najlepszy pierwszy krok, kiedy klient chce sprawdzić styl współpracy przy jednej konkretnej sytuacji wymagającej obecności.
+          </p>
+        </div>
+
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Czy asysta może być częścią większej współpracy?</div>
+          <p class="uc-faq-copy">
+            Tak. W zależności od sytuacji asysta może być osobną usługą albo elementem szerszego modelu współpracy, na przykład Dnia Wsparcia lub abonamentu.
+          </p>
+        </div>
+
+        <div class="uc-faq-card">
+          <div class="uc-faq-title">Czy możecie przejąć również potwierdzenia i przygotowanie przed terminem?</div>
+          <p class="uc-faq-copy">
+            Tak, jeśli taki zakres zostanie potwierdzony przed startem. W niektórych sytuacjach właśnie to przygotowanie decyduje o spokojnym przebiegu asysty.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="uc-section">
+    <div class="uc-shell">
+      <div class="uc-contact-box">
+        <h2 class="uc-contact-main">Poproś o asystę</h2>
+        <div class="uc-rule"></div>
+        <div class="uc-contact-copy">
+          Zacznij od krótkiej wiadomości z terminem, miejscem i kontekstem sytuacji. Na tej podstawie potwierdzimy, czy to właściwy model i jaki zakres asysty będzie najlepszy.
+        </div>
+
+        <div class="uc-actions" style="margin-top: 34px;">
+          <a href="mailto:info@urbanconcierge.pl?subject=Asysta%20Urban%20Concierge" class="uc-btn uc-btn-primary">Poproś o asystę</a>
+          <a href="/" class="uc-btn uc-btn-secondary">Poznaj całą ofertę</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-footer">
+    <div class="uc-footer-brand">Urban Concierge</div>
+    <div class="uc-footer-sub">Prywatne wsparcie concierge | Kraków i okolice | zdalnie w całej Polsce</div>
+    <div class="uc-footer-links">
+      <a href="/1-dzien-wsparcia/">1 dzień wsparcia</a>
+      <a href="/asysty/">Asysty</a>
+      <a href="/abonament/">Abonament</a>
+      <a href="/relokacja-krakow/">Relokacja do Krakowa</a>
+      <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Regulamin</a>
+      <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Polityka prywatności</a>
+      <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
+    </div>
+  </section>
+</body>
+</html>
 
