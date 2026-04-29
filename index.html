@@ -54,6 +54,7 @@
       --choco-2: #3A2F2A;
       --hover: #473934;
       --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
+      --shadow-strong: 0 20px 54px rgba(43,34,31,0.10);
     }
 
     .uc-topbar {
@@ -76,10 +77,28 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
+      gap: 24px;
     }
 
-    .uc-header-spacer {
-      min-height: 1px;
+    .uc-mini-nav {
+      justify-self: start;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    .uc-mini-nav a {
+      color: var(--soft);
+      text-decoration: none;
+      transition: color 0.22s ease;
+    }
+
+    .uc-mini-nav a:hover {
+      color: var(--gold);
     }
 
     .uc-brand {
@@ -92,6 +111,7 @@
       letter-spacing: 0.25px;
       text-decoration: none;
       display: inline-block;
+      white-space: nowrap;
     }
 
     .uc-lang-switch {
@@ -147,7 +167,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 56px 0 80px 0;
+      padding: 58px 0 82px 0;
       position: relative;
       overflow: hidden;
     }
@@ -177,7 +197,7 @@
     }
 
     .uc-hero-inner {
-      max-width: 1000px;
+      max-width: 1010px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -196,8 +216,8 @@
 
     .uc-h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 78px;
-      line-height: 1.02;
+      font-size: 76px;
+      line-height: 1.03;
       font-weight: 500;
       color: var(--text);
       margin: 0 0 30px 0;
@@ -560,9 +580,173 @@
       text-wrap: balance;
     }
 
+    .uc-form-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(194,164,109,0.10), transparent 34%),
+        linear-gradient(180deg, #332925 0%, #241C19 100%);
+      border: 1px solid rgba(194,164,109,0.42);
+      box-shadow: var(--shadow-strong);
+      padding: 44px;
+      color: #F5F1EB;
+    }
+
+    .uc-form-head {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .uc-form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 46px;
+      line-height: 1.06;
+      font-weight: 500;
+      margin: 0 0 14px 0;
+      color: #F5F1EB;
+      text-wrap: balance;
+    }
+
+    .uc-form-copy {
+      max-width: 700px;
+      margin: 0 auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(245,241,235,0.84);
+      text-wrap: balance;
+    }
+
+    .uc-form {
+      margin: 0;
+    }
+
+    .uc-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .uc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .uc-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .uc-field label,
+    .uc-consent label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      line-height: 1.6;
+      letter-spacing: 0.4px;
+      color: rgba(245,241,235,0.92);
+    }
+
+    .uc-field input,
+    .uc-field select,
+    .uc-field textarea {
+      width: 100%;
+      border: 1px solid rgba(245,241,235,0.22);
+      background: rgba(245,241,235,0.07);
+      color: #F5F1EB;
+      padding: 15px 15px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.6;
+      outline: none;
+      transition: all 0.22s ease;
+      border-radius: 0;
+    }
+
+    .uc-field input::placeholder,
+    .uc-field textarea::placeholder {
+      color: rgba(245,241,235,0.46);
+    }
+
+    .uc-field select {
+      appearance: none;
+      color: #F5F1EB;
+    }
+
+    .uc-field select option {
+      color: #3A2F2A;
+      background: #F5F1EB;
+    }
+
+    .uc-field textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .uc-field input:focus,
+    .uc-field select:focus,
+    .uc-field textarea:focus {
+      border-color: rgba(194,164,109,0.86);
+      background: rgba(245,241,235,0.10);
+    }
+
+    .uc-consent {
+      margin: 22px 0 26px 0;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .uc-consent input {
+      margin-top: 4px;
+      accent-color: var(--gold);
+    }
+
+    .uc-consent a {
+      color: #F5F1EB;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .uc-form-submit {
+      text-align: center;
+    }
+
+    .uc-submit {
+      cursor: pointer;
+      border-radius: 0;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #FFFFFF;
+      padding: 18px 40px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      letter-spacing: 0.55px;
+      transition: all 0.24s ease;
+    }
+
+    .uc-submit:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold-soft);
+      transform: translateY(-1px);
+    }
+
+    .uc-form-note {
+      max-width: 640px;
+      margin: 18px auto 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      line-height: 1.8;
+      color: rgba(245,241,235,0.62);
+    }
+
+    .uc-hidden {
+      display: none;
+    }
+
     .uc-contact-box {
       max-width: 760px;
-      margin: 0 auto;
+      margin: 0 auto 42px auto;
       text-align: center;
     }
 
@@ -629,6 +813,10 @@
     }
 
     @media (max-width: 1100px) {
+      .uc-mini-nav {
+        display: none;
+      }
+
       .uc-steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -650,13 +838,14 @@
       }
 
       .uc-h1 {
-        font-size: 62px;
-        line-height: 1.04;
+        font-size: 60px;
+        line-height: 1.05;
       }
 
       .uc-title,
       .uc-band-title,
-      .uc-contact-main {
+      .uc-contact-main,
+      .uc-form-title {
         font-size: 44px;
       }
     }
@@ -673,10 +862,6 @@
       .uc-headerbar {
         grid-template-columns: 1fr;
         gap: 18px;
-      }
-
-      .uc-header-spacer {
-        display: none;
       }
 
       .uc-brand {
@@ -698,7 +883,7 @@
       }
 
       .uc-h1 {
-        font-size: 44px;
+        font-size: 42px;
         line-height: 1.08;
         margin: 0 0 20px 0;
       }
@@ -723,12 +908,14 @@
 
       .uc-title,
       .uc-band-title,
-      .uc-contact-main {
+      .uc-contact-main,
+      .uc-form-title {
         font-size: 36px;
       }
 
       .uc-steps,
-      .uc-price-row {
+      .uc-price-row,
+      .uc-form-grid {
         grid-template-columns: 1fr;
       }
 
@@ -755,6 +942,14 @@
       .uc-why-card:before {
         left: 24px;
       }
+
+      .uc-form-wrap {
+        padding: 34px 22px;
+      }
+
+      .uc-submit {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -764,8 +959,14 @@
 
   <section class="uc-shell uc-brandbar">
     <div class="uc-headerbar">
-      <div class="uc-header-spacer"></div>
+      <nav class="uc-mini-nav" aria-label="Nawigacja główna">
+        <a href="#dzien-wsparcia">Dzień Wsparcia</a>
+        <a href="#jak-to-dziala">Jak działa</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
       <a href="/" class="uc-brand">Urban Concierge</a>
+
       <div class="uc-lang-switch">
         <span class="uc-lang-current">PL</span>
         <span class="uc-lang-divider">|</span>
@@ -793,7 +994,7 @@
         </div>
 
         <div class="uc-actions">
-          <a href="mailto:info@urbanconcierge.pl?subject=Sprawy%20do%20organizacji%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Przekaż sprawy do organizacji</a>
+          <a href="#kontakt" class="uc-btn uc-btn-primary">Przekaż sprawy do organizacji</a>
           <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz Dzień Wsparcia</a>
         </div>
       </div>
@@ -805,7 +1006,7 @@
       <div class="uc-band-title">Jeden dzień, konkretna lista, spokojna realizacja.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Nie musisz od razu decydować się na stałą współpracę. Możesz zacząć od Dnia Wsparcia — przesłać sprawy, potwierdzić zakres i przekazać organizację Urban Concierge.
+        Nie musisz od razu decydować się na stałą współpracę. Możesz zacząć od Dnia Wsparcia — opisać sprawy, potwierdzić zakres i przekazać organizację Urban Concierge.
       </div>
     </div>
   </section>
@@ -837,7 +1038,7 @@
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section" id="dzien-wsparcia">
     <div class="uc-shell">
       <h2 class="uc-title">Dzień Wsparcia</h2>
       <div class="uc-rule"></div>
@@ -869,7 +1070,7 @@
       </div>
 
       <div class="uc-actions" style="text-align:center; margin-top: 38px;">
-        <a href="mailto:info@urbanconcierge.pl?subject=Sprawy%20do%20organizacji%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Przekaż sprawy do organizacji</a>
+        <a href="#kontakt" class="uc-btn uc-btn-primary">Przekaż sprawy do organizacji</a>
         <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz szczegóły</a>
       </div>
     </div>
@@ -914,7 +1115,7 @@
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section" id="jak-to-dziala">
     <div class="uc-shell">
       <h2 class="uc-title">Jak to działa</h2>
       <div class="uc-rule"></div>
@@ -1038,29 +1239,107 @@
         </div>
 
         <div class="uc-why-card">
-          <div class="uc-why-title">Selektywna baza klientów</div>
+          <div class="uc-why-title">Ograniczona liczba współprac</div>
           <p class="uc-why-copy">
-            Pracujemy z ograniczoną liczbą klientów, aby utrzymać ciągłość i standard wsparcia.
+            Pracujemy z ograniczoną liczbą klientów, aby utrzymać standard, dostępność i jakość realizacji.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section" id="kontakt">
     <div class="uc-shell">
       <div class="uc-contact-box">
-        <h2 class="uc-contact-main">Zacznij od jednej listy spraw</h2>
+        <h2 class="uc-contact-main">Przekaż sprawy do organizacji</h2>
         <div class="uc-rule"></div>
 
         <div class="uc-contact-copy">
-          Nie musisz od razu decydować się na abonament. Przekaż sprawy, które chcesz oddać do organizacji, a my odpowiemy, czy mieszczą się w Dniu Wsparcia i jaki będzie właściwy zakres.
+          Opisz krótko, co chcesz przekazać. Nie musisz wiedzieć, czy dana sprawa mieści się w zakresie — odpowiemy, jaka forma wsparcia będzie właściwa.
+        </div>
+      </div>
+
+      <div class="uc-form-wrap">
+        <div class="uc-form-head">
+          <div class="uc-form-title">Zgłoszenie</div>
+          <div class="uc-form-copy">
+            Wypełnij formularz, jeśli chcesz rozpocząć od Dnia Wsparcia, asysty na miejscu, abonamentu albo nie masz pewności, która forma będzie najlepsza.
+          </div>
         </div>
 
-        <div class="uc-actions" style="margin-top: 30px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=Sprawy%20do%20organizacji%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Przekaż sprawy do organizacji</a>
-          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz szczegóły</a>
-        </div>
+        <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="uc-form">
+          <input type="hidden" name="form-name" value="urban-concierge-pl">
+
+          <p class="uc-hidden">
+            <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
+          </p>
+
+          <div class="uc-form-grid">
+            <div class="uc-field">
+              <label for="name">Imię</label>
+              <input id="name" name="imie" type="text" placeholder="Twoje imię" required>
+            </div>
+
+            <div class="uc-field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="adres@email.pl" required>
+            </div>
+
+            <div class="uc-field">
+              <label for="phone">Telefon</label>
+              <input id="phone" name="telefon" type="tel" placeholder="+48..." required>
+            </div>
+
+            <div class="uc-field">
+              <label for="location">Lokalizacja</label>
+              <input id="location" name="lokalizacja" type="text" placeholder="Kraków / okolice / zdalnie / inne">
+            </div>
+
+            <div class="uc-field">
+              <label for="support">Forma wsparcia</label>
+              <select id="support" name="forma_wsparcia" required>
+                <option value="">Wybierz</option>
+                <option value="Dzień Wsparcia zdalnie">Dzień Wsparcia zdalnie</option>
+                <option value="Dzień Wsparcia Kraków i okolice">Dzień Wsparcia — Kraków i okolice</option>
+                <option value="Asysta na miejscu">Asysta na miejscu</option>
+                <option value="Abonament">Abonament</option>
+                <option value="Relokacja do Krakowa">Relokacja do Krakowa</option>
+                <option value="Nie wiem">Nie wiem — proszę dobrać właściwą formę</option>
+              </select>
+            </div>
+
+            <div class="uc-field">
+              <label for="date">Termin</label>
+              <select id="date" name="termin" required>
+                <option value="">Wybierz</option>
+                <option value="Jak najszybciej">Jak najszybciej</option>
+                <option value="W tym tygodniu">W tym tygodniu</option>
+                <option value="W konkretnym dniu">W konkretnym dniu</option>
+                <option value="Elastycznie">Elastycznie</option>
+              </select>
+            </div>
+
+            <div class="uc-field uc-field-full">
+              <label for="message">Sprawy do organizacji</label>
+              <textarea id="message" name="sprawy_do_organizacji" placeholder="Opisz krótko, co chcesz przekazać do organizacji. Możesz wypisać kilka spraw w punktach." required></textarea>
+            </div>
+          </div>
+
+          <div class="uc-consent">
+            <input id="consent" name="zgoda_na_kontakt" type="checkbox" required>
+            <label for="consent">
+              Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>.
+            </label>
+          </div>
+
+          <div class="uc-form-submit">
+            <button type="submit" class="uc-submit">Wyślij zgłoszenie</button>
+          </div>
+
+          <div class="uc-form-note">
+            Po wysłaniu zgłoszenia zakres zostanie przeanalizowany. Jeśli dana sprawa wymaga innej formy wsparcia, otrzymasz odpowiednią propozycję.
+          </div>
+        </form>
       </div>
     </div>
   </section>
