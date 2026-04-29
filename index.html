@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Concierge | Dzień Wsparcia, asysty i relokacja w Krakowie</title>
-  <meta name="description" content="Urban Concierge to prywatne wsparcie organizacyjne na miejscu w Krakowie i okolicach oraz zdalnie w całej Polsce. Wyślij listę spraw i odzyskaj czas." />
+
+  <title>Urban Concierge | Dzień Wsparcia i prywatna organizacja spraw</title>
+  <meta name="description" content="Urban Concierge przejmuje codzienne, organizacyjne i czasochłonne sprawy. Dzień Wsparcia zdalnie w całej Polsce oraz na miejscu w Krakowie i okolicach." />
+
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
@@ -40,7 +42,6 @@
     :root {
       --bg: #F5F1EB;
       --bg-soft: #F8F4EE;
-      --card: #F7F2EB;
       --text: #3A2F2A;
       --muted: #5F534B;
       --soft: #7B6C61;
@@ -146,7 +147,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 56px 0 82px 0;
+      padding: 56px 0 80px 0;
       position: relative;
       overflow: hidden;
     }
@@ -206,7 +207,7 @@
 
     .uc-sub {
       max-width: 820px;
-      margin: 0 auto 28px auto;
+      margin: 0 auto 24px auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 18px;
       line-height: 2;
@@ -215,7 +216,7 @@
     }
 
     .uc-hero-proof {
-      max-width: 740px;
+      max-width: 760px;
       margin: 0 auto 34px auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 13px;
@@ -281,18 +282,6 @@
     .uc-btn-card:hover {
       background: var(--gold-soft);
       border-color: var(--gold-soft);
-      transform: translateY(-1px);
-    }
-
-    .uc-btn-card-light {
-      background: transparent;
-      color: #F5F1EB;
-      border: 1px solid rgba(245,241,235,0.46);
-    }
-
-    .uc-btn-card-light:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(245,241,235,0.72);
       transform: translateY(-1px);
     }
 
@@ -377,124 +366,8 @@
       text-wrap: balance;
     }
 
-    .uc-price-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      max-width: 1040px;
-      margin: 0 auto 28px auto;
-    }
-
-    .uc-price-card {
-      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
-      border: 1px solid #E3D8CB;
-      padding: 30px 28px;
-      text-align: center;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-    }
-
-    .uc-price-card:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 64px;
-      height: 2px;
-      background: var(--gold);
-      transform: translateX(-50%);
-    }
-
-    .uc-price-label {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 10px;
-      line-height: 1.6;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .uc-price-value {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 38px;
-      line-height: 1;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    .uc-price-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
-      line-height: 1.8;
-      color: var(--muted);
-    }
-
-    .uc-feature-wrap {
-      max-width: 1020px;
-      margin: 0 auto 48px auto;
-    }
-
-    .uc-feature-card {
-      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
-      border: 1px solid rgba(194,164,109,0.42);
-      box-shadow: var(--shadow-strong);
-      padding: 38px 38px;
-      position: relative;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 30px;
-      align-items: start;
-    }
-
-    .uc-feature-card:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 38px;
-      width: 74px;
-      height: 2px;
-      background: var(--gold-soft);
-    }
-
-    .uc-feature-badge {
-      display: inline-block;
-      margin: 6px 0 14px 0;
-      padding: 8px 12px;
-      border: 1px solid rgba(194,164,109,0.38);
-      color: var(--gold-soft);
-      font-family: 'Libre Baskerville', serif;
-      font-size: 9px;
-      line-height: 1.4;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-    }
-
-    .uc-feature-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 44px;
-      line-height: 1.02;
-      font-weight: 500;
-      color: #F5F1EB;
-      margin: 0 0 14px 0;
-      text-wrap: balance;
-    }
-
-    .uc-feature-copy,
-    .uc-feature-side {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 1.95;
-      color: rgba(245,241,235,0.86);
-      text-wrap: balance;
-    }
-
-    .uc-feature-side {
-      padding-top: 52px;
-    }
-
-    .uc-grid-3,
     .uc-grid-2,
+    .uc-grid-3,
     .uc-why-grid,
     .uc-steps {
       display: grid;
@@ -503,17 +376,18 @@
       margin: 0 auto;
     }
 
-    .uc-grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
     .uc-grid-2,
     .uc-why-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .uc-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .uc-card,
-    .uc-why-card {
+    .uc-why-card,
+    .uc-price-card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
       padding: 34px 32px;
@@ -527,7 +401,8 @@
     }
 
     .uc-card:before,
-    .uc-why-card:before {
+    .uc-why-card:before,
+    .uc-price-card:before {
       content: "";
       position: absolute;
       top: 0;
@@ -561,6 +436,50 @@
       color: var(--muted);
       margin: 0;
       text-wrap: balance;
+    }
+
+    .uc-price-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto 28px auto;
+    }
+
+    .uc-price-card {
+      text-align: center;
+      padding: 34px 30px;
+    }
+
+    .uc-price-card:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .uc-price-label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .uc-price-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      line-height: 1;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .uc-price-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 1.85;
+      color: var(--muted);
+      margin: 0;
     }
 
     .uc-example-list {
@@ -710,8 +629,7 @@
     }
 
     @media (max-width: 1100px) {
-      .uc-steps,
-      .uc-price-row {
+      .uc-steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -726,14 +644,9 @@
         padding: 38px 0 74px 0;
       }
 
-      .uc-feature-card,
       .uc-why-grid,
       .uc-grid-2 {
         grid-template-columns: 1fr;
-      }
-
-      .uc-feature-side {
-        padding-top: 0;
       }
 
       .uc-h1 {
@@ -743,8 +656,7 @@
 
       .uc-title,
       .uc-band-title,
-      .uc-contact-main,
-      .uc-feature-title {
+      .uc-contact-main {
         font-size: 44px;
       }
     }
@@ -811,8 +723,7 @@
 
       .uc-title,
       .uc-band-title,
-      .uc-contact-main,
-      .uc-feature-title {
+      .uc-contact-main {
         font-size: 36px;
       }
 
@@ -835,14 +746,13 @@
 
       .uc-card,
       .uc-why-card,
-      .uc-feature-card {
+      .uc-price-card {
         min-height: auto;
         padding: 32px 24px;
       }
 
       .uc-card:before,
-      .uc-why-card:before,
-      .uc-feature-card:before {
+      .uc-why-card:before {
         left: 24px;
       }
     }
@@ -870,8 +780,8 @@
         <div class="uc-kicker">Dzień Wsparcia • Kraków i okolice • zdalnie w całej Polsce</div>
 
         <h1 class="uc-h1">
-          Wyślij listę spraw.<br>
-          My zajmiemy się resztą.
+          Przekaż listę spraw.<br>
+          Odzyskaj czas.
         </h1>
 
         <div class="uc-sub">
@@ -879,11 +789,11 @@
         </div>
 
         <div class="uc-hero-proof">
-          Terminy, telefony, rezerwacje, follow-upy, odbiory, dostawy, kontakt z usługodawcami i sprawy, które od tygodni wracają na Twoją listę.
+          Terminy, telefony, rezerwacje, follow-upy, odbiory, dostawy, kontakt z usługodawcami i sprawy, które ciągle wracają na Twoją listę.
         </div>
 
         <div class="uc-actions">
-          <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Wyślij listę spraw</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Przekaż listę spraw</a>
           <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz Dzień Wsparcia</a>
         </div>
       </div>
@@ -892,56 +802,80 @@
 
   <section class="uc-band">
     <div class="uc-shell">
-      <div class="uc-band-title">Pierwszy krok: jeden dzień, konkretna lista, uporządkowana realizacja.</div>
+      <div class="uc-band-title">Jeden dzień, konkretna lista, spokojna realizacja.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Nie musisz od razu decydować się na stałą współpracę. Możesz zacząć od Dnia Wsparcia — przesłać listę spraw, potwierdzić zakres i oddać realizację w ręce Urban Concierge.
+        Nie musisz od razu decydować się na stałą współpracę. Możesz zacząć od Dnia Wsparcia — przesłać listę spraw, potwierdzić zakres i przekazać organizację Urban Concierge.
       </div>
     </div>
   </section>
 
   <section class="uc-section uc-section-soft">
     <div class="uc-shell">
+      <h2 class="uc-title">Kiedy warto skorzystać</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        Najczęściej wtedy, gdy sprawy nie są trudne, ale zabierają czas, uwagę i energię — a Ty nie chcesz już ich przesuwać na kolejny tydzień.
+      </div>
+
+      <div class="uc-grid-2">
+        <div class="uc-card">
+          <div class="uc-card-title">Gdy masz za dużo drobnych spraw</div>
+          <p class="uc-card-copy">
+            Kilka telefonów, rezerwacja, potwierdzenie terminu, znalezienie wykonawcy, odbiór, dostawa, przypomnienie, follow-up. Osobno małe. Razem zabierają dzień.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Gdy potrzebujesz kogoś na miejscu</div>
+          <p class="uc-card-copy">
+            W Krakowie i okolicach możemy pomóc tam, gdzie potrzebna jest obecność, koordynacja lub dopilnowanie sprawy poza telefonem i mailem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
       <h2 class="uc-title">Dzień Wsparcia</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        Dzień Wsparcia jest dla osób, które mają kilka spraw do załatwienia, ale nie chcą już tracić czasu na telefony, szukanie terminów, porównywanie opcji i dopilnowywanie szczegółów.
+        To najprostszy sposób, żeby rozpocząć współpracę. Przesyłasz listę spraw, my potwierdzamy zakres i przejmujemy organizację w ustalonym dniu.
       </div>
 
       <div class="uc-price-row">
         <div class="uc-price-card">
           <div class="uc-price-label">Zdalnie</div>
           <div class="uc-price-value">od 490 zł</div>
-          <div class="uc-price-copy">
-            Dla spraw możliwych do przejęcia telefonicznie, mailowo lub organizacyjnie na odległość.
-          </div>
+          <p class="uc-price-copy">
+            Dla spraw możliwych do przejęcia telefonicznie, mailowo lub organizacyjnie na odległość — w całej Polsce.
+          </p>
         </div>
 
         <div class="uc-price-card">
           <div class="uc-price-label">Kraków i okolice</div>
           <div class="uc-price-value">od 690 zł</div>
-          <div class="uc-price-copy">
+          <p class="uc-price-copy">
             Dla spraw, które wymagają lokalnej koordynacji, obecności lub działania na miejscu.
-          </div>
-        </div>
-
-        <div class="uc-price-card">
-          <div class="uc-price-label">Poza Krakowem</div>
-          <div class="uc-price-value">od 900 zł</div>
-          <div class="uc-price-copy">
-            Dla wybranych spraw wymagających obecności poza Krakowem, po wcześniejszym ustaleniu zakresu.
-          </div>
+          </p>
         </div>
       </div>
 
       <div class="uc-note">
         Cena końcowa zależy od liczby spraw, terminu, konieczności działania na miejscu oraz stopnia koordynacji.
       </div>
+
+      <div class="uc-actions" style="text-align:center; margin-top: 38px;">
+        <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Przekaż listę spraw</a>
+        <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz szczegóły</a>
+      </div>
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">Co możesz przekazać</h2>
       <div class="uc-rule"></div>
@@ -980,7 +914,7 @@
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft">
+  <section class="uc-section">
     <div class="uc-shell">
       <h2 class="uc-title">Jak to działa</h2>
       <div class="uc-rule"></div>
@@ -998,7 +932,7 @@
           <div class="uc-step-no">Krok 02</div>
           <div class="uc-step-title">Potwierdzamy zakres</div>
           <div class="uc-step-copy">
-            Sprawdzamy, co mieści się w Dniu Wsparcia i jaki model będzie najlepszy.
+            Sprawdzamy, co mieści się w Dniu Wsparcia i jaka forma realizacji będzie właściwa.
           </div>
         </div>
 
@@ -1018,37 +952,30 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="uc-actions" style="text-align:center; margin-top: 42px;">
-        <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Wyślij listę spraw</a>
+  <section class="uc-section uc-section-soft">
+    <div class="uc-shell" style="max-width: 920px;">
+      <h2 class="uc-title">Dla kogo jest Urban Concierge</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-list">
+        dla osób, które mają za dużo spraw operacyjnych i za mało czasu<br><br>
+        dla klientów, którzy wolą delegować niż samodzielnie zajmować się detalami<br><br>
+        dla tych, którzy potrzebują kogoś, kto spokojnie dopilnuje terminów, kontaktów i ustaleń<br><br>
+        dla klientów, którzy chcą mieć sprawy załatwione bez stałego angażowania się
       </div>
     </div>
   </section>
 
-  <section class="uc-section" id="modele">
+  <section class="uc-section">
     <div class="uc-shell">
       <h2 class="uc-title">Inne modele współpracy</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
         Jeśli jedna lista spraw to za mało, Urban Concierge może działać także w modelu asysty na miejscu, stałego abonamentu lub wsparcia przy relokacji.
-      </div>
-
-      <div class="uc-feature-wrap">
-        <div class="uc-feature-card">
-          <div>
-            <div class="uc-feature-badge">Najczęściej wybierany pierwszy krok</div>
-            <div class="uc-feature-title">Dzień Wsparcia</div>
-            <div class="uc-feature-copy">
-              To uporządkowana forma rozpoczęcia współpracy bez wchodzenia od razu w stały abonament. Klient przesyła listę tematów wcześniej, zakres jest potwierdzany przed startem, a w ustalonym dniu jego sprawy otrzymują priorytet.
-            </div>
-            <a href="/1-dzien-wsparcia/" class="uc-btn-card uc-btn-card-light">Przejdź do Dnia Wsparcia</a>
-          </div>
-
-          <div class="uc-feature-side">
-            Dzień Wsparcia sprawdza się szczególnie wtedy, gdy dzień lub tydzień staje się wyjątkowo intensywny — w pracy, w domu albo pomiędzy obowiązkami. Na miejscu w Krakowie i okolicach, zdalnie w całej Polsce.
-          </div>
-        </div>
       </div>
 
       <div class="uc-grid-3">
@@ -1085,7 +1012,7 @@
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        To model dla klientów, którzy chcą praktycznego wykonania, dyskrecji i ciągłości — bez konieczności pozostawania w każdym detalu.
+        To prywatna, uporządkowana forma wsparcia dla klientów, którzy oczekują dyskrecji, właściwego wykonania i spokojnej komunikacji.
       </div>
 
       <div class="uc-why-grid">
@@ -1121,31 +1048,17 @@
   </section>
 
   <section class="uc-section">
-    <div class="uc-shell" style="max-width: 920px;">
-      <h2 class="uc-title">Dla kogo jest Urban Concierge</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-list">
-        dla osób, które mają za dużo spraw operacyjnych i za mało czasu<br><br>
-        dla klientów, którzy wolą delegować niż samodzielnie zajmować się detalami<br><br>
-        dla tych, którzy potrzebują kogoś, kto spokojnie dopilnuje terminów, kontaktów i ustaleń<br><br>
-        dla klientów, którzy chcą mieć sprawy załatwione bez stałego angażowania się
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <div class="uc-contact-box">
         <h2 class="uc-contact-main">Zacznij od jednej listy spraw</h2>
         <div class="uc-rule"></div>
 
         <div class="uc-contact-copy">
-          Nie musisz od razu decydować się na abonament. Wyślij listę rzeczy, które chcesz przekazać, a my odpowiemy, czy mieszczą się w Dniu Wsparcia i jaki będzie właściwy zakres.
+          Nie musisz od razu decydować się na abonament. Przekaż listę rzeczy, które chcesz oddać do organizacji, a my odpowiemy, czy mieszczą się w Dniu Wsparcia i jaki będzie właściwy zakres.
         </div>
 
         <div class="uc-actions" style="margin-top: 30px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Wyślij listę spraw</a>
+          <a href="mailto:info@urbanconcierge.pl?subject=Lista%20spraw%20-%20Dzie%C5%84%20Wsparcia" class="uc-btn uc-btn-primary">Przekaż listę spraw</a>
           <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz szczegóły</a>
         </div>
       </div>
