@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One-Day Support | Urban Concierge</title>
-  <meta name="description" content="Urban Concierge One-Day Support is private, structured support in Kraków and nearby, as well as remote across Poland. A first step without committing to monthly support." />
+
+  <title>One-Day Concierge Support Krakow | Urban Concierge</title>
+  <meta name="description" content="One-Day Support by Urban Concierge is private concierge support in Krakow and nearby areas, as well as remote support across Poland. Help with everyday matters, appointments, reservations, follow-ups, pick-ups, deliveries and task coordination." />
+
   <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://urbanconcierge.pl/one-day-support/">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,7 +25,6 @@
       background: #F5F1EB;
       margin: 0;
       padding: 0;
-      box-shadow: none;
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
@@ -39,7 +42,6 @@
     :root {
       --bg: #F5F1EB;
       --bg-soft: #F8F4EE;
-      --card: #F7F2EB;
       --text: #3A2F2A;
       --muted: #5F534B;
       --soft: #7B6C61;
@@ -74,10 +76,28 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
+      gap: 24px;
     }
 
-    .uc-header-spacer {
-      min-height: 1px;
+    .uc-mini-nav {
+      justify-self: start;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    .uc-mini-nav a {
+      color: var(--soft);
+      text-decoration: none;
+      transition: color 0.22s ease;
+    }
+
+    .uc-mini-nav a:hover {
+      color: var(--gold);
     }
 
     .uc-brand {
@@ -90,6 +110,7 @@
       letter-spacing: 0.25px;
       text-decoration: none;
       display: inline-block;
+      white-space: nowrap;
     }
 
     .uc-lang-switch {
@@ -141,11 +162,11 @@
     }
 
     .uc-hero {
-      min-height: calc(92vh - 14px);
+      min-height: calc(88vh - 14px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 56px 0 96px 0;
+      padding: 58px 0 82px 0;
       position: relative;
       overflow: hidden;
     }
@@ -175,7 +196,7 @@
     }
 
     .uc-hero-inner {
-      max-width: 980px;
+      max-width: 1010px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -194,22 +215,32 @@
 
     .uc-h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 84px;
-      line-height: 0.97;
+      font-size: 76px;
+      line-height: 1.03;
       font-weight: 500;
       color: var(--text);
-      margin: 0 0 28px 0;
+      margin: 0 0 30px 0;
       letter-spacing: -0.9px;
       text-wrap: balance;
     }
 
     .uc-sub {
-      max-width: 820px;
-      margin: 0 auto 34px auto;
+      max-width: 850px;
+      margin: 0 auto 24px auto;
       font-family: 'Libre Baskerville', serif;
-      font-size: 19px;
+      font-size: 18px;
       line-height: 2;
       color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-hero-proof {
+      max-width: 790px;
+      margin: 0 auto 34px auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--soft);
       text-wrap: balance;
     }
 
@@ -252,39 +283,6 @@
       transform: translateY(-1px);
     }
 
-    .uc-btn-card {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      text-decoration: none;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 11px;
-      letter-spacing: 0.45px;
-      background: var(--gold);
-      color: #FFFFFF;
-      border: 1px solid var(--gold);
-      transition: all 0.24s ease;
-      align-self: flex-start;
-    }
-
-    .uc-btn-card:hover {
-      background: var(--gold-soft);
-      border-color: var(--gold-soft);
-      transform: translateY(-1px);
-    }
-
-    .uc-btn-card-light {
-      background: transparent;
-      color: #F5F1EB;
-      border: 1px solid rgba(245,241,235,0.46);
-    }
-
-    .uc-btn-card-light:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(245,241,235,0.72);
-      transform: translateY(-1px);
-    }
-
     .uc-band {
       background:
         radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
@@ -299,7 +297,7 @@
 
     .uc-band-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 50px;
+      font-size: 48px;
       line-height: 1.08;
       font-weight: 500;
       margin: 0 0 12px 0;
@@ -315,7 +313,7 @@
     }
 
     .uc-band-copy {
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 15px;
@@ -356,7 +354,7 @@
     }
 
     .uc-intro {
-      max-width: 820px;
+      max-width: 840px;
       margin: 0 auto 40px auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
@@ -367,44 +365,42 @@
     }
 
     .uc-grid-2,
-    .uc-grid-4,
-    .uc-pricing-grid,
-    .uc-steps-compact {
+    .uc-grid-3,
+    .uc-why-grid,
+    .uc-steps {
       display: grid;
       gap: 24px;
       max-width: 1040px;
       margin: 0 auto;
     }
 
-    .uc-grid-2 {
+    .uc-grid-2,
+    .uc-why-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .uc-grid-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .uc-pricing-grid {
+    .uc-grid-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .uc-steps-compact {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .uc-card,
-    .uc-price-card,
-    .uc-step-card {
+    .uc-why-card,
+    .uc-price-card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
       padding: 34px 32px;
+      text-align: left;
+      transition: all 0.26s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
       position: relative;
       box-shadow: var(--shadow-soft);
     }
 
     .uc-card:before,
-    .uc-price-card:before,
-    .uc-step-card:before {
+    .uc-why-card:before,
+    .uc-price-card:before {
       content: "";
       position: absolute;
       top: 0;
@@ -414,9 +410,14 @@
       background: var(--gold);
     }
 
+    .uc-card:hover,
+    .uc-why-card:hover {
+      border-color: #D2BCA4;
+      transform: translateY(-3px);
+    }
+
     .uc-card-title,
-    .uc-list-title,
-    .uc-step-title {
+    .uc-why-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 34px;
       line-height: 1.06;
@@ -426,7 +427,7 @@
     }
 
     .uc-card-copy,
-    .uc-step-copy {
+    .uc-why-copy {
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
       line-height: 1.9;
@@ -435,113 +436,22 @@
       text-wrap: balance;
     }
 
-    .uc-step-no {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 10px;
-      line-height: 1.6;
-      letter-spacing: 2.2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .uc-step-title {
-      font-size: 30px;
-      margin: 0 0 10px 0;
-    }
-
-    .uc-dark-block {
-      max-width: 1040px;
-      margin: 0 auto;
-      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
-      border: 1px solid rgba(194,164,109,0.42);
-      box-shadow: var(--shadow-strong);
-      padding: 42px 38px;
-      position: relative;
+    .uc-price-row {
       display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
-      gap: 42px;
-      align-items: start;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto 28px auto;
     }
 
-    .uc-dark-block:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 38px;
-      width: 74px;
-      height: 2px;
-      background: var(--gold-soft);
+    .uc-price-card {
+      text-align: center;
+      padding: 34px 30px;
     }
 
-    .uc-dark-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 44px;
-      line-height: 1.02;
-      font-weight: 500;
-      color: #F5F1EB;
-      margin: 0 0 14px 0;
-      text-wrap: balance;
-    }
-
-    .uc-dark-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 1.95;
-      color: rgba(245,241,235,0.86);
-      text-wrap: balance;
-    }
-
-    .uc-dark-side {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding-top: 6px;
-    }
-
-    .uc-dark-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      max-width: 360px;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 1.95;
-      color: rgba(245,241,235,0.90);
-    }
-
-    .uc-dark-list li {
-      position: relative;
-      padding-left: 20px;
-      text-align: left;
-    }
-
-    .uc-dark-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: rgba(245,241,235,0.90);
-      font-size: 14px;
-      line-height: 1.95;
-    }
-
-    .uc-dark-list li + li {
-      margin-top: 10px;
-    }
-
-    .uc-badge {
-      display: inline-block;
-      margin: 6px 0 14px 0;
-      padding: 8px 12px;
-      border: 1px solid rgba(194,164,109,0.38);
-      color: var(--gold-soft);
-      font-family: 'Libre Baskerville', serif;
-      font-size: 9px;
-      line-height: 1.4;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
+    .uc-price-card:before {
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .uc-price-label {
@@ -556,61 +466,37 @@
 
     .uc-price-value {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 52px;
+      font-size: 40px;
       line-height: 1;
       color: var(--text);
-      margin: 0 0 12px 0;
+      margin-bottom: 12px;
     }
 
     .uc-price-copy {
       font-family: 'Libre Baskerville', serif;
-      font-size: 14px;
-      line-height: 1.9;
+      font-size: 12px;
+      line-height: 1.85;
       color: var(--muted);
       margin: 0;
     }
 
-    .uc-list-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-
-    .uc-list-box {
-      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
-      border: 1px solid #E3D8CB;
-      padding: 34px 32px;
-      position: relative;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .uc-list-box:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 32px;
-      width: 68px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .uc-list-title {
-      margin: 10px 0 16px 0;
-    }
-
-    .uc-ul {
+    .uc-example-list {
       margin: 0;
-      padding-left: 18px;
+      padding: 0;
+      list-style: none;
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
       line-height: 1.9;
       color: var(--muted);
     }
 
-    .uc-ul li + li {
-      margin-top: 10px;
+    .uc-example-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(221,207,191,0.72);
+    }
+
+    .uc-example-list li:last-child {
+      border-bottom: none;
     }
 
     .uc-note {
@@ -624,30 +510,216 @@
       text-wrap: balance;
     }
 
-    .uc-contact-box {
-      max-width: 760px;
+    .uc-steps {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .uc-step {
+      text-align: left;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    .uc-step-no {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .uc-step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      line-height: 1.04;
+      color: var(--text);
+      margin: 0 0 10px 0;
+      text-wrap: balance;
+    }
+
+    .uc-step-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .uc-list {
+      max-width: 900px;
       margin: 0 auto;
+      text-align: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 16px;
+      line-height: 2;
+      color: var(--text);
+      text-wrap: balance;
+    }
+
+    .uc-form-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(194,164,109,0.10), transparent 34%),
+        linear-gradient(180deg, #332925 0%, #241C19 100%);
+      border: 1px solid rgba(194,164,109,0.42);
+      box-shadow: var(--shadow-strong);
+      padding: 44px;
+      color: #F5F1EB;
+    }
+
+    .uc-form-head {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .uc-form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 46px;
+      line-height: 1.06;
+      font-weight: 500;
+      margin: 0 0 14px 0;
+      color: #F5F1EB;
+      text-wrap: balance;
+    }
+
+    .uc-form-copy {
+      max-width: 700px;
+      margin: 0 auto;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(245,241,235,0.84);
+      text-wrap: balance;
+    }
+
+    .uc-form {
+      margin: 0;
+    }
+
+    .uc-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .uc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .uc-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .uc-field label,
+    .uc-consent label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 11px;
+      line-height: 1.6;
+      letter-spacing: 0.4px;
+      color: rgba(245,241,235,0.92);
+    }
+
+    .uc-field input,
+    .uc-field select,
+    .uc-field textarea {
+      width: 100%;
+      border: 1px solid rgba(245,241,235,0.22);
+      background: rgba(245,241,235,0.07);
+      color: #F5F1EB;
+      padding: 15px 15px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.6;
+      outline: none;
+      transition: all 0.22s ease;
+      border-radius: 0;
+    }
+
+    .uc-field input::placeholder,
+    .uc-field textarea::placeholder {
+      color: rgba(245,241,235,0.46);
+    }
+
+    .uc-field select {
+      appearance: none;
+      color: #F5F1EB;
+    }
+
+    .uc-field select option {
+      color: #3A2F2A;
+      background: #F5F1EB;
+    }
+
+    .uc-field textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .uc-field input:focus,
+    .uc-field select:focus,
+    .uc-field textarea:focus {
+      border-color: rgba(194,164,109,0.86);
+      background: rgba(245,241,235,0.10);
+    }
+
+    .uc-consent {
+      margin: 22px 0 26px 0;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .uc-consent input {
+      margin-top: 4px;
+      accent-color: var(--gold);
+    }
+
+    .uc-consent a {
+      color: #F5F1EB;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .uc-form-submit {
       text-align: center;
     }
 
-    .uc-contact-main {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 50px;
-      line-height: 1.08;
-      font-weight: 500;
-      color: var(--text);
-      margin: 0 0 14px 0;
-      text-wrap: balance;
+    .uc-submit {
+      cursor: pointer;
+      border-radius: 0;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #FFFFFF;
+      padding: 18px 40px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      letter-spacing: 0.55px;
+      transition: all 0.24s ease;
     }
 
-    .uc-contact-copy {
-      max-width: 700px;
-      margin: 0 auto 20px auto;
+    .uc-submit:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold-soft);
+      transform: translateY(-1px);
+    }
+
+    .uc-form-note {
+      max-width: 640px;
+      margin: 18px auto 0 auto;
+      text-align: center;
       font-family: 'Libre Baskerville', serif;
-      font-size: 15px;
-      line-height: 1.95;
-      color: var(--muted);
-      text-wrap: balance;
+      font-size: 11px;
+      line-height: 1.8;
+      color: rgba(245,241,235,0.62);
+    }
+
+    .uc-hidden {
+      display: none;
     }
 
     .uc-footer {
@@ -693,8 +765,16 @@
     }
 
     @media (max-width: 1100px) {
-      .uc-grid-4 {
+      .uc-mini-nav {
+        display: none;
+      }
+
+      .uc-steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .uc-grid-3 {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -704,32 +784,20 @@
         padding: 38px 0 74px 0;
       }
 
+      .uc-grid-2,
+      .uc-why-grid {
+        grid-template-columns: 1fr;
+      }
+
       .uc-h1 {
-        font-size: 66px;
-        line-height: 0.98;
+        font-size: 60px;
+        line-height: 1.05;
       }
 
       .uc-title,
       .uc-band-title,
-      .uc-contact-main,
-      .uc-dark-title {
+      .uc-form-title {
         font-size: 44px;
-      }
-
-      .uc-grid-2,
-      .uc-list-grid,
-      .uc-dark-block,
-      .uc-pricing-grid,
-      .uc-steps-compact {
-        grid-template-columns: 1fr;
-      }
-
-      .uc-dark-side {
-        padding-top: 0;
-      }
-
-      .uc-dark-list {
-        max-width: none;
       }
     }
 
@@ -747,10 +815,6 @@
         gap: 18px;
       }
 
-      .uc-header-spacer {
-        display: none;
-      }
-
       .uc-brand {
         font-size: 28px;
       }
@@ -766,18 +830,19 @@
 
       .uc-kicker {
         margin-bottom: 22px;
+        letter-spacing: 3px;
       }
 
       .uc-h1 {
-        font-size: 50px;
-        line-height: 1.02;
+        font-size: 42px;
+        line-height: 1.08;
         margin: 0 0 20px 0;
       }
 
       .uc-sub {
         font-size: 16px;
         line-height: 1.9;
-        margin: 0 auto 14px auto;
+        margin: 0 auto 16px auto;
       }
 
       .uc-actions {
@@ -794,15 +859,13 @@
 
       .uc-title,
       .uc-band-title,
-      .uc-contact-main,
-      .uc-dark-title,
-      .uc-list-title,
-      .uc-card-title {
+      .uc-form-title {
         font-size: 36px;
       }
 
-      .uc-grid-4,
-      .uc-steps-compact {
+      .uc-steps,
+      .uc-price-row,
+      .uc-form-grid {
         grid-template-columns: 1fr;
       }
 
@@ -812,37 +875,42 @@
         margin: 0 auto 12px auto;
       }
 
-      .uc-btn-card {
-        display: inline-block;
-        max-width: none;
-        margin: 20px 0 0 0;
-      }
-
       .uc-card,
-      .uc-list-box,
-      .uc-dark-block,
-      .uc-price-card,
-      .uc-step-card {
+      .uc-why-card,
+      .uc-price-card {
+        min-height: auto;
         padding: 32px 24px;
       }
 
       .uc-card:before,
-      .uc-list-box:before,
-      .uc-dark-block:before,
-      .uc-price-card:before,
-      .uc-step-card:before {
+      .uc-why-card:before {
         left: 24px;
+      }
+
+      .uc-form-wrap {
+        padding: 34px 22px;
+      }
+
+      .uc-submit {
+        width: 100%;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="uc-topbar"></div>
 
   <section class="uc-shell uc-brandbar">
     <div class="uc-headerbar">
-      <div class="uc-header-spacer"></div>
+      <nav class="uc-mini-nav" aria-label="Navigation">
+        <a href="#scope">Scope</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
       <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+
       <div class="uc-lang-switch">
         <a href="/1-dzien-wsparcia/">PL</a>
         <span class="uc-lang-divider">|</span>
@@ -854,21 +922,23 @@
   <section class="uc-hero">
     <div class="uc-shell">
       <div class="uc-hero-inner">
-        <div class="uc-kicker">Urban Concierge One-Day Support • Kraków and nearby • remote across Poland</div>
+        <div class="uc-kicker">One-Day Concierge Support • Krakow and nearby areas • remote across Poland</div>
 
         <h1 class="uc-h1">
-          For the days when<br>
-          there are simply<br>
-          too many things.
+          One-Day Concierge Support
         </h1>
 
         <div class="uc-sub">
-          One-Day Support is a structured first step for clients who want to hand over selected matters for coordination without starting with monthly support. In person in Kraków and nearby, or remotely across Poland.
+          Private concierge support in Krakow and nearby areas, as well as remote support across Poland. For clients who want to hand over a clear list of tasks without starting with a monthly retainer.
+        </div>
+
+        <div class="uc-hero-proof">
+          Appointments, calls, reservations, follow-ups, pick-ups, deliveries, service providers and practical help with everyday matters that take your time.
         </div>
 
         <div class="uc-actions">
-          <a href="mailto:info@urbanconcierge.pl?subject=One-Day%20Support%20-%20availability%20and%20price" class="uc-btn uc-btn-primary">Check availability and price</a>
-          <a href="mailto:info@urbanconcierge.pl?subject=Task%20list%20-%20One-Day%20Support" class="uc-btn uc-btn-secondary">Send your task list</a>
+          <a href="#contact" class="uc-btn uc-btn-primary">Send your tasks</a>
+          <a href="#scope" class="uc-btn uc-btn-secondary">See the scope</a>
         </div>
       </div>
     </div>
@@ -876,196 +946,125 @@
 
   <section class="uc-band">
     <div class="uc-shell">
-      <div class="uc-band-title">You are not buying individual hours.</div>
+      <div class="uc-band-title">One day. One clear list. Calm execution.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        You are buying preparation, confirmed scope and priority for selected matters on the agreed day. It is a calm, private form of support for people who want real relief — without moving straight into ongoing cooperation.
+        One-Day Support is the simplest way to use concierge services without ongoing cooperation. You send the tasks, we confirm the scope and coordinate them on the agreed day.
       </div>
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft">
+  <section class="uc-section uc-section-soft" id="scope">
     <div class="uc-shell">
-      <h2 class="uc-title">Price and form of support</h2>
+      <h2 class="uc-title">What One-Day Support includes</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        One-Day Support is not about billing every minute separately. It is a structured service with confirmed scope and priority for selected matters on an agreed day.
+        Help with everyday matters in Krakow, nearby areas or remotely — especially when the tasks are not difficult, but require time, calls, arrangements and attention to detail.
       </div>
 
-      <div class="uc-pricing-grid">
+      <div class="uc-grid-2">
+        <div class="uc-card">
+          <div class="uc-card-title">Everyday matters</div>
+          <ul class="uc-example-list">
+            <li>booking an appointment, service or consultation</li>
+            <li>confirming a delivery, installation or pick-up time</li>
+            <li>contacting a provider, administration office or facility</li>
+            <li>arranging a gift, flowers, reservation or transport</li>
+            <li>following up on a matter that has been left open</li>
+          </ul>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Matters that need coordination</div>
+          <ul class="uc-example-list">
+            <li>finding and comparing several service options</li>
+            <li>coordinating dates between several people</li>
+            <li>organizing a repair, visit, pick-up or practical formality</li>
+            <li>checking availability and gathering information</li>
+            <li>bringing several delayed tasks into order</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="uc-note">
+        If a matter requires specialist knowledge, a license or your final decision, Urban Concierge can support the organization of the process, but does not replace a licensed professional.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section" id="pricing">
+    <div class="uc-shell">
+      <h2 class="uc-title">Pricing</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-intro">
+        The price depends on the number of tasks, timing, level of coordination and whether on-site presence is needed.
+      </div>
+
+      <div class="uc-price-row">
         <div class="uc-price-card">
-          <div class="uc-price-label">Remote across Poland</div>
+          <div class="uc-price-label">Remote</div>
           <div class="uc-price-value">from 490 PLN</div>
           <p class="uc-price-copy">
-            for a selected task list handled remotely within the One-Day Support format
+            For matters that can be handled by phone, email, research, booking or remote coordination — across Poland.
           </p>
         </div>
 
         <div class="uc-price-card">
-          <div class="uc-price-label">Kraków and nearby</div>
+          <div class="uc-price-label">Krakow and nearby areas</div>
           <div class="uc-price-value">from 690 PLN</div>
           <p class="uc-price-copy">
-            when the scope includes on-site action and requires local presence
-          </p>
-        </div>
-
-        <div class="uc-price-card">
-          <div class="uc-price-label">Outside Kraków</div>
-          <div class="uc-price-value">from 900 PLN</div>
-          <p class="uc-price-copy">
-            individual pricing for local support outside Kraków and nearby areas
+            For matters that require local coordination, presence or practical action on site.
           </p>
         </div>
       </div>
 
       <div class="uc-note">
-        Final pricing depends on scope, number of matters, location and whether on-site action is required. Scope is always confirmed before the start.
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">What One-Day Support means</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        This format is designed for days when there are simply too many tasks, deadlines and topics. Instead of counting every minute, the client receives one structured day of support with clearly confirmed scope.
+        Before the work begins, we confirm the scope, price and the most appropriate way to proceed.
       </div>
 
-      <div class="uc-grid-4">
-        <div class="uc-card">
-          <div class="uc-card-title">Task list in advance</div>
-          <p class="uc-card-copy">
-            You may send your list of topics the day before so the day can be prepared properly in advance.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Confirmed scope</div>
-          <p class="uc-card-copy">
-            Before the start, we confirm what is included in the service and what requires separate pricing or another support model.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Priority on that day</div>
-          <p class="uc-card-copy">
-            On the agreed day, your matters receive priority and are handled in a structured way.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Calm updates</div>
-          <p class="uc-card-copy">
-            You receive confirmations, updates or completed solutions — without having to stay involved in every detail.
-          </p>
-        </div>
+      <div class="uc-actions" style="text-align:center; margin-top: 38px;">
+        <a href="#contact" class="uc-btn uc-btn-primary">Send your tasks</a>
       </div>
     </div>
   </section>
 
   <section class="uc-section uc-section-soft">
-    <div class="uc-shell">
-      <div class="uc-dark-block">
-        <div>
-          <div class="uc-badge">The simplest first step</div>
-          <div class="uc-dark-title">Why this format works</div>
-          <div class="uc-dark-copy">
-            One-Day Support is a convenient entry point for clients who want to experience the Urban Concierge way of working without committing to monthly support. It is designed for intense weeks, accumulated matters and moments when you need real relief, not just another list of things to do yourself.
-          </div>
-          <a href="mailto:info@urbanconcierge.pl?subject=One-Day%20Support%20-%20availability%20and%20price" class="uc-btn-card uc-btn-card-light">Ask about availability</a>
-        </div>
-
-        <div class="uc-dark-side">
-          <ul class="uc-dark-list">
-            <li>in person in Kraków and nearby</li>
-            <li>remote across Poland</li>
-            <li>no monthly support required to start</li>
-            <li>possible transition into ongoing cooperation later</li>
-            <li>scope confirmed before the work begins</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">Examples of matters</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        Scope always depends on the specific situation, but below you can see the kind of matters this service is best suited for.
-      </div>
-
-      <div class="uc-list-grid">
-        <div class="uc-list-box">
-          <div class="uc-list-title">Most often included</div>
-          <ul class="uc-ul">
-            <li>coordination of selected matters from one list</li>
-            <li>research and comparison of options</li>
-            <li>contact with service providers within the agreed scope</li>
-            <li>reservations, arrangements, confirmations and follow-ups</li>
-            <li>organising the day around priority matters</li>
-            <li>selected on-site actions in Kraków and nearby</li>
-          </ul>
-        </div>
-
-        <div class="uc-list-box">
-          <div class="uc-list-title">Usually not included</div>
-          <ul class="uc-ul">
-            <li>large sales projects or multi-day projects</li>
-            <li>mass outreach, cold calling or scaled activities</li>
-            <li>matters that completely change the agreed scope during the day</li>
-            <li>cases requiring separate full project handling</li>
-            <li>tasks that go beyond the realistic model of this service</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="uc-note">
-        If something goes beyond this format, we simply say so clearly before the start and suggest a more suitable model.
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft" id="how-it-works">
     <div class="uc-shell">
       <h2 class="uc-title">How it works</h2>
       <div class="uc-rule"></div>
 
-      <div class="uc-steps-compact">
-        <div class="uc-step-card">
+      <div class="uc-steps">
+        <div class="uc-step">
           <div class="uc-step-no">Step 01</div>
-          <div class="uc-step-title">Message</div>
+          <div class="uc-step-title">You describe the tasks</div>
           <div class="uc-step-copy">
-            You send a short message and describe what you need.
+            You send a list of matters you would like to hand over for coordination.
           </div>
         </div>
 
-        <div class="uc-step-card">
+        <div class="uc-step">
           <div class="uc-step-no">Step 02</div>
-          <div class="uc-step-title">Task list</div>
+          <div class="uc-step-title">We confirm the scope</div>
           <div class="uc-step-copy">
-            You may send your list of topics in advance, ideally the day before the planned support day.
+            We check what fits within One-Day Support and which form of service is most appropriate.
           </div>
         </div>
 
-        <div class="uc-step-card">
+        <div class="uc-step">
           <div class="uc-step-no">Step 03</div>
-          <div class="uc-step-title">Scope confirmation</div>
+          <div class="uc-step-title">We take over coordination</div>
           <div class="uc-step-copy">
-            We confirm what falls within One-Day Support and what goes beyond this format.
+            We organize, coordinate, contact providers and move the matters forward.
           </div>
         </div>
 
-        <div class="uc-step-card">
+        <div class="uc-step">
           <div class="uc-step-no">Step 04</div>
-          <div class="uc-step-title">Execution</div>
+          <div class="uc-step-title">You receive an update</div>
           <div class="uc-step-copy">
-            On the agreed day, your matters receive priority and you receive updates and confirmations.
+            You receive a status update, confirmation or completed solution.
           </div>
         </div>
       </div>
@@ -1073,72 +1072,130 @@
   </section>
 
   <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">Who this service is for</h2>
+    <div class="uc-shell" style="max-width: 920px;">
+      <h2 class="uc-title">Who it is for</h2>
       <div class="uc-rule"></div>
 
-      <div class="uc-grid-2">
-        <div class="uc-card">
-          <div class="uc-card-title">For intense days</div>
-          <p class="uc-card-copy">
-            For people who suddenly have several matters piling up at once and want real relief without chaos.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">For work outside the standard rhythm</div>
-          <p class="uc-card-copy">
-            For people working in a non-standard schedule, on shifts or at hours that do not always allow them to handle everything personally.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">For clients who value calm</div>
-          <p class="uc-card-copy">
-            For those who would rather delegate than personally handle every call, deadline and detail.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">For a first contact with UC</div>
-          <p class="uc-card-copy">
-            For clients who want to start with one service first and only later decide whether they need in-person assistance, monthly support or further cooperation.
-          </p>
-        </div>
+      <div class="uc-list">
+        for clients who need a private concierge or personal assistant in Krakow<br><br>
+        for clients who want to hand over everyday matters without a monthly retainer<br><br>
+        for people carrying many responsibilities who want to recover time from operational details<br><br>
+        for clients who expect discretion, structure and calm communication
       </div>
     </div>
   </section>
 
   <section class="uc-section uc-section-soft">
     <div class="uc-shell">
-      <div class="uc-contact-box">
-        <h2 class="uc-contact-main">Start with one well-prepared list</h2>
-        <div class="uc-rule"></div>
+      <h2 class="uc-title">What it does not include</h2>
+      <div class="uc-rule"></div>
 
-        <div class="uc-contact-copy">
-          Write to us with what you need and we will confirm whether it is the right scope for One-Day Support and what the appropriate price will be. If yes, we set the date and take over the selected matters in a structured way.
+      <div class="uc-intro">
+        Urban Concierge does not replace a doctor, lawyer, accountant, tax advisor or any licensed specialist. We do not make decisions on behalf of the client. We support organization, coordination, communication and follow-through.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section" id="contact">
+    <div class="uc-shell">
+      <div class="uc-form-wrap">
+        <div class="uc-form-head">
+          <div class="uc-form-title">Send your tasks</div>
+          <div class="uc-form-copy">
+            Briefly describe what you need. You do not need to know whether it fits the scope — we will reply with the most suitable form of support.
+          </div>
         </div>
 
-        <div class="uc-actions" style="margin-top: 30px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=One-Day%20Support%20-%20availability%20and%20price" class="uc-btn uc-btn-primary">Check availability and price</a>
-          <a href="mailto:info@urbanconcierge.pl?subject=Task%20list%20-%20One-Day%20Support" class="uc-btn uc-btn-secondary">Send your task list</a>
-        </div>
+        <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="uc-form">
+          <input type="hidden" name="form-name" value="urban-concierge-pl">
+          <input type="hidden" name="language" value="English">
+          <input type="hidden" name="source_page" value="One-Day Support ENG">
+
+          <p class="uc-hidden">
+            <label>Do not fill this field: <input name="bot-field"></label>
+          </p>
+
+          <div class="uc-form-grid">
+            <div class="uc-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+
+            <div class="uc-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="email@example.com" required>
+            </div>
+
+            <div class="uc-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+48..." required>
+            </div>
+
+            <div class="uc-field">
+              <label for="location">Location</label>
+              <input id="location" name="location" type="text" placeholder="Krakow / nearby / remote / other">
+            </div>
+
+            <div class="uc-field">
+              <label for="support">Support model</label>
+              <select id="support" name="support_model" required>
+                <option value="">Choose</option>
+                <option value="One-Day Support remote">One-Day Support — remote</option>
+                <option value="One-Day Support Krakow and nearby">One-Day Support — Krakow and nearby</option>
+                <option value="On-site assistance">On-site assistance</option>
+                <option value="Retainer support">Retainer support</option>
+                <option value="Not sure">Not sure — please advise</option>
+              </select>
+            </div>
+
+            <div class="uc-field">
+              <label for="date">Timeframe</label>
+              <select id="date" name="timeframe" required>
+                <option value="">Choose</option>
+                <option value="As soon as possible">As soon as possible</option>
+                <option value="This week">This week</option>
+                <option value="On a specific day">On a specific day</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+
+            <div class="uc-field uc-field-full">
+              <label for="message">Tasks to coordinate</label>
+              <textarea id="message" name="tasks_to_coordinate" placeholder="Briefly describe what you would like to hand over. You can list several tasks in points." required></textarea>
+            </div>
+          </div>
+
+          <div class="uc-consent">
+            <input id="consent" name="contact_consent" type="checkbox" required>
+            <label for="consent">
+              I consent to being contacted in order to handle this request. I have read the <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">privacy policy</a>.
+            </label>
+          </div>
+
+          <div class="uc-form-submit">
+            <button type="submit" class="uc-submit">Send request</button>
+          </div>
+
+          <div class="uc-form-note">
+            After you submit the form, the scope will be reviewed. If another form of support is more suitable, you will receive a relevant proposal.
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
   <section class="uc-footer">
     <div class="uc-footer-brand">Urban Concierge</div>
-    <div class="uc-footer-sub">Private concierge support | Kraków and nearby | remote across Poland</div>
+    <div class="uc-footer-sub">Private concierge support | Krakow and nearby areas | remote across Poland</div>
 
     <div class="uc-footer-links">
       <a href="/expats-krakow/">Home</a>
-      <a href="/expats-krakow/in-person-assistance/">In-Person Assistance</a>
-      <a href="/expats-krakow/monthly-support/">Monthly Support</a>
-      <a href="/expats-krakow/relocation/">Relocation to Kraków</a>
-      <a href="/expats-krakow/Regulamin%20UC%20eng.pdf" target="_blank" rel="noopener">Terms</a>
-      <a href="/expats-krakow/polityka%20prywatnosci%20UC%20eng.pdf" target="_blank" rel="noopener">Privacy Policy</a>
-      <a href="mailto:info@urbanconcierge.pl">Contact</a>
+      <a href="#scope">Scope</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms</a>
+      <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy policy</a>
+      <a href="mailto:info@urbanconcierge.pl">Email</a>
     </div>
   </section>
 </body>
