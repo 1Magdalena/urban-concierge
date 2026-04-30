@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Relocation to Kraków | Urban Concierge</title>
-  <meta name="description" content="Discreet, organised relocation support in Kraków for expats, international clients, couples and families. Practical coordination before arrival and during the first stage after you arrive." />
+
+  <title>Relocation to Krakow | Expat & Family Support | Urban Concierge</title>
+  <meta name="description" content="Relocation support in Krakow by Urban Concierge. Private support for expats, international clients, couples and families: apartment preparation, local coordination, first formalities and practical support after arrival." />
+
   <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/relocation/">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
@@ -13,144 +16,132 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18108841323');
+    gtag("js", new Date());
+    gtag("config", "AW-18108841323");
   </script>
 
   <style>
-    html, body {
-      background: #F5F1EB;
-      margin: 0;
-      padding: 0;
-      box-shadow: none;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
+    :root {
+      --bg: #F5F1EB;
+      --soft-bg: #F8F4EE;
+      --text: #3A2F2A;
+      --muted: #5F534B;
+      --soft: #7B6C61;
+      --gold: #B8955A;
+      --gold-soft: #C2A46D;
+      --line: #E7DDD2;
+      --line-strong: #DDCFBF;
+      --dark: #2B221F;
     }
 
-    body {
-      color: #3A2F2A;
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: "Libre Baskerville", serif;
     }
 
-    :root {
-      --bg: #F5F1EB;
-      --bg-soft: #F8F4EE;
-      --card: #F7F2EB;
-      --text: #3A2F2A;
-      --muted: #5F534B;
-      --soft: #7B6C61;
-      --line: #E7DDD2;
-      --line-strong: #DDCFBF;
-      --gold: #B8955A;
-      --gold-soft: #C2A46D;
-      --choco: #2B221F;
-      --choco-2: #3A2F2A;
-      --hover: #473934;
-      --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
-    }
-
-    .uc-topbar {
-      width: 100%;
+    .topbar {
       height: 14px;
       background: linear-gradient(90deg, #2B221F 0%, #3A2F2A 50%, #2B221F 100%);
     }
 
-    .uc-shell {
+    .shell {
       max-width: 1180px;
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    .uc-brandbar {
-      padding: 34px 0 0 0;
+    header {
+      padding: 34px 0 0;
     }
 
-    .uc-headerbar {
+    .header-inner {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
+      gap: 24px;
     }
 
-    .uc-header-spacer {
-      min-height: 1px;
+    .mini-nav {
+      display: flex;
+      gap: 22px;
+      font-size: 10px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
     }
 
-    .uc-brand {
-      justify-self: center;
-      font-family: 'Cormorant Garamond', serif;
+    .mini-nav a {
+      color: var(--soft);
+      text-decoration: none;
+    }
+
+    .mini-nav a:hover {
+      color: var(--gold);
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
       font-size: 31px;
       line-height: 1.1;
       font-weight: 600;
       color: var(--gold);
-      letter-spacing: 0.25px;
       text-decoration: none;
-      display: inline-block;
+      white-space: nowrap;
     }
 
-    .uc-lang-switch {
+    .lang {
       justify-self: end;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 6px;
-      background: rgba(255,255,255,0.32);
       border: 1px solid #D8C8B6;
+      background: rgba(255,255,255,0.32);
     }
 
-    .uc-lang-current,
-    .uc-lang-switch a {
-      display: inline-block;
+    .lang span,
+    .lang a {
       min-width: 44px;
       text-align: center;
       padding: 8px 12px;
-      font-family: 'Libre Baskerville', serif;
       font-size: 10px;
-      line-height: 1.4;
       letter-spacing: 1.2px;
       text-transform: uppercase;
       text-decoration: none;
     }
 
-    .uc-lang-current {
-      background: var(--choco-2);
-      color: #FFFFFF;
-      border: 1px solid var(--choco-2);
+    .lang span {
+      background: var(--text);
+      color: #fff;
     }
 
-    .uc-lang-switch a {
+    .lang a {
       color: var(--text);
-      border: 1px solid transparent;
-      transition: all 0.22s ease;
     }
 
-    .uc-lang-switch a:hover {
-      background: #EEE6DD;
-      border-color: var(--gold);
-    }
-
-    .uc-lang-divider {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 10px;
-      color: #8B7B70;
-      line-height: 1;
-    }
-
-    .uc-hero {
-      min-height: calc(92vh - 14px);
+    .hero {
+      min-height: calc(88vh - 14px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 28px 0 68px 0;
+      padding: 58px 0 82px;
       position: relative;
+      text-align: center;
       overflow: hidden;
     }
 
-    .uc-hero:before {
+    .hero:before {
       content: "";
       position: absolute;
       width: 720px;
@@ -159,10 +150,9 @@
       border-radius: 50%;
       top: -250px;
       right: -230px;
-      pointer-events: none;
     }
 
-    .uc-hero:after {
+    .hero:after {
       content: "";
       position: absolute;
       width: 420px;
@@ -171,1034 +161,1000 @@
       border-radius: 50%;
       bottom: -150px;
       left: -120px;
-      pointer-events: none;
     }
 
-    .uc-hero-inner {
-      max-width: 980px;
-      margin: 0 auto;
-      text-align: center;
+    .hero-inner {
       position: relative;
-      z-index: 2;
+      z-index: 1;
+      max-width: 1020px;
+      margin: 0 auto;
     }
 
-    .uc-kicker {
-      font-family: 'Libre Baskerville', serif;
+    .kicker {
       font-size: 10px;
       line-height: 1.8;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #9C8F84;
-      margin-bottom: 28px;
+      margin-bottom: 34px;
     }
 
-    .uc-h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 86px;
-      line-height: 0.95;
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 76px;
+      line-height: 1.03;
       font-weight: 500;
-      color: var(--text);
-      margin: 0 0 22px 0;
-      letter-spacing: -1.1px;
-      text-wrap: balance;
+      letter-spacing: -0.9px;
+      margin: 0 0 30px;
     }
 
-    .uc-sub {
-      max-width: 860px;
-      margin: 0 auto 16px auto;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 21px;
-      line-height: 1.85;
-      color: var(--muted);
-      text-wrap: balance;
-    }
-
-    .uc-premium-note {
-      max-width: 760px;
-      margin: 24px auto 0 auto;
-      text-align: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
+    .sub {
+      max-width: 900px;
+      margin: 0 auto 24px;
+      font-size: 18px;
       line-height: 2;
+      color: var(--muted);
+    }
+
+    .proof {
+      max-width: 840px;
+      margin: 0 auto 34px;
+      font-size: 13px;
+      line-height: 1.9;
       color: var(--soft);
-      text-wrap: balance;
     }
 
-    .uc-actions {
-      margin-top: 42px;
-    }
-
-    .uc-btn {
+    .btn {
       display: inline-block;
-      text-decoration: none;
       padding: 18px 38px;
-      font-family: 'Libre Baskerville', serif;
+      margin: 0 10px 12px;
       font-size: 12px;
       letter-spacing: 0.55px;
-      transition: all 0.24s ease;
-      margin: 0 8px 12px 8px;
+      text-decoration: none;
+      transition: 0.24s ease;
     }
 
-    .uc-btn-primary {
-      background: var(--choco-2);
-      color: #FFFFFF;
-      border: 1px solid var(--choco-2);
+    .btn-primary {
+      background: var(--text);
+      color: #fff;
+      border: 1px solid var(--text);
     }
 
-    .uc-btn-primary:hover {
-      background: var(--hover);
-      border-color: var(--hover);
+    .btn-primary:hover {
+      background: #473934;
+      border-color: #473934;
       transform: translateY(-1px);
     }
 
-    .uc-btn-secondary {
-      background: transparent;
+    .btn-secondary {
       color: var(--text);
       border: 1px solid #CCB8A2;
+      background: transparent;
     }
 
-    .uc-btn-secondary:hover {
+    .btn-secondary:hover {
       background: #EEE6DD;
       border-color: var(--gold);
       transform: translateY(-1px);
     }
 
-    .uc-band {
-      background:
-        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
-        radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
-        linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
+    .band {
+      background: linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
       color: #F5F1EB;
-      padding: 72px 36px;
+      padding: 74px 36px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
 
-    .uc-band-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 52px;
-      line-height: 1.06;
+    .band h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 48px;
+      line-height: 1.08;
       font-weight: 500;
-      margin: 0 0 14px 0;
-      color: #F5F1EB;
-      text-wrap: balance;
+      margin: 0 0 12px;
     }
 
-    .uc-band-rule {
+    .rule-light {
       width: 86px;
       height: 1px;
       background: rgba(245,241,235,0.40);
-      margin: 0 auto 22px auto;
+      margin: 0 auto 18px;
     }
 
-    .uc-band-copy {
-      max-width: 760px;
+    .band p {
+      max-width: 850px;
       margin: 0 auto;
-      font-family: 'Libre Baskerville', serif;
       font-size: 15px;
-      line-height: 2;
+      line-height: 1.95;
       color: rgba(245,241,235,0.88);
-      text-wrap: balance;
     }
 
-    .uc-section {
-      padding: 112px 0;
-      position: relative;
-    }
-
-    .uc-section + .uc-section {
+    section.content {
+      padding: 96px 0;
       border-top: 1px solid var(--line);
     }
 
-    .uc-section-soft {
-      background: var(--bg-soft);
+    section.soft {
+      background: var(--soft-bg);
     }
 
-    .uc-title {
-      text-align: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 56px;
-      line-height: 1.03;
+    .title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      line-height: 1.04;
       font-weight: 500;
-      color: var(--text);
-      margin: 0 0 14px 0;
-      text-wrap: balance;
+      text-align: center;
+      margin: 0 0 12px;
     }
 
-    .uc-rule {
+    .rule {
       width: 84px;
       height: 1px;
       background: var(--gold);
-      margin: 0 auto 28px auto;
+      margin: 0 auto 24px;
     }
 
-    .uc-intro {
-      max-width: 820px;
-      margin: 0 auto 48px auto;
+    .intro {
+      max-width: 860px;
+      margin: 0 auto 40px;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
       font-size: 15px;
-      line-height: 2;
+      line-height: 1.95;
       color: var(--muted);
-      text-wrap: balance;
     }
 
-    .uc-grid-2 {
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
-      max-width: 980px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
-    .uc-card {
-      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
-      border: 1px solid #E3D8CB;
-      padding: 40px 36px;
-      text-align: left;
-      transition: all 0.26s ease;
-      position: relative;
-      box-shadow: var(--shadow-soft);
-      min-height: 100%;
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
     }
 
-    .uc-card:before {
+    .card {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 34px 32px;
+      position: relative;
+      box-shadow: 0 16px 40px rgba(58,47,42,0.04);
+    }
+
+    .card:before {
       content: "";
       position: absolute;
       top: 0;
-      left: 36px;
+      left: 32px;
       width: 68px;
       height: 2px;
       background: var(--gold);
     }
 
-    .uc-card:hover {
-      border-color: #D2BCA4;
-      transform: translateY(-3px);
-    }
-
-    .uc-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 36px;
-      line-height: 1.05;
-      color: var(--text);
-      margin: 10px 0 14px 0;
-      text-wrap: balance;
-    }
-
-    .uc-card-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 14px;
-      line-height: 2;
-      color: var(--muted);
-      margin: 0;
-      text-wrap: balance;
-    }
-
-    .uc-mini-grid,
-    .uc-example-grid,
-    .uc-pricing-grid,
-    .uc-faq-grid {
-      display: grid;
-      gap: 24px;
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-
-    .uc-mini-grid,
-    .uc-pricing-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .uc-example-grid,
-    .uc-faq-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      max-width: 1040px;
-    }
-
-    .uc-mini-card,
-    .uc-example,
-    .uc-price-card,
-    .uc-faq-card {
-      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
-      border: 1px solid #E3D8CB;
-      padding: 36px 28px;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      min-height: 100%;
-    }
-
-    .uc-mini-card:before,
-    .uc-price-card:before,
-    .uc-faq-card:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 28px;
-      width: 58px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .uc-example {
-      background: #FBF8F3;
-      border: 1px solid var(--line);
-      padding: 30px 26px;
-    }
-
-    .uc-mini-title,
-    .uc-example-title,
-    .uc-price-title,
-    .uc-faq-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 30px;
+    .card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
       line-height: 1.06;
-      color: var(--text);
-      margin: 8px 0 14px 0;
-      text-wrap: balance;
+      font-weight: 500;
+      margin: 10px 0 12px;
     }
 
-    .uc-price-title {
-      font-size: 32px;
-    }
-
-    .uc-mini-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 12px;
-    }
-
-    .uc-mini-list li {
-      font-family: 'Libre Baskerville', serif;
+    .card p,
+    .card li {
       font-size: 14px;
       line-height: 1.9;
       color: var(--muted);
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--line);
     }
 
-    .uc-mini-list li:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .uc-example-copy,
-    .uc-price-copy,
-    .uc-faq-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 14px;
-      line-height: 2;
-      color: var(--muted);
+    .card ul {
       margin: 0;
-      text-wrap: balance;
+      padding-left: 18px;
     }
 
-    .uc-price-from {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 11px;
-      line-height: 1.8;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .uc-price-amount {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 42px;
-      line-height: 1;
-      color: var(--text);
-      margin: 0 0 14px 0;
-    }
-
-    .uc-price-note {
-      max-width: 760px;
-      margin: 22px auto 0 auto;
-      text-align: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
-      line-height: 2;
-      color: var(--soft);
-      text-wrap: balance;
-    }
-
-    .uc-steps {
+    .price-row {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
       max-width: 1040px;
-      margin: 0 auto;
+      margin: 0 auto 28px;
     }
 
-    .uc-step {
-      text-align: left;
-      padding-top: 22px;
-      border-top: 1px solid var(--line-strong);
+    .price-card {
+      text-align: center;
     }
 
-    .uc-step-no {
-      font-family: 'Libre Baskerville', serif;
+    .price-label {
       font-size: 10px;
       line-height: 1.6;
-      letter-spacing: 2.2px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 12px;
     }
 
-    .uc-step-title {
-      font-family: 'Cormorant Garamond', serif;
+    .price-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 40px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .step {
+      border-top: 1px solid var(--line-strong);
+      padding-top: 18px;
+    }
+
+    .step-no {
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-family: "Cormorant Garamond", serif;
       font-size: 30px;
       line-height: 1.04;
-      color: var(--text);
-      margin: 0 0 10px 0;
-      text-wrap: balance;
+      margin-bottom: 10px;
     }
 
-    .uc-step-copy {
-      font-family: 'Libre Baskerville', serif;
+    .step p {
       font-size: 13px;
-      line-height: 1.95;
+      line-height: 1.9;
       color: var(--muted);
-      text-wrap: balance;
+      margin: 0;
     }
 
-    .uc-simple-list {
-      max-width: 820px;
+    .list {
+      max-width: 900px;
       margin: 0 auto;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
       font-size: 16px;
-      line-height: 2.15;
-      color: var(--text);
-      text-wrap: balance;
-    }
-
-    .uc-note {
-      max-width: 760px;
-      margin: 24px auto 0 auto;
-      text-align: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
       line-height: 2;
-      color: var(--soft);
-      text-wrap: balance;
     }
 
-    .uc-contact-box {
-      max-width: 760px;
+    .form-wrap {
+      max-width: 900px;
       margin: 0 auto;
-      text-align: center;
+      padding: 44px;
+      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
+      border: 1px solid rgba(194,164,109,0.42);
+      color: #F5F1EB;
+      box-shadow: 0 20px 54px rgba(43,34,31,0.10);
     }
 
-    .uc-contact-main {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 54px;
+    .form-head {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .form-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 46px;
       line-height: 1.06;
       font-weight: 500;
-      color: var(--text);
-      margin: 0 0 16px 0;
-      text-wrap: balance;
+      margin: 0 0 14px;
     }
 
-    .uc-contact-copy {
-      max-width: 700px;
-      margin: 0 auto 24px auto;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 15px;
-      line-height: 2;
-      color: var(--muted);
-      text-wrap: balance;
+    .form-copy {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(245,241,235,0.84);
     }
 
-    .uc-footer {
-      background:
-        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04), transparent 26%),
-        linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
-      padding: 54px 34px 58px 34px;
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field-full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 11px;
+      line-height: 1.6;
+      letter-spacing: 0.4px;
+      color: rgba(245,241,235,0.92);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(245,241,235,0.22);
+      background: rgba(245,241,235,0.07);
+      color: #F5F1EB;
+      padding: 15px;
+      font-family: "Libre Baskerville", serif;
+      font-size: 13px;
+      line-height: 1.6;
+      outline: none;
+      border-radius: 0;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(245,241,235,0.46);
+    }
+
+    select option {
+      color: #3A2F2A;
+      background: #F5F1EB;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(194,164,109,0.86);
+      background: rgba(245,241,235,0.10);
+    }
+
+    .consent {
+      margin: 22px 0 26px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .consent input {
+      width: auto;
+      margin-top: 4px;
+      accent-color: var(--gold);
+    }
+
+    .consent a {
+      color: #F5F1EB;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .submit-wrap {
       text-align: center;
-      border-top: 1px solid rgba(245,241,235,0.08);
     }
 
-    .uc-footer-brand {
-      font-family: 'Cormorant Garamond', serif;
+    button {
+      cursor: pointer;
+      border-radius: 0;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #fff;
+      padding: 18px 40px;
+      font-family: "Libre Baskerville", serif;
+      font-size: 12px;
+      letter-spacing: 0.55px;
+    }
+
+    button:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold-soft);
+    }
+
+    .form-note {
+      max-width: 660px;
+      margin: 18px auto 0;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.8;
+      color: rgba(245,241,235,0.62);
+    }
+
+    footer {
+      background: linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
+      padding: 44px 34px 48px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: "Cormorant Garamond", serif;
       font-size: 24px;
       color: #F5F1EB;
       margin-bottom: 6px;
     }
 
-    .uc-footer-sub {
-      font-family: 'Libre Baskerville', serif;
+    .footer-sub {
       font-size: 11px;
       color: #D9CEC4;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
-    .uc-footer-links {
-      font-family: 'Libre Baskerville', serif;
+    .footer-links {
       font-size: 10px;
       line-height: 1.9;
-      letter-spacing: 0.25px;
     }
 
-    .uc-footer-links a {
+    .footer-links a {
       color: #F5F1EB;
       text-decoration: none;
       margin: 0 10px;
       opacity: 0.92;
     }
 
-    .uc-footer-links a:hover {
-      opacity: 1;
+    .footer-links a:hover {
       text-decoration: underline;
     }
 
     @media (max-width: 1100px) {
-      .uc-grid-2,
-      .uc-mini-grid,
-      .uc-example-grid,
-      .uc-pricing-grid,
-      .uc-faq-grid,
-      .uc-steps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .mini-nav { display: none; }
+      .grid-3,
+      .price-row { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 980px) {
-      .uc-h1 {
-        font-size: 70px;
-        line-height: 1;
-      }
-
-      .uc-title,
-      .uc-band-title,
-      .uc-contact-main {
-        font-size: 46px;
-      }
-
-      .uc-grid-2,
-      .uc-mini-grid,
-      .uc-example-grid,
-      .uc-pricing-grid,
-      .uc-faq-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      h1 { font-size: 56px; }
     }
 
     @media (max-width: 768px) {
-      .uc-shell {
-        padding: 0 20px;
-      }
+      .shell { padding: 0 20px; }
 
-      .uc-headerbar {
+      header { padding-top: 26px; }
+
+      .header-inner {
         grid-template-columns: 1fr;
         gap: 18px;
       }
 
-      .uc-header-spacer {
-        display: none;
-      }
-
-      .uc-brand {
+      .brand {
+        justify-self: center;
         font-size: 28px;
       }
 
-      .uc-lang-switch {
-        justify-self: center;
-      }
+      .lang { justify-self: center; }
 
-      .uc-hero {
+      .hero {
         min-height: auto;
-        padding: 26px 0 54px 0;
+        padding: 34px 0 64px;
       }
 
-      .uc-h1 {
-        font-size: 52px;
-        line-height: 1.02;
+      .kicker {
+        letter-spacing: 3px;
+        margin-bottom: 22px;
       }
 
-      .uc-sub {
-        font-size: 18px;
+      h1 {
+        font-size: 42px;
+        line-height: 1.08;
       }
 
-      .uc-title,
-      .uc-band-title,
-      .uc-contact-main {
-        font-size: 38px;
+      .sub {
+        font-size: 16px;
+        line-height: 1.9;
       }
 
-      .uc-section {
-        padding: 86px 0;
+      .btn {
+        display: block;
+        max-width: 340px;
+        margin: 0 auto 12px;
       }
 
-      .uc-steps {
+      section.content { padding: 76px 0; }
+
+      .title,
+      .band h2,
+      .form-title {
+        font-size: 36px;
+      }
+
+      .steps,
+      .form-grid {
         grid-template-columns: 1fr;
       }
 
-      .uc-btn {
-        display: block;
-        max-width: 320px;
-        margin: 0 auto 12px auto;
-      }
+      .form-wrap { padding: 34px 22px; }
 
-      .uc-card,
-      .uc-mini-card,
-      .uc-example,
-      .uc-price-card,
-      .uc-faq-card {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-
-      .uc-card:before,
-      .uc-mini-card:before,
-      .uc-price-card:before,
-      .uc-faq-card:before {
-        left: 24px;
-      }
+      button { width: 100%; }
     }
   </style>
 </head>
+
 <body>
-  <div class="uc-topbar"></div>
+  <div class="topbar"></div>
 
-  <section class="uc-shell uc-brandbar">
-    <div class="uc-headerbar">
-      <div class="uc-header-spacer"></div>
-      <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
-      <div class="uc-lang-switch">
+  <header class="shell">
+    <div class="header-inner">
+      <nav class="mini-nav" aria-label="Navigation">
+        <a href="#scope">Scope</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="/expats-krakow/" class="brand">Urban Concierge</a>
+
+      <div class="lang">
         <a href="/relokacja-krakow/">PL</a>
-        <span class="uc-lang-divider">|</span>
-        <span class="uc-lang-current">ENG</span>
+        <span>ENG</span>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="uc-hero">
-    <div class="uc-shell">
-      <div class="uc-hero-inner">
-        <div class="uc-kicker">Relocation to Kraków • Support before arrival and after you arrive</div>
-        <h1 class="uc-h1">Relocation to Kraków without the chaos.</h1>
-        <div class="uc-sub">
-          Discreet, organised support for expats, international clients, couples and families who want key matters prepared before arrival and a calmer start on the ground.
-        </div>
-        <div class="uc-actions">
-          <a href="#contact" class="uc-btn uc-btn-primary">Request relocation support</a>
-          <a href="#what-can-be-handled" class="uc-btn uc-btn-secondary">See scope of support</a>
-        </div>
-        <div class="uc-premium-note">
-          Start with a short message including your moving timeline, planned arrival date and the kind of support you may need. We will organise the rest from there.
-        </div>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <div class="hero-inner">
+          <div class="kicker">Relocation to Krakow • expats • families • international clients</div>
 
-  <section class="uc-band">
-    <div class="uc-shell">
-      <div class="uc-band-title">Before you arrive in Kraków, key matters can already be in motion.</div>
-      <div class="uc-band-rule"></div>
-      <div class="uc-band-copy">
-        Relocation does not have to mean chaos, unfinished details and running after everything from day one. Urban Concierge takes over selected practical elements of the process and carries them forward with local coordination.
-      </div>
-    </div>
-  </section>
+          <h1>
+            Relocation to Krakow<br>
+            without the chaos.
+          </h1>
 
-  <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">Why Urban Concierge</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-grid-2">
-        <div class="uc-card">
-          <div class="uc-card-title">Local execution on the ground</div>
-          <p class="uc-card-copy">
-            This is not just a list of suggestions. It is real support in Kraków where coordination, presence, confirmed timings and calm follow-through actually matter.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Less administrative chaos</div>
-          <p class="uc-card-copy">
-            Instead of personally managing the apartment, internet, deliveries, appointments and small loose ends, you have one organised point of contact collecting and moving selected matters forward.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Support before arrival and after you arrive</div>
-          <p class="uc-card-copy">
-            The service can begin before the move and continue into local support after arrival — depending on what you actually need.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Trusted local partners</div>
-          <p class="uc-card-copy">
-            Where the situation calls for it, support may also be coordinated with trusted local partners, including a real estate partner, to make the process more coherent.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft">
-    <div class="uc-shell">
-      <h2 class="uc-title">What this service involves</h2>
-      <div class="uc-rule"></div>
-      <div class="uc-intro">
-        This is support for people who do not want to arrive and start everything from zero. The scope may include pre-move preparation, local coordination after arrival and help during the first weeks on the ground.
-      </div>
-
-      <div class="uc-grid-2">
-        <div class="uc-card">
-          <div class="uc-card-title">Before arrival</div>
-          <p class="uc-card-copy">
-            Selected matters can be prepared in advance so your first days in Kraków are not spent chasing internet, deliveries, appointments and missing practical basics.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">After arrival</div>
-          <p class="uc-card-copy">
-            Once you are on the ground, we take over selected local matters that still require presence, confirmation, coordination or simply calm follow-through to completion.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">What it may include</h2>
-      <div class="uc-rule"></div>
-      <div class="uc-intro">
-        The exact scope depends on your situation, timing and what you want to delegate. Relocation support may include, among other things:
-      </div>
-
-      <div class="uc-mini-grid">
-        <div class="uc-mini-card">
-          <div class="uc-mini-title">Before arrival</div>
-          <ul class="uc-mini-list">
-            <li>preparing the apartment before arrival</li>
-            <li>coordinating internet and selected utilities</li>
-            <li>coordinating deliveries, access and basic move-in readiness</li>
-            <li>selected arrangements related to move-in</li>
-            <li>planning selected local matters for the first days after arrival</li>
-          </ul>
-        </div>
-
-        <div class="uc-mini-card">
-          <div class="uc-mini-title">After arrival</div>
-          <ul class="uc-mini-list">
-            <li>local coordination on the ground</li>
-            <li>scheduling selected appointments</li>
-            <li>practical support after move-in</li>
-            <li>selected follow-ups related to the apartment and daily functioning</li>
-            <li>help organising the first stage after the move</li>
-          </ul>
-        </div>
-
-        <div class="uc-mini-card">
-          <div class="uc-mini-title">First matters after arrival</div>
-          <ul class="uc-mini-list">
-            <li>support with PESEL, if relevant</li>
-            <li>support with residence registration, if relevant</li>
-            <li>support with opening a bank account, if relevant</li>
-            <li>practical help for foreigners in Kraków</li>
-            <li>local support during the first weeks after arrival</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="what-can-be-handled" class="uc-section uc-section-soft">
-    <div class="uc-shell">
-      <h2 class="uc-title">Examples of what can be handled</h2>
-      <div class="uc-rule"></div>
-      <div class="uc-intro">
-        Below are example areas in which this service works best:
-      </div>
-
-      <div class="uc-example-grid">
-        <div class="uc-example">
-          <div class="uc-example-title">Preparing the apartment</div>
-          <p class="uc-example-copy">
-            Preparing the apartment before arrival so that from day one it is more ready for everyday life.
-          </p>
-        </div>
-
-        <div class="uc-example">
-          <div class="uc-example-title">Internet, utilities and basics</div>
-          <p class="uc-example-copy">
-            Coordination of selected practical matters related to internet, utilities and core early logistics after the move.
-          </p>
-        </div>
-
-        <div class="uc-example">
-          <div class="uc-example-title">Selected appointments</div>
-          <p class="uc-example-copy">
-            Scheduling selected appointments and practical follow-ups related to the first stage after the move.
-          </p>
-        </div>
-
-        <div class="uc-example">
-          <div class="uc-example-title">Deliveries and access</div>
-          <p class="uc-example-copy">
-            Receiving selected deliveries or coordinating practical access where local presence genuinely makes a difference.
-          </p>
-        </div>
-
-        <div class="uc-example">
-          <div class="uc-example-title">Move-in and first days</div>
-          <p class="uc-example-copy">
-            Help coordinating selected practical matters related to moving into a new place and the first stage immediately after.
-          </p>
-        </div>
-
-        <div class="uc-example">
-          <div class="uc-example-title">Getting started after the move</div>
-          <p class="uc-example-copy">
-            On-the-ground support during the early stage after arrival and while organising your first local practical matters.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section">
-    <div class="uc-shell" style="max-width: 920px;">
-      <h2 class="uc-title">Who this service is for</h2>
-      <div class="uc-rule"></div>
-      <div class="uc-intro" style="margin-bottom: 34px;">
-        This service works best for clients who want fewer loose ends to manage personally and stronger local execution around the move.
-      </div>
-
-      <div class="uc-simple-list">
-        for expats relocating to Kraków<br><br>
-        for international clients moving to Poland<br><br>
-        for couples and families who want practical local coordination, not just advice<br><br>
-        for people who value calm, discretion and reliable support on the ground
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft">
-    <div class="uc-shell">
-      <h2 class="uc-title">Levels of relocation support</h2>
-      <div class="uc-rule"></div>
-      <div class="uc-intro">
-        Support may be built around one stage only or include broader help before arrival and after you arrive.
-      </div>
-
-      <div class="uc-pricing-grid">
-        <div class="uc-price-card">
-          <div class="uc-price-title">Before arrival</div>
-          <div class="uc-price-from">from</div>
-          <div class="uc-price-amount">1 800 PLN</div>
-          <p class="uc-price-copy">
-            For clients who want selected practical matters prepared before arriving in Kraków.
-          </p>
-        </div>
-
-        <div class="uc-price-card">
-          <div class="uc-price-title">Arrival and first stage</div>
-          <div class="uc-price-from">from</div>
-          <div class="uc-price-amount">2 800 PLN</div>
-          <p class="uc-price-copy">
-            For clients who need local support and practical coordination during the first stage after arrival.
-          </p>
-        </div>
-
-        <div class="uc-price-card">
-          <div class="uc-price-title">Broader relocation support</div>
-          <div class="uc-price-from">from</div>
-          <div class="uc-price-amount">4 500 PLN</div>
-          <p class="uc-price-copy">
-            For more complex relocations involving several stages, broader coordination and a higher level of support.
-          </p>
-        </div>
-      </div>
-
-      <div class="uc-price-note">
-        Final pricing depends on timing, scope, complexity and the number of practical matters requiring local coordination.
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section">
-    <div class="uc-shell" style="max-width: 980px;">
-      <h2 class="uc-title">Real estate partner</h2>
-      <div class="uc-rule"></div>
-      <div class="uc-intro">
-        When relocation also involves housing-related matters, support may be coordinated with a trusted real estate partner — so the practical side of finding or preparing the place becomes part of one more coherent process.
-      </div>
-
-      <div class="uc-grid-2" style="max-width: 920px;">
-        <div class="uc-card">
-          <div class="uc-card-title">Why this matters</div>
-          <p class="uc-card-copy">
-            Housing matters often connect with access, internet, deliveries, move-in timing and early logistics after the move. Coordinating these elements together creates a calmer start.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">How it fits into the service</div>
-          <p class="uc-card-copy">
-            The property-related scope depends on the situation and may form part of broader relocation support instead of functioning as detached, separate tasks.
-          </p>
-        </div>
-      </div>
-
-      <div class="uc-note">
-        Trusted real estate partner: Very Home.
-      </div>
-
-      <div class="uc-actions" style="margin-top: 30px; text-align: center;">
-        <a href="https://www.veryhome.pl/" class="uc-btn uc-btn-secondary" target="_blank" rel="noopener">
-          Meet our trusted real estate partner
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft">
-    <div class="uc-shell">
-      <h2 class="uc-title">How it works</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-steps">
-        <div class="uc-step">
-          <div class="uc-step-no">Step 01</div>
-          <div class="uc-step-title">First message</div>
-          <div class="uc-step-copy">
-            You describe your moving timeline, planned arrival date and the type of support you need.
+          <div class="sub">
+            Private relocation support for expats, international clients, couples and families who want key practical matters prepared before arrival and a calmer start in Krakow.
           </div>
-        </div>
 
-        <div class="uc-step">
-          <div class="uc-step-no">Step 02</div>
-          <div class="uc-step-title">Scope</div>
-          <div class="uc-step-copy">
-            We define what can be organised before arrival, after arrival and within local coordination.
+          <div class="proof">
+            Urban Concierge helps organize the practical side of relocation: apartment preparation, local coordination, first formalities after arrival, appointments, deliveries, access and ongoing follow-ups.
           </div>
-        </div>
 
-        <div class="uc-step">
-          <div class="uc-step-no">Step 03</div>
-          <div class="uc-step-title">Preparation</div>
-          <div class="uc-step-copy">
-            Agreed matters are organised, confirmed and prepared in advance wherever possible.
+          <a href="#contact" class="btn btn-primary">Request relocation support</a>
+          <a href="#scope" class="btn btn-secondary">See the scope</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <h2>Before you arrive in Krakow, key matters can already be in motion.</h2>
+        <div class="rule-light"></div>
+        <p>
+          Relocation does not have to mean unfinished details, practical stress and trying to handle everything from day one. Urban Concierge takes over selected parts of the process and moves them forward through local coordination.
+        </p>
+      </div>
+    </section>
+
+    <section class="content soft">
+      <div class="shell">
+        <h2 class="title">Why Urban Concierge</h2>
+        <div class="rule"></div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Local execution on site</h3>
+            <p>
+              This is not only a list of recommendations. It is practical support in Krakow where coordination, presence, appointments and calm follow-through are needed.
+            </p>
           </div>
-        </div>
 
-        <div class="uc-step">
-          <div class="uc-step-no">Step 04</div>
-          <div class="uc-step-title">First weeks after arrival</div>
-          <div class="uc-step-copy">
-            After arrival, you receive practical support during the first weeks on the ground and while your first local matters are being organised.
+          <div class="card">
+            <h3>Less administrative noise</h3>
+            <p>
+              Instead of tracking the apartment, internet, deliveries, appointments and unfinished details yourself, you have one organized point of contact for selected matters.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Before and after arrival</h3>
+            <p>
+              Support may begin before the move and continue after arrival as local assistance — depending on what you actually need.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Coordinated process</h3>
+            <p>
+              Relocation connects many small elements: housing, access, appointments, services, first formalities and everyday functioning. Our role is to bring them into a calmer process.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">FAQ</h2>
-      <div class="uc-rule"></div>
+    <section class="content" id="scope">
+      <div class="shell">
+        <h2 class="title">What this service is about</h2>
+        <div class="rule"></div>
 
-      <div class="uc-faq-grid">
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">Do you support relocation to Kraków from abroad?</div>
-          <p class="uc-faq-copy">
-            Yes. Support may begin before arrival in Poland and continue into the first stage after you arrive.
-          </p>
-        </div>
+        <p class="intro">
+          This support is for clients who do not want to start from zero after arrival. The scope may include preparation before the move, local coordination after arrival and practical help during the first weeks in Krakow.
+        </p>
 
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">Can you help before my arrival in Poland?</div>
-          <p class="uc-faq-copy">
-            Yes. Selected practical matters may be coordinated before arrival — depending on timing and scope.
-          </p>
-        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Before arrival</h3>
+            <p>
+              Selected matters may be prepared in advance so the first days in Krakow are not spent chasing internet, deliveries, appointments and missing practical details.
+            </p>
+          </div>
 
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">Can you help prepare the apartment before arrival?</div>
-          <p class="uc-faq-copy">
-            Yes. Selected elements of apartment preparation may form part of relocation support if needed in your situation.
-          </p>
-        </div>
-
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">Can support include internet, utilities and appointments?</div>
-          <p class="uc-faq-copy">
-            Yes. Depending on scope, we can coordinate selected practical matters such as internet, utilities and selected appointments.
-          </p>
-        </div>
-
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">Is this service only for expats?</div>
-          <p class="uc-faq-copy">
-            No. It may also be suitable for international clients, couples, families and people relocating to Kraków from elsewhere.
-          </p>
-        </div>
-
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">Is support available only in Kraków?</div>
-          <p class="uc-faq-copy">
-            Kraków is the main area of operation. Selected elements of support outside Kraków may be possible depending on the situation.
-          </p>
-        </div>
-
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">How is pricing calculated?</div>
-          <p class="uc-faq-copy">
-            Pricing depends on timing, scope, complexity and the number of practical matters that require local coordination.
-          </p>
-        </div>
-
-        <div class="uc-faq-card">
-          <div class="uc-faq-title">Can you coordinate with a real estate partner?</div>
-          <p class="uc-faq-copy">
-            Yes. If the situation requires it, relocation support may also be coordinated with a trusted real estate partner.
-          </p>
+          <div class="card">
+            <h3>After arrival</h3>
+            <p>
+              Once you are in Krakow, we can take over selected local matters that still require presence, confirmations, coordination or calm follow-through.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="uc-section uc-section-soft">
-    <div class="uc-shell">
-      <div class="uc-contact-box">
-        <h2 class="uc-contact-main">Request relocation support</h2>
-        <div class="uc-rule"></div>
-        <div class="uc-contact-copy">
-          Start with a short message including your moving timeline, planned arrival date and the scope of support you may need. Based on that, we will tailor the support to your relocation.
+    <section class="content soft">
+      <div class="shell">
+        <h2 class="title">What it may include</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          The exact scope depends on your situation, timing and what you want to delegate. Relocation support may include:
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Before arrival</h3>
+            <ul>
+              <li>preparing the apartment before arrival</li>
+              <li>coordinating internet and selected utilities</li>
+              <li>coordinating deliveries, access and basic apartment readiness</li>
+              <li>selected move-in arrangements</li>
+              <li>planning local matters for the first days after arrival</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>After arrival</h3>
+            <ul>
+              <li>local coordination on site</li>
+              <li>booking selected appointments</li>
+              <li>practical support after moving in</li>
+              <li>follow-ups related to the apartment and daily life</li>
+              <li>organizing the first stage after relocation</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>First formalities</h3>
+            <ul>
+              <li>support with PESEL, if applicable</li>
+              <li>support with address registration, if applicable</li>
+              <li>support with opening a bank account, if applicable</li>
+              <li>practical support for foreigners in Krakow</li>
+              <li>local support during the first weeks after arrival</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="uc-actions" style="margin-top: 34px;">
-          <a href="mailto:info@urbanconcierge.pl?subject=Relocation%20to%20Krakow" class="uc-btn uc-btn-primary">Request relocation support</a>
-          <a href="/expats-krakow/" class="uc-btn uc-btn-secondary">Explore the full offer</a>
+        <p class="intro" style="font-size:12px; margin-top:24px; margin-bottom:0;">
+          Urban Concierge supports organization, coordination and practical follow-through. We do not replace a lawyer, tax advisor, public office, bank or any licensed professional.
+        </p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="shell">
+        <h2 class="title">Examples of what can be handled</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          These are example areas where this service works best:
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Apartment preparation</h3>
+            <p>Preparing the apartment before arrival so it is more ready for everyday functioning from the first day.</p>
+          </div>
+
+          <div class="card">
+            <h3>Internet, utilities and essentials</h3>
+            <p>Coordinating selected practical matters related to internet, utilities and basic logistics after the move.</p>
+          </div>
+
+          <div class="card">
+            <h3>Selected appointments</h3>
+            <p>Booking selected appointments and practical follow-ups connected with the first stage after relocation.</p>
+          </div>
+
+          <div class="card">
+            <h3>Deliveries and access</h3>
+            <p>Receiving selected deliveries or coordinating access where local presence genuinely makes a difference.</p>
+          </div>
+
+          <div class="card">
+            <h3>Move-in and first days</h3>
+            <p>Helping coordinate selected practical matters connected with moving into a new place.</p>
+          </div>
+
+          <div class="card">
+            <h3>Start after the move</h3>
+            <p>On-site support during the initial stage after relocation and organizing the first local matters.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="uc-footer">
-    <div class="uc-footer-brand">Urban Concierge</div>
-    <div class="uc-footer-sub">Private concierge support | Kraków and surrounding areas</div>
-    <div class="uc-footer-links">
-      <a href="/expats-krakow/monthly-support/">Monthly Support</a>
+    <section class="content soft">
+      <div class="shell">
+        <h2 class="title">Who this service is for</h2>
+        <div class="rule"></div>
+
+        <div class="list">
+          for expats moving to Krakow<br><br>
+          for international clients relocating to Poland<br><br>
+          for couples and families who want practical local coordination, not only advice<br><br>
+          for clients who value calm, discretion and reliable on-site support
+        </div>
+      </div>
+    </section>
+
+    <section class="content" id="pricing">
+      <div class="shell">
+        <h2 class="title">Relocation support levels</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          Support may be built around one stage or cover a broader process before and after arrival.
+        </p>
+
+        <div class="price-row">
+          <div class="card price-card">
+            <div class="price-label">Before arrival</div>
+            <div class="price-value">from 1,800 PLN</div>
+            <p>For clients who want to organize selected practical matters before arriving in Krakow.</p>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Arrival and first stage</div>
+            <div class="price-value">from 2,800 PLN</div>
+            <p>For clients who need local support and practical coordination during the first stage after arrival.</p>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Broader support</div>
+            <div class="price-value">from 4,500 PLN</div>
+            <p>For more complex relocations covering several stages, broader coordination and a higher level of support.</p>
+          </div>
+        </div>
+
+        <p class="intro" style="font-size:12px; margin-bottom:0;">
+          Final pricing depends on timing, scope, number of matters to coordinate and the level of local support needed in your situation.
+        </p>
+      </div>
+    </section>
+
+    <section class="content soft">
+      <div class="shell">
+        <h2 class="title">Real estate partner</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          When relocation also involves an apartment or house, support may be coordinated with a trusted real estate partner — so the practical side of finding or preparing the place becomes part of one more coherent process.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Why it matters</h3>
+            <p>
+              Real estate matters often connect with access, internet, deliveries, move-in timing and early logistics after relocation. Coordinating these elements together creates a calmer start.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>How it fits into the service</h3>
+            <p>
+              The real estate-related scope depends on the situation and may become part of broader relocation support instead of functioning as separate, disconnected tasks.
+            </p>
+          </div>
+        </div>
+
+        <p class="intro" style="font-size:12px; margin-top:24px; margin-bottom:22px;">
+          Trusted real estate partner: Very Home.
+        </p>
+
+        <div style="text-align:center;">
+          <a href="https://www.veryhome.pl/" class="btn btn-secondary" target="_blank" rel="noopener">Meet the trusted real estate partner</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="shell">
+        <h2 class="title">How cooperation works</h2>
+        <div class="rule"></div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">Step 01</div>
+            <div class="step-title">First message</div>
+            <p>You describe your planned move date, expected arrival date and the type of support you need.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 02</div>
+            <div class="step-title">Scope</div>
+            <p>We define what can be organized before arrival, after arrival and as part of local coordination.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 03</div>
+            <div class="step-title">Preparation</div>
+            <p>Agreed matters are organized, confirmed and prepared in advance where possible.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 04</div>
+            <div class="step-title">First stage</div>
+            <p>After arrival, you receive practical support during the first weeks in Krakow and help organizing local matters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content soft">
+      <div class="shell">
+        <h2 class="title">FAQ</h2>
+        <div class="rule"></div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Do you support relocation to Krakow from abroad?</h3>
+            <p>Yes. Support may begin before arrival in Poland and continue during the first stage after you arrive.</p>
+          </div>
+
+          <div class="card">
+            <h3>Can you help before I arrive?</h3>
+            <p>Yes. Selected practical matters may be coordinated before arrival, depending on timing and scope.</p>
+          </div>
+
+          <div class="card">
+            <h3>Can you help prepare the apartment?</h3>
+            <p>Yes. Selected apartment preparation elements may be part of relocation support if they are needed in your situation.</p>
+          </div>
+
+          <div class="card">
+            <h3>Can support include internet, utilities and appointments?</h3>
+            <p>Yes. Depending on the scope, we can coordinate selected practical matters such as internet, utilities or selected appointments.</p>
+          </div>
+
+          <div class="card">
+            <h3>Is this service only for expats?</h3>
+            <p>No. It may also be suitable for international clients, couples, families and people moving to Krakow from other places.</p>
+          </div>
+
+          <div class="card">
+            <h3>Is support available only in Krakow?</h3>
+            <p>The main area of operation is Krakow. Selected support outside Krakow may be possible depending on the situation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" id="contact">
+      <div class="shell">
+        <div class="form-wrap">
+          <div class="form-head">
+            <div class="form-title">Request relocation support</div>
+            <div class="form-copy">
+              Briefly describe your planned arrival date, housing situation and the matters you would like to organize before relocation or after arrival.
+            </div>
+          </div>
+
+          <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="urban-concierge-pl">
+            <input type="hidden" name="language" value="English">
+            <input type="hidden" name="source_page" value="Relocation ENG">
+
+            <p class="hidden">
+              <label>Do not fill this field: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="email@example.com" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+48..." required>
+              </div>
+
+              <div class="field">
+                <label for="arrival">Planned arrival</label>
+                <input id="arrival" name="planned_arrival" type="text" placeholder="e.g. May / specific date / not sure yet">
+              </div>
+
+              <div class="field">
+                <label for="support">Support scope</label>
+                <select id="support" name="support_scope" required>
+                  <option value="">Choose</option>
+                  <option value="Before arrival">Before arrival</option>
+                  <option value="After arrival">After arrival</option>
+                  <option value="Before and after arrival">Before and after arrival</option>
+                  <option value="Apartment support">Apartment support</option>
+                  <option value="First formalities">First formalities</option>
+                  <option value="Not sure">Not sure — please advise</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="client-type">Client type</label>
+                <select id="client-type" name="client_type" required>
+                  <option value="">Choose</option>
+                  <option value="Expat">Expat</option>
+                  <option value="Family">Family</option>
+                  <option value="Couple">Couple</option>
+                  <option value="International client">International client</option>
+                  <option value="Moving from another city">Moving from another city</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label for="message">Relocation description</label>
+                <textarea id="message" name="relocation_description" placeholder="Briefly describe your situation: where you are moving from, when, whether the apartment is already chosen and which matters you want to hand over for coordination." required></textarea>
+              </div>
+            </div>
+
+            <div class="consent">
+              <input id="consent" name="contact_consent" type="checkbox" required>
+              <label for="consent">
+                I consent to being contacted in order to handle this request. I have read the <a href="/expats-krakow/polityka%20prywatnosci%20UC%20eng.pdf" target="_blank" rel="noopener">privacy policy</a>.
+              </label>
+            </div>
+
+            <div class="submit-wrap">
+              <button type="submit">Send request</button>
+            </div>
+
+            <div class="form-note">
+              After you submit the form, the scope will be reviewed. If relocation support requires a different service model, we will suggest the right scope.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">Urban Concierge</div>
+    <div class="footer-sub">Private concierge support | Krakow and nearby areas | remote across Poland</div>
+
+    <div class="footer-links">
+      <a href="/expats-krakow/">Home</a>
       <a href="/expats-krakow/one-day-support/">One-Day Support</a>
-      <a href="/expats-krakow/in-person-assistance/">In-Person Assistance</a>
-      <a href="/expats-krakow/relocation/">Relocation to Kraków</a>
-      <a href="/Regulamin%20UC%20eng.pdf" target="_blank" rel="noopener">Terms &amp; Conditions</a>
-      <a href="/polityka%20prywatnosci%20UC%20eng.pdf" target="_blank" rel="noopener">Privacy Policy</a>
-      <a href="mailto:info@urbanconcierge.pl">Contact</a>
+      <a href="/expats-krakow/in-person-assistance/">In-person assistance</a>
+      <a href="/expats-krakow/monthly-support/">Monthly support</a>
+      <a href="/expats-krakow/Regulamin%20UC%20eng.pdf" target="_blank" rel="noopener">Terms</a>
+      <a href="/expats-krakow/polityka%20prywatnosci%20UC%20eng.pdf" target="_blank" rel="noopener">Privacy policy</a>
+      <a href="mailto:info@urbanconcierge.pl">Email</a>
     </div>
-  </section>
+  </footer>
 </body>
 </html>
