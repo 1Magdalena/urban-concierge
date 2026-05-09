@@ -351,7 +351,7 @@
     }
 
     .uc-grid-2,
-    .uc-grid-3,
+    .uc-grid-4,
     .uc-steps {
       display: grid;
       gap: 24px;
@@ -363,8 +363,8 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .uc-grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .uc-grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .uc-card,
@@ -393,7 +393,7 @@
 
     .uc-card-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-size: 32px;
       line-height: 1.06;
       color: var(--text);
       margin: 10px 0 12px 0;
@@ -402,7 +402,7 @@
 
     .uc-card-copy {
       font-family: 'Libre Baskerville', serif;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.9;
       color: var(--muted);
       margin: 0;
@@ -760,7 +760,7 @@
     @media (max-width: 1100px) {
       .uc-mini-nav { display: none; }
       .uc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .uc-grid-3 { grid-template-columns: 1fr; }
+      .uc-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .uc-price-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
@@ -785,7 +785,7 @@
       .uc-sub { font-size: 16px; line-height: 1.9; margin: 0 auto 16px auto; }
       .uc-section { padding: 74px 0; }
       .uc-title, .uc-band-title, .uc-form-title { font-size: 36px; }
-      .uc-steps, .uc-price-row, .uc-form-grid { grid-template-columns: 1fr; }
+      .uc-steps, .uc-price-row, .uc-form-grid, .uc-grid-4 { grid-template-columns: 1fr; }
       .uc-offer-strip { grid-template-columns: 1fr; }
       .uc-offer-item { border-right: none; border-bottom: 1px solid #DCCDBB; }
       .uc-offer-item:last-child { border-bottom: none; }
@@ -982,7 +982,7 @@
         Concierge na godziny to najprostszy pierwszy krok. Jeśli potrzebujesz większego wsparcia, możesz wybrać także jedną z pozostałych form.
       </div>
 
-      <div class="uc-grid-3">
+      <div class="uc-grid-4">
         <div class="uc-card">
           <div class="uc-card-title">Dzień Wsparcia</div>
           <p class="uc-card-copy">Jeden dzień przeznaczony na większą listę spraw, zdalnie lub lokalnie w Krakowie i okolicach.</p>
@@ -996,9 +996,15 @@
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Relokacja / abonament</div>
-          <p class="uc-card-copy">Większe projekty, stałe wsparcie lub relokacja do Krakowa — wyceniane indywidualnie.</p>
+          <div class="uc-card-title">Abonament concierge</div>
+          <p class="uc-card-copy">Stałe wsparcie dla klientów, którzy chcą mieć jeden punkt kontaktu do bieżących spraw i follow-upów.</p>
           <a href="/abonament/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Relokacja do Krakowa</div>
+          <p class="uc-card-copy">Wsparcie przy przeprowadzce do Krakowa — od przygotowań przed przyjazdem po lokalną koordynację.</p>
+          <a href="/relokacja-krakow/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
       </div>
     </div>
