@@ -48,9 +48,7 @@
       --line-strong: #DDCFBF;
       --gold: #B8955A;
       --gold-soft: #C2A46D;
-      --choco: #2B221F;
       --hover: #473934;
-      --white: #FFFFFF;
     }
 
     .uc-topbar {
@@ -148,13 +146,6 @@
       border-color: var(--gold);
     }
 
-    .uc-lang-divider {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 10px;
-      color: #8B7B70;
-      line-height: 1;
-    }
-
     .uc-hero {
       min-height: calc(92vh - 14px);
       display: flex;
@@ -248,10 +239,6 @@
       color: var(--text);
     }
 
-    .uc-actions {
-      margin-top: 0;
-    }
-
     .uc-btn {
       display: inline-block;
       text-decoration: none;
@@ -287,23 +274,8 @@
       transform: translateY(-1px);
     }
 
-    .uc-section {
-      padding: 92px 0;
-      position: relative;
-    }
-
-    .uc-section + .uc-section {
-      border-top: 1px solid var(--line);
-    }
-
-    .uc-section-soft {
-      background: var(--bg-soft);
-    }
-
     .uc-band {
-      background:
-        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
-        linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
+      background: linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
       color: #F5F1EB;
       padding: 70px 36px;
       text-align: center;
@@ -334,6 +306,19 @@
       line-height: 1.95;
       color: rgba(245,241,235,0.88);
       text-wrap: balance;
+    }
+
+    .uc-section {
+      padding: 92px 0;
+      position: relative;
+    }
+
+    .uc-section + .uc-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .uc-section-soft {
+      background: var(--bg-soft);
     }
 
     .uc-title {
@@ -424,17 +409,6 @@
       text-wrap: balance;
     }
 
-    .uc-list {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 16px;
-      line-height: 2;
-      color: var(--text);
-      text-wrap: balance;
-    }
-
     .uc-example-list {
       margin: 0;
       padding: 0;
@@ -462,43 +436,6 @@
       font-size: 12px;
       line-height: 1.9;
       color: var(--soft);
-      text-wrap: balance;
-    }
-
-    .uc-steps {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .uc-step {
-      text-align: left;
-      padding-top: 18px;
-      border-top: 1px solid var(--line-strong);
-    }
-
-    .uc-step-no {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 10px;
-      line-height: 1.6;
-      letter-spacing: 2.2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .uc-step-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 30px;
-      line-height: 1.04;
-      color: var(--text);
-      margin: 0 0 10px 0;
-      text-wrap: balance;
-    }
-
-    .uc-step-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--muted);
       text-wrap: balance;
     }
 
@@ -544,6 +481,42 @@
       line-height: 1.85;
       color: var(--muted);
       margin: 0;
+    }
+
+    .uc-steps {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .uc-step {
+      text-align: left;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    .uc-step-no {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .uc-step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      line-height: 1.04;
+      color: var(--text);
+      margin: 0 0 10px 0;
+      text-wrap: balance;
+    }
+
+    .uc-step-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
     }
 
     .uc-form-wrap {
@@ -609,7 +582,6 @@
     }
 
     .uc-field input,
-    .uc-field select,
     .uc-field textarea {
       width: 100%;
       border: 1px solid rgba(245,241,235,0.22);
@@ -620,7 +592,6 @@
       font-size: 13px;
       line-height: 1.6;
       outline: none;
-      transition: all 0.22s ease;
       border-radius: 0;
     }
 
@@ -629,21 +600,49 @@
       color: rgba(245,241,235,0.46);
     }
 
-    .uc-field select option {
-      color: #3A2F2A;
-      background: #F5F1EB;
-    }
-
     .uc-field textarea {
       min-height: 150px;
       resize: vertical;
     }
 
-    .uc-field input:focus,
-    .uc-field select:focus,
-    .uc-field textarea:focus {
-      border-color: rgba(194,164,109,0.86);
-      background: rgba(245,241,235,0.10);
+    .uc-hour-counter {
+      display: grid;
+      grid-template-columns: 58px 1fr 58px;
+      border: 1px solid rgba(245,241,235,0.22);
+      background: rgba(245,241,235,0.07);
+      min-height: 56px;
+    }
+
+    .uc-hour-counter button {
+      border: none;
+      background: rgba(245,241,235,0.08);
+      color: #F5F1EB;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .uc-hour-counter button:hover {
+      background: rgba(194,164,109,0.25);
+    }
+
+    .uc-hour-counter input {
+      border: none;
+      text-align: center;
+      background: transparent;
+      color: #F5F1EB;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      padding: 0;
+    }
+
+    .uc-small-note {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      line-height: 1.7;
+      color: rgba(245,241,235,0.62);
+      margin-top: 8px;
     }
 
     .uc-total-box {
@@ -724,9 +723,7 @@
     .uc-hidden { display: none; }
 
     .uc-footer {
-      background:
-        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04), transparent 26%),
-        linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
+      background: linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
       padding: 44px 34px 48px 34px;
       text-align: center;
       border-top: 1px solid rgba(245,241,235,0.08);
@@ -760,11 +757,6 @@
       opacity: 0.92;
     }
 
-    .uc-footer-links a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-
     @media (max-width: 1100px) {
       .uc-mini-nav { display: none; }
       .uc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -773,7 +765,6 @@
     }
 
     @media (max-width: 980px) {
-      .uc-hero { min-height: auto; }
       .uc-grid-2 { grid-template-columns: 1fr; }
       .uc-h1 { font-size: 58px; line-height: 1.05; }
       .uc-title, .uc-band-title, .uc-form-title { font-size: 44px; }
@@ -789,8 +780,7 @@
       .uc-headerbar { grid-template-columns: 1fr; gap: 18px; }
       .uc-brand { font-size: 28px; }
       .uc-lang-switch { justify-self: center; }
-      .uc-hero { padding: 30px 0 60px 0; }
-      .uc-kicker { margin-bottom: 22px; letter-spacing: 3px; }
+      .uc-hero { min-height: auto; padding: 30px 0 60px 0; }
       .uc-h1 { font-size: 42px; line-height: 1.08; margin: 0 0 20px 0; }
       .uc-sub { font-size: 16px; line-height: 1.9; margin: 0 auto 16px auto; }
       .uc-section { padding: 74px 0; }
@@ -801,7 +791,6 @@
       .uc-offer-item:last-child { border-bottom: none; }
       .uc-btn { display: block; max-width: 340px; margin: 0 auto 12px auto; }
       .uc-card, .uc-price-card { min-height: auto; padding: 32px 24px; }
-      .uc-card:before { left: 24px; }
       .uc-form-wrap { padding: 34px 22px; }
       .uc-submit { width: 100%; }
     }
@@ -823,7 +812,7 @@
 
       <div class="uc-lang-switch">
         <span class="uc-lang-current">PL</span>
-        <span class="uc-lang-divider">|</span>
+        <span>|</span>
         <a href="/expats-krakow/">ENG</a>
       </div>
     </div>
@@ -834,10 +823,7 @@
       <div class="uc-hero-inner">
         <div class="uc-kicker">Kraków i okolice • concierge bez abonamentu</div>
 
-        <h1 class="uc-h1">
-          Concierge na godziny<br>
-          w Krakowie
-        </h1>
+        <h1 class="uc-h1">Concierge na godziny<br>w Krakowie</h1>
 
         <div class="uc-sub">
           Telefony, rezerwacje, odbiory, zwroty, zakupy, research i codzienna organizacja spraw — wtedy, kiedy potrzebujesz wsparcia.
@@ -857,12 +843,12 @@
             <div class="uc-offer-value">2h / 200 zł</div>
           </div>
           <div class="uc-offer-item">
-            <div class="uc-offer-label">Zakres</div>
-            <div class="uc-offer-value">miasto + zdalnie</div>
+            <div class="uc-offer-label">Rezerwacja online</div>
+            <div class="uc-offer-value">2–5 godzin</div>
           </div>
         </div>
 
-        <div class="uc-actions">
+        <div>
           <a href="#rezerwacja" class="uc-btn uc-btn-primary">Zarezerwuj slot od 200 zł</a>
           <a href="#co-ogarniamy" class="uc-btn uc-btn-secondary">Zobacz, co możemy załatwić</a>
         </div>
@@ -920,32 +906,32 @@
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">Wybierz liczbę godzin</h2>
+      <h2 class="uc-title">Ile godzin potrzebujesz?</h2>
       <div class="uc-rule"></div>
       <div class="uc-intro">
-        W pierwszym miesiącu współpracy obowiązuje stawka 100 zł/h. Minimalna rezerwacja to 2 godziny.
+        W pierwszym miesiącu współpracy obowiązuje stawka 100 zł/h. W rezerwacji online możesz wybrać od 2 do 5 godzin.
       </div>
 
       <div class="uc-price-row">
         <div class="uc-price-card">
-          <div class="uc-price-label">Slot 2h</div>
-          <div class="uc-price-value">200 zł</div>
+          <div class="uc-price-label">Minimum</div>
+          <div class="uc-price-value">2h</div>
           <p class="uc-price-copy">Dobry wybór na jedną konkretną sprawę lub kilka prostych tematów.</p>
         </div>
         <div class="uc-price-card">
-          <div class="uc-price-label">Slot 3h</div>
-          <div class="uc-price-value">300 zł</div>
-          <p class="uc-price-copy">Na kilka spraw miejskich albo research + telefony.</p>
+          <div class="uc-price-label">Najczęściej</div>
+          <div class="uc-price-value">3–4h</div>
+          <p class="uc-price-copy">Na kilka spraw miejskich, research, telefony albo organizację.</p>
         </div>
         <div class="uc-price-card">
-          <div class="uc-price-label">Slot 4h</div>
-          <div class="uc-price-value">400 zł</div>
-          <p class="uc-price-copy">Na większą listę spraw lub bardziej rozbudowaną koordynację.</p>
+          <div class="uc-price-label">Większy slot</div>
+          <div class="uc-price-value">5h</div>
+          <p class="uc-price-copy">Na bardziej intensywny blok wsparcia w danym dniu.</p>
         </div>
         <div class="uc-price-card">
-          <div class="uc-price-label">Slot 5h</div>
-          <div class="uc-price-value">500 zł</div>
-          <p class="uc-price-copy">Na intensywny blok wsparcia w danym dniu.</p>
+          <div class="uc-price-label">Więcej?</div>
+          <div class="uc-price-value">indywidualnie</div>
+          <p class="uc-price-copy">Większy zakres, asysty i relokacja są wyceniane osobno.</p>
         </div>
       </div>
 
@@ -963,8 +949,8 @@
       <div class="uc-steps">
         <div class="uc-step">
           <div class="uc-step-no">Krok 01</div>
-          <div class="uc-step-title">Wybierasz slot</div>
-          <div class="uc-step-copy">Wybierasz liczbę godzin: 2h, 3h, 4h lub 5h.</div>
+          <div class="uc-step-title">Wybierasz godziny</div>
+          <div class="uc-step-copy">Wybierasz licznikowo od 2 do 5 godzin wsparcia.</div>
         </div>
 
         <div class="uc-step">
@@ -975,14 +961,14 @@
 
         <div class="uc-step">
           <div class="uc-step-no">Krok 03</div>
-          <div class="uc-step-title">Potwierdzamy zakres</div>
-          <div class="uc-step-copy">Sprawdzamy, co mieści się w wybranym czasie i potwierdzamy realizację.</div>
+          <div class="uc-step-title">Opłacasz slot</div>
+          <div class="uc-step-copy">Po wysłaniu formularza przechodzisz do płatności za wybraną liczbę godzin.</div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Krok 04</div>
           <div class="uc-step-title">Działamy</div>
-          <div class="uc-step-copy">Organizujemy, dzwonimy, odbieramy, sprawdzamy i doprowadzamy sprawy dalej.</div>
+          <div class="uc-step-copy">Potwierdzamy zakres i przejmujemy realizację spraw.</div>
         </div>
       </div>
     </div>
@@ -999,25 +985,19 @@
       <div class="uc-grid-3">
         <div class="uc-card">
           <div class="uc-card-title">Dzień Wsparcia</div>
-          <p class="uc-card-copy">
-            Jeden dzień przeznaczony na większą listę spraw, zdalnie lub lokalnie w Krakowie i okolicach.
-          </p>
+          <p class="uc-card-copy">Jeden dzień przeznaczony na większą listę spraw, zdalnie lub lokalnie w Krakowie i okolicach.</p>
           <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
 
         <div class="uc-card">
           <div class="uc-card-title">Asysty osobiste</div>
-          <p class="uc-card-copy">
-            Wsparcie na miejscu tam, gdzie potrzebna jest obecność, koordynacja albo reprezentowanie klienta.
-          </p>
+          <p class="uc-card-copy">Wsparcie na miejscu tam, gdzie potrzebna jest obecność, koordynacja albo reprezentowanie klienta.</p>
           <a href="/asysty/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
 
         <div class="uc-card">
           <div class="uc-card-title">Relokacja / abonament</div>
-          <p class="uc-card-copy">
-            Większe projekty, stałe wsparcie lub relokacja do Krakowa — wyceniane indywidualnie.
-          </p>
+          <p class="uc-card-copy">Większe projekty, stałe wsparcie lub relokacja do Krakowa — wyceniane indywidualnie.</p>
           <a href="/abonament/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
       </div>
@@ -1030,13 +1010,15 @@
         <div class="uc-form-head">
           <div class="uc-form-title">Zarezerwuj slot</div>
           <div class="uc-form-copy">
-            Wybierz liczbę godzin, opisz krótko sprawy i podaj preferowany termin. Po potwierdzeniu zakresu otrzymasz informację o dalszych krokach i płatności.
+            Wybierz liczbę godzin, opisz krótko sprawy i podaj preferowany termin. Po wysłaniu formularza przejdziesz do płatności.
           </div>
         </div>
 
-        <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="uc-form">
+        <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="uc-form" id="ucBookingForm">
           <input type="hidden" name="form-name" value="urban-concierge-pl">
           <input type="hidden" id="priceHidden" name="wartosc_slotu" value="200 zł">
+          <input type="hidden" id="hoursHidden" name="liczba_godzin" value="2">
+          <input type="hidden" id="orderIdHidden" name="numer_zamowienia" value="">
 
           <p class="uc-hidden">
             <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
@@ -1064,26 +1046,13 @@
             </div>
 
             <div class="uc-field">
-              <label for="support">Forma wsparcia</label>
-              <select id="support" name="forma_wsparcia" required>
-                <option value="">Wybierz</option>
-                <option value="Concierge na godziny">Concierge na godziny</option>
-                <option value="Dzień Wsparcia">Dzień Wsparcia</option>
-                <option value="Asysta osobista">Asysta osobista</option>
-                <option value="Abonament">Abonament</option>
-                <option value="Relokacja">Relokacja</option>
-                <option value="Nie wiem">Nie wiem — proszę dobrać właściwą formę</option>
-              </select>
-            </div>
-
-            <div class="uc-field">
-              <label for="hours">Liczba godzin</label>
-              <select id="hours" name="liczba_godzin" required>
-                <option value="2" data-price="200">2h — 200 zł</option>
-                <option value="3" data-price="300">3h — 300 zł</option>
-                <option value="4" data-price="400">4h — 400 zł</option>
-                <option value="5" data-price="500">5h — 500 zł</option>
-              </select>
+              <label>Liczba godzin</label>
+              <div class="uc-hour-counter">
+                <button type="button" id="minusHour">−</button>
+                <input id="hoursCounter" type="number" value="2" min="2" max="5" readonly>
+                <button type="button" id="plusHour">+</button>
+              </div>
+              <div class="uc-small-note">Pierwszy miesiąc współpracy: 100 zł/h. Minimum 2h, maksimum 5h online.</div>
             </div>
 
             <div class="uc-field">
@@ -1091,18 +1060,18 @@
               <input id="date" name="preferowany_termin" type="text" placeholder="Np. poniedziałek rano / ten tydzień / elastycznie" required>
             </div>
 
-            <div class="uc-field">
+            <div class="uc-field uc-field-full">
               <label for="place">Miejsce realizacji</label>
               <input id="place" name="miejsce_realizacji" type="text" placeholder="Adres, dzielnica lub informacja: zdalnie">
             </div>
 
             <div class="uc-field uc-field-full">
               <label for="message">Lista spraw</label>
-              <textarea id="message" name="sprawy_do_organizacji" placeholder="Opisz krótko, co chcesz przekazać. Np. odbiór paczki, zwrot, telefon, rezerwacja, research, zakupy, dokumenty." required></textarea>
+              <textarea id="message" name="sprawy_do_organizacji" placeholder="Opisz sprawy: odbiór, zwrot, telefon, rezerwacja, research, zakupy, dokumenty..." required></textarea>
             </div>
 
             <div class="uc-total-box">
-              <div class="uc-total-label">Szacunkowa wartość slotu</div>
+              <div class="uc-total-label">Do zapłaty</div>
               <div class="uc-total-value" id="priceDisplay">200 zł</div>
             </div>
           </div>
@@ -1116,11 +1085,11 @@
           </div>
 
           <div class="uc-form-submit">
-            <button type="submit" class="uc-submit">Wyślij zgłoszenie</button>
+            <button type="submit" class="uc-submit">Przejdź do płatności</button>
           </div>
 
           <div class="uc-form-note">
-            Rezerwacja zostaje potwierdzona po akceptacji zakresu i opłaceniu slotu. Koszty zewnętrzne, takie jak zakupy, bilety, transport lub usługi podwykonawców, są rozliczane osobno.
+            Formularz zapisuje zgłoszenie, a następnie przekierowuje do płatności HotPay. Rezerwacja jest aktywna po opłaceniu slotu. Koszty zewnętrzne są rozliczane osobno.
           </div>
         </form>
       </div>
@@ -1143,18 +1112,82 @@
   </section>
 
   <script>
-    const hoursSelect = document.getElementById('hours');
+    const form = document.getElementById('ucBookingForm');
+    const minusHour = document.getElementById('minusHour');
+    const plusHour = document.getElementById('plusHour');
+    const hoursCounter = document.getElementById('hoursCounter');
+    const hoursHidden = document.getElementById('hoursHidden');
     const priceDisplay = document.getElementById('priceDisplay');
     const priceHidden = document.getElementById('priceHidden');
+    const orderIdHidden = document.getElementById('orderIdHidden');
+
+    const PRICE_PER_HOUR = 100;
+    const MIN_HOURS = 2;
+    const MAX_HOURS = 5;
 
     function updatePrice() {
-      const selected = hoursSelect.options[hoursSelect.selectedIndex];
-      const price = selected.getAttribute('data-price');
-      priceDisplay.textContent = price + ' zł';
-      priceHidden.value = price + ' zł';
+      const hours = parseInt(hoursCounter.value, 10);
+      const amount = hours * PRICE_PER_HOUR;
+
+      hoursHidden.value = hours;
+      priceDisplay.textContent = amount + ' zł';
+      priceHidden.value = amount + ' zł';
     }
 
-    hoursSelect.addEventListener('change', updatePrice);
+    minusHour.addEventListener('click', function () {
+      let hours = parseInt(hoursCounter.value, 10);
+      if (hours > MIN_HOURS) {
+        hoursCounter.value = hours - 1;
+        updatePrice();
+      }
+    });
+
+    plusHour.addEventListener('click', function () {
+      let hours = parseInt(hoursCounter.value, 10);
+      if (hours < MAX_HOURS) {
+        hoursCounter.value = hours + 1;
+        updatePrice();
+      }
+    });
+
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const hours = parseInt(hoursCounter.value, 10);
+      const amount = hours * PRICE_PER_HOUR;
+      const orderId = 'UC-' + Date.now();
+
+      orderIdHidden.value = orderId;
+
+      const formData = new FormData(form);
+      formData.append('kwota_do_zaplaty', amount + ' zł');
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        const hotpayUrl = new URL("HOTPAY_PAYMENT_URL_HERE");
+
+        hotpayUrl.searchParams.set("amount", amount);
+        hotpayUrl.searchParams.set("currency", "PLN");
+        hotpayUrl.searchParams.set("description", "Urban Concierge - slot " + hours + "h");
+        hotpayUrl.searchParams.set("order_id", orderId);
+        hotpayUrl.searchParams.set("email", document.getElementById("email").value);
+        hotpayUrl.searchParams.set("phone", document.getElementById("phone").value);
+
+        window.location.href = hotpayUrl.toString();
+      })
+      .catch(() => {
+        alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+      });
+    });
+
     updatePrice();
   </script>
 </body>
