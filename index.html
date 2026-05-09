@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urban Concierge | Prywatny concierge Kraków i zdalnie w całej Polsce</title>
-  <meta name="description" content="Urban Concierge to prywatny concierge w Krakowie i okolicach oraz zdalnie w całej Polsce. Pomoc w załatwianiu spraw, koordynacji, Dniu Wsparcia, asystach, abonamencie i relokacji." />
+
+  <title>Urban Concierge | Concierge na godziny w Krakowie</title>
+  <meta name="description" content="Urban Concierge — concierge na godziny w Krakowie. Bez abonamentu. Sprawy na mieście, telefony, rezerwacje, odbiory, zakupy i codzienna organizacja. Pierwszy miesiąc współpracy: 100 zł/h." />
+
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/">
   <meta name="google-site-verification" content="AAxFEQEICNm5e7gTLla3e9yeV5aEDyHjChOliVF_S7M" />
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,7 +26,6 @@
       background: #F5F1EB;
       margin: 0;
       padding: 0;
-      box-shadow: none;
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
@@ -35,9 +36,7 @@
       text-rendering: optimizeLegibility;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     :root {
       --bg: #F5F1EB;
@@ -50,10 +49,8 @@
       --gold: #B8955A;
       --gold-soft: #C2A46D;
       --choco: #2B221F;
-      --choco-2: #3A2F2A;
       --hover: #473934;
-      --shadow-soft: 0 16px 40px rgba(58,47,42,0.04);
-      --shadow-strong: 0 20px 54px rgba(43,34,31,0.10);
+      --white: #FFFFFF;
     }
 
     .uc-topbar {
@@ -96,9 +93,7 @@
       transition: color 0.22s ease;
     }
 
-    .uc-mini-nav a:hover {
-      color: var(--gold);
-    }
+    .uc-mini-nav a:hover { color: var(--gold); }
 
     .uc-brand {
       justify-self: center;
@@ -109,7 +104,6 @@
       color: var(--gold);
       letter-spacing: 0.25px;
       text-decoration: none;
-      display: inline-block;
       white-space: nowrap;
     }
 
@@ -138,9 +132,9 @@
     }
 
     .uc-lang-current {
-      background: var(--choco-2);
+      background: var(--text);
       color: #FFFFFF;
-      border: 1px solid var(--choco-2);
+      border: 1px solid var(--text);
     }
 
     .uc-lang-switch a {
@@ -166,7 +160,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 58px 0 82px 0;
+      padding: 54px 0 76px 0;
       position: relative;
       overflow: hidden;
     }
@@ -183,20 +177,8 @@
       pointer-events: none;
     }
 
-    .uc-hero:after {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(58,47,42,0.06);
-      border-radius: 50%;
-      bottom: -150px;
-      left: -120px;
-      pointer-events: none;
-    }
-
     .uc-hero-inner {
-      max-width: 1010px;
+      max-width: 1040px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -210,16 +192,16 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #9C8F84;
-      margin-bottom: 34px;
+      margin-bottom: 28px;
     }
 
     .uc-h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 76px;
+      font-size: 74px;
       line-height: 1.03;
       font-weight: 500;
       color: var(--text);
-      margin: 0 0 30px 0;
+      margin: 0 0 26px 0;
       letter-spacing: -0.9px;
       text-wrap: balance;
     }
@@ -234,14 +216,36 @@
       text-wrap: balance;
     }
 
-    .uc-hero-proof {
-      max-width: 790px;
-      margin: 0 auto 34px auto;
+    .uc-offer-strip {
+      max-width: 900px;
+      margin: 34px auto 34px auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.32);
+    }
+
+    .uc-offer-item {
+      padding: 22px 18px;
+      border-right: 1px solid #DCCDBB;
+    }
+
+    .uc-offer-item:last-child { border-right: none; }
+
+    .uc-offer-label {
       font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--soft);
-      text-wrap: balance;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .uc-offer-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      line-height: 1.1;
+      color: var(--text);
     }
 
     .uc-actions {
@@ -260,9 +264,9 @@
     }
 
     .uc-btn-primary {
-      background: var(--choco-2);
+      background: var(--text);
       color: #FFFFFF;
-      border: 1px solid var(--choco-2);
+      border: 1px solid var(--text);
     }
 
     .uc-btn-primary:hover {
@@ -283,37 +287,26 @@
       transform: translateY(-1px);
     }
 
-    .uc-btn-card {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      text-decoration: none;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 11px;
-      letter-spacing: 0.45px;
-      background: var(--gold);
-      color: #FFFFFF;
-      border: 1px solid var(--gold);
-      transition: all 0.24s ease;
-      align-self: flex-start;
+    .uc-section {
+      padding: 92px 0;
+      position: relative;
     }
 
-    .uc-btn-card:hover {
-      background: var(--gold-soft);
-      border-color: var(--gold-soft);
-      transform: translateY(-1px);
+    .uc-section + .uc-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .uc-section-soft {
+      background: var(--bg-soft);
     }
 
     .uc-band {
       background:
         radial-gradient(circle at 15% 50%, rgba(255,255,255,0.05), transparent 28%),
-        radial-gradient(circle at 85% 50%, rgba(255,255,255,0.03), transparent 22%),
         linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
       color: #F5F1EB;
-      padding: 74px 36px;
+      padding: 70px 36px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
 
     .uc-band-title {
@@ -334,26 +327,13 @@
     }
 
     .uc-band-copy {
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 15px;
       line-height: 1.95;
       color: rgba(245,241,235,0.88);
       text-wrap: balance;
-    }
-
-    .uc-section {
-      padding: 96px 0;
-      position: relative;
-    }
-
-    .uc-section + .uc-section {
-      border-top: 1px solid var(--line);
-    }
-
-    .uc-section-soft {
-      background: var(--bg-soft);
     }
 
     .uc-title {
@@ -387,7 +367,6 @@
 
     .uc-grid-2,
     .uc-grid-3,
-    .uc-why-grid,
     .uc-steps {
       display: grid;
       gap: 24px;
@@ -395,8 +374,7 @@
       margin: 0 auto;
     }
 
-    .uc-grid-2,
-    .uc-why-grid {
+    .uc-grid-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -405,22 +383,19 @@
     }
 
     .uc-card,
-    .uc-why-card,
     .uc-price-card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
       padding: 34px 32px;
       text-align: left;
-      transition: all 0.26s ease;
       display: flex;
       flex-direction: column;
       min-height: 100%;
       position: relative;
-      box-shadow: var(--shadow-soft);
+      box-shadow: 0 16px 40px rgba(58,47,42,0.04);
     }
 
     .uc-card:before,
-    .uc-why-card:before,
     .uc-price-card:before {
       content: "";
       position: absolute;
@@ -431,14 +406,7 @@
       background: var(--gold);
     }
 
-    .uc-card:hover,
-    .uc-why-card:hover {
-      border-color: #D2BCA4;
-      transform: translateY(-3px);
-    }
-
-    .uc-card-title,
-    .uc-why-title {
+    .uc-card-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 34px;
       line-height: 1.06;
@@ -447,8 +415,7 @@
       text-wrap: balance;
     }
 
-    .uc-card-copy,
-    .uc-why-copy {
+    .uc-card-copy {
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
       line-height: 1.9;
@@ -457,48 +424,15 @@
       text-wrap: balance;
     }
 
-    .uc-price-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      max-width: 860px;
-      margin: 0 auto 28px auto;
-    }
-
-    .uc-price-card {
+    .uc-list {
+      max-width: 900px;
+      margin: 0 auto;
       text-align: center;
-      padding: 34px 30px;
-    }
-
-    .uc-price-card:before {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .uc-price-label {
       font-family: 'Libre Baskerville', serif;
-      font-size: 10px;
-      line-height: 1.6;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .uc-price-value {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 40px;
-      line-height: 1;
+      font-size: 16px;
+      line-height: 2;
       color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    .uc-price-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
-      line-height: 1.85;
-      color: var(--muted);
-      margin: 0;
+      text-wrap: balance;
     }
 
     .uc-example-list {
@@ -568,25 +502,58 @@
       text-wrap: balance;
     }
 
-    .uc-list {
-      max-width: 900px;
-      margin: 0 auto;
+    .uc-price-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 980px;
+      margin: 0 auto 28px auto;
+    }
+
+    .uc-price-card {
       text-align: center;
+      padding: 30px 22px;
+    }
+
+    .uc-price-card:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .uc-price-label {
       font-family: 'Libre Baskerville', serif;
-      font-size: 16px;
-      line-height: 2;
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .uc-price-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      line-height: 1;
       color: var(--text);
-      text-wrap: balance;
+      margin-bottom: 12px;
+    }
+
+    .uc-price-copy {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 12px;
+      line-height: 1.85;
+      color: var(--muted);
+      margin: 0;
     }
 
     .uc-form-wrap {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
       background:
         radial-gradient(circle at 20% 0%, rgba(194,164,109,0.10), transparent 34%),
         linear-gradient(180deg, #332925 0%, #241C19 100%);
       border: 1px solid rgba(194,164,109,0.42);
-      box-shadow: var(--shadow-strong);
+      box-shadow: 0 20px 54px rgba(43,34,31,0.10);
       padding: 44px;
       color: #F5F1EB;
     }
@@ -607,17 +574,13 @@
     }
 
     .uc-form-copy {
-      max-width: 700px;
+      max-width: 730px;
       margin: 0 auto;
       font-family: 'Libre Baskerville', serif;
       font-size: 14px;
       line-height: 1.9;
       color: rgba(245,241,235,0.84);
       text-wrap: balance;
-    }
-
-    .uc-form {
-      margin: 0;
     }
 
     .uc-form-grid {
@@ -666,11 +629,6 @@
       color: rgba(245,241,235,0.46);
     }
 
-    .uc-field select {
-      appearance: none;
-      color: #F5F1EB;
-    }
-
     .uc-field select option {
       color: #3A2F2A;
       background: #F5F1EB;
@@ -686,6 +644,30 @@
     .uc-field textarea:focus {
       border-color: rgba(194,164,109,0.86);
       background: rgba(245,241,235,0.10);
+    }
+
+    .uc-total-box {
+      grid-column: 1 / -1;
+      border: 1px solid rgba(194,164,109,0.52);
+      padding: 22px;
+      text-align: center;
+      background: rgba(245,241,235,0.06);
+    }
+
+    .uc-total-label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,241,235,0.72);
+      margin-bottom: 8px;
+    }
+
+    .uc-total-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      line-height: 1.1;
+      color: #F5F1EB;
     }
 
     .uc-consent {
@@ -730,7 +712,7 @@
     }
 
     .uc-form-note {
-      max-width: 640px;
+      max-width: 680px;
       margin: 18px auto 0 auto;
       text-align: center;
       font-family: 'Libre Baskerville', serif;
@@ -739,35 +721,7 @@
       color: rgba(245,241,235,0.62);
     }
 
-    .uc-hidden {
-      display: none;
-    }
-
-    .uc-contact-box {
-      max-width: 760px;
-      margin: 0 auto 42px auto;
-      text-align: center;
-    }
-
-    .uc-contact-main {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 50px;
-      line-height: 1.08;
-      font-weight: 500;
-      color: var(--text);
-      margin: 0 0 14px 0;
-      text-wrap: balance;
-    }
-
-    .uc-contact-copy {
-      max-width: 720px;
-      margin: 0 auto 20px auto;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 15px;
-      line-height: 1.95;
-      color: var(--muted);
-      text-wrap: balance;
-    }
+    .uc-hidden { display: none; }
 
     .uc-footer {
       background:
@@ -812,155 +766,57 @@
     }
 
     @media (max-width: 1100px) {
-      .uc-mini-nav {
-        display: none;
-      }
-
-      .uc-steps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .uc-grid-3 {
-        grid-template-columns: 1fr;
-      }
+      .uc-mini-nav { display: none; }
+      .uc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .uc-grid-3 { grid-template-columns: 1fr; }
+      .uc-price-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 980px) {
-      .uc-hero {
-        min-height: calc(84vh - 14px);
-        padding: 38px 0 74px 0;
-      }
-
-      .uc-why-grid,
-      .uc-grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .uc-h1 {
-        font-size: 60px;
-        line-height: 1.05;
-      }
-
-      .uc-title,
-      .uc-band-title,
-      .uc-contact-main,
-      .uc-form-title {
-        font-size: 44px;
-      }
+      .uc-hero { min-height: auto; }
+      .uc-grid-2 { grid-template-columns: 1fr; }
+      .uc-h1 { font-size: 58px; line-height: 1.05; }
+      .uc-title, .uc-band-title, .uc-form-title { font-size: 44px; }
+      .uc-offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .uc-offer-item:nth-child(2) { border-right: none; }
+      .uc-offer-item:nth-child(1),
+      .uc-offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
     }
 
     @media (max-width: 768px) {
-      .uc-shell {
-        padding: 0 20px;
-      }
-
-      .uc-brandbar {
-        padding: 26px 0 0 0;
-      }
-
-      .uc-headerbar {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-
-      .uc-brand {
-        font-size: 28px;
-      }
-
-      .uc-lang-switch {
-        justify-self: center;
-      }
-
-      .uc-hero {
-        min-height: auto;
-        padding: 30px 0 60px 0;
-      }
-
-      .uc-kicker {
-        margin-bottom: 22px;
-        letter-spacing: 3px;
-      }
-
-      .uc-h1 {
-        font-size: 42px;
-        line-height: 1.08;
-        margin: 0 0 20px 0;
-      }
-
-      .uc-sub {
-        font-size: 16px;
-        line-height: 1.9;
-        margin: 0 auto 16px auto;
-      }
-
-      .uc-actions {
-        margin-top: 30px;
-      }
-
-      .uc-band {
-        padding: 62px 24px;
-      }
-
-      .uc-section {
-        padding: 76px 0;
-      }
-
-      .uc-title,
-      .uc-band-title,
-      .uc-contact-main,
-      .uc-form-title {
-        font-size: 36px;
-      }
-
-      .uc-steps,
-      .uc-price-row,
-      .uc-form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .uc-btn {
-        display: block;
-        max-width: 340px;
-        margin: 0 auto 12px auto;
-      }
-
-      .uc-btn-card {
-        display: inline-block;
-        max-width: none;
-        margin: 20px 0 0 0;
-      }
-
-      .uc-card,
-      .uc-why-card,
-      .uc-price-card {
-        min-height: auto;
-        padding: 32px 24px;
-      }
-
-      .uc-card:before,
-      .uc-why-card:before {
-        left: 24px;
-      }
-
-      .uc-form-wrap {
-        padding: 34px 22px;
-      }
-
-      .uc-submit {
-        width: 100%;
-      }
+      .uc-shell { padding: 0 20px; }
+      .uc-brandbar { padding: 26px 0 0 0; }
+      .uc-headerbar { grid-template-columns: 1fr; gap: 18px; }
+      .uc-brand { font-size: 28px; }
+      .uc-lang-switch { justify-self: center; }
+      .uc-hero { padding: 30px 0 60px 0; }
+      .uc-kicker { margin-bottom: 22px; letter-spacing: 3px; }
+      .uc-h1 { font-size: 42px; line-height: 1.08; margin: 0 0 20px 0; }
+      .uc-sub { font-size: 16px; line-height: 1.9; margin: 0 auto 16px auto; }
+      .uc-section { padding: 74px 0; }
+      .uc-title, .uc-band-title, .uc-form-title { font-size: 36px; }
+      .uc-steps, .uc-price-row, .uc-form-grid { grid-template-columns: 1fr; }
+      .uc-offer-strip { grid-template-columns: 1fr; }
+      .uc-offer-item { border-right: none; border-bottom: 1px solid #DCCDBB; }
+      .uc-offer-item:last-child { border-bottom: none; }
+      .uc-btn { display: block; max-width: 340px; margin: 0 auto 12px auto; }
+      .uc-card, .uc-price-card { min-height: auto; padding: 32px 24px; }
+      .uc-card:before { left: 24px; }
+      .uc-form-wrap { padding: 34px 22px; }
+      .uc-submit { width: 100%; }
     }
   </style>
 </head>
+
 <body>
   <div class="uc-topbar"></div>
 
   <section class="uc-shell uc-brandbar">
     <div class="uc-headerbar">
       <nav class="uc-mini-nav" aria-label="Nawigacja główna">
-        <a href="#dzien-wsparcia">Dzień Wsparcia</a>
+        <a href="#concierge-na-godziny">Concierge na godziny</a>
         <a href="#jak-to-dziala">Jak działa</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#rezerwacja">Rezerwacja</a>
       </nav>
 
       <a href="/" class="uc-brand">Urban Concierge</a>
@@ -976,297 +832,211 @@
   <section class="uc-hero">
     <div class="uc-shell">
       <div class="uc-hero-inner">
-        <div class="uc-kicker">Prywatny concierge • Kraków i okolice • zdalnie w całej Polsce</div>
+        <div class="uc-kicker">Kraków i okolice • concierge bez abonamentu</div>
 
         <h1 class="uc-h1">
-          Prywatny concierge w Krakowie<br>
-          i zdalnie w całej Polsce
+          Concierge na godziny<br>
+          w Krakowie
         </h1>
 
         <div class="uc-sub">
-          Urban Concierge to prywatny concierge w Krakowie i okolicach oraz zdalnie w całej Polsce. Pomagamy w załatwianiu spraw, koordynacji terminów, rezerwacjach, odbiorach, asystach na miejscu i relokacji.
+          Telefony, rezerwacje, odbiory, zwroty, zakupy, research i codzienna organizacja spraw — wtedy, kiedy potrzebujesz wsparcia.
         </div>
 
-        <div class="uc-hero-proof">
-          Terminy, telefony, rezerwacje, follow-upy, odbiory, dostawy, kontakt z usługodawcami i praktyczna pomoc w organizacji spraw — bez konieczności pilnowania wszystkiego samodzielnie.
+        <div class="uc-offer-strip">
+          <div class="uc-offer-item">
+            <div class="uc-offer-label">Bez abonamentu</div>
+            <div class="uc-offer-value">płacisz za slot</div>
+          </div>
+          <div class="uc-offer-item">
+            <div class="uc-offer-label">Pierwszy miesiąc</div>
+            <div class="uc-offer-value">100 zł/h</div>
+          </div>
+          <div class="uc-offer-item">
+            <div class="uc-offer-label">Minimum</div>
+            <div class="uc-offer-value">2h / 200 zł</div>
+          </div>
+          <div class="uc-offer-item">
+            <div class="uc-offer-label">Zakres</div>
+            <div class="uc-offer-value">miasto + zdalnie</div>
+          </div>
         </div>
 
         <div class="uc-actions">
-          <a href="#kontakt" class="uc-btn uc-btn-primary">Przekaż sprawy do organizacji</a>
-          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz Dzień Wsparcia</a>
+          <a href="#rezerwacja" class="uc-btn uc-btn-primary">Zarezerwuj slot od 200 zł</a>
+          <a href="#co-ogarniamy" class="uc-btn uc-btn-secondary">Zobacz, co możemy załatwić</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="uc-band">
+  <section class="uc-band" id="concierge-na-godziny">
     <div class="uc-shell">
-      <div class="uc-band-title">Concierge, który przejmuje organizację.</div>
+      <div class="uc-band-title">Bez abonamentu. Kiedy potrzebujesz i do czego potrzebujesz.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Urban Concierge to uporządkowane, prywatne wsparcie dla osób, które chcą przekazać codzienne i operacyjne sprawy jednemu zaufanemu punktowi kontaktu — lokalnie w Krakowie i okolicach oraz zdalnie w całej Polsce.
+        Urban Concierge to praktyczne wsparcie dla osób, które mają za dużo spraw na głowie i chcą przekazać część codziennej logistyki komuś, kto spokojnie ją zorganizuje.
       </div>
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft">
+  <section class="uc-section uc-section-soft" id="co-ogarniamy">
     <div class="uc-shell">
-      <h2 class="uc-title">Kiedy warto skorzystać z concierge</h2>
+      <h2 class="uc-title">Co możesz przekazać</h2>
       <div class="uc-rule"></div>
-
       <div class="uc-intro">
-        Najczęściej wtedy, gdy sprawy nie są trudne, ale zabierają czas, uwagę i energię. To usługa concierge dla osób, które chcą przekazać organizacyjne detale komuś, kto spokojnie je uporządkuje i dopilnuje.
+        Najlepiej działają konkretne sprawy: coś trzeba znaleźć, zamówić, odebrać, zwrócić, umówić, potwierdzić albo dopilnować.
       </div>
 
       <div class="uc-grid-2">
         <div class="uc-card">
-          <div class="uc-card-title">Gdy masz za dużo drobnych spraw</div>
-          <p class="uc-card-copy">
-            Kilka telefonów, rezerwacja, potwierdzenie terminu, znalezienie wykonawcy, odbiór, dostawa, przypomnienie, follow-up. Osobno małe. Razem zabierają dzień.
-          </p>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Gdy potrzebujesz kogoś na miejscu lub zdalnie</div>
-          <p class="uc-card-copy">
-            W Krakowie i okolicach możemy pomóc tam, gdzie potrzebna jest obecność, koordynacja lub dopilnowanie sprawy poza telefonem i mailem. W wielu sprawach działamy też zdalnie w całej Polsce.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section" id="dzien-wsparcia">
-    <div class="uc-shell">
-      <h2 class="uc-title">Dzień Wsparcia</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        To najprostszy sposób, żeby skorzystać z prywatnego concierge bez zaczynania od stałej współpracy. Przesyłasz sprawy do organizacji, my potwierdzamy zakres i przejmujemy realizację w ustalonym dniu.
-      </div>
-
-      <div class="uc-price-row">
-        <div class="uc-price-card">
-          <div class="uc-price-label">Zdalnie</div>
-          <div class="uc-price-value">od 490 zł</div>
-          <p class="uc-price-copy">
-            Dla spraw możliwych do przejęcia telefonicznie, mailowo lub organizacyjnie na odległość — zdalnie w całej Polsce.
-          </p>
-        </div>
-
-        <div class="uc-price-card">
-          <div class="uc-price-label">Kraków i okolice</div>
-          <div class="uc-price-value">od 690 zł</div>
-          <p class="uc-price-copy">
-            Dla spraw, które wymagają lokalnej koordynacji, obecności lub działania na miejscu.
-          </p>
-        </div>
-      </div>
-
-      <div class="uc-note">
-        Cena końcowa zależy od liczby spraw, terminu, konieczności działania na miejscu oraz stopnia koordynacji.
-      </div>
-
-      <div class="uc-actions" style="text-align:center; margin-top: 38px;">
-        <a href="#kontakt" class="uc-btn uc-btn-primary">Przekaż sprawy do organizacji</a>
-        <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary">Zobacz szczegóły</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft">
-    <div class="uc-shell">
-      <h2 class="uc-title">Co możesz przekazać concierge</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        Najlepiej działa lista kilku konkretnych spraw. Ty opisujesz, co trzeba zrobić. My potwierdzamy zakres i przejmujemy organizację.
-      </div>
-
-      <div class="uc-grid-2">
-        <div class="uc-card">
-          <div class="uc-card-title">Sprawy codzienne</div>
+          <div class="uc-card-title">Sprawy na mieście</div>
           <ul class="uc-example-list">
-            <li>umówienie wizyty, usługi lub konsultacji</li>
-            <li>potwierdzenie terminu dostawy, montażu albo odbioru</li>
-            <li>kontakt z usługodawcą, administracją lub placówką</li>
-            <li>zorganizowanie prezentu, kwiatów, rezerwacji lub transportu</li>
-            <li>przypilnowanie sprawy, która wymaga follow-upu</li>
+            <li>odbiór lub zwrot rzeczy</li>
+            <li>zakupy i drobne sprawy lokalne</li>
+            <li>przekazanie dokumentów lub paczki</li>
+            <li>koordynacja odbioru, dostawy albo terminu</li>
+            <li>załatwienie kilku punktów z jednej listy</li>
           </ul>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Sprawy wymagające koordynacji</div>
+          <div class="uc-card-title">Sprawy organizacyjne</div>
           <ul class="uc-example-list">
-            <li>znalezienie i porównanie kilku opcji wykonawcy lub usługi</li>
-            <li>ustalenie terminów między kilkoma osobami</li>
-            <li>koordynacja naprawy, wizyty, odbioru lub formalności</li>
-            <li>sprawdzenie dostępności i zebranie informacji</li>
-            <li>uporządkowanie kilku zaległych tematów z jednej listy</li>
+            <li>telefony i potwierdzanie terminów</li>
+            <li>rezerwacje i umawianie wizyt</li>
+            <li>research i porównanie ofert</li>
+            <li>kontakt z usługodawcami</li>
+            <li>follow-up spraw, które utknęły</li>
           </ul>
         </div>
       </div>
 
       <div class="uc-note">
-        Jeśli dana sprawa wymaga specjalistycznej wiedzy, licencji lub decyzji po Twojej stronie, Urban Concierge może pomóc w organizacji procesu, ale nie zastępuje specjalisty.
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section" id="jak-to-dziala">
-    <div class="uc-shell">
-      <h2 class="uc-title">Jak działa prywatny concierge</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-steps">
-        <div class="uc-step">
-          <div class="uc-step-no">Krok 01</div>
-          <div class="uc-step-title">Opisujesz sprawy</div>
-          <div class="uc-step-copy">
-            Wysyłasz listę tematów, które chcesz przekazać do organizacji — krótko i konkretnie.
-          </div>
-        </div>
-
-        <div class="uc-step">
-          <div class="uc-step-no">Krok 02</div>
-          <div class="uc-step-title">Potwierdzamy zakres</div>
-          <div class="uc-step-copy">
-            Sprawdzamy, co mieści się w Dniu Wsparcia i jaka forma realizacji będzie właściwa.
-          </div>
-        </div>
-
-        <div class="uc-step">
-          <div class="uc-step-no">Krok 03</div>
-          <div class="uc-step-title">Przejmujemy realizację</div>
-          <div class="uc-step-copy">
-            Organizujemy, koordynujemy, kontaktujemy się i doprowadzamy sprawy dalej.
-          </div>
-        </div>
-
-        <div class="uc-step">
-          <div class="uc-step-no">Krok 04</div>
-          <div class="uc-step-title">Dostajesz update</div>
-          <div class="uc-step-copy">
-            Otrzymujesz potwierdzenia, status lub gotowe rozwiązanie — bez pilnowania każdego detalu.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft">
-    <div class="uc-shell" style="max-width: 920px;">
-      <h2 class="uc-title">Dla kogo jest Urban Concierge</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-list">
-        dla osób szukających prywatnego concierge w Krakowie lub spokojnego wsparcia zdalnie w całej Polsce<br><br>
-        dla rodzin, które potrzebują wsparcia w dopilnowaniu codziennych spraw<br><br>
-        dla osób, które mają dużo odpowiedzialności i chcą przekazać część operacyjnych tematów dalej<br><br>
-        dla klientów, którzy wolą mieć jeden spokojny punkt kontaktu niż samodzielnie pilnować wielu spraw
+        Asysty osobiste, relokacja oraz większe projekty są wyceniane indywidualnie.
       </div>
     </div>
   </section>
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">Inne modele współpracy concierge</h2>
+      <h2 class="uc-title">Wybierz liczbę godzin</h2>
+      <div class="uc-rule"></div>
+      <div class="uc-intro">
+        W pierwszym miesiącu współpracy obowiązuje stawka 100 zł/h. Minimalna rezerwacja to 2 godziny.
+      </div>
+
+      <div class="uc-price-row">
+        <div class="uc-price-card">
+          <div class="uc-price-label">Slot 2h</div>
+          <div class="uc-price-value">200 zł</div>
+          <p class="uc-price-copy">Dobry wybór na jedną konkretną sprawę lub kilka prostych tematów.</p>
+        </div>
+        <div class="uc-price-card">
+          <div class="uc-price-label">Slot 3h</div>
+          <div class="uc-price-value">300 zł</div>
+          <p class="uc-price-copy">Na kilka spraw miejskich albo research + telefony.</p>
+        </div>
+        <div class="uc-price-card">
+          <div class="uc-price-label">Slot 4h</div>
+          <div class="uc-price-value">400 zł</div>
+          <p class="uc-price-copy">Na większą listę spraw lub bardziej rozbudowaną koordynację.</p>
+        </div>
+        <div class="uc-price-card">
+          <div class="uc-price-label">Slot 5h</div>
+          <div class="uc-price-value">500 zł</div>
+          <p class="uc-price-copy">Na intensywny blok wsparcia w danym dniu.</p>
+        </div>
+      </div>
+
+      <div class="uc-note">
+        Koszty zewnętrzne, np. zakupy, bilety, opłaty, usługi wykonawców lub transport, klient pokrywa osobno.
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft" id="jak-to-dziala">
+    <div class="uc-shell">
+      <h2 class="uc-title">Jak to działa</h2>
       <div class="uc-rule"></div>
 
+      <div class="uc-steps">
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 01</div>
+          <div class="uc-step-title">Wybierasz slot</div>
+          <div class="uc-step-copy">Wybierasz liczbę godzin: 2h, 3h, 4h lub 5h.</div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 02</div>
+          <div class="uc-step-title">Opisujesz sprawy</div>
+          <div class="uc-step-copy">Wysyłasz listę tematów, które chcesz przekazać do organizacji.</div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 03</div>
+          <div class="uc-step-title">Potwierdzamy zakres</div>
+          <div class="uc-step-copy">Sprawdzamy, co mieści się w wybranym czasie i potwierdzamy realizację.</div>
+        </div>
+
+        <div class="uc-step">
+          <div class="uc-step-no">Krok 04</div>
+          <div class="uc-step-title">Działamy</div>
+          <div class="uc-step-copy">Organizujemy, dzwonimy, odbieramy, sprawdzamy i doprowadzamy sprawy dalej.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Inne opcje współpracy</h2>
+      <div class="uc-rule"></div>
       <div class="uc-intro">
-        Jeśli jedna lista spraw to za mało, Urban Concierge może działać także w modelu asysty na miejscu, stałego abonamentu lub wsparcia przy relokacji.
+        Concierge na godziny to najprostszy pierwszy krok. Jeśli potrzebujesz większego wsparcia, możesz wybrać także jedną z pozostałych form.
       </div>
 
       <div class="uc-grid-3">
         <div class="uc-card">
-          <div class="uc-card-title">Asysty na miejscu</div>
+          <div class="uc-card-title">Dzień Wsparcia</div>
           <p class="uc-card-copy">
-            Wsparcie lokalne wszędzie tam, gdzie potrzebna jest obecność, koordynacja i spokojne doprowadzenie sprawy do końca — spotkania, odbiory, wizyty i wybrane tematy wymagające działania na miejscu.
+            Jeden dzień przeznaczony na większą listę spraw, zdalnie lub lokalnie w Krakowie i okolicach.
           </p>
-          <a href="/asysty/" class="uc-btn-card">Dowiedz się więcej</a>
+          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Abonament concierge</div>
+          <div class="uc-card-title">Asysty osobiste</div>
           <p class="uc-card-copy">
-            Stałe wsparcie dla klientów, którzy chcą mieć jeden zaufany punkt kontaktu do bieżących spraw, koordynacji, follow-upów i tematów wymagających ciągłości.
+            Wsparcie na miejscu tam, gdzie potrzebna jest obecność, koordynacja albo reprezentowanie klienta.
           </p>
-          <a href="/abonament/" class="uc-btn-card">Dowiedz się więcej</a>
+          <a href="/asysty/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Relokacja do Krakowa</div>
+          <div class="uc-card-title">Relokacja / abonament</div>
           <p class="uc-card-copy">
-            Wsparcie dla klientów przeprowadzających się do Krakowa — od przygotowania przed przyjazdem po praktyczną lokalną koordynację po nim.
+            Większe projekty, stałe wsparcie lub relokacja do Krakowa — wyceniane indywidualnie.
           </p>
-          <a href="/relokacja-krakow/" class="uc-btn-card">Dowiedz się więcej</a>
+          <a href="/abonament/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft">
+  <section class="uc-section uc-section-soft" id="rezerwacja">
     <div class="uc-shell">
-      <h2 class="uc-title">Dlaczego Urban Concierge</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        To prywatna, uporządkowana forma wsparcia dla klientów, którzy oczekują dyskrecji, właściwego wykonania i spokojnej komunikacji.
-      </div>
-
-      <div class="uc-why-grid">
-        <div class="uc-why-card">
-          <div class="uc-why-title">Dyskrecja</div>
-          <p class="uc-why-copy">
-            Twoje sprawy pozostają prywatne. Zawsze.
-          </p>
-        </div>
-
-        <div class="uc-why-card">
-          <div class="uc-why-title">Porządek</div>
-          <p class="uc-why-copy">
-            Zakres jest potwierdzany jasno, a współpraca prowadzona w spokojny i realistyczny sposób.
-          </p>
-        </div>
-
-        <div class="uc-why-card">
-          <div class="uc-why-title">Odzyskany czas</div>
-          <p class="uc-why-copy">
-            Ty decydujesz, co jest potrzebne. My organizujemy, koordynujemy i prowadzimy sprawy dalej.
-          </p>
-        </div>
-
-        <div class="uc-why-card">
-          <div class="uc-why-title">Ograniczona liczba współprac</div>
-          <p class="uc-why-copy">
-            Pracujemy z ograniczoną liczbą klientów, aby utrzymać standard, dostępność i jakość realizacji.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section" id="kontakt">
-    <div class="uc-shell">
-      <div class="uc-contact-box">
-        <h2 class="uc-contact-main">Przekaż sprawy do organizacji</h2>
-        <div class="uc-rule"></div>
-
-        <div class="uc-contact-copy">
-          Opisz krótko, co chcesz przekazać. Nie musisz wiedzieć, czy dana sprawa mieści się w zakresie — odpowiemy, jaka forma wsparcia będzie właściwa.
-        </div>
-      </div>
-
       <div class="uc-form-wrap">
         <div class="uc-form-head">
-          <div class="uc-form-title">Zgłoszenie</div>
+          <div class="uc-form-title">Zarezerwuj slot</div>
           <div class="uc-form-copy">
-            Wypełnij formularz, jeśli chcesz rozpocząć od Dnia Wsparcia, asysty na miejscu, abonamentu albo nie masz pewności, która forma będzie najlepsza.
+            Wybierz liczbę godzin, opisz krótko sprawy i podaj preferowany termin. Po potwierdzeniu zakresu otrzymasz informację o dalszych krokach i płatności.
           </div>
         </div>
 
         <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="uc-form">
           <input type="hidden" name="form-name" value="urban-concierge-pl">
+          <input type="hidden" id="priceHidden" name="wartosc_slotu" value="200 zł">
 
           <p class="uc-hidden">
             <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
@@ -1290,43 +1060,58 @@
 
             <div class="uc-field">
               <label for="location">Lokalizacja</label>
-              <input id="location" name="lokalizacja" type="text" placeholder="Kraków / okolice / zdalnie / inne">
+              <input id="location" name="lokalizacja" type="text" placeholder="Kraków / okolice / zdalnie">
             </div>
 
             <div class="uc-field">
               <label for="support">Forma wsparcia</label>
               <select id="support" name="forma_wsparcia" required>
                 <option value="">Wybierz</option>
-                <option value="Dzień Wsparcia zdalnie">Dzień Wsparcia zdalnie</option>
-                <option value="Dzień Wsparcia Kraków i okolice">Dzień Wsparcia — Kraków i okolice</option>
-                <option value="Asysta na miejscu">Asysta na miejscu</option>
+                <option value="Concierge na godziny">Concierge na godziny</option>
+                <option value="Dzień Wsparcia">Dzień Wsparcia</option>
+                <option value="Asysta osobista">Asysta osobista</option>
                 <option value="Abonament">Abonament</option>
-                <option value="Relokacja do Krakowa">Relokacja do Krakowa</option>
+                <option value="Relokacja">Relokacja</option>
                 <option value="Nie wiem">Nie wiem — proszę dobrać właściwą formę</option>
               </select>
             </div>
 
             <div class="uc-field">
-              <label for="date">Termin</label>
-              <select id="date" name="termin" required>
-                <option value="">Wybierz</option>
-                <option value="Jak najszybciej">Jak najszybciej</option>
-                <option value="W tym tygodniu">W tym tygodniu</option>
-                <option value="W konkretnym dniu">W konkretnym dniu</option>
-                <option value="Elastycznie">Elastycznie</option>
+              <label for="hours">Liczba godzin</label>
+              <select id="hours" name="liczba_godzin" required>
+                <option value="2" data-price="200">2h — 200 zł</option>
+                <option value="3" data-price="300">3h — 300 zł</option>
+                <option value="4" data-price="400">4h — 400 zł</option>
+                <option value="5" data-price="500">5h — 500 zł</option>
               </select>
             </div>
 
+            <div class="uc-field">
+              <label for="date">Preferowany termin</label>
+              <input id="date" name="preferowany_termin" type="text" placeholder="Np. poniedziałek rano / ten tydzień / elastycznie" required>
+            </div>
+
+            <div class="uc-field">
+              <label for="place">Miejsce realizacji</label>
+              <input id="place" name="miejsce_realizacji" type="text" placeholder="Adres, dzielnica lub informacja: zdalnie">
+            </div>
+
             <div class="uc-field uc-field-full">
-              <label for="message">Sprawy do organizacji</label>
-              <textarea id="message" name="sprawy_do_organizacji" placeholder="Opisz krótko, co chcesz przekazać do organizacji. Możesz wypisać kilka spraw w punktach." required></textarea>
+              <label for="message">Lista spraw</label>
+              <textarea id="message" name="sprawy_do_organizacji" placeholder="Opisz krótko, co chcesz przekazać. Np. odbiór paczki, zwrot, telefon, rezerwacja, research, zakupy, dokumenty." required></textarea>
+            </div>
+
+            <div class="uc-total-box">
+              <div class="uc-total-label">Szacunkowa wartość slotu</div>
+              <div class="uc-total-value" id="priceDisplay">200 zł</div>
             </div>
           </div>
 
           <div class="uc-consent">
             <input id="consent" name="zgoda_na_kontakt" type="checkbox" required>
             <label for="consent">
-              Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>.
+              Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z
+              <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>.
             </label>
           </div>
 
@@ -1335,7 +1120,7 @@
           </div>
 
           <div class="uc-form-note">
-            Po wysłaniu zgłoszenia zakres zostanie przeanalizowany. Jeśli dana sprawa wymaga innej formy wsparcia, otrzymasz odpowiednią propozycję.
+            Rezerwacja zostaje potwierdzona po akceptacji zakresu i opłaceniu slotu. Koszty zewnętrzne, takie jak zakupy, bilety, transport lub usługi podwykonawców, są rozliczane osobno.
           </div>
         </form>
       </div>
@@ -1344,7 +1129,7 @@
 
   <section class="uc-footer">
     <div class="uc-footer-brand">Urban Concierge</div>
-    <div class="uc-footer-sub">Prywatne wsparcie concierge | Kraków i okolice | zdalnie w całej Polsce</div>
+    <div class="uc-footer-sub">Concierge na godziny | Kraków i okolice | zdalnie w całej Polsce</div>
 
     <div class="uc-footer-links">
       <a href="/1-dzien-wsparcia/">Dzień Wsparcia</a>
@@ -1356,5 +1141,21 @@
       <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
     </div>
   </section>
+
+  <script>
+    const hoursSelect = document.getElementById('hours');
+    const priceDisplay = document.getElementById('priceDisplay');
+    const priceHidden = document.getElementById('priceHidden');
+
+    function updatePrice() {
+      const selected = hoursSelect.options[hoursSelect.selectedIndex];
+      const price = selected.getAttribute('data-price');
+      priceDisplay.textContent = price + ' zł';
+      priceHidden.value = price + ' zł';
+    }
+
+    hoursSelect.addEventListener('change', updatePrice);
+    updatePrice();
+  </script>
 </body>
 </html>
