@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Relokacja do Krakowa | Wsparcie dla ekspatów i rodzin | Urban Concierge</title>
-  <meta name="description" content="Relokacja do Krakowa z Urban Concierge. Prywatne wsparcie dla ekspatów, klientów międzynarodowych, par i rodzin: przygotowanie mieszkania, lokalna koordynacja, pierwsze formalności i wsparcie po przyjeździe." />
+  <title>Relokacja do Krakowa | Urban Concierge</title>
+  <meta name="description" content="Relokacja do Krakowa z Urban Concierge. Pakiet Start, Pakiet Rozszerzony lub wycena indywidualna. Wsparcie dla ekspatów, rodzin i klientów międzynarodowych: mieszkanie, lokalna koordynacja, pierwsze formalności i wsparcie po przyjeździe." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/relokacja-krakow/">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,9 +46,7 @@
       text-rendering: optimizeLegibility;
     }
 
-    body {
-      font-family: "Libre Baskerville", serif;
-    }
+    body { font-family: "Libre Baskerville", serif; }
 
     .topbar {
       height: 14px;
@@ -62,9 +59,7 @@
       padding: 0 40px;
     }
 
-    header {
-      padding: 34px 0 0;
-    }
+    header { padding: 34px 0 0; }
 
     .header-inner {
       display: grid;
@@ -86,9 +81,7 @@
       text-decoration: none;
     }
 
-    .mini-nav a:hover {
-      color: var(--gold);
-    }
+    .mini-nav a:hover { color: var(--gold); }
 
     .brand {
       font-family: "Cormorant Garamond", serif;
@@ -126,9 +119,7 @@
       color: #fff;
     }
 
-    .lang a {
-      color: var(--text);
-    }
+    .lang a { color: var(--text); }
 
     .hero {
       min-height: calc(88vh - 14px);
@@ -152,21 +143,10 @@
       right: -230px;
     }
 
-    .hero:after {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(58,47,42,0.06);
-      border-radius: 50%;
-      bottom: -150px;
-      left: -120px;
-    }
-
     .hero-inner {
       position: relative;
       z-index: 1;
-      max-width: 1020px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
@@ -196,12 +176,35 @@
       color: var(--muted);
     }
 
-    .proof {
-      max-width: 840px;
-      margin: 0 auto 34px;
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--soft);
+    .offer-strip {
+      max-width: 900px;
+      margin: 34px auto 34px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.32);
+    }
+
+    .offer-item {
+      padding: 22px 18px;
+      border-right: 1px solid #DCCDBB;
+    }
+
+    .offer-item:last-child { border-right: none; }
+
+    .offer-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .offer-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      line-height: 1.1;
+      color: var(--text);
     }
 
     .btn {
@@ -273,9 +276,7 @@
       border-top: 1px solid var(--line);
     }
 
-    section.soft {
-      background: var(--soft-bg);
-    }
+    section.soft { background: var(--soft-bg); }
 
     .title {
       font-family: "Cormorant Garamond", serif;
@@ -324,6 +325,7 @@
       padding: 34px 32px;
       position: relative;
       box-shadow: 0 16px 40px rgba(58,47,42,0.04);
+      min-height: 100%;
     }
 
     .card:before {
@@ -356,17 +358,7 @@
       padding-left: 18px;
     }
 
-    .price-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto 28px;
-    }
-
-    .price-card {
-      text-align: center;
-    }
+    .price-card { text-align: center; }
 
     .price-label {
       font-size: 10px;
@@ -379,9 +371,16 @@
 
     .price-value {
       font-family: "Cormorant Garamond", serif;
-      font-size: 40px;
+      font-size: 42px;
       line-height: 1;
       margin-bottom: 12px;
+    }
+
+    .price-note {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--soft);
+      margin-top: 18px;
     }
 
     .steps {
@@ -418,14 +417,6 @@
       line-height: 1.9;
       color: var(--muted);
       margin: 0;
-    }
-
-    .list {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 16px;
-      line-height: 2;
     }
 
     .form-wrap {
@@ -471,9 +462,7 @@
       gap: 8px;
     }
 
-    .field-full {
-      grid-column: 1 / -1;
-    }
+    .field-full { grid-column: 1 / -1; }
 
     label {
       font-size: 11px;
@@ -498,9 +487,7 @@
     }
 
     input::placeholder,
-    textarea::placeholder {
-      color: rgba(245,241,235,0.46);
-    }
+    textarea::placeholder { color: rgba(245,241,235,0.46); }
 
     select option {
       color: #3A2F2A;
@@ -512,11 +499,40 @@
       resize: vertical;
     }
 
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      opacity: 0.75;
+      cursor: pointer;
+    }
+
     input:focus,
     select:focus,
     textarea:focus {
       border-color: rgba(194,164,109,0.86);
       background: rgba(245,241,235,0.10);
+    }
+
+    .total-box {
+      grid-column: 1 / -1;
+      border: 1px solid rgba(194,164,109,0.52);
+      padding: 22px;
+      text-align: center;
+      background: rgba(245,241,235,0.06);
+    }
+
+    .total-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,241,235,0.72);
+      margin-bottom: 8px;
+    }
+
+    .total-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      line-height: 1.1;
+      color: #F5F1EB;
     }
 
     .consent {
@@ -538,13 +554,9 @@
       text-underline-offset: 3px;
     }
 
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
 
-    .submit-wrap {
-      text-align: center;
-    }
+    .submit-wrap { text-align: center; }
 
     button {
       cursor: pointer;
@@ -564,7 +576,7 @@
     }
 
     .form-note {
-      max-width: 660px;
+      max-width: 680px;
       margin: 18px auto 0;
       text-align: center;
       font-size: 11px;
@@ -603,25 +615,25 @@
       opacity: 0.92;
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
+    .footer-links a:hover { text-decoration: underline; }
 
     @media (max-width: 1100px) {
       .mini-nav { display: none; }
-      .grid-3,
-      .price-row { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
       .steps { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 900px) {
       .grid-2 { grid-template-columns: 1fr; }
       h1 { font-size: 56px; }
+      .offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .offer-item:nth-child(2) { border-right: none; }
+      .offer-item:nth-child(1),
+      .offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
     }
 
     @media (max-width: 768px) {
       .shell { padding: 0 20px; }
-
       header { padding-top: 26px; }
 
       .header-inner {
@@ -656,6 +668,15 @@
         line-height: 1.9;
       }
 
+      .offer-strip { grid-template-columns: 1fr; }
+
+      .offer-item {
+        border-right: none;
+        border-bottom: 1px solid #DCCDBB;
+      }
+
+      .offer-item:last-child { border-bottom: none; }
+
       .btn {
         display: block;
         max-width: 340px;
@@ -666,14 +687,10 @@
 
       .title,
       .band h2,
-      .form-title {
-        font-size: 36px;
-      }
+      .form-title { font-size: 36px; }
 
       .steps,
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
+      .form-grid { grid-template-columns: 1fr; }
 
       .form-wrap { padding: 34px 22px; }
 
@@ -688,9 +705,9 @@
   <header class="shell">
     <div class="header-inner">
       <nav class="mini-nav" aria-label="Nawigacja">
+        <a href="#pakiety">Pakiety</a>
         <a href="#zakres">Zakres</a>
-        <a href="#cennik">Cennik</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#rezerwacja">Rezerwacja</a>
       </nav>
 
       <a href="/" class="brand">Urban Concierge</a>
@@ -714,14 +731,32 @@
           </h1>
 
           <div class="sub">
-            Prywatne wsparcie relokacyjne dla ekspatów, klientów międzynarodowych, par i rodzin, które chcą mieć przygotowane kluczowe sprawy jeszcze przed przyjazdem i spokojniejsze wejście w życie na miejscu.
+            Praktyczne wsparcie relokacyjne dla ekspatów, klientów międzynarodowych, par i rodzin: przygotowanie pierwszych spraw, lokalna koordynacja i spokojniejsze wejście w życie na miejscu.
           </div>
 
-          <div class="proof">
-            Urban Concierge pomaga uporządkować praktyczne elementy przeprowadzki: przygotowanie mieszkania, lokalną koordynację, pierwsze sprawy po przyjeździe, terminy, dostawy, dostęp i bieżące follow-upy.
+          <div class="offer-strip">
+            <div class="offer-item">
+              <div class="offer-label">Pakiet Start</div>
+              <div class="offer-value">900 zł</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">Rozszerzony</div>
+              <div class="offer-value">1800 zł</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">Kraków</div>
+              <div class="offer-value">lokalnie</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">Rezerwacja</div>
+              <div class="offer-value">online</div>
+            </div>
           </div>
 
-          <a href="#kontakt" class="btn btn-primary">Poproś o wsparcie relokacyjne</a>
+          <a href="#rezerwacja" class="btn btn-primary">Zarezerwuj wsparcie</a>
           <a href="#zakres" class="btn btn-secondary">Zobacz zakres</a>
         </div>
       </div>
@@ -732,213 +767,101 @@
         <h2>Zanim dotrzesz do Krakowa, kluczowe sprawy mogą już być w ruchu.</h2>
         <div class="rule-light"></div>
         <p>
-          Relokacja nie musi oznaczać chaosu, niedopiętych tematów i biegania po wszystkim od pierwszego dnia. Urban Concierge przejmuje wybrane praktyczne elementy procesu i prowadzi je dalej z lokalną koordynacją.
+          Relokacja nie musi oznaczać niedopiętych tematów i biegania po wszystkim od pierwszego dnia. Urban Concierge pomaga przejąć wybrane praktyczne elementy procesu.
         </p>
       </div>
     </section>
 
-    <section class="content soft">
+    <section class="content soft" id="pakiety">
       <div class="shell">
-        <h2 class="title">Dlaczego Urban Concierge</h2>
+        <h2 class="title">Wybierz pakiet</h2>
         <div class="rule"></div>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Lokalna realizacja na miejscu</h3>
+        <p class="intro">
+          Możesz zacząć od prostego pakietu startowego albo wybrać szersze wsparcie obejmujące więcej spraw przed przyjazdem i po nim.
+        </p>
+
+        <div class="grid-3">
+          <div class="card price-card">
+            <div class="price-label">Pakiet Start</div>
+            <div class="price-value">900 zł</div>
             <p>
-              To nie jest wyłącznie lista porad. To realne wsparcie w Krakowie tam, gdzie potrzebna jest koordynacja, obecność, dopięcie terminów i spokojne prowadzenie spraw dalej.
+              Dla osób, które potrzebują uporządkować kilka pierwszych spraw: wstępny plan, podstawowa koordynacja, lista kroków, pierwsze terminy i praktyczne ustalenia.
             </p>
+            <div class="price-note">Dobry pierwszy krok, gdy chcesz sprawdzić wsparcie i zacząć od najważniejszych tematów.</div>
           </div>
 
-          <div class="card">
-            <h3>Mniej administracyjnego chaosu</h3>
+          <div class="card price-card">
+            <div class="price-label">Pakiet Rozszerzony</div>
+            <div class="price-value">1800 zł</div>
             <p>
-              Zamiast samodzielnie pilnować mieszkania, internetu, dostaw, terminów i drobnych końcówek, masz jeden uporządkowany punkt kontaktu, który zbiera i prowadzi wybrane tematy.
+              Dla klientów, którzy potrzebują większej koordynacji: mieszkanie, dostawy, internet, pierwsze formalności, terminy, lokalne sprawy i follow-upy.
             </p>
+            <div class="price-note">Dobry wybór, gdy relokacja ma kilka etapów i wymaga spokojnego prowadzenia spraw.</div>
           </div>
 
-          <div class="card">
-            <h3>Wsparcie przed i po przyjeździe</h3>
+          <div class="card price-card">
+            <div class="price-label">Pełna relokacja</div>
+            <div class="price-value">wycena</div>
             <p>
-              Usługa może zacząć się jeszcze przed przeprowadzką i płynnie przejść w lokalne wsparcie po przyjeździe — zależnie od tego, czego naprawdę potrzebujesz.
+              Dla rodzin, firm, bardziej złożonych przeprowadzek, wsparcia wielodniowego lub relokacji wymagających szerszej koordynacji.
             </p>
-          </div>
-
-          <div class="card">
-            <h3>Spójna koordynacja</h3>
-            <p>
-              Relokacja łączy wiele małych elementów: mieszkanie, dostęp, terminy, usługi, pierwsze formalności i codzienne funkcjonowanie. Naszą rolą jest połączyć je w spokojniejszy proces.
-            </p>
+            <div class="price-note">Opisz sytuację w formularzu — przygotujemy dopasowaną propozycję.</div>
           </div>
         </div>
+
+        <p class="intro" style="font-size:12px; margin-top:28px; margin-bottom:0;">
+          Koszty zewnętrzne, np. opłaty urzędowe, tłumaczenia, transport, zakupy, usługi wykonawców, parking lub dostawy, klient pokrywa osobno.
+        </p>
       </div>
     </section>
 
     <section class="content" id="zakres">
       <div class="shell">
-        <h2 class="title">Na czym polega ta usługa</h2>
+        <h2 class="title">Co może obejmować relokacja</h2>
         <div class="rule"></div>
 
         <p class="intro">
-          To wsparcie dla osób, które nie chcą po przyjeździe zaczynać wszystkiego od zera. Zakres może obejmować przygotowanie przed przeprowadzką, lokalną koordynację po przyjeździe i pomoc w pierwszych tygodniach na miejscu.
-        </p>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Przed przyjazdem</h3>
-            <p>
-              Wybrane sprawy mogą być przygotowane wcześniej, tak aby pierwsze dni w Krakowie nie były poświęcone na gonienie internetu, dostaw, terminów i brakujących elementów codzienności.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Po przyjeździe</h3>
-            <p>
-              Gdy jesteś już na miejscu, przejmujemy wybrane lokalne tematy, które nadal wymagają obecności, potwierdzeń, koordynacji lub po prostu spokojnego doprowadzenia do końca.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content soft">
-      <div class="shell">
-        <h2 class="title">Co może obejmować</h2>
-        <div class="rule"></div>
-
-        <p class="intro">
-          Dokładny zakres zależy od sytuacji, terminu i tego, co chcesz delegować. Wsparcie relokacyjne może obejmować między innymi:
+          Zakres zależy od sytuacji, terminu i tego, co chcesz przekazać do koordynacji. Wsparcie może dotyczyć przygotowania przed przyjazdem, pierwszych dni w Krakowie i praktycznych spraw po przeprowadzce.
         </p>
 
         <div class="grid-3">
           <div class="card">
             <h3>Przed przyjazdem</h3>
             <ul>
-              <li>przygotowanie mieszkania przed przyjazdem</li>
-              <li>koordynację internetu i wybranych mediów</li>
-              <li>koordynację dostaw, dostępu i podstawowej gotowości mieszkania</li>
-              <li>wybrane ustalenia związane z move-in</li>
-              <li>plan lokalnych tematów na pierwsze dni po przyjeździe</li>
+              <li>wstępny plan spraw do załatwienia</li>
+              <li>koordynacja wybranych terminów</li>
+              <li>przygotowanie listy pierwszych kroków</li>
+              <li>kontakt z wybranymi usługodawcami</li>
+              <li>plan lokalnych tematów na pierwsze dni</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Po przyjeździe</h3>
+            <h3>Mieszkanie i lokalna logistyka</h3>
             <ul>
-              <li>lokalną koordynację na miejscu</li>
-              <li>umawianie wybranych terminów</li>
-              <li>praktyczne wsparcie po wprowadzeniu</li>
-              <li>follow-upy związane z mieszkaniem i codziennym funkcjonowaniem</li>
-              <li>porządkowanie pierwszego etapu po przeprowadzce</li>
+              <li>koordynacja dostaw i dostępu</li>
+              <li>internet, media i podstawowe usługi</li>
+              <li>wybrane odbiory lub przekazania</li>
+              <li>lokalne dopięcie praktycznych tematów</li>
+              <li>follow-upy związane z mieszkaniem</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Pierwsze sprawy</h3>
+            <h3>Pierwsze sprawy w Polsce</h3>
             <ul>
               <li>wsparcie przy PESEL, jeśli dotyczy</li>
               <li>wsparcie przy zameldowaniu, jeśli dotyczy</li>
-              <li>wsparcie przy założeniu konta bankowego, jeśli dotyczy</li>
+              <li>wsparcie przy koncie bankowym, jeśli dotyczy</li>
+              <li>koordynacja dokumentów i terminów</li>
               <li>praktyczna pomoc dla obcokrajowców w Krakowie</li>
-              <li>lokalne wsparcie w pierwszych tygodniach po przyjeździe</li>
             </ul>
           </div>
         </div>
 
         <p class="intro" style="font-size:12px; margin-top:24px; margin-bottom:0;">
           Urban Concierge wspiera organizację, koordynację i praktyczne prowadzenie spraw. Nie zastępujemy prawnika, doradcy podatkowego, urzędu, banku ani innego licencjonowanego specjalisty.
-        </p>
-      </div>
-    </section>
-
-    <section class="content">
-      <div class="shell">
-        <h2 class="title">Przykłady tego, co może zostać załatwione</h2>
-        <div class="rule"></div>
-
-        <p class="intro">
-          Poniżej przykładowe obszary, w których ta usługa sprawdza się najlepiej:
-        </p>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Przygotowanie mieszkania</h3>
-            <p>Przygotowanie mieszkania przed przyjazdem tak, aby od pierwszego dnia było bardziej gotowe do codziennego funkcjonowania.</p>
-          </div>
-
-          <div class="card">
-            <h3>Internet, media i podstawy</h3>
-            <p>Koordynacja wybranych praktycznych kwestii związanych z internetem, mediami i podstawową logistyką po przeprowadzce.</p>
-          </div>
-
-          <div class="card">
-            <h3>Wybrane terminy</h3>
-            <p>Umawianie wybranych terminów i praktycznych follow-upów związanych z pierwszym etapem po przeprowadzce.</p>
-          </div>
-
-          <div class="card">
-            <h3>Dostawy i dostęp</h3>
-            <p>Odbiór wybranych dostaw lub koordynacja praktycznego dostępu tam, gdzie lokalna obecność naprawdę robi różnicę.</p>
-          </div>
-
-          <div class="card">
-            <h3>Wprowadzenie i pierwsze dni</h3>
-            <p>Pomoc w koordynacji wybranych praktycznych tematów związanych z wprowadzeniem się do nowego miejsca.</p>
-          </div>
-
-          <div class="card">
-            <h3>Start po przeprowadzce</h3>
-            <p>Wsparcie na miejscu w początkowym etapie po przeprowadzce i uporządkowaniu pierwszych lokalnych spraw.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content soft">
-      <div class="shell">
-        <h2 class="title">Dla kogo jest ta usługa</h2>
-        <div class="rule"></div>
-
-        <div class="list">
-          dla ekspatów przeprowadzających się do Krakowa<br><br>
-          dla klientów międzynarodowych przenoszących się do Polski<br><br>
-          dla par i rodzin, które chcą praktycznej lokalnej koordynacji, a nie tylko porad<br><br>
-          dla osób, które cenią spokój, dyskrecję i rzetelne wsparcie na miejscu
-        </div>
-      </div>
-    </section>
-
-    <section class="content" id="cennik">
-      <div class="shell">
-        <h2 class="title">Poziomy wsparcia relokacyjnego</h2>
-        <div class="rule"></div>
-
-        <p class="intro">
-          Wsparcie może zostać zbudowane wokół jednego etapu albo obejmować szerszą pomoc przed przyjazdem i po nim.
-        </p>
-
-        <div class="price-row">
-          <div class="card price-card">
-            <div class="price-label">Przed przyjazdem</div>
-            <div class="price-value">od 1 800 zł</div>
-            <p>Dla klientów, którzy chcą uporządkować wybrane praktyczne sprawy jeszcze przed pojawieniem się w Krakowie.</p>
-          </div>
-
-          <div class="card price-card">
-            <div class="price-label">Przyjazd i pierwszy etap</div>
-            <div class="price-value">od 2 800 zł</div>
-            <p>Dla klientów, którzy potrzebują lokalnego wsparcia i praktycznej koordynacji w pierwszym etapie po przyjeździe.</p>
-          </div>
-
-          <div class="card price-card">
-            <div class="price-label">Szersze wsparcie</div>
-            <div class="price-value">od 4 500 zł</div>
-            <p>Dla bardziej złożonych relokacji obejmujących kilka etapów, szerszą koordynację i wyższy poziom wsparcia.</p>
-          </div>
-        </div>
-
-        <p class="intro" style="font-size:12px; margin-bottom:0;">
-          Ostateczna wycena zależy od terminu, zakresu, liczby spraw do koordynacji i poziomu lokalnego wsparcia potrzebnego w danej sytuacji.
         </p>
       </div>
     </section>
@@ -956,14 +879,14 @@
           <div class="card">
             <h3>Dlaczego to ma znaczenie</h3>
             <p>
-              Sprawy nieruchomości często łączą się z dostępem, internetem, dostawami, terminem move-in i wczesną logistyką po przeprowadzce. Koordynacja tych elementów razem daje spokojniejszy start.
+              Sprawy nieruchomości często łączą się z dostępem, internetem, dostawami, terminem move-in i wczesną logistyką po przeprowadzce.
             </p>
           </div>
 
           <div class="card">
             <h3>Jak to wpisuje się w usługę</h3>
             <p>
-              Zakres związany z nieruchomością zależy od sytuacji i może stanowić część szerszego wsparcia relokacyjnego zamiast funkcjonować jako odłączone, niezależne zadania.
+              Zakres związany z nieruchomością zależy od sytuacji i może stanowić część szerszego wsparcia relokacyjnego.
             </p>
           </div>
         </div>
@@ -986,83 +909,47 @@
         <div class="steps">
           <div class="step">
             <div class="step-no">Krok 01</div>
-            <div class="step-title">Pierwsza wiadomość</div>
-            <p>Opisujesz termin przeprowadzki, planowaną datę przyjazdu i rodzaj wsparcia, którego potrzebujesz.</p>
+            <div class="step-title">Wybierasz pakiet</div>
+            <p>Wybierasz Pakiet Start, Pakiet Rozszerzony albo pełną relokację do wyceny.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Krok 02</div>
-            <div class="step-title">Zakres</div>
-            <p>Ustalamy, co może zostać zorganizowane przed przyjazdem, po przyjeździe i w ramach lokalnej koordynacji.</p>
+            <div class="step-title">Opisujesz sytuację</div>
+            <p>Podajesz datę przyjazdu, typ klienta, mieszkanie i sprawy do koordynacji.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Krok 03</div>
-            <div class="step-title">Przygotowanie</div>
-            <p>Uzgodnione sprawy są organizowane, potwierdzane i przygotowywane z wyprzedzeniem tam, gdzie to możliwe.</p>
+            <div class="step-title">Opłacasz rezerwację</div>
+            <p>Po wysłaniu formularza przechodzisz do płatności online za wybrany pakiet.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Krok 04</div>
-            <div class="step-title">Pierwszy etap</div>
-            <p>Po przyjeździe otrzymujesz praktyczne wsparcie w pierwszych tygodniach na miejscu i przy porządkowaniu lokalnych spraw.</p>
+            <div class="step-title">Działamy</div>
+            <p>Potwierdzamy zakres i przejmujemy wybrane sprawy relokacyjne.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="content soft">
-      <div class="shell">
-        <h2 class="title">FAQ</h2>
-        <div class="rule"></div>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Czy wspieracie relokację do Krakowa z zagranicy?</h3>
-            <p>Tak. Wsparcie może zacząć się jeszcze przed przyjazdem do Polski i być kontynuowane w pierwszym etapie po przyjeździe.</p>
-          </div>
-
-          <div class="card">
-            <h3>Czy możecie pomóc jeszcze przed moim przyjazdem?</h3>
-            <p>Tak. Wybrane praktyczne sprawy mogą być koordynowane przed przyjazdem — zależnie od terminu i zakresu.</p>
-          </div>
-
-          <div class="card">
-            <h3>Czy pomagacie w przygotowaniu mieszkania?</h3>
-            <p>Tak. Wybrane elementy przygotowania mieszkania mogą być częścią wsparcia relokacyjnego, jeśli są potrzebne w danej sytuacji.</p>
-          </div>
-
-          <div class="card">
-            <h3>Czy wsparcie może obejmować internet, media i terminy?</h3>
-            <p>Tak. W zależności od zakresu możemy koordynować wybrane kwestie praktyczne, takie jak internet, media czy wybrane terminy.</p>
-          </div>
-
-          <div class="card">
-            <h3>Czy to usługa tylko dla ekspatów?</h3>
-            <p>Nie. Może być odpowiednia także dla klientów międzynarodowych, par, rodzin i osób przenoszących się do Krakowa z innych miejsc.</p>
-          </div>
-
-          <div class="card">
-            <h3>Czy wsparcie jest dostępne tylko w Krakowie?</h3>
-            <p>Głównym obszarem działania jest Kraków. Wybrane elementy wsparcia poza Krakowem mogą być możliwe zależnie od sytuacji.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content" id="kontakt">
+    <section class="content soft" id="rezerwacja">
       <div class="shell">
         <div class="form-wrap">
           <div class="form-head">
-            <div class="form-title">Poproś o wsparcie relokacyjne</div>
+            <div class="form-title">Zarezerwuj wsparcie relokacyjne</div>
             <div class="form-copy">
-              Opisz krótko planowaną datę przyjazdu, sytuację mieszkaniową i zakres spraw, które chcesz uporządkować przed relokacją albo po przyjeździe.
+              Wybierz pakiet, podaj planowany przyjazd i opisz sytuację. Po wysłaniu formularza przejdziesz do płatności online.
             </div>
           </div>
 
-          <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="urban-concierge-pl">
+          <form name="relokacja-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="relocationForm">
+            <input type="hidden" name="form-name" value="relokacja-pl">
             <input type="hidden" name="source_page" value="Relokacja PL">
+            <input type="hidden" id="priceHidden" name="wartosc_pakietu" value="900 zł">
+            <input type="hidden" id="packageHidden" name="wybrany_pakiet" value="Pakiet Start">
+            <input type="hidden" id="orderIdHidden" name="numer_zamowienia" value="">
 
             <p class="hidden">
               <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
@@ -1090,15 +977,11 @@
               </div>
 
               <div class="field">
-                <label for="support">Zakres wsparcia</label>
-                <select id="support" name="zakres_wsparcia" required>
-                  <option value="">Wybierz</option>
-                  <option value="Przed przyjazdem">Przed przyjazdem</option>
-                  <option value="Po przyjeździe">Po przyjeździe</option>
-                  <option value="Przed i po przyjeździe">Przed i po przyjeździe</option>
-                  <option value="Wsparcie przy mieszkaniu">Wsparcie przy mieszkaniu</option>
-                  <option value="Pierwsze formalności">Pierwsze formalności</option>
-                  <option value="Nie wiem">Nie wiem — proszę dobrać właściwy zakres</option>
+                <label for="package">Pakiet</label>
+                <select id="package" name="pakiet" required>
+                  <option value="start" data-price="900" data-label="Pakiet Start">Pakiet Start — 900 zł</option>
+                  <option value="extended" data-price="1800" data-label="Pakiet Rozszerzony">Pakiet Rozszerzony — 1800 zł</option>
+                  <option value="custom" data-price="0" data-label="Wycena indywidualna">Pełna relokacja — wycena indywidualna</option>
                 </select>
               </div>
 
@@ -1111,7 +994,21 @@
                   <option value="Para">Para</option>
                   <option value="Klient międzynarodowy">Klient międzynarodowy</option>
                   <option value="Przeprowadzka z innego miasta">Przeprowadzka z innego miasta</option>
+                  <option value="Firma">Firma</option>
                   <option value="Inne">Inne</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label for="support">Zakres wsparcia</label>
+                <select id="support" name="zakres_wsparcia" required>
+                  <option value="">Wybierz</option>
+                  <option value="Przed przyjazdem">Przed przyjazdem</option>
+                  <option value="Po przyjeździe">Po przyjeździe</option>
+                  <option value="Przed i po przyjeździe">Przed i po przyjeździe</option>
+                  <option value="Wsparcie przy mieszkaniu">Wsparcie przy mieszkaniu</option>
+                  <option value="Pierwsze formalności">Pierwsze formalności</option>
+                  <option value="Nie wiem">Nie wiem — proszę dobrać właściwy zakres</option>
                 </select>
               </div>
 
@@ -1119,21 +1016,29 @@
                 <label for="message">Opis relokacji</label>
                 <textarea id="message" name="opis_relokacji" placeholder="Opisz krótko sytuację: skąd następuje przeprowadzka, kiedy, czy mieszkanie jest już wybrane, jakie sprawy chcesz przekazać do koordynacji." required></textarea>
               </div>
+
+              <div class="total-box">
+                <div class="total-label">Do zapłaty</div>
+                <div class="total-value" id="priceDisplay">900 zł</div>
+              </div>
             </div>
 
             <div class="consent">
               <input id="consent" name="zgoda_na_kontakt" type="checkbox" required>
               <label for="consent">
-                Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>.
+                Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z
+                <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>
+                oraz
+                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">regulaminem</a>.
               </label>
             </div>
 
             <div class="submit-wrap">
-              <button type="submit">Wyślij zgłoszenie</button>
+              <button type="submit" id="submitButton">Przejdź do płatności</button>
             </div>
 
             <div class="form-note">
-              Po wysłaniu zgłoszenia zakres zostanie przeanalizowany. Jeśli relokacja wymaga innego modelu wsparcia, zaproponujemy właściwy zakres.
+              Formularz zapisuje zgłoszenie, a następnie przekierowuje do płatności HotPay. Rezerwacja jest aktywna po opłaceniu pakietu i potwierdzeniu zakresu. Dla pełnej relokacji skontaktujemy się z propozycją wyceny.
             </div>
           </form>
         </div>
@@ -1155,5 +1060,85 @@
       <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
     </div>
   </footer>
+
+  <script>
+    const form = document.getElementById("relocationForm");
+    const packageSelect = document.getElementById("package");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
+
+    const HOTPAY_PAYMENT_URL = "https://secure.hotpay.pl/TU_WKLEJ_LINK_HOTPAY_RELOKACJA";
+
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+
+      packageHidden.value = label;
+
+      if (price > 0) {
+        priceDisplay.textContent = price + " zł";
+        priceHidden.value = price + " zł";
+        submitButton.textContent = "Przejdź do płatności";
+      } else {
+        priceDisplay.textContent = "Wycena";
+        priceHidden.value = "Wycena indywidualna";
+        submitButton.textContent = "Wyślij zapytanie";
+      }
+    }
+
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
+
+    packageSelect.addEventListener("change", updatePackage);
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-REL-" + Date.now();
+
+      orderIdHidden.value = orderId;
+
+      const formData = new FormData(form);
+      formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        if (price === 0) {
+          alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
+        const hotpayUrl = new URL(HOTPAY_PAYMENT_URL);
+
+        hotpayUrl.searchParams.set("amount", price);
+        hotpayUrl.searchParams.set("currency", "PLN");
+        hotpayUrl.searchParams.set("description", "Urban Concierge - Relokacja - " + label);
+        hotpayUrl.searchParams.set("order_id", orderId);
+        hotpayUrl.searchParams.set("email", document.getElementById("email").value);
+        hotpayUrl.searchParams.set("phone", document.getElementById("phone").value);
+
+        window.location.href = hotpayUrl.toString();
+      })
+      .catch(() => {
+        alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+      });
+    });
+
+    updatePackage();
+  </script>
 </body>
 </html>
