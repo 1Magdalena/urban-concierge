@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Urban Concierge | Concierge na godziny w Krakowie</title>
-  <meta name="description" content="Urban Concierge — concierge na godziny w Krakowie. Bez abonamentu. Sprawy na mieście, telefony, rezerwacje, odbiory, zakupy i codzienna organizacja. Pierwszy miesiąc współpracy: 100 zł/h." />
+  <meta name="description" content="Urban Concierge — concierge na godziny w Krakowie. Bez abonamentu. Sprawy na mieście, telefony, rezerwacje, odbiory, zakupy i codzienna organizacja. Pierwsze 10 godzin współpracy: 100 zł/h." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/">
+
   <meta name="google-site-verification" content="AAxFEQEICNm5e7gTLla3e9yeV5aEDyHjChOliVF_S7M" />
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
@@ -63,9 +64,7 @@
       padding: 0 40px;
     }
 
-    .uc-brandbar {
-      padding: 34px 0 0 0;
-    }
+    .uc-brandbar { padding: 34px 0 0 0; }
 
     .uc-headerbar {
       display: grid;
@@ -313,13 +312,9 @@
       position: relative;
     }
 
-    .uc-section + .uc-section {
-      border-top: 1px solid var(--line);
-    }
+    .uc-section + .uc-section { border-top: 1px solid var(--line); }
 
-    .uc-section-soft {
-      background: var(--bg-soft);
-    }
+    .uc-section-soft { background: var(--bg-soft); }
 
     .uc-title {
       text-align: center;
@@ -359,13 +354,9 @@
       margin: 0 auto;
     }
 
-    .uc-grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    .uc-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-    .uc-grid-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+    .uc-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .uc-card,
     .uc-price-card {
@@ -424,9 +415,7 @@
       border-bottom: 1px solid rgba(221,207,191,0.72);
     }
 
-    .uc-example-list li:last-child {
-      border-bottom: none;
-    }
+    .uc-example-list li:last-child { border-bottom: none; }
 
     .uc-note {
       max-width: 760px;
@@ -441,9 +430,9 @@
 
     .uc-price-row {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
-      max-width: 980px;
+      max-width: 900px;
       margin: 0 auto 28px auto;
     }
 
@@ -483,9 +472,7 @@
       margin: 0;
     }
 
-    .uc-steps {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+    .uc-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .uc-step {
       text-align: left;
@@ -568,9 +555,7 @@
       gap: 8px;
     }
 
-    .uc-field-full {
-      grid-column: 1 / -1;
-    }
+    .uc-field-full { grid-column: 1 / -1; }
 
     .uc-field label,
     .uc-consent label {
@@ -605,6 +590,12 @@
       resize: vertical;
     }
 
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      opacity: 0.75;
+      cursor: pointer;
+    }
+
     .uc-hour-counter {
       display: grid;
       grid-template-columns: 58px 1fr 58px;
@@ -623,9 +614,7 @@
       cursor: pointer;
     }
 
-    .uc-hour-counter button:hover {
-      background: rgba(194,164,109,0.25);
-    }
+    .uc-hour-counter button:hover { background: rgba(194,164,109,0.25); }
 
     .uc-hour-counter input {
       border: none;
@@ -687,9 +676,7 @@
       text-underline-offset: 3px;
     }
 
-    .uc-form-submit {
-      text-align: center;
-    }
+    .uc-form-submit { text-align: center; }
 
     .uc-submit {
       cursor: pointer;
@@ -761,7 +748,6 @@
       .uc-mini-nav { display: none; }
       .uc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .uc-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .uc-price-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 980px) {
@@ -772,6 +758,7 @@
       .uc-offer-item:nth-child(2) { border-right: none; }
       .uc-offer-item:nth-child(1),
       .uc-offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
+      .uc-price-row { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -785,7 +772,7 @@
       .uc-sub { font-size: 16px; line-height: 1.9; margin: 0 auto 16px auto; }
       .uc-section { padding: 74px 0; }
       .uc-title, .uc-band-title, .uc-form-title { font-size: 36px; }
-      .uc-steps, .uc-price-row, .uc-form-grid, .uc-grid-4 { grid-template-columns: 1fr; }
+      .uc-steps, .uc-form-grid, .uc-grid-4 { grid-template-columns: 1fr; }
       .uc-offer-strip { grid-template-columns: 1fr; }
       .uc-offer-item { border-right: none; border-bottom: 1px solid #DCCDBB; }
       .uc-offer-item:last-child { border-bottom: none; }
@@ -834,14 +821,17 @@
             <div class="uc-offer-label">Bez abonamentu</div>
             <div class="uc-offer-value">płacisz za slot</div>
           </div>
+
           <div class="uc-offer-item">
-            <div class="uc-offer-label">Pierwszy miesiąc</div>
+            <div class="uc-offer-label">Pierwsze 10 godzin</div>
             <div class="uc-offer-value">100 zł/h</div>
           </div>
+
           <div class="uc-offer-item">
             <div class="uc-offer-label">Minimum</div>
             <div class="uc-offer-value">2h / 200 zł</div>
           </div>
+
           <div class="uc-offer-item">
             <div class="uc-offer-label">Rezerwacja online</div>
             <div class="uc-offer-value">2–5 godzin</div>
@@ -870,6 +860,7 @@
     <div class="uc-shell">
       <h2 class="uc-title">Co możesz przekazać</h2>
       <div class="uc-rule"></div>
+
       <div class="uc-intro">
         Najlepiej działają konkretne sprawy: coś trzeba znaleźć, zamówić, odebrać, zwrócić, umówić, potwierdzić albo dopilnować.
       </div>
@@ -897,10 +888,6 @@
           </ul>
         </div>
       </div>
-
-      <div class="uc-note">
-        Asysty osobiste, relokacja oraz większe projekty są wyceniane indywidualnie.
-      </div>
     </div>
   </section>
 
@@ -908,30 +895,28 @@
     <div class="uc-shell">
       <h2 class="uc-title">Ile godzin potrzebujesz?</h2>
       <div class="uc-rule"></div>
+
       <div class="uc-intro">
-        W pierwszym miesiącu współpracy obowiązuje stawka 100 zł/h. W rezerwacji online możesz wybrać od 2 do 5 godzin.
+        Pierwsze 10 godzin współpracy dostępne jest w stawce 100 zł/h. W rezerwacji online możesz wybrać od 2 do 5 godzin.
       </div>
 
       <div class="uc-price-row">
         <div class="uc-price-card">
           <div class="uc-price-label">Minimum</div>
           <div class="uc-price-value">2h</div>
-          <p class="uc-price-copy">Dobry wybór na jedną konkretną sprawę lub kilka prostych tematów.</p>
+          <p class="uc-price-copy">200 zł. Dobry wybór na jedną konkretną sprawę lub kilka prostych tematów.</p>
         </div>
+
         <div class="uc-price-card">
           <div class="uc-price-label">Najczęściej</div>
           <div class="uc-price-value">3–4h</div>
-          <p class="uc-price-copy">Na kilka spraw miejskich, research, telefony albo organizację.</p>
+          <p class="uc-price-copy">300–400 zł. Na kilka spraw miejskich, research, telefony albo organizację.</p>
         </div>
+
         <div class="uc-price-card">
           <div class="uc-price-label">Większy slot</div>
           <div class="uc-price-value">5h</div>
-          <p class="uc-price-copy">Na bardziej intensywny blok wsparcia w danym dniu.</p>
-        </div>
-        <div class="uc-price-card">
-          <div class="uc-price-label">Więcej?</div>
-          <div class="uc-price-value">indywidualnie</div>
-          <p class="uc-price-copy">Większy zakres, asysty i relokacja są wyceniane osobno.</p>
+          <p class="uc-price-copy">500 zł. Na bardziej intensywny blok wsparcia w wybranym dniu.</p>
         </div>
       </div>
 
@@ -978,8 +963,9 @@
     <div class="uc-shell">
       <h2 class="uc-title">Inne opcje współpracy</h2>
       <div class="uc-rule"></div>
+
       <div class="uc-intro">
-        Concierge na godziny to najprostszy pierwszy krok. Jeśli potrzebujesz większego wsparcia, możesz wybrać także jedną z pozostałych form.
+        Concierge na godziny to najprostszy pierwszy krok. Jeśli potrzebujesz innego rodzaju wsparcia, możesz przejść do wybranej usługi.
       </div>
 
       <div class="uc-grid-4">
@@ -1016,7 +1002,7 @@
         <div class="uc-form-head">
           <div class="uc-form-title">Zarezerwuj slot</div>
           <div class="uc-form-copy">
-            Wybierz liczbę godzin, opisz krótko sprawy i podaj preferowany termin. Po wysłaniu formularza przejdziesz do płatności.
+            Wybierz liczbę godzin, preferowany dzień realizacji i opisz krótko sprawy. Po wysłaniu formularza przejdziesz do płatności.
           </div>
         </div>
 
@@ -1058,12 +1044,18 @@
                 <input id="hoursCounter" type="number" value="2" min="2" max="5" readonly>
                 <button type="button" id="plusHour">+</button>
               </div>
-              <div class="uc-small-note">Pierwszy miesiąc współpracy: 100 zł/h. Minimum 2h, maksimum 5h online.</div>
+              <div class="uc-small-note">Pierwsze 10 godzin współpracy: 100 zł/h. Minimum 2h, maksimum 5h online.</div>
             </div>
 
             <div class="uc-field">
-              <label for="date">Preferowany termin</label>
-              <input id="date" name="preferowany_termin" type="text" placeholder="Np. poniedziałek rano / ten tydzień / elastycznie" required>
+              <label for="date">Preferowany dzień realizacji</label>
+              <input id="date" name="preferowany_dzien_realizacji" type="date" required>
+              <div class="uc-small-note">Rezerwacja dotyczy wybranego dnia, nie konkretnej godziny.</div>
+            </div>
+
+            <div class="uc-field uc-field-full">
+              <label for="preferredTime">Uwagi / preferowana godzina</label>
+              <input id="preferredTime" name="uwagi_preferowana_godzina" type="text" placeholder="Jeśli zależy Ci na konkretnej godzinie lub przedziale czasowym, wpisz to tutaj.">
             </div>
 
             <div class="uc-field uc-field-full">
@@ -1086,7 +1078,9 @@
             <input id="consent" name="zgoda_na_kontakt" type="checkbox" required>
             <label for="consent">
               Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z
-              <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>.
+              <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>
+              oraz
+              <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">regulaminem</a>.
             </label>
           </div>
 
@@ -1131,6 +1125,8 @@
     const MIN_HOURS = 2;
     const MAX_HOURS = 5;
 
+    const HOTPAY_PAYMENT_URL = "https://secure.hotpay.pl/TU_WKLEJ_LINK_HOTPAY";
+
     function updatePrice() {
       const hours = parseInt(hoursCounter.value, 10);
       const amount = hours * PRICE_PER_HOUR;
@@ -1142,6 +1138,7 @@
 
     minusHour.addEventListener('click', function () {
       let hours = parseInt(hoursCounter.value, 10);
+
       if (hours > MIN_HOURS) {
         hoursCounter.value = hours - 1;
         updatePrice();
@@ -1150,6 +1147,7 @@
 
     plusHour.addEventListener('click', function () {
       let hours = parseInt(hoursCounter.value, 10);
+
       if (hours < MAX_HOURS) {
         hoursCounter.value = hours + 1;
         updatePrice();
@@ -1178,7 +1176,7 @@
         body: encode(formData)
       })
       .then(() => {
-        const hotpayUrl = new URL("HOTPAY_PAYMENT_URL_HERE");
+        const hotpayUrl = new URL(HOTPAY_PAYMENT_URL);
 
         hotpayUrl.searchParams.set("amount", amount);
         hotpayUrl.searchParams.set("currency", "PLN");
