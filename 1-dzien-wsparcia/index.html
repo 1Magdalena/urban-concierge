@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dzień Wsparcia Concierge Kraków | Prywatny Concierge | Urban Concierge</title>
-  <meta name="description" content="Dzień Wsparcia Urban Concierge to prywatny concierge w Krakowie i okolicach. Pomoc w załatwianiu spraw, organizacji terminów, rezerwacji, odbiorów, dostaw i codziennych zadań. Zdalnie w całej Polsce." />
+  <title>Dzień Wsparcia Concierge Kraków | Urban Concierge</title>
+  <meta name="description" content="Dzień Wsparcia Urban Concierge w Krakowie i okolicach. Pakiet Mały lub Pakiet Duży: organizacja spraw, telefony, rezerwacje, odbiory, koordynacja i codzienna logistyka. Płatność online." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/1-dzien-wsparcia/">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,9 +46,7 @@
       text-rendering: optimizeLegibility;
     }
 
-    body {
-      font-family: "Libre Baskerville", serif;
-    }
+    body { font-family: "Libre Baskerville", serif; }
 
     .topbar {
       height: 14px;
@@ -62,9 +59,7 @@
       padding: 0 40px;
     }
 
-    header {
-      padding: 34px 0 0;
-    }
+    header { padding: 34px 0 0; }
 
     .header-inner {
       display: grid;
@@ -86,9 +81,7 @@
       text-decoration: none;
     }
 
-    .mini-nav a:hover {
-      color: var(--gold);
-    }
+    .mini-nav a:hover { color: var(--gold); }
 
     .brand {
       font-family: "Cormorant Garamond", serif;
@@ -126,9 +119,7 @@
       color: #fff;
     }
 
-    .lang a {
-      color: var(--text);
-    }
+    .lang a { color: var(--text); }
 
     .hero {
       min-height: calc(88vh - 14px);
@@ -152,21 +143,10 @@
       right: -230px;
     }
 
-    .hero:after {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(58,47,42,0.06);
-      border-radius: 50%;
-      bottom: -150px;
-      left: -120px;
-    }
-
     .hero-inner {
       position: relative;
       z-index: 1;
-      max-width: 1020px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
@@ -196,12 +176,35 @@
       color: var(--muted);
     }
 
-    .proof {
-      max-width: 820px;
-      margin: 0 auto 34px;
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--soft);
+    .offer-strip {
+      max-width: 900px;
+      margin: 34px auto 34px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.32);
+    }
+
+    .offer-item {
+      padding: 22px 18px;
+      border-right: 1px solid #DCCDBB;
+    }
+
+    .offer-item:last-child { border-right: none; }
+
+    .offer-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .offer-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      line-height: 1.1;
+      color: var(--text);
     }
 
     .btn {
@@ -273,9 +276,7 @@
       border-top: 1px solid var(--line);
     }
 
-    section.soft {
-      background: var(--soft-bg);
-    }
+    section.soft { background: var(--soft-bg); }
 
     .title {
       font-family: "Cormorant Garamond", serif;
@@ -310,12 +311,21 @@
       margin: 0 auto;
     }
 
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
     .card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
       padding: 34px 32px;
       position: relative;
       box-shadow: 0 16px 40px rgba(58,47,42,0.04);
+      min-height: 100%;
     }
 
     .card:before {
@@ -348,17 +358,7 @@
       padding-left: 18px;
     }
 
-    .price-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      max-width: 860px;
-      margin: 0 auto 28px;
-    }
-
-    .price-card {
-      text-align: center;
-    }
+    .price-card { text-align: center; }
 
     .price-label {
       font-size: 10px;
@@ -371,9 +371,16 @@
 
     .price-value {
       font-family: "Cormorant Garamond", serif;
-      font-size: 40px;
+      font-size: 42px;
       line-height: 1;
       margin-bottom: 12px;
+    }
+
+    .price-note {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--soft);
+      margin-top: 18px;
     }
 
     .steps {
@@ -410,14 +417,6 @@
       line-height: 1.9;
       color: var(--muted);
       margin: 0;
-    }
-
-    .list {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 16px;
-      line-height: 2;
     }
 
     .form-wrap {
@@ -463,9 +462,7 @@
       gap: 8px;
     }
 
-    .field-full {
-      grid-column: 1 / -1;
-    }
+    .field-full { grid-column: 1 / -1; }
 
     label {
       font-size: 11px;
@@ -490,9 +487,7 @@
     }
 
     input::placeholder,
-    textarea::placeholder {
-      color: rgba(245,241,235,0.46);
-    }
+    textarea::placeholder { color: rgba(245,241,235,0.46); }
 
     select option {
       color: #3A2F2A;
@@ -504,11 +499,47 @@
       resize: vertical;
     }
 
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      opacity: 0.75;
+      cursor: pointer;
+    }
+
     input:focus,
     select:focus,
     textarea:focus {
       border-color: rgba(194,164,109,0.86);
       background: rgba(245,241,235,0.10);
+    }
+
+    .small-note {
+      font-size: 10px;
+      line-height: 1.7;
+      color: rgba(245,241,235,0.62);
+      margin-top: 8px;
+    }
+
+    .total-box {
+      grid-column: 1 / -1;
+      border: 1px solid rgba(194,164,109,0.52);
+      padding: 22px;
+      text-align: center;
+      background: rgba(245,241,235,0.06);
+    }
+
+    .total-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,241,235,0.72);
+      margin-bottom: 8px;
+    }
+
+    .total-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      line-height: 1.1;
+      color: #F5F1EB;
     }
 
     .consent {
@@ -530,13 +561,9 @@
       text-underline-offset: 3px;
     }
 
-    .hidden {
-      display: none;
-    }
+    .hidden { display: none; }
 
-    .submit-wrap {
-      text-align: center;
-    }
+    .submit-wrap { text-align: center; }
 
     button {
       cursor: pointer;
@@ -556,7 +583,7 @@
     }
 
     .form-note {
-      max-width: 640px;
+      max-width: 680px;
       margin: 18px auto 0;
       text-align: center;
       font-size: 11px;
@@ -595,34 +622,26 @@
       opacity: 0.92;
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
+    .footer-links a:hover { text-decoration: underline; }
 
     @media (max-width: 1100px) {
       .mini-nav { display: none; }
       .steps { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 900px) {
-      .grid-2,
-      .price-row {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 56px;
-      }
+      .grid-2 { grid-template-columns: 1fr; }
+      h1 { font-size: 56px; }
+      .offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .offer-item:nth-child(2) { border-right: none; }
+      .offer-item:nth-child(1),
+      .offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
     }
 
     @media (max-width: 768px) {
-      .shell {
-        padding: 0 20px;
-      }
-
-      header {
-        padding-top: 26px;
-      }
+      .shell { padding: 0 20px; }
+      header { padding-top: 26px; }
 
       .header-inner {
         grid-template-columns: 1fr;
@@ -634,9 +653,7 @@
         font-size: 28px;
       }
 
-      .lang {
-        justify-self: center;
-      }
+      .lang { justify-self: center; }
 
       .hero {
         min-height: auto;
@@ -658,34 +675,33 @@
         line-height: 1.9;
       }
 
+      .offer-strip { grid-template-columns: 1fr; }
+
+      .offer-item {
+        border-right: none;
+        border-bottom: 1px solid #DCCDBB;
+      }
+
+      .offer-item:last-child { border-bottom: none; }
+
       .btn {
         display: block;
         max-width: 340px;
         margin: 0 auto 12px;
       }
 
-      section.content {
-        padding: 76px 0;
-      }
+      section.content { padding: 76px 0; }
 
       .title,
       .band h2,
-      .form-title {
-        font-size: 36px;
-      }
+      .form-title { font-size: 36px; }
 
       .steps,
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
+      .form-grid { grid-template-columns: 1fr; }
 
-      .form-wrap {
-        padding: 34px 22px;
-      }
+      .form-wrap { padding: 34px 22px; }
 
-      button {
-        width: 100%;
-      }
+      button { width: 100%; }
     }
   </style>
 </head>
@@ -696,9 +712,9 @@
   <header class="shell">
     <div class="header-inner">
       <nav class="mini-nav" aria-label="Nawigacja">
+        <a href="#pakiety">Pakiety</a>
         <a href="#zakres">Zakres</a>
-        <a href="#cennik">Cennik</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#rezerwacja">Rezerwacja</a>
       </nav>
 
       <a href="/" class="brand">Urban Concierge</a>
@@ -717,19 +733,37 @@
           <div class="kicker">Dzień Wsparcia Concierge • Kraków i okolice • zdalnie w całej Polsce</div>
 
           <h1>
-            Prywatny concierge w Krakowie<br>
-            na jeden konkretny dzień.
+            Jeden dzień,<br>
+            kilka spraw mniej.
           </h1>
 
           <div class="sub">
-            Dzień Wsparcia Urban Concierge to prywatny concierge w Krakowie i okolicach oraz zdalne wsparcie organizacyjne w całej Polsce. Pomagamy w załatwianiu spraw, organizacji terminów, rezerwacji, odbiorów, dostaw, kontaktów z usługodawcami i codziennych zadań, które zabierają czas.
+            Dzień Wsparcia Urban Concierge to konkretny blok organizacyjny na sprawy, które trzeba doprowadzić do końca: telefony, rezerwacje, odbiory, zwroty, research, ustalenia i codzienna logistyka.
           </div>
 
-          <div class="proof">
-            To usługa dla osób, które szukają prywatnego concierge w Krakowie, asystenta osobistego lub pomocy w załatwianiu spraw — bez konieczności rozpoczynania stałego abonamentu.
+          <div class="offer-strip">
+            <div class="offer-item">
+              <div class="offer-label">Pakiet Mały</div>
+              <div class="offer-value">600 zł</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">Pakiet Duży</div>
+              <div class="offer-value">1000 zł</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">Rezerwacja</div>
+              <div class="offer-value">online</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">Bez abonamentu</div>
+              <div class="offer-value">jednorazowo</div>
+            </div>
           </div>
 
-          <a href="#kontakt" class="btn btn-primary">Przekaż sprawy do organizacji</a>
+          <a href="#rezerwacja" class="btn btn-primary">Zarezerwuj Dzień Wsparcia</a>
           <a href="#zakres" class="btn btn-secondary">Zobacz zakres</a>
         </div>
       </div>
@@ -737,15 +771,59 @@
 
     <section class="band">
       <div class="shell">
-        <h2>Usługi concierge bez stałego abonamentu.</h2>
+        <h2>Nie wszystko wymaga stałej współpracy.</h2>
         <div class="rule-light"></div>
         <p>
-          Jeden dzień, konkretna lista i spokojna realizacja. Dzień Wsparcia sprawdza się wtedy, gdy potrzebujesz prywatnego concierge lub asystenta osobistego do organizacji spraw, które odkładają się na później.
+          Czasem wystarczy jeden dobrze zorganizowany dzień, żeby zamknąć kilka zaległych tematów, odciążyć głowę i odzyskać porządek w sprawach, które ciągle wracają.
         </p>
       </div>
     </section>
 
-    <section class="content soft" id="zakres">
+    <section class="content soft" id="pakiety">
+      <div class="shell">
+        <h2 class="title">Wybierz pakiet</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          Dzień Wsparcia możesz zarezerwować jako mniejszy blok organizacyjny lub większy pakiet na bardziej rozbudowaną listę spraw.
+        </p>
+
+        <div class="grid-3">
+          <div class="card price-card">
+            <div class="price-label">Pakiet Mały</div>
+            <div class="price-value">600 zł</div>
+            <p>
+              Na kilka prostych spraw do załatwienia jednego dnia: telefony, rezerwacje, odbiory, zwroty, research lub podstawowa koordynacja.
+            </p>
+            <div class="price-note">Dobra opcja, gdy chcesz sprawdzić usługę lub zamknąć konkretną listę drobnych tematów.</div>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Pakiet Duży</div>
+            <div class="price-value">1000 zł</div>
+            <p>
+              Na większą listę spraw, intensywniejszą koordynację, kilka punktów na mieście lub połączenie działań zdalnych i lokalnych.
+            </p>
+            <div class="price-note">Dobra opcja, gdy spraw jest więcej i chcesz przekazać większy blok codziennej logistyki.</div>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Większy zakres</div>
+            <div class="price-value">wycena</div>
+            <p>
+              Jeśli potrzebujesz asysty osobistej, relokacji, większego projektu lub kilku dni wsparcia, opisz sprawę w formularzu.
+            </p>
+            <div class="price-note">W takim przypadku przygotujemy propozycję dopasowaną do zakresu.</div>
+          </div>
+        </div>
+
+        <p class="intro" style="font-size:12px; margin-top:28px; margin-bottom:0;">
+          Koszty zewnętrzne, np. zakupy, bilety, opłaty, usługi wykonawców lub transport, klient pokrywa osobno.
+        </p>
+      </div>
+    </section>
+
+    <section class="content" id="zakres">
       <div class="shell">
         <h2 class="title">Co obejmuje Dzień Wsparcia</h2>
         <div class="rule"></div>
@@ -784,35 +862,6 @@
       </div>
     </section>
 
-    <section class="content" id="cennik">
-      <div class="shell">
-        <h2 class="title">Cennik Dnia Wsparcia</h2>
-        <div class="rule"></div>
-
-        <p class="intro">
-          Cena zależy od liczby spraw, terminu, poziomu koordynacji oraz tego, czy potrzebna jest obecność na miejscu.
-        </p>
-
-        <div class="price-row">
-          <div class="card price-card">
-            <div class="price-label">Zdalnie</div>
-            <div class="price-value">od 490 zł</div>
-            <p>Dla spraw możliwych do przejęcia telefonicznie, mailowo lub organizacyjnie na odległość — w całej Polsce.</p>
-          </div>
-
-          <div class="card price-card">
-            <div class="price-label">Kraków i okolice</div>
-            <div class="price-value">od 690 zł</div>
-            <p>Dla spraw, które wymagają lokalnej koordynacji, obecności lub działania na miejscu.</p>
-          </div>
-        </div>
-
-        <p class="intro" style="font-size:12px; margin-bottom:0;">
-          Przed rozpoczęciem realizacji potwierdzamy zakres, cenę i możliwy sposób działania.
-        </p>
-      </div>
-    </section>
-
     <section class="content soft">
       <div class="shell">
         <h2 class="title">Jak to działa</h2>
@@ -821,58 +870,47 @@
         <div class="steps">
           <div class="step">
             <div class="step-no">Krok 01</div>
-            <div class="step-title">Opisujesz sprawy</div>
-            <p>Wysyłasz listę tematów, które chcesz przekazać do organizacji.</p>
+            <div class="step-title">Wybierasz pakiet</div>
+            <p>Wybierasz Pakiet Mały, Pakiet Duży albo opisujesz większy zakres.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Krok 02</div>
-            <div class="step-title">Potwierdzamy zakres</div>
-            <p>Sprawdzamy, co mieści się w Dniu Wsparcia i jaka forma realizacji będzie właściwa.</p>
+            <div class="step-title">Wskazujesz dzień</div>
+            <p>Podajesz preferowany dzień realizacji i listę spraw do organizacji.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Krok 03</div>
-            <div class="step-title">Przejmujemy realizację</div>
-            <p>Organizujemy, koordynujemy, kontaktujemy się i doprowadzamy sprawy dalej.</p>
+            <div class="step-title">Opłacasz rezerwację</div>
+            <p>Po wysłaniu formularza przechodzisz do płatności online.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Krok 04</div>
-            <div class="step-title">Dostajesz update</div>
-            <p>Otrzymujesz potwierdzenia, status lub gotowe rozwiązanie.</p>
+            <div class="step-title">Działamy</div>
+            <p>Potwierdzamy zakres i przejmujemy realizację spraw.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="content">
-      <div class="shell">
-        <h2 class="title">Dla kogo</h2>
-        <div class="rule"></div>
-
-        <div class="list">
-          dla osób, które potrzebują prywatnego concierge w Krakowie lub asystenta osobistego<br><br>
-          dla klientów, którzy chcą przekazać codzienne sprawy bez stałego abonamentu<br><br>
-          dla osób, które mają dużo odpowiedzialności i chcą odzyskać czas z organizacyjnych detali<br><br>
-          dla klientów, którzy oczekują dyskrecji, porządku i spokojnej komunikacji
-        </div>
-      </div>
-    </section>
-
-    <section class="content soft" id="kontakt">
+    <section class="content" id="rezerwacja">
       <div class="shell">
         <div class="form-wrap">
           <div class="form-head">
-            <div class="form-title">Przekaż sprawy do organizacji</div>
+            <div class="form-title">Zarezerwuj Dzień Wsparcia</div>
             <div class="form-copy">
-              Opisz krótko, czego potrzebujesz. Nie musisz wiedzieć, czy dana sprawa mieści się w zakresie — odpowiemy, jaka forma wsparcia będzie właściwa.
+              Wybierz pakiet, preferowany dzień realizacji i opisz sprawy. Po wysłaniu formularza przejdziesz do płatności online.
             </div>
           </div>
 
-          <form name="urban-concierge-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="urban-concierge-pl">
+          <form name="dzien-wsparcia-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="supportDayForm">
+            <input type="hidden" name="form-name" value="dzien-wsparcia-pl">
             <input type="hidden" name="source_page" value="Dzień Wsparcia PL">
+            <input type="hidden" id="priceHidden" name="wartosc_pakietu" value="600 zł">
+            <input type="hidden" id="packageHidden" name="wybrany_pakiet" value="Pakiet Mały">
+            <input type="hidden" id="orderIdHidden" name="numer_zamowienia" value="">
 
             <p class="hidden">
               <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
@@ -900,47 +938,52 @@
               </div>
 
               <div class="field">
-                <label for="support">Forma wsparcia</label>
-                <select id="support" name="forma_wsparcia" required>
-                  <option value="">Wybierz</option>
-                  <option value="Dzień Wsparcia zdalnie">Dzień Wsparcia zdalnie</option>
-                  <option value="Dzień Wsparcia Kraków i okolice">Dzień Wsparcia — Kraków i okolice</option>
-                  <option value="Asysta na miejscu">Asysta na miejscu</option>
-                  <option value="Abonament">Abonament</option>
-                  <option value="Nie wiem">Nie wiem — proszę dobrać właściwą formę</option>
+                <label for="package">Pakiet</label>
+                <select id="package" name="pakiet" required>
+                  <option value="small" data-price="600" data-label="Pakiet Mały">Pakiet Mały — 600 zł</option>
+                  <option value="large" data-price="1000" data-label="Pakiet Duży">Pakiet Duży — 1000 zł</option>
+                  <option value="custom" data-price="0" data-label="Wycena indywidualna">Większy zakres — wycena indywidualna</option>
                 </select>
               </div>
 
               <div class="field">
-                <label for="date">Termin</label>
-                <select id="date" name="termin" required>
-                  <option value="">Wybierz</option>
-                  <option value="Jak najszybciej">Jak najszybciej</option>
-                  <option value="W tym tygodniu">W tym tygodniu</option>
-                  <option value="W konkretnym dniu">W konkretnym dniu</option>
-                  <option value="Elastycznie">Elastycznie</option>
-                </select>
+                <label for="date">Preferowany dzień realizacji</label>
+                <input id="date" name="preferowany_dzien_realizacji" type="date" required>
+                <div class="small-note">Rezerwacja dotyczy wybranego dnia, nie konkretnej godziny.</div>
+              </div>
+
+              <div class="field field-full">
+                <label for="preferredTime">Uwagi / preferowana godzina</label>
+                <input id="preferredTime" name="uwagi_preferowana_godzina" type="text" placeholder="Jeśli zależy Ci na konkretnej godzinie lub przedziale czasowym, wpisz to tutaj.">
               </div>
 
               <div class="field field-full">
                 <label for="message">Sprawy do organizacji</label>
                 <textarea id="message" name="sprawy_do_organizacji" placeholder="Opisz krótko, co chcesz przekazać do organizacji. Możesz wypisać kilka spraw w punktach." required></textarea>
               </div>
+
+              <div class="total-box">
+                <div class="total-label">Do zapłaty</div>
+                <div class="total-value" id="priceDisplay">600 zł</div>
+              </div>
             </div>
 
             <div class="consent">
               <input id="consent" name="zgoda_na_kontakt" type="checkbox" required>
               <label for="consent">
-                Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>.
+                Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z
+                <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>
+                oraz
+                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">regulaminem</a>.
               </label>
             </div>
 
             <div class="submit-wrap">
-              <button type="submit">Wyślij zgłoszenie</button>
+              <button type="submit" id="submitButton">Przejdź do płatności</button>
             </div>
 
             <div class="form-note">
-              Po wysłaniu zgłoszenia zakres zostanie przeanalizowany. Jeśli dana sprawa wymaga innej formy wsparcia, otrzymasz odpowiednią propozycję.
+              Formularz zapisuje zgłoszenie, a następnie przekierowuje do płatności HotPay. Rezerwacja jest aktywna po opłaceniu pakietu. Dla większego zakresu skontaktujemy się z propozycją wyceny.
             </div>
           </form>
         </div>
@@ -962,5 +1005,85 @@
       <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
     </div>
   </footer>
+
+  <script>
+    const form = document.getElementById("supportDayForm");
+    const packageSelect = document.getElementById("package");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
+
+    const HOTPAY_PAYMENT_URL = "https://secure.hotpay.pl/TU_WKLEJ_LINK_HOTPAY_DZIEN_WSPARCIA";
+
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+
+      packageHidden.value = label;
+
+      if (price > 0) {
+        priceDisplay.textContent = price + " zł";
+        priceHidden.value = price + " zł";
+        submitButton.textContent = "Przejdź do płatności";
+      } else {
+        priceDisplay.textContent = "Wycena";
+        priceHidden.value = "Wycena indywidualna";
+        submitButton.textContent = "Wyślij zapytanie";
+      }
+    }
+
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
+
+    packageSelect.addEventListener("change", updatePackage);
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-DW-" + Date.now();
+
+      orderIdHidden.value = orderId;
+
+      const formData = new FormData(form);
+      formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        if (price === 0) {
+          alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
+        const hotpayUrl = new URL(HOTPAY_PAYMENT_URL);
+
+        hotpayUrl.searchParams.set("amount", price);
+        hotpayUrl.searchParams.set("currency", "PLN");
+        hotpayUrl.searchParams.set("description", "Urban Concierge - Dzien Wsparcia - " + label);
+        hotpayUrl.searchParams.set("order_id", orderId);
+        hotpayUrl.searchParams.set("email", document.getElementById("email").value);
+        hotpayUrl.searchParams.set("phone", document.getElementById("phone").value);
+
+        window.location.href = hotpayUrl.toString();
+      })
+      .catch(() => {
+        alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+      });
+    });
+
+    updatePackage();
+  </script>
 </body>
 </html>
