@@ -5,13 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Urban Concierge | Hourly Concierge in Krakow</title>
-  <meta name="description" content="Urban Concierge — hourly concierge in Krakow. No subscription. Errands, calls, bookings, pickups, returns, shopping and everyday organization. First month: 100 PLN/h." />
+  <meta name="description" content="Urban Concierge — hourly concierge service in Krakow. No subscription. Errands, calls, bookings, pickups, shopping, research and everyday coordination. First 10 hours: 100 PLN/h." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/">
+
   <meta name="google-site-verification" content="AAxFEQEICNm5e7gTLla3e9yeV5aEDyHjChOliVF_S7M" />
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18108841323');
+  </script>
 
   <style>
     html, body {
@@ -337,7 +346,7 @@
     }
 
     .uc-grid-2,
-    .uc-grid-3,
+    .uc-grid-4,
     .uc-steps {
       display: grid;
       gap: 24px;
@@ -346,7 +355,8 @@
     }
 
     .uc-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .uc-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .uc-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .uc-card,
     .uc-price-card {
@@ -374,21 +384,25 @@
 
     .uc-card-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-size: 32px;
       line-height: 1.06;
       color: var(--text);
       margin: 10px 0 12px 0;
       text-wrap: balance;
     }
 
-    .uc-card-copy {
+    .uc-card-copy,
+    .uc-step-copy,
+    .uc-price-copy {
       font-family: 'Libre Baskerville', serif;
-      font-size: 14px;
-      line-height: 1.9;
       color: var(--muted);
       margin: 0;
       text-wrap: balance;
     }
+
+    .uc-card-copy { font-size: 13px; line-height: 1.9; }
+    .uc-step-copy { font-size: 13px; line-height: 1.9; }
+    .uc-price-copy { font-size: 12px; line-height: 1.85; }
 
     .uc-example-list {
       margin: 0;
@@ -420,9 +434,9 @@
 
     .uc-price-row {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
-      max-width: 980px;
+      max-width: 900px;
       margin: 0 auto 28px auto;
     }
 
@@ -454,14 +468,6 @@
       margin-bottom: 12px;
     }
 
-    .uc-price-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
-      line-height: 1.85;
-      color: var(--muted);
-      margin: 0;
-    }
-
     .uc-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .uc-step {
@@ -487,13 +493,6 @@
       color: var(--text);
       margin: 0 0 10px 0;
       text-wrap: balance;
-    }
-
-    .uc-step-copy {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--muted);
     }
 
     .uc-form-wrap {
@@ -578,6 +577,12 @@
     .uc-field textarea {
       min-height: 150px;
       resize: vertical;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      opacity: 0.75;
+      cursor: pointer;
     }
 
     .uc-hour-counter {
@@ -731,8 +736,7 @@
     @media (max-width: 1100px) {
       .uc-mini-nav { display: none; }
       .uc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .uc-grid-3 { grid-template-columns: 1fr; }
-      .uc-price-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .uc-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 980px) {
@@ -743,6 +747,7 @@
       .uc-offer-item:nth-child(2) { border-right: none; }
       .uc-offer-item:nth-child(1),
       .uc-offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
+      .uc-price-row { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -756,7 +761,7 @@
       .uc-sub { font-size: 16px; line-height: 1.9; margin: 0 auto 16px auto; }
       .uc-section { padding: 74px 0; }
       .uc-title, .uc-band-title, .uc-form-title { font-size: 36px; }
-      .uc-steps, .uc-price-row, .uc-form-grid { grid-template-columns: 1fr; }
+      .uc-steps, .uc-form-grid, .uc-grid-4 { grid-template-columns: 1fr; }
       .uc-offer-strip { grid-template-columns: 1fr; }
       .uc-offer-item { border-right: none; border-bottom: 1px solid #DCCDBB; }
       .uc-offer-item:last-child { border-bottom: none; }
@@ -792,27 +797,30 @@
   <section class="uc-hero">
     <div class="uc-shell">
       <div class="uc-hero-inner">
-        <div class="uc-kicker">Krakow and nearby areas • no subscription</div>
+        <div class="uc-kicker">Krakow and nearby areas • concierge without subscription</div>
 
         <h1 class="uc-h1">Hourly concierge<br>in Krakow</h1>
 
         <div class="uc-sub">
-          Calls, bookings, pickups, returns, shopping, research and everyday organization — whenever you need practical support.
+          Calls, bookings, pickups, returns, shopping, research and everyday coordination — when you need practical support without a monthly commitment.
         </div>
 
         <div class="uc-offer-strip">
           <div class="uc-offer-item">
             <div class="uc-offer-label">No subscription</div>
-            <div class="uc-offer-value">pay per slot</div>
+            <div class="uc-offer-value">pay for a slot</div>
           </div>
+
           <div class="uc-offer-item">
-            <div class="uc-offer-label">First month</div>
+            <div class="uc-offer-label">First 10 hours</div>
             <div class="uc-offer-value">100 PLN/h</div>
           </div>
+
           <div class="uc-offer-item">
             <div class="uc-offer-label">Minimum</div>
             <div class="uc-offer-value">2h / 200 PLN</div>
           </div>
+
           <div class="uc-offer-item">
             <div class="uc-offer-label">Online booking</div>
             <div class="uc-offer-value">2–5 hours</div>
@@ -829,48 +837,45 @@
 
   <section class="uc-band" id="hourly-concierge">
     <div class="uc-shell">
-      <div class="uc-band-title">No subscription. When you need it, for what you need.</div>
+      <div class="uc-band-title">No subscription. Use it when you need it, for what you need.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Urban Concierge is practical support for busy people who want to hand over everyday logistics to someone who can organize them calmly and discreetly.
+        Urban Concierge is practical support for people who have too many things on their mind and want to delegate part of their everyday logistics to someone who can calmly organise and complete them.
       </div>
     </div>
   </section>
 
   <section class="uc-section uc-section-soft" id="what-we-handle">
     <div class="uc-shell">
-      <h2 class="uc-title">What you can hand over</h2>
+      <h2 class="uc-title">What you can delegate</h2>
       <div class="uc-rule"></div>
+
       <div class="uc-intro">
-        It works best for concrete tasks: something needs to be found, booked, collected, returned, confirmed or followed up.
+        It works best for specific tasks: something needs to be found, ordered, picked up, returned, booked, confirmed or followed up.
       </div>
 
       <div class="uc-grid-2">
         <div class="uc-card">
-          <div class="uc-card-title">Errands in Krakow</div>
+          <div class="uc-card-title">Errands in the city</div>
           <ul class="uc-example-list">
-            <li>pickups and returns</li>
+            <li>pickups or returns</li>
             <li>shopping and small local errands</li>
-            <li>documents or parcel handover</li>
-            <li>coordination of pickup, delivery or appointments</li>
-            <li>handling several small tasks from one list</li>
+            <li>document or parcel handover</li>
+            <li>coordination of pickup, delivery or appointment</li>
+            <li>handling several points from one list</li>
           </ul>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Remote organization</div>
+          <div class="uc-card-title">Organisational tasks</div>
           <ul class="uc-example-list">
             <li>calls and appointment confirmations</li>
-            <li>bookings and reservations</li>
+            <li>bookings and scheduling visits</li>
             <li>research and offer comparison</li>
             <li>contact with service providers</li>
-            <li>follow-ups on matters that got stuck</li>
+            <li>follow-up on matters that got stuck</li>
           </ul>
         </div>
-      </div>
-
-      <div class="uc-note">
-        Personal assistance, relocation and larger projects are priced individually.
       </div>
     </div>
   </section>
@@ -879,35 +884,33 @@
     <div class="uc-shell">
       <h2 class="uc-title">How many hours do you need?</h2>
       <div class="uc-rule"></div>
+
       <div class="uc-intro">
-        During the first month of cooperation, the rate is 100 PLN/h. Online booking is available for 2 to 5 hours.
+        The first 10 hours of cooperation are available at 100 PLN/h. Online booking allows you to choose from 2 to 5 hours.
       </div>
 
       <div class="uc-price-row">
         <div class="uc-price-card">
           <div class="uc-price-label">Minimum</div>
           <div class="uc-price-value">2h</div>
-          <p class="uc-price-copy">A good choice for one specific matter or a few simple tasks.</p>
+          <p class="uc-price-copy">200 PLN. A good choice for one specific task or a few simple matters.</p>
         </div>
+
         <div class="uc-price-card">
           <div class="uc-price-label">Most common</div>
           <div class="uc-price-value">3–4h</div>
-          <p class="uc-price-copy">For several city errands, research, calls or organization.</p>
+          <p class="uc-price-copy">300–400 PLN. For several city errands, research, calls or coordination.</p>
         </div>
+
         <div class="uc-price-card">
           <div class="uc-price-label">Larger slot</div>
           <div class="uc-price-value">5h</div>
-          <p class="uc-price-copy">For a more intensive support block on a selected day.</p>
-        </div>
-        <div class="uc-price-card">
-          <div class="uc-price-label">Need more?</div>
-          <div class="uc-price-value">custom</div>
-          <p class="uc-price-copy">Larger scope, assistance and relocation are priced individually.</p>
+          <p class="uc-price-copy">500 PLN. For a more intensive support block on the selected day.</p>
         </div>
       </div>
 
       <div class="uc-note">
-        External costs such as shopping, tickets, fees, contractors or transport are covered separately by the client.
+        External costs, such as purchases, tickets, fees, third-party services or transport, are covered separately by the client.
       </div>
     </div>
   </section>
@@ -921,25 +924,25 @@
         <div class="uc-step">
           <div class="uc-step-no">Step 01</div>
           <div class="uc-step-title">Choose hours</div>
-          <div class="uc-step-copy">Select 2 to 5 hours of concierge support.</div>
+          <div class="uc-step-copy">Use the counter to select from 2 to 5 hours of support.</div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Step 02</div>
-          <div class="uc-step-title">Describe tasks</div>
-          <div class="uc-step-copy">Send a short list of matters you want us to organize.</div>
+          <div class="uc-step-title">Describe the tasks</div>
+          <div class="uc-step-copy">Send the list of matters you want to delegate for organisation.</div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Step 03</div>
           <div class="uc-step-title">Pay for the slot</div>
-          <div class="uc-step-copy">After submitting the form, you proceed to payment for the selected number of hours.</div>
+          <div class="uc-step-copy">After submitting the form, you will be redirected to payment for the selected number of hours.</div>
         </div>
 
         <div class="uc-step">
           <div class="uc-step-no">Step 04</div>
           <div class="uc-step-title">We handle it</div>
-          <div class="uc-step-copy">We confirm the scope and start organizing your tasks.</div>
+          <div class="uc-step-copy">We confirm the scope and start handling the selected matters.</div>
         </div>
       </div>
     </div>
@@ -947,29 +950,36 @@
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">Other concierge options</h2>
+      <h2 class="uc-title">Other ways to work with us</h2>
       <div class="uc-rule"></div>
+
       <div class="uc-intro">
-        Hourly concierge is the simplest first step. If you need broader support, you can also choose one of the additional service models.
+        Hourly concierge is the simplest first step. If you need a different type of support, you can choose one of the dedicated services.
       </div>
 
-      <div class="uc-grid-3">
+      <div class="uc-grid-4">
         <div class="uc-card">
           <div class="uc-card-title">One-Day Support</div>
-          <p class="uc-card-copy">One day dedicated to a larger list of tasks, remotely or locally in Krakow and nearby areas.</p>
-          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Learn more</a>
+          <p class="uc-card-copy">One day dedicated to a larger list of matters, remotely or locally in Krakow and nearby areas.</p>
+          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
         </div>
 
         <div class="uc-card">
           <div class="uc-card-title">Personal Assistance</div>
-          <p class="uc-card-copy">On-site support where presence, coordination or client representation is needed.</p>
-          <a href="/asysty/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Learn more</a>
+          <p class="uc-card-copy">On-site support where presence, coordination or representing the client is needed.</p>
+          <a href="/asysty/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Relocation / Retainer</div>
-          <p class="uc-card-copy">Larger projects, ongoing support or relocation to Krakow — priced individually.</p>
-          <a href="/abonament/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Learn more</a>
+          <div class="uc-card-title">Concierge Retainer</div>
+          <p class="uc-card-copy">Ongoing support for clients who want one point of contact for current matters and follow-ups.</p>
+          <a href="/abonament/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Relocation to Krakow</div>
+          <p class="uc-card-copy">Support with moving to Krakow — from pre-arrival preparation to local coordination.</p>
+          <a href="/relokacja-krakow/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
         </div>
       </div>
     </div>
@@ -981,7 +991,7 @@
         <div class="uc-form-head">
           <div class="uc-form-title">Book a slot</div>
           <div class="uc-form-copy">
-            Choose the number of hours, briefly describe your tasks and provide your preferred timing. After submitting the form, you will be redirected to payment.
+            Choose the number of hours, preferred service day and briefly describe the tasks. After submitting the form, you will be redirected to payment.
           </div>
         </div>
 
@@ -989,7 +999,7 @@
           <input type="hidden" name="form-name" value="urban-concierge-en">
           <input type="hidden" id="priceHidden" name="slot_value" value="200 PLN">
           <input type="hidden" id="hoursHidden" name="number_of_hours" value="2">
-          <input type="hidden" id="orderIdHidden" name="order_id" value="">
+          <input type="hidden" id="orderIdHidden" name="order_number" value="">
 
           <p class="uc-hidden">
             <label>Do not fill this field: <input name="bot-field"></label>
@@ -997,13 +1007,13 @@
 
           <div class="uc-form-grid">
             <div class="uc-field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required>
+              <label for="name">First name</label>
+              <input id="name" name="first_name" type="text" placeholder="Your name" required>
             </div>
 
             <div class="uc-field">
               <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" placeholder="name@email.com" required>
+              <input id="email" name="email" type="email" placeholder="email@example.com" required>
             </div>
 
             <div class="uc-field">
@@ -1023,26 +1033,32 @@
                 <input id="hoursCounter" type="number" value="2" min="2" max="5" readonly>
                 <button type="button" id="plusHour">+</button>
               </div>
-              <div class="uc-small-note">First month: 100 PLN/h. Minimum 2h, maximum 5h online.</div>
+              <div class="uc-small-note">First 10 hours: 100 PLN/h. Minimum 2h, maximum 5h online.</div>
             </div>
 
             <div class="uc-field">
-              <label for="date">Preferred timing</label>
-              <input id="date" name="preferred_timing" type="text" placeholder="e.g. Monday morning / this week / flexible" required>
+              <label for="date">Preferred service day</label>
+              <input id="date" name="preferred_service_day" type="date" required>
+              <div class="uc-small-note">The booking covers the selected day, not a specific hour.</div>
             </div>
 
             <div class="uc-field uc-field-full">
-              <label for="place">Service location</label>
-              <input id="place" name="service_location" type="text" placeholder="Address, district or remote">
+              <label for="preferredTime">Notes / preferred time</label>
+              <input id="preferredTime" name="notes_preferred_time" type="text" placeholder="If you need a specific hour or time window, write it here.">
+            </div>
+
+            <div class="uc-field uc-field-full">
+              <label for="place">Place of service</label>
+              <input id="place" name="place_of_service" type="text" placeholder="Address, district or: remote">
             </div>
 
             <div class="uc-field uc-field-full">
               <label for="message">Task list</label>
-              <textarea id="message" name="task_list" placeholder="Describe the tasks: pickup, return, call, booking, research, shopping, documents..." required></textarea>
+              <textarea id="message" name="tasks_to_handle" placeholder="Describe the tasks: pickup, return, call, booking, research, shopping, documents..." required></textarea>
             </div>
 
             <div class="uc-total-box">
-              <div class="uc-total-label">To pay</div>
+              <div class="uc-total-label">Total</div>
               <div class="uc-total-value" id="priceDisplay">200 PLN</div>
             </div>
           </div>
@@ -1051,7 +1067,9 @@
             <input id="consent" name="contact_consent" type="checkbox" required>
             <label for="consent">
               I agree to be contacted regarding this request. I have read the
-              <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">privacy policy</a>.
+              <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+              and
+              <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms of Service</a>.
             </label>
           </div>
 
@@ -1060,7 +1078,7 @@
           </div>
 
           <div class="uc-form-note">
-            The form saves your request and redirects you to HotPay payment. Your booking is active after the slot is paid. External costs are settled separately.
+            The form records your request and then redirects you to HotPay payment. The booking becomes active after the slot is paid. External costs are settled separately.
           </div>
         </form>
       </div>
@@ -1096,6 +1114,8 @@
     const MIN_HOURS = 2;
     const MAX_HOURS = 5;
 
+    const HOTPAY_PAYMENT_URL = "https://secure.hotpay.pl/TU_WKLEJ_LINK_HOTPAY";
+
     function updatePrice() {
       const hours = parseInt(hoursCounter.value, 10);
       const amount = hours * PRICE_PER_HOUR;
@@ -1107,6 +1127,7 @@
 
     minusHour.addEventListener('click', function () {
       let hours = parseInt(hoursCounter.value, 10);
+
       if (hours > MIN_HOURS) {
         hoursCounter.value = hours - 1;
         updatePrice();
@@ -1115,6 +1136,7 @@
 
     plusHour.addEventListener('click', function () {
       let hours = parseInt(hoursCounter.value, 10);
+
       if (hours < MAX_HOURS) {
         hoursCounter.value = hours + 1;
         updatePrice();
@@ -1130,7 +1152,7 @@
 
       const hours = parseInt(hoursCounter.value, 10);
       const amount = hours * PRICE_PER_HOUR;
-      const orderId = 'UC-EN-' + Date.now();
+      const orderId = 'UC-' + Date.now();
 
       orderIdHidden.value = orderId;
 
@@ -1143,11 +1165,11 @@
         body: encode(formData)
       })
       .then(() => {
-        const hotpayUrl = new URL("HOTPAY_PAYMENT_URL_HERE");
+        const hotpayUrl = new URL(HOTPAY_PAYMENT_URL);
 
         hotpayUrl.searchParams.set("amount", amount);
         hotpayUrl.searchParams.set("currency", "PLN");
-        hotpayUrl.searchParams.set("description", "Urban Concierge - " + hours + "h slot");
+        hotpayUrl.searchParams.set("description", "Urban Concierge - slot " + hours + "h");
         hotpayUrl.searchParams.set("order_id", orderId);
         hotpayUrl.searchParams.set("email", document.getElementById("email").value);
         hotpayUrl.searchParams.set("phone", document.getElementById("phone").value);
@@ -1155,7 +1177,7 @@
         window.location.href = hotpayUrl.toString();
       })
       .catch(() => {
-        alert("The form could not be sent. Please try again or contact info@urbanconcierge.pl.");
+        alert("The form could not be submitted. Please try again or write to info@urbanconcierge.pl.");
       });
     });
 
