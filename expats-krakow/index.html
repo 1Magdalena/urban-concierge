@@ -4,158 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Urban Concierge | Hourly Concierge in Krakow</title>
-  <meta name="description" content="Urban Concierge — hourly concierge service in Krakow. No subscription. Errands, calls, bookings, pickups, shopping, research and everyday coordination. First 10 hours: 100 PLN/h." />
+  <title>Relocation to Krakow | Urban Concierge</title>
+  <meta name="description" content="Relocation to Krakow with Urban Concierge. Start Package, Extended Package or custom quote. Support for expats, families and international clients: housing logistics, local coordination, first formalities and arrival support." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/">
-
-  <meta name="google-site-verification" content="AAxFEQEICNm5e7gTLla3e9yeV5aEDyHjChOliVF_S7M" />
-
+  <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/relocation/">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18108841323');
+    gtag("js", new Date());
+    gtag("config", "AW-18108841323");
   </script>
 
   <style>
-    html, body {
-      background: #F5F1EB;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    body {
-      color: #3A2F2A;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+    :root {
+      --bg: #F5F1EB;
+      --soft-bg: #F8F4EE;
+      --text: #3A2F2A;
+      --muted: #5F534B;
+      --soft: #7B6C61;
+      --gold: #B8955A;
+      --gold-soft: #C2A46D;
+      --line: #E7DDD2;
+      --line-strong: #DDCFBF;
+      --dark: #2B221F;
     }
 
     * { box-sizing: border-box; }
 
-    :root {
-      --bg: #F5F1EB;
-      --bg-soft: #F8F4EE;
-      --text: #3A2F2A;
-      --muted: #5F534B;
-      --soft: #7B6C61;
-      --line: #E7DDD2;
-      --line-strong: #DDCFBF;
-      --gold: #B8955A;
-      --gold-soft: #C2A46D;
-      --hover: #473934;
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    .uc-topbar {
-      width: 100%;
+    body { font-family: "Libre Baskerville", serif; }
+
+    .topbar {
       height: 14px;
       background: linear-gradient(90deg, #2B221F 0%, #3A2F2A 50%, #2B221F 100%);
     }
 
-    .uc-shell {
+    .shell {
       max-width: 1180px;
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    .uc-brandbar { padding: 34px 0 0 0; }
+    header { padding: 34px 0 0; }
 
-    .uc-headerbar {
+    .header-inner {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
       gap: 24px;
     }
 
-    .uc-mini-nav {
-      justify-self: start;
+    .mini-nav {
       display: flex;
-      align-items: center;
-      gap: 24px;
-      font-family: 'Libre Baskerville', serif;
+      gap: 22px;
       font-size: 10px;
       letter-spacing: 1.1px;
       text-transform: uppercase;
     }
 
-    .uc-mini-nav a {
+    .mini-nav a {
       color: var(--soft);
       text-decoration: none;
-      transition: color 0.22s ease;
     }
 
-    .uc-mini-nav a:hover { color: var(--gold); }
+    .mini-nav a:hover { color: var(--gold); }
 
-    .uc-brand {
-      justify-self: center;
-      font-family: 'Cormorant Garamond', serif;
+    .brand {
+      font-family: "Cormorant Garamond", serif;
       font-size: 31px;
       line-height: 1.1;
       font-weight: 600;
       color: var(--gold);
-      letter-spacing: 0.25px;
       text-decoration: none;
       white-space: nowrap;
     }
 
-    .uc-lang-switch {
+    .lang {
       justify-self: end;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 6px;
-      background: rgba(255,255,255,0.32);
       border: 1px solid #D8C8B6;
+      background: rgba(255,255,255,0.32);
     }
 
-    .uc-lang-current,
-    .uc-lang-switch a {
-      display: inline-block;
+    .lang span,
+    .lang a {
       min-width: 44px;
       text-align: center;
       padding: 8px 12px;
-      font-family: 'Libre Baskerville', serif;
       font-size: 10px;
-      line-height: 1.4;
       letter-spacing: 1.2px;
       text-transform: uppercase;
       text-decoration: none;
     }
 
-    .uc-lang-current {
+    .lang span {
       background: var(--text);
-      color: #FFFFFF;
-      border: 1px solid var(--text);
+      color: #fff;
     }
 
-    .uc-lang-switch a {
-      color: var(--text);
-      border: 1px solid transparent;
-      transition: all 0.22s ease;
-    }
+    .lang a { color: var(--text); }
 
-    .uc-lang-switch a:hover {
-      background: #EEE6DD;
-      border-color: var(--gold);
-    }
-
-    .uc-hero {
-      min-height: calc(92vh - 14px);
+    .hero {
+      min-height: calc(88vh - 14px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 54px 0 76px 0;
+      padding: 58px 0 82px;
       position: relative;
+      text-align: center;
       overflow: hidden;
     }
 
-    .uc-hero:before {
+    .hero:before {
       content: "";
       position: absolute;
       width: 720px;
@@ -164,66 +141,58 @@
       border-radius: 50%;
       top: -250px;
       right: -230px;
-      pointer-events: none;
     }
 
-    .uc-hero-inner {
+    .hero-inner {
+      position: relative;
+      z-index: 1;
       max-width: 1040px;
       margin: 0 auto;
-      text-align: center;
-      position: relative;
-      z-index: 2;
     }
 
-    .uc-kicker {
-      font-family: 'Libre Baskerville', serif;
+    .kicker {
       font-size: 10px;
       line-height: 1.8;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #9C8F84;
-      margin-bottom: 28px;
+      margin-bottom: 34px;
     }
 
-    .uc-h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 74px;
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 76px;
       line-height: 1.03;
       font-weight: 500;
-      color: var(--text);
-      margin: 0 0 26px 0;
       letter-spacing: -0.9px;
-      text-wrap: balance;
+      margin: 0 0 30px;
     }
 
-    .uc-sub {
-      max-width: 850px;
-      margin: 0 auto 24px auto;
-      font-family: 'Libre Baskerville', serif;
+    .sub {
+      max-width: 900px;
+      margin: 0 auto 24px;
       font-size: 18px;
       line-height: 2;
       color: var(--muted);
-      text-wrap: balance;
     }
 
-    .uc-offer-strip {
+    .offer-strip {
       max-width: 900px;
-      margin: 34px auto 34px auto;
+      margin: 34px auto 34px;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       border: 1px solid #DCCDBB;
       background: rgba(255,255,255,0.32);
     }
 
-    .uc-offer-item {
+    .offer-item {
       padding: 22px 18px;
       border-right: 1px solid #DCCDBB;
     }
 
-    .uc-offer-item:last-child { border-right: none; }
+    .offer-item:last-child { border-right: none; }
 
-    .uc-offer-label {
-      font-family: 'Libre Baskerville', serif;
+    .offer-label {
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1.8px;
@@ -231,148 +200,135 @@
       margin-bottom: 8px;
     }
 
-    .uc-offer-value {
-      font-family: 'Cormorant Garamond', serif;
+    .offer-value {
+      font-family: "Cormorant Garamond", serif;
       font-size: 28px;
       line-height: 1.1;
       color: var(--text);
     }
 
-    .uc-btn {
+    .btn {
       display: inline-block;
-      text-decoration: none;
       padding: 18px 38px;
-      font-family: 'Libre Baskerville', serif;
+      margin: 0 10px 12px;
       font-size: 12px;
       letter-spacing: 0.55px;
-      transition: all 0.24s ease;
-      margin: 0 10px 12px 10px;
+      text-decoration: none;
+      transition: 0.24s ease;
     }
 
-    .uc-btn-primary {
+    .btn-primary {
       background: var(--text);
-      color: #FFFFFF;
+      color: #fff;
       border: 1px solid var(--text);
     }
 
-    .uc-btn-primary:hover {
-      background: var(--hover);
-      border-color: var(--hover);
+    .btn-primary:hover {
+      background: #473934;
+      border-color: #473934;
       transform: translateY(-1px);
     }
 
-    .uc-btn-secondary {
-      background: transparent;
+    .btn-secondary {
       color: var(--text);
       border: 1px solid #CCB8A2;
+      background: transparent;
     }
 
-    .uc-btn-secondary:hover {
+    .btn-secondary:hover {
       background: #EEE6DD;
       border-color: var(--gold);
       transform: translateY(-1px);
     }
 
-    .uc-band {
+    .band {
       background: linear-gradient(180deg, #3A2F2A 0%, #2B221F 100%);
       color: #F5F1EB;
-      padding: 70px 36px;
+      padding: 74px 36px;
       text-align: center;
     }
 
-    .uc-band-title {
-      font-family: 'Cormorant Garamond', serif;
+    .band h2 {
+      font-family: "Cormorant Garamond", serif;
       font-size: 48px;
       line-height: 1.08;
       font-weight: 500;
-      margin: 0 0 12px 0;
-      color: #F5F1EB;
-      text-wrap: balance;
+      margin: 0 0 12px;
     }
 
-    .uc-band-rule {
+    .rule-light {
       width: 86px;
       height: 1px;
       background: rgba(245,241,235,0.40);
-      margin: 0 auto 18px auto;
+      margin: 0 auto 18px;
     }
 
-    .uc-band-copy {
-      max-width: 820px;
+    .band p {
+      max-width: 850px;
       margin: 0 auto;
-      font-family: 'Libre Baskerville', serif;
       font-size: 15px;
       line-height: 1.95;
       color: rgba(245,241,235,0.88);
-      text-wrap: balance;
     }
 
-    .uc-section {
-      padding: 92px 0;
-      position: relative;
+    section.content {
+      padding: 96px 0;
+      border-top: 1px solid var(--line);
     }
 
-    .uc-section + .uc-section { border-top: 1px solid var(--line); }
+    section.soft { background: var(--soft-bg); }
 
-    .uc-section-soft { background: var(--bg-soft); }
-
-    .uc-title {
-      text-align: center;
-      font-family: 'Cormorant Garamond', serif;
+    .title {
+      font-family: "Cormorant Garamond", serif;
       font-size: 52px;
       line-height: 1.04;
       font-weight: 500;
-      color: var(--text);
-      margin: 0 0 12px 0;
-      text-wrap: balance;
+      text-align: center;
+      margin: 0 0 12px;
     }
 
-    .uc-rule {
+    .rule {
       width: 84px;
       height: 1px;
       background: var(--gold);
-      margin: 0 auto 24px auto;
+      margin: 0 auto 24px;
     }
 
-    .uc-intro {
-      max-width: 840px;
-      margin: 0 auto 40px auto;
+    .intro {
+      max-width: 860px;
+      margin: 0 auto 40px;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
       font-size: 15px;
       line-height: 1.95;
       color: var(--muted);
-      text-wrap: balance;
     }
 
-    .uc-grid-2,
-    .uc-grid-4,
-    .uc-steps {
+    .grid-2 {
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       max-width: 1040px;
       margin: 0 auto;
     }
 
-    .uc-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
 
-    .uc-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-
-    .uc-card,
-    .uc-price-card {
+    .card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
       border: 1px solid #E3D8CB;
       padding: 34px 32px;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
       position: relative;
       box-shadow: 0 16px 40px rgba(58,47,42,0.04);
+      min-height: 100%;
     }
 
-    .uc-card:before,
-    .uc-price-card:before {
+    .card:before {
       content: "";
       position: absolute;
       top: 0;
@@ -382,76 +338,29 @@
       background: var(--gold);
     }
 
-    .uc-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
+    .card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
       line-height: 1.06;
-      color: var(--text);
-      margin: 10px 0 12px 0;
-      text-wrap: balance;
+      font-weight: 500;
+      margin: 10px 0 12px;
     }
 
-    .uc-card-copy,
-    .uc-step-copy,
-    .uc-price-copy {
-      font-family: 'Libre Baskerville', serif;
-      color: var(--muted);
-      margin: 0;
-      text-wrap: balance;
-    }
-
-    .uc-card-copy { font-size: 13px; line-height: 1.9; }
-    .uc-step-copy { font-size: 13px; line-height: 1.9; }
-    .uc-price-copy { font-size: 12px; line-height: 1.85; }
-
-    .uc-example-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-family: 'Libre Baskerville', serif;
+    .card p,
+    .card li {
       font-size: 14px;
       line-height: 1.9;
       color: var(--muted);
     }
 
-    .uc-example-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(221,207,191,0.72);
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
     }
 
-    .uc-example-list li:last-child { border-bottom: none; }
+    .price-card { text-align: center; }
 
-    .uc-note {
-      max-width: 760px;
-      margin: 24px auto 0 auto;
-      text-align: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 12px;
-      line-height: 1.9;
-      color: var(--soft);
-      text-wrap: balance;
-    }
-
-    .uc-price-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      max-width: 900px;
-      margin: 0 auto 28px auto;
-    }
-
-    .uc-price-card {
-      text-align: center;
-      padding: 30px 22px;
-    }
-
-    .uc-price-card:before {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .uc-price-label {
-      font-family: 'Libre Baskerville', serif;
+    .price-label {
       font-size: 10px;
       line-height: 1.6;
       letter-spacing: 2px;
@@ -460,24 +369,34 @@
       margin-bottom: 12px;
     }
 
-    .uc-price-value {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 38px;
+    .price-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
       line-height: 1;
-      color: var(--text);
       margin-bottom: 12px;
     }
 
-    .uc-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-
-    .uc-step {
-      text-align: left;
-      padding-top: 18px;
-      border-top: 1px solid var(--line-strong);
+    .price-note {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--soft);
+      margin-top: 18px;
     }
 
-    .uc-step-no {
-      font-family: 'Libre Baskerville', serif;
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .step {
+      border-top: 1px solid var(--line-strong);
+      padding-top: 18px;
+    }
+
+    .step-no {
       font-size: 10px;
       line-height: 1.6;
       letter-spacing: 2.2px;
@@ -486,95 +405,96 @@
       margin-bottom: 10px;
     }
 
-    .uc-step-title {
-      font-family: 'Cormorant Garamond', serif;
+    .step-title {
+      font-family: "Cormorant Garamond", serif;
       font-size: 30px;
       line-height: 1.04;
-      color: var(--text);
-      margin: 0 0 10px 0;
-      text-wrap: balance;
+      margin-bottom: 10px;
     }
 
-    .uc-form-wrap {
-      max-width: 920px;
+    .step p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .form-wrap {
+      max-width: 900px;
       margin: 0 auto;
-      background:
-        radial-gradient(circle at 20% 0%, rgba(194,164,109,0.10), transparent 34%),
-        linear-gradient(180deg, #332925 0%, #241C19 100%);
-      border: 1px solid rgba(194,164,109,0.42);
-      box-shadow: 0 20px 54px rgba(43,34,31,0.10);
       padding: 44px;
+      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
+      border: 1px solid rgba(194,164,109,0.42);
       color: #F5F1EB;
+      box-shadow: 0 20px 54px rgba(43,34,31,0.10);
     }
 
-    .uc-form-head {
+    .form-head {
       text-align: center;
       margin-bottom: 34px;
     }
 
-    .uc-form-title {
-      font-family: 'Cormorant Garamond', serif;
+    .form-title {
+      font-family: "Cormorant Garamond", serif;
       font-size: 46px;
       line-height: 1.06;
       font-weight: 500;
-      margin: 0 0 14px 0;
-      color: #F5F1EB;
-      text-wrap: balance;
+      margin: 0 0 14px;
     }
 
-    .uc-form-copy {
-      max-width: 730px;
+    .form-copy {
+      max-width: 720px;
       margin: 0 auto;
-      font-family: 'Libre Baskerville', serif;
       font-size: 14px;
       line-height: 1.9;
       color: rgba(245,241,235,0.84);
-      text-wrap: balance;
     }
 
-    .uc-form-grid {
+    .form-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    .uc-field {
+    .field {
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
 
-    .uc-field-full { grid-column: 1 / -1; }
+    .field-full { grid-column: 1 / -1; }
 
-    .uc-field label,
-    .uc-consent label {
-      font-family: 'Libre Baskerville', serif;
+    label {
       font-size: 11px;
       line-height: 1.6;
       letter-spacing: 0.4px;
       color: rgba(245,241,235,0.92);
     }
 
-    .uc-field input,
-    .uc-field textarea {
+    input,
+    select,
+    textarea {
       width: 100%;
       border: 1px solid rgba(245,241,235,0.22);
       background: rgba(245,241,235,0.07);
       color: #F5F1EB;
-      padding: 15px 15px;
-      font-family: 'Libre Baskerville', serif;
+      padding: 15px;
+      font-family: "Libre Baskerville", serif;
       font-size: 13px;
       line-height: 1.6;
       outline: none;
       border-radius: 0;
     }
 
-    .uc-field input::placeholder,
-    .uc-field textarea::placeholder {
-      color: rgba(245,241,235,0.46);
+    input::placeholder,
+    textarea::placeholder { color: rgba(245,241,235,0.46); }
+
+    select option {
+      color: #3A2F2A;
+      background: #F5F1EB;
     }
 
-    .uc-field textarea {
+    textarea {
       min-height: 150px;
       resize: vertical;
     }
@@ -585,45 +505,14 @@
       cursor: pointer;
     }
 
-    .uc-hour-counter {
-      display: grid;
-      grid-template-columns: 58px 1fr 58px;
-      border: 1px solid rgba(245,241,235,0.22);
-      background: rgba(245,241,235,0.07);
-      min-height: 56px;
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(194,164,109,0.86);
+      background: rgba(245,241,235,0.10);
     }
 
-    .uc-hour-counter button {
-      border: none;
-      background: rgba(245,241,235,0.08);
-      color: #F5F1EB;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .uc-hour-counter button:hover { background: rgba(194,164,109,0.25); }
-
-    .uc-hour-counter input {
-      border: none;
-      text-align: center;
-      background: transparent;
-      color: #F5F1EB;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 30px;
-      padding: 0;
-    }
-
-    .uc-small-note {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 10px;
-      line-height: 1.7;
-      color: rgba(245,241,235,0.62);
-      margin-top: 8px;
-    }
-
-    .uc-total-box {
+    .total-box {
       grid-column: 1 / -1;
       border: 1px solid rgba(194,164,109,0.52);
       padding: 22px;
@@ -631,8 +520,7 @@
       background: rgba(245,241,235,0.06);
     }
 
-    .uc-total-label {
-      font-family: 'Libre Baskerville', serif;
+    .total-label {
       font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -640,524 +528,586 @@
       margin-bottom: 8px;
     }
 
-    .uc-total-value {
-      font-family: 'Cormorant Garamond', serif;
+    .total-value {
+      font-family: "Cormorant Garamond", serif;
       font-size: 38px;
       line-height: 1.1;
       color: #F5F1EB;
     }
 
-    .uc-consent {
-      margin: 22px 0 26px 0;
+    .consent {
+      margin: 22px 0 26px;
       display: flex;
       gap: 12px;
       align-items: flex-start;
     }
 
-    .uc-consent input {
+    .consent input {
+      width: auto;
       margin-top: 4px;
       accent-color: var(--gold);
     }
 
-    .uc-consent a {
+    .consent a {
       color: #F5F1EB;
       text-decoration: underline;
       text-underline-offset: 3px;
     }
 
-    .uc-form-submit { text-align: center; }
+    .hidden { display: none; }
 
-    .uc-submit {
+    .submit-wrap { text-align: center; }
+
+    button {
       cursor: pointer;
       border-radius: 0;
       border: 1px solid var(--gold);
       background: var(--gold);
-      color: #FFFFFF;
+      color: #fff;
       padding: 18px 40px;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       font-size: 12px;
       letter-spacing: 0.55px;
-      transition: all 0.24s ease;
     }
 
-    .uc-submit:hover {
+    button:hover {
       background: var(--gold-soft);
       border-color: var(--gold-soft);
-      transform: translateY(-1px);
     }
 
-    .uc-form-note {
+    .form-note {
       max-width: 680px;
-      margin: 18px auto 0 auto;
+      margin: 18px auto 0;
       text-align: center;
-      font-family: 'Libre Baskerville', serif;
       font-size: 11px;
       line-height: 1.8;
       color: rgba(245,241,235,0.62);
     }
 
-    .uc-hidden { display: none; }
-
-    .uc-footer {
+    footer {
       background: linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
-      padding: 44px 34px 48px 34px;
+      padding: 44px 34px 48px;
       text-align: center;
-      border-top: 1px solid rgba(245,241,235,0.08);
     }
 
-    .uc-footer-brand {
-      font-family: 'Cormorant Garamond', serif;
+    .footer-brand {
+      font-family: "Cormorant Garamond", serif;
       font-size: 24px;
       color: #F5F1EB;
       margin-bottom: 6px;
     }
 
-    .uc-footer-sub {
-      font-family: 'Libre Baskerville', serif;
+    .footer-sub {
       font-size: 11px;
       color: #D9CEC4;
       margin-bottom: 14px;
     }
 
-    .uc-footer-links {
-      font-family: 'Libre Baskerville', serif;
+    .footer-links {
       font-size: 10px;
       line-height: 1.9;
-      letter-spacing: 0.25px;
     }
 
-    .uc-footer-links a {
+    .footer-links a {
       color: #F5F1EB;
       text-decoration: none;
       margin: 0 10px;
       opacity: 0.92;
     }
 
+    .footer-links a:hover { text-decoration: underline; }
+
     @media (max-width: 1100px) {
-      .uc-mini-nav { display: none; }
-      .uc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .uc-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .mini-nav { display: none; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 980px) {
-      .uc-grid-2 { grid-template-columns: 1fr; }
-      .uc-h1 { font-size: 58px; line-height: 1.05; }
-      .uc-title, .uc-band-title, .uc-form-title { font-size: 44px; }
-      .uc-offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .uc-offer-item:nth-child(2) { border-right: none; }
-      .uc-offer-item:nth-child(1),
-      .uc-offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
-      .uc-price-row { grid-template-columns: 1fr; }
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      h1 { font-size: 56px; }
+      .offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .offer-item:nth-child(2) { border-right: none; }
+      .offer-item:nth-child(1),
+      .offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
     }
 
     @media (max-width: 768px) {
-      .uc-shell { padding: 0 20px; }
-      .uc-brandbar { padding: 26px 0 0 0; }
-      .uc-headerbar { grid-template-columns: 1fr; gap: 18px; }
-      .uc-brand { font-size: 28px; }
-      .uc-lang-switch { justify-self: center; }
-      .uc-hero { min-height: auto; padding: 30px 0 60px 0; }
-      .uc-h1 { font-size: 42px; line-height: 1.08; margin: 0 0 20px 0; }
-      .uc-sub { font-size: 16px; line-height: 1.9; margin: 0 auto 16px auto; }
-      .uc-section { padding: 74px 0; }
-      .uc-title, .uc-band-title, .uc-form-title { font-size: 36px; }
-      .uc-steps, .uc-form-grid, .uc-grid-4 { grid-template-columns: 1fr; }
-      .uc-offer-strip { grid-template-columns: 1fr; }
-      .uc-offer-item { border-right: none; border-bottom: 1px solid #DCCDBB; }
-      .uc-offer-item:last-child { border-bottom: none; }
-      .uc-btn { display: block; max-width: 340px; margin: 0 auto 12px auto; }
-      .uc-card, .uc-price-card { min-height: auto; padding: 32px 24px; }
-      .uc-form-wrap { padding: 34px 22px; }
-      .uc-submit { width: 100%; }
+      .shell { padding: 0 20px; }
+      header { padding-top: 26px; }
+
+      .header-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .brand {
+        justify-self: center;
+        font-size: 28px;
+      }
+
+      .lang { justify-self: center; }
+
+      .hero {
+        min-height: auto;
+        padding: 34px 0 64px;
+      }
+
+      .kicker {
+        letter-spacing: 3px;
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        font-size: 42px;
+        line-height: 1.08;
+      }
+
+      .sub {
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .offer-strip { grid-template-columns: 1fr; }
+
+      .offer-item {
+        border-right: none;
+        border-bottom: 1px solid #DCCDBB;
+      }
+
+      .offer-item:last-child { border-bottom: none; }
+
+      .btn {
+        display: block;
+        max-width: 340px;
+        margin: 0 auto 12px;
+      }
+
+      section.content { padding: 76px 0; }
+
+      .title,
+      .band h2,
+      .form-title { font-size: 36px; }
+
+      .steps,
+      .form-grid { grid-template-columns: 1fr; }
+
+      .form-wrap { padding: 34px 22px; }
+
+      button { width: 100%; }
     }
   </style>
 </head>
 
 <body>
-  <div class="uc-topbar"></div>
+  <div class="topbar"></div>
 
-  <section class="uc-shell uc-brandbar">
-    <div class="uc-headerbar">
-      <nav class="uc-mini-nav" aria-label="Main navigation">
-        <a href="#hourly-concierge">Hourly concierge</a>
-        <a href="#how-it-works">How it works</a>
+  <header class="shell">
+    <div class="header-inner">
+      <nav class="mini-nav" aria-label="Navigation">
+        <a href="#packages">Packages</a>
+        <a href="#scope">Scope</a>
         <a href="#booking">Booking</a>
       </nav>
 
-      <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
+      <a href="/expats-krakow/" class="brand">Urban Concierge</a>
 
-      <div class="uc-lang-switch">
-        <a href="/">PL</a>
-        <span>|</span>
-        <span class="uc-lang-current">ENG</span>
+      <div class="lang">
+        <a href="/relokacja-krakow/">PL</a>
+        <span>ENG</span>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="uc-hero">
-    <div class="uc-shell">
-      <div class="uc-hero-inner">
-        <div class="uc-kicker">Krakow and nearby areas • concierge without subscription</div>
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <div class="hero-inner">
+          <div class="kicker">Relocation to Krakow • expats • families • international clients</div>
 
-        <h1 class="uc-h1">Hourly concierge<br>in Krakow</h1>
+          <h1>
+            Relocation to Krakow<br>
+            without the chaos.
+          </h1>
 
-        <div class="uc-sub">
-          Calls, bookings, pickups, returns, shopping, research and everyday coordination — when you need practical support without a monthly commitment.
-        </div>
-
-        <div class="uc-offer-strip">
-          <div class="uc-offer-item">
-            <div class="uc-offer-label">No subscription</div>
-            <div class="uc-offer-value">pay for a slot</div>
+          <div class="sub">
+            Practical relocation support for expats, international clients, couples and families: first arrangements, local coordination and a calmer start in Krakow.
           </div>
 
-          <div class="uc-offer-item">
-            <div class="uc-offer-label">First 10 hours</div>
-            <div class="uc-offer-value">100 PLN/h</div>
-          </div>
-
-          <div class="uc-offer-item">
-            <div class="uc-offer-label">Minimum</div>
-            <div class="uc-offer-value">2h / 200 PLN</div>
-          </div>
-
-          <div class="uc-offer-item">
-            <div class="uc-offer-label">Online booking</div>
-            <div class="uc-offer-value">2–5 hours</div>
-          </div>
-        </div>
-
-        <div>
-          <a href="#booking" class="uc-btn uc-btn-primary">Book a slot from 200 PLN</a>
-          <a href="#what-we-handle" class="uc-btn uc-btn-secondary">See what we can handle</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-band" id="hourly-concierge">
-    <div class="uc-shell">
-      <div class="uc-band-title">No subscription. Use it when you need it, for what you need.</div>
-      <div class="uc-band-rule"></div>
-      <div class="uc-band-copy">
-        Urban Concierge is practical support for people who have too many things on their mind and want to delegate part of their everyday logistics to someone who can calmly organise and complete them.
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft" id="what-we-handle">
-    <div class="uc-shell">
-      <h2 class="uc-title">What you can delegate</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        It works best for specific tasks: something needs to be found, ordered, picked up, returned, booked, confirmed or followed up.
-      </div>
-
-      <div class="uc-grid-2">
-        <div class="uc-card">
-          <div class="uc-card-title">Errands in the city</div>
-          <ul class="uc-example-list">
-            <li>pickups or returns</li>
-            <li>shopping and small local errands</li>
-            <li>document or parcel handover</li>
-            <li>coordination of pickup, delivery or appointment</li>
-            <li>handling several points from one list</li>
-          </ul>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Organisational tasks</div>
-          <ul class="uc-example-list">
-            <li>calls and appointment confirmations</li>
-            <li>bookings and scheduling visits</li>
-            <li>research and offer comparison</li>
-            <li>contact with service providers</li>
-            <li>follow-up on matters that got stuck</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">How many hours do you need?</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        The first 10 hours of cooperation are available at 100 PLN/h. Online booking allows you to choose from 2 to 5 hours.
-      </div>
-
-      <div class="uc-price-row">
-        <div class="uc-price-card">
-          <div class="uc-price-label">Minimum</div>
-          <div class="uc-price-value">2h</div>
-          <p class="uc-price-copy">200 PLN. A good choice for one specific task or a few simple matters.</p>
-        </div>
-
-        <div class="uc-price-card">
-          <div class="uc-price-label">Most common</div>
-          <div class="uc-price-value">3–4h</div>
-          <p class="uc-price-copy">300–400 PLN. For several city errands, research, calls or coordination.</p>
-        </div>
-
-        <div class="uc-price-card">
-          <div class="uc-price-label">Larger slot</div>
-          <div class="uc-price-value">5h</div>
-          <p class="uc-price-copy">500 PLN. For a more intensive support block on the selected day.</p>
-        </div>
-      </div>
-
-      <div class="uc-note">
-        External costs, such as purchases, tickets, fees, third-party services or transport, are covered separately by the client.
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft" id="how-it-works">
-    <div class="uc-shell">
-      <h2 class="uc-title">How it works</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-steps">
-        <div class="uc-step">
-          <div class="uc-step-no">Step 01</div>
-          <div class="uc-step-title">Choose hours</div>
-          <div class="uc-step-copy">Use the counter to select from 2 to 5 hours of support.</div>
-        </div>
-
-        <div class="uc-step">
-          <div class="uc-step-no">Step 02</div>
-          <div class="uc-step-title">Describe the tasks</div>
-          <div class="uc-step-copy">Send the list of matters you want to delegate for organisation.</div>
-        </div>
-
-        <div class="uc-step">
-          <div class="uc-step-no">Step 03</div>
-          <div class="uc-step-title">Pay for the slot</div>
-          <div class="uc-step-copy">After submitting the form, you will be redirected to payment for the selected number of hours.</div>
-        </div>
-
-        <div class="uc-step">
-          <div class="uc-step-no">Step 04</div>
-          <div class="uc-step-title">We handle it</div>
-          <div class="uc-step-copy">We confirm the scope and start handling the selected matters.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section">
-    <div class="uc-shell">
-      <h2 class="uc-title">Other ways to work with us</h2>
-      <div class="uc-rule"></div>
-
-      <div class="uc-intro">
-        Hourly concierge is the simplest first step. If you need a different type of support, you can choose one of the dedicated services.
-      </div>
-
-      <div class="uc-grid-4">
-        <div class="uc-card">
-          <div class="uc-card-title">One-Day Support</div>
-          <p class="uc-card-copy">One day dedicated to a larger list of matters, remotely or locally in Krakow and nearby areas.</p>
-          <a href="/1-dzien-wsparcia/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Personal Assistance</div>
-          <p class="uc-card-copy">On-site support where presence, coordination or representing the client is needed.</p>
-          <a href="/asysty/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Concierge Retainer</div>
-          <p class="uc-card-copy">Ongoing support for clients who want one point of contact for current matters and follow-ups.</p>
-          <a href="/abonament/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
-        </div>
-
-        <div class="uc-card">
-          <div class="uc-card-title">Relocation to Krakow</div>
-          <p class="uc-card-copy">Support with moving to Krakow — from pre-arrival preparation to local coordination.</p>
-          <a href="/relokacja-krakow/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">See details</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uc-section uc-section-soft" id="booking">
-    <div class="uc-shell">
-      <div class="uc-form-wrap">
-        <div class="uc-form-head">
-          <div class="uc-form-title">Book a slot</div>
-          <div class="uc-form-copy">
-            Choose the number of hours, preferred service day and briefly describe the tasks. After submitting the form, you will be redirected to payment.
-          </div>
-        </div>
-
-        <form name="urban-concierge-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="uc-form" id="ucBookingForm">
-          <input type="hidden" name="form-name" value="urban-concierge-en">
-          <input type="hidden" id="priceHidden" name="slot_value" value="200 PLN">
-          <input type="hidden" id="hoursHidden" name="number_of_hours" value="2">
-          <input type="hidden" id="orderIdHidden" name="order_number" value="">
-
-          <p class="uc-hidden">
-            <label>Do not fill this field: <input name="bot-field"></label>
-          </p>
-
-          <div class="uc-form-grid">
-            <div class="uc-field">
-              <label for="name">First name</label>
-              <input id="name" name="first_name" type="text" placeholder="Your name" required>
+          <div class="offer-strip">
+            <div class="offer-item">
+              <div class="offer-label">Start Package</div>
+              <div class="offer-value">900 PLN</div>
             </div>
 
-            <div class="uc-field">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" placeholder="email@example.com" required>
+            <div class="offer-item">
+              <div class="offer-label">Extended</div>
+              <div class="offer-value">1800 PLN</div>
             </div>
 
-            <div class="uc-field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="+48..." required>
+            <div class="offer-item">
+              <div class="offer-label">Krakow</div>
+              <div class="offer-value">local support</div>
             </div>
 
-            <div class="uc-field">
-              <label for="location">Location</label>
-              <input id="location" name="location" type="text" placeholder="Krakow / nearby area / remote">
+            <div class="offer-item">
+              <div class="offer-label">Booking</div>
+              <div class="offer-value">online</div>
             </div>
+          </div>
 
-            <div class="uc-field">
-              <label>Number of hours</label>
-              <div class="uc-hour-counter">
-                <button type="button" id="minusHour">−</button>
-                <input id="hoursCounter" type="number" value="2" min="2" max="5" readonly>
-                <button type="button" id="plusHour">+</button>
+          <a href="#booking" class="btn btn-primary">Book relocation support</a>
+          <a href="#scope" class="btn btn-secondary">See the scope</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <h2>Before you arrive in Krakow, key matters can already be in motion.</h2>
+        <div class="rule-light"></div>
+        <p>
+          Relocation does not have to mean unfinished details and chasing everything from day one. Urban Concierge helps take over selected practical elements of the process.
+        </p>
+      </div>
+    </section>
+
+    <section class="content soft" id="packages">
+      <div class="shell">
+        <h2 class="title">Choose a package</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          You can start with a simple starter package or choose broader support covering more matters before and after arrival.
+        </p>
+
+        <div class="grid-3">
+          <div class="card price-card">
+            <div class="price-label">Start Package</div>
+            <div class="price-value">900 PLN</div>
+            <p>
+              For people who need to organise the first key matters: initial plan, basic coordination, first steps, first appointments and practical arrangements.
+            </p>
+            <div class="price-note">A good first step if you want to check the support and begin with the most important matters.</div>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Extended Package</div>
+            <div class="price-value">1800 PLN</div>
+            <p>
+              For clients who need broader coordination: housing logistics, deliveries, internet, first formalities, appointments, local matters and follow-ups.
+            </p>
+            <div class="price-note">A good choice when the relocation has several stages and requires calm coordination.</div>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Full relocation</div>
+            <div class="price-value">quote</div>
+            <p>
+              For families, companies, more complex moves, multi-day support or relocations requiring broader coordination.
+            </p>
+            <div class="price-note">Describe your situation in the form — we will prepare a tailored proposal.</div>
+          </div>
+        </div>
+
+        <p class="intro" style="font-size:12px; margin-top:28px; margin-bottom:0;">
+          External costs, such as official fees, translations, transport, purchases, third-party services, parking or deliveries, are covered separately by the client.
+        </p>
+      </div>
+    </section>
+
+    <section class="content" id="scope">
+      <div class="shell">
+        <h2 class="title">What relocation support may include</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          The exact scope depends on your situation, timing and what you want to delegate. Support may cover preparation before arrival, the first days in Krakow and practical matters after the move.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Before arrival</h3>
+            <ul>
+              <li>initial plan of matters to handle</li>
+              <li>coordination of selected appointments</li>
+              <li>preparation of the first steps list</li>
+              <li>contact with selected service providers</li>
+              <li>plan for local matters during the first days</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Housing and local logistics</h3>
+            <ul>
+              <li>coordination of deliveries and access</li>
+              <li>internet, utilities and basic services</li>
+              <li>selected pickups or handovers</li>
+              <li>local completion of practical matters</li>
+              <li>housing-related follow-ups</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>First matters in Poland</h3>
+            <ul>
+              <li>support with PESEL, if applicable</li>
+              <li>support with address registration, if applicable</li>
+              <li>support with a bank account, if applicable</li>
+              <li>coordination of documents and appointments</li>
+              <li>practical help for foreigners in Krakow</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="intro" style="font-size:12px; margin-top:24px; margin-bottom:0;">
+          Urban Concierge supports organisation, coordination and practical handling of matters. We do not replace a lawyer, tax adviser, public office, bank or any other licensed specialist.
+        </p>
+      </div>
+    </section>
+
+    <section class="content soft">
+      <div class="shell">
+        <h2 class="title">Real estate partner</h2>
+        <div class="rule"></div>
+
+        <p class="intro">
+          When relocation also involves apartment or housing matters, support may be coordinated with a trusted real estate partner — so that finding or preparing the place becomes part of one more coherent process.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Why it matters</h3>
+            <p>
+              Housing matters often connect with access, internet, deliveries, move-in timing and early logistics after arrival.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>How it fits the service</h3>
+            <p>
+              The real estate-related scope depends on the situation and may become part of broader relocation support.
+            </p>
+          </div>
+        </div>
+
+        <p class="intro" style="font-size:12px; margin-top:24px; margin-bottom:22px;">
+          Trusted real estate partner: Very Home.
+        </p>
+
+        <div style="text-align:center;">
+          <a href="https://www.veryhome.pl/" class="btn btn-secondary" target="_blank" rel="noopener">Meet the trusted real estate partner</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="shell">
+        <h2 class="title">How it works</h2>
+        <div class="rule"></div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">Step 01</div>
+            <div class="step-title">Choose a package</div>
+            <p>Select the Start Package, Extended Package or full relocation for a custom quote.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 02</div>
+            <div class="step-title">Describe the situation</div>
+            <p>Provide your arrival date, client type, housing status and matters to coordinate.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 03</div>
+            <div class="step-title">Pay online</div>
+            <p>After submitting the form, you will be redirected to online payment for the selected package.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 04</div>
+            <div class="step-title">We begin</div>
+            <p>We confirm the scope and start taking over selected relocation matters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content soft" id="booking">
+      <div class="shell">
+        <div class="form-wrap">
+          <div class="form-head">
+            <div class="form-title">Book relocation support</div>
+            <div class="form-copy">
+              Choose a package, provide your planned arrival and describe the situation. After submitting the form, you will be redirected to online payment.
+            </div>
+          </div>
+
+          <form name="relocation-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="relocationForm">
+            <input type="hidden" name="form-name" value="relocation-en">
+            <input type="hidden" name="source_page" value="Relocation EN">
+            <input type="hidden" id="priceHidden" name="package_value" value="900 PLN">
+            <input type="hidden" id="packageHidden" name="selected_package" value="Start Package">
+            <input type="hidden" id="orderIdHidden" name="order_number" value="">
+
+            <p class="hidden">
+              <label>Do not fill this field: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">First name</label>
+                <input id="name" name="first_name" type="text" placeholder="Your name" required>
               </div>
-              <div class="uc-small-note">First 10 hours: 100 PLN/h. Minimum 2h, maximum 5h online.</div>
+
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="email@example.com" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+48..." required>
+              </div>
+
+              <div class="field">
+                <label for="arrival">Planned arrival</label>
+                <input id="arrival" name="planned_arrival" type="text" placeholder="e.g. May / exact date / not sure yet">
+              </div>
+
+              <div class="field">
+                <label for="package">Package</label>
+                <select id="package" name="package" required>
+                  <option value="start" data-price="900" data-label="Start Package">Start Package — 900 PLN</option>
+                  <option value="extended" data-price="1800" data-label="Extended Package">Extended Package — 1800 PLN</option>
+                  <option value="custom" data-price="0" data-label="Custom quote">Full relocation — custom quote</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="client-type">Client type</label>
+                <select id="client-type" name="client_type" required>
+                  <option value="">Choose</option>
+                  <option value="Expat">Expat</option>
+                  <option value="Family">Family</option>
+                  <option value="Couple">Couple</option>
+                  <option value="International client">International client</option>
+                  <option value="Moving from another city">Moving from another city</option>
+                  <option value="Company">Company</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label for="support">Support scope</label>
+                <select id="support" name="support_scope" required>
+                  <option value="">Choose</option>
+                  <option value="Before arrival">Before arrival</option>
+                  <option value="After arrival">After arrival</option>
+                  <option value="Before and after arrival">Before and after arrival</option>
+                  <option value="Housing support">Housing support</option>
+                  <option value="First formalities">First formalities</option>
+                  <option value="I am not sure">I am not sure — please suggest the right scope</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label for="message">Relocation description</label>
+                <textarea id="message" name="relocation_description" placeholder="Briefly describe the situation: where you are moving from, when, whether housing is already arranged, and what matters you would like to delegate for coordination." required></textarea>
+              </div>
+
+              <div class="total-box">
+                <div class="total-label">Total</div>
+                <div class="total-value" id="priceDisplay">900 PLN</div>
+              </div>
             </div>
 
-            <div class="uc-field">
-              <label for="date">Preferred service day</label>
-              <input id="date" name="preferred_service_day" type="date" required>
-              <div class="uc-small-note">The booking covers the selected day, not a specific hour.</div>
+            <div class="consent">
+              <input id="consent" name="contact_consent" type="checkbox" required>
+              <label for="consent">
+                I agree to be contacted regarding this request. I have read the
+                <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+                and
+                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms of Service</a>.
+              </label>
             </div>
 
-            <div class="uc-field uc-field-full">
-              <label for="preferredTime">Notes / preferred time</label>
-              <input id="preferredTime" name="notes_preferred_time" type="text" placeholder="If you need a specific hour or time window, write it here.">
+            <div class="submit-wrap">
+              <button type="submit" id="submitButton">Proceed to payment</button>
             </div>
 
-            <div class="uc-field uc-field-full">
-              <label for="place">Place of service</label>
-              <input id="place" name="place_of_service" type="text" placeholder="Address, district or: remote">
+            <div class="form-note">
+              The form records your request and then redirects you to HotPay payment. The booking becomes active after the package is paid and the scope is confirmed. For full relocation, we will contact you with a proposed quote.
             </div>
-
-            <div class="uc-field uc-field-full">
-              <label for="message">Task list</label>
-              <textarea id="message" name="tasks_to_handle" placeholder="Describe the tasks: pickup, return, call, booking, research, shopping, documents..." required></textarea>
-            </div>
-
-            <div class="uc-total-box">
-              <div class="uc-total-label">Total</div>
-              <div class="uc-total-value" id="priceDisplay">200 PLN</div>
-            </div>
-          </div>
-
-          <div class="uc-consent">
-            <input id="consent" name="contact_consent" type="checkbox" required>
-            <label for="consent">
-              I agree to be contacted regarding this request. I have read the
-              <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
-              and
-              <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms of Service</a>.
-            </label>
-          </div>
-
-          <div class="uc-form-submit">
-            <button type="submit" class="uc-submit">Proceed to payment</button>
-          </div>
-
-          <div class="uc-form-note">
-            The form records your request and then redirects you to HotPay payment. The booking becomes active after the slot is paid. External costs are settled separately.
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="uc-footer">
-    <div class="uc-footer-brand">Urban Concierge</div>
-    <div class="uc-footer-sub">Hourly concierge | Krakow and nearby areas | remote support across Poland</div>
+  <footer>
+    <div class="footer-brand">Urban Concierge</div>
+    <div class="footer-sub">Private concierge support | Krakow and nearby areas | remote across Poland</div>
 
-    <div class="uc-footer-links">
-      <a href="/1-dzien-wsparcia/">One-Day Support</a>
-      <a href="/asysty/">Personal Assistance</a>
-      <a href="/abonament/">Retainer</a>
-      <a href="/relokacja-krakow/">Relocation to Krakow</a>
+    <div class="footer-links">
+      <a href="/expats-krakow/">Home</a>
+      <a href="/expats-krakow/one-day-support/">One-Day Support</a>
+      <a href="/expats-krakow/in-person-assistance/">In-Person Assistance</a>
+      <a href="/expats-krakow/monthly-support/">Monthly Support</a>
       <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms</a>
       <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
       <a href="mailto:info@urbanconcierge.pl">Contact</a>
     </div>
-  </section>
+  </footer>
 
   <script>
-    const form = document.getElementById('ucBookingForm');
-    const minusHour = document.getElementById('minusHour');
-    const plusHour = document.getElementById('plusHour');
-    const hoursCounter = document.getElementById('hoursCounter');
-    const hoursHidden = document.getElementById('hoursHidden');
-    const priceDisplay = document.getElementById('priceDisplay');
-    const priceHidden = document.getElementById('priceHidden');
-    const orderIdHidden = document.getElementById('orderIdHidden');
+    const form = document.getElementById("relocationForm");
+    const packageSelect = document.getElementById("package");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
 
-    const PRICE_PER_HOUR = 100;
-    const MIN_HOURS = 2;
-    const MAX_HOURS = 5;
+    const HOTPAY_PAYMENT_URL = "https://secure.hotpay.pl/TU_WKLEJ_LINK_HOTPAY_RELOCATION";
 
-    const HOTPAY_PAYMENT_URL = "https://secure.hotpay.pl/TU_WKLEJ_LINK_HOTPAY";
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
 
-    function updatePrice() {
-      const hours = parseInt(hoursCounter.value, 10);
-      const amount = hours * PRICE_PER_HOUR;
+      packageHidden.value = label;
 
-      hoursHidden.value = hours;
-      priceDisplay.textContent = amount + ' PLN';
-      priceHidden.value = amount + ' PLN';
+      if (price > 0) {
+        priceDisplay.textContent = price + " PLN";
+        priceHidden.value = price + " PLN";
+        submitButton.textContent = "Proceed to payment";
+      } else {
+        priceDisplay.textContent = "Quote";
+        priceHidden.value = "Custom quote";
+        submitButton.textContent = "Send request";
+      }
     }
-
-    minusHour.addEventListener('click', function () {
-      let hours = parseInt(hoursCounter.value, 10);
-
-      if (hours > MIN_HOURS) {
-        hoursCounter.value = hours - 1;
-        updatePrice();
-      }
-    });
-
-    plusHour.addEventListener('click', function () {
-      let hours = parseInt(hoursCounter.value, 10);
-
-      if (hours < MAX_HOURS) {
-        hoursCounter.value = hours + 1;
-        updatePrice();
-      }
-    });
 
     function encode(data) {
       return new URLSearchParams(data).toString();
     }
 
-    form.addEventListener('submit', function (e) {
+    packageSelect.addEventListener("change", updatePackage);
+
+    form.addEventListener("submit", function(e) {
       e.preventDefault();
 
-      const hours = parseInt(hoursCounter.value, 10);
-      const amount = hours * PRICE_PER_HOUR;
-      const orderId = 'UC-' + Date.now();
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-REL-EN-" + Date.now();
 
       orderIdHidden.value = orderId;
 
       const formData = new FormData(form);
-      formData.append('amount_to_pay', amount + ' PLN');
+      formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Custom quote");
 
       fetch("/", {
         method: "POST",
@@ -1165,11 +1115,18 @@
         body: encode(formData)
       })
       .then(() => {
+        if (price === 0) {
+          alert("Thank you. Your request has been sent. We will contact you with a proposed quote.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
         const hotpayUrl = new URL(HOTPAY_PAYMENT_URL);
 
-        hotpayUrl.searchParams.set("amount", amount);
+        hotpayUrl.searchParams.set("amount", price);
         hotpayUrl.searchParams.set("currency", "PLN");
-        hotpayUrl.searchParams.set("description", "Urban Concierge - slot " + hours + "h");
+        hotpayUrl.searchParams.set("description", "Urban Concierge - Relocation - " + label);
         hotpayUrl.searchParams.set("order_id", orderId);
         hotpayUrl.searchParams.set("email", document.getElementById("email").value);
         hotpayUrl.searchParams.set("phone", document.getElementById("phone").value);
@@ -1181,7 +1138,7 @@
       });
     });
 
-    updatePrice();
+    updatePackage();
   </script>
 </body>
 </html>
