@@ -1120,14 +1120,20 @@ const hoursHidden = document.getElementById('hoursHidden');
 const priceDisplay = document.getElementById('priceDisplay');
 const priceHidden = document.getElementById('priceHidden');
 const orderIdHidden = document.getElementById('orderIdHidden');
+const dateInput = document.getElementById('date');
 
 const PRICE_PER_HOUR = 100;
 const MIN_HOURS = 2;
 const MAX_HOURS = 5;
 
-/* HOTPAY */
 const HOTPAY_URL = "https://platnosc.hotpay.pl/";
 const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+
+function isWeekend(dateString) {
+  const selectedDate = new Date(dateString + "T12:00:00");
+  const day = selectedDate.getDay();
+  return day === 0 || day === 6;
+}
 
 function updatePrice() {
   const hours = parseInt(hoursCounter.value, 10);
@@ -1140,7 +1146,6 @@ function updatePrice() {
 
 minusHour.addEventListener('click', function () {
   let hours = parseInt(hoursCounter.value, 10);
-
   if (hours > MIN_HOURS) {
     hoursCounter.value = hours - 1;
     updatePrice();
@@ -1149,10 +1154,16 @@ minusHour.addEventListener('click', function () {
 
 plusHour.addEventListener('click', function () {
   let hours = parseInt(hoursCounter.value, 10);
-
   if (hours < MAX_HOURS) {
     hoursCounter.value = hours + 1;
     updatePrice();
+  }
+});
+
+dateInput.addEventListener("change", function () {
+  if (isWeekend(dateInput.value)) {
+    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+    dateInput.value = "";
   }
 });
 
@@ -1160,58 +1171,56 @@ function encode(data) {
   return new URLSearchParams(data).toString();
 }
 
+function addHotpayField(formElement, name, value) {
+  const input = document.createElement("input");
+  input.type = "hidden";
+  input.name = name;
+  input.value = value;
+  formElement.appendChild(input);
+}
+
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
+  if (isWeekend(dateInput.value)) {
+    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+    return;
+  }
+
   const hours = parseInt(hoursCounter.value, 10);
   const amount = hours * PRICE_PER_HOUR;
-
   const orderId = 'UC-' + Date.now();
 
   orderIdHidden.value = orderId;
 
   const formData = new FormData(form);
-
   formData.append('kwota_do_zaplaty', amount + ' zł');
 
   fetch("/", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: encode(formData)
   })
   .then(() => {
-
     const hotpayForm = document.createElement("form");
-
     hotpayForm.method = "POST";
     hotpayForm.action = HOTPAY_URL;
 
-    function addField(name, value) {
-      const input = document.createElement("input");
-      input.type = "hidden";
-      input.name = name;
-      input.value = value;
-      hotpayForm.appendChild(input);
-    }
-
-    addField("SEKRET", HOTPAY_SECRET);
-    addField("KWOTA", amount);
-    addField("NAZWA_USLUGI", "Urban Concierge - slot " + hours + "h");
-    addField("ADRES_WWW", "https://urbanconcierge.pl/");
-    addField("ID_ZAMOWIENIA", orderId);
-    addField("EMAIL", document.getElementById("email").value);
+    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+    addHotpayField(hotpayForm, "KWOTA", amount);
+    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - slot " + hours + "h");
+    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/");
+    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
 
     const customerData =
       document.getElementById("name").value +
       " | tel: " +
       document.getElementById("phone").value;
 
-    addField("DANE_OSOBOWE", customerData);
+    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
 
     document.body.appendChild(hotpayForm);
-
     hotpayForm.submit();
   })
   .catch(() => {
@@ -1221,6 +1230,7 @@ form.addEventListener('submit', function (e) {
 
 updatePrice();
 </script>
+
 
 </body>
 </html>
