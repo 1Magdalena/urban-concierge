@@ -1009,6 +1009,7 @@
   <script>
 const form = document.getElementById("supportDayForm");
 const packageSelect = document.getElementById("package");
+const dateInput = document.getElementById("date");
 const priceDisplay = document.getElementById("priceDisplay");
 const priceHidden = document.getElementById("priceHidden");
 const packageHidden = document.getElementById("packageHidden");
@@ -1018,6 +1019,12 @@ const submitButton = document.getElementById("submitButton");
 const HOTPAY_URL = "https://platnosc.hotpay.pl/";
 const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
 
+function isWeekend(dateString) {
+  const selectedDate = new Date(dateString + "T12:00:00");
+  const day = selectedDate.getDay();
+  return day === 0 || day === 6;
+}
+
 function updatePackage() {
   const selected = packageSelect.options[packageSelect.selectedIndex];
   const price = parseInt(selected.dataset.price, 10);
@@ -1026,13 +1033,13 @@ function updatePackage() {
   packageHidden.value = label;
 
   if (price > 0) {
-    priceDisplay.textContent = price + " zł";
-    priceHidden.value = price + " zł";
-    submitButton.textContent = "Przejdź do płatności";
+    priceDisplay.textContent = price + " PLN";
+    priceHidden.value = price + " PLN";
+    submitButton.textContent = "Proceed to payment";
   } else {
-    priceDisplay.textContent = "Wycena";
-    priceHidden.value = "Wycena indywidualna";
-    submitButton.textContent = "Wyślij zapytanie";
+    priceDisplay.textContent = "Custom quote";
+    priceHidden.value = "Custom quote";
+    submitButton.textContent = "Send inquiry";
   }
 }
 
@@ -1050,18 +1057,30 @@ function addHotpayField(formElement, name, value) {
 
 packageSelect.addEventListener("change", updatePackage);
 
+dateInput.addEventListener("change", function () {
+  if (isWeekend(dateInput.value)) {
+    alert("Online bookings are available Monday to Friday only. Please select a weekday.");
+    dateInput.value = "";
+  }
+});
+
 form.addEventListener("submit", function(e) {
   e.preventDefault();
+
+  if (isWeekend(dateInput.value)) {
+    alert("Online bookings are available Monday to Friday only. Please select a weekday.");
+    return;
+  }
 
   const selected = packageSelect.options[packageSelect.selectedIndex];
   const price = parseInt(selected.dataset.price, 10);
   const label = selected.dataset.label;
-  const orderId = "UC-DW-" + Date.now();
+  const orderId = "UC-DW-EN-" + Date.now();
 
   orderIdHidden.value = orderId;
 
   const formData = new FormData(form);
-  formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
+  formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Custom quote");
 
   fetch("/", {
     method: "POST",
@@ -1069,8 +1088,9 @@ form.addEventListener("submit", function(e) {
     body: encode(formData)
   })
   .then(() => {
+
     if (price === 0) {
-      alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
+      alert("Thank you. Your inquiry has been sent. We will contact you with a custom quote.");
       form.reset();
       updatePackage();
       return;
@@ -1082,14 +1102,14 @@ form.addEventListener("submit", function(e) {
 
     addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
     addHotpayField(hotpayForm, "KWOTA", price);
-    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Dzień Wsparcia - " + label);
-    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/1-dzien-wsparcia/");
+    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - One Day Support - " + label);
+    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/one-day-support/");
     addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
     addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
 
     const customerData =
       document.getElementById("name").value +
-      " | tel: " +
+      " | phone: " +
       document.getElementById("phone").value;
 
     addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
@@ -1098,11 +1118,12 @@ form.addEventListener("submit", function(e) {
     hotpayForm.submit();
   })
   .catch(() => {
-    alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+    alert("Could not send the form. Please try again or contact info@urbanconcierge.pl.");
   });
 });
 
 updatePackage();
 </script>
+
 </body>
 </html>
