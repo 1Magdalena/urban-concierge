@@ -1120,7 +1120,6 @@ const PRICE_PER_HOUR = 100;
 const MIN_HOURS = 2;
 const MAX_HOURS = 5;
 
-/* HOTPAY */
 const HOTPAY_URL = "https://platnosc.hotpay.pl/";
 const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
 
@@ -1129,8 +1128,8 @@ function updatePrice() {
   const amount = hours * PRICE_PER_HOUR;
 
   hoursHidden.value = hours;
-  priceDisplay.textContent = amount + ' zł';
-  priceHidden.value = amount + ' zł';
+  priceDisplay.textContent = amount + ' PLN';
+  priceHidden.value = amount + ' PLN';
 }
 
 minusHour.addEventListener('click', function () {
@@ -1160,14 +1159,12 @@ form.addEventListener('submit', function (e) {
 
   const hours = parseInt(hoursCounter.value, 10);
   const amount = hours * PRICE_PER_HOUR;
-
-  const orderId = 'UC-' + Date.now();
+  const orderId = 'UC-EN-' + Date.now();
 
   orderIdHidden.value = orderId;
 
   const formData = new FormData(form);
-
-  formData.append('kwota_do_zaplaty', amount + ' zł');
+  formData.append('amount_to_pay', amount + ' PLN');
 
   fetch("/", {
     method: "POST",
@@ -1177,7 +1174,6 @@ form.addEventListener('submit', function (e) {
     body: encode(formData)
   })
   .then(() => {
-
     const hotpayForm = document.createElement("form");
 
     hotpayForm.method = "POST";
@@ -1193,24 +1189,23 @@ form.addEventListener('submit', function (e) {
 
     addField("SEKRET", HOTPAY_SECRET);
     addField("KWOTA", amount);
-    addField("NAZWA_USLUGI", "Urban Concierge - slot " + hours + "h");
-    addField("ADRES_WWW", "https://urbanconcierge.pl/");
+    addField("NAZWA_USLUGI", "Urban Concierge - hourly concierge " + hours + "h");
+    addField("ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/");
     addField("ID_ZAMOWIENIA", orderId);
     addField("EMAIL", document.getElementById("email").value);
 
     const customerData =
       document.getElementById("name").value +
-      " | tel: " +
+      " | phone: " +
       document.getElementById("phone").value;
 
     addField("DANE_OSOBOWE", customerData);
 
     document.body.appendChild(hotpayForm);
-
     hotpayForm.submit();
   })
   .catch(() => {
-    alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+    alert("Could not send the form. Please try again or contact info@urbanconcierge.pl.");
   });
 });
 
