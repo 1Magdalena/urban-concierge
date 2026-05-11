@@ -1041,83 +1041,103 @@
   </footer>
 
   <script>
-    const form = document.getElementById("subscriptionForm");
-    const packageSelect = document.getElementById("package");
-    const priceDisplay = document.getElementById("priceDisplay");
-    const priceHidden = document.getElementById("priceHidden");
-    const packageHidden = document.getElementById("packageHidden");
-    const orderIdHidden = document.getElementById("orderIdHidden");
-    const submitButton = document.getElementById("submitButton");
+const form = document.getElementById("subscriptionForm");
+const packageSelect = document.getElementById("package");
+const priceDisplay = document.getElementById("priceDisplay");
+const priceHidden = document.getElementById("priceHidden");
+const packageHidden = document.getElementById("packageHidden");
+const orderIdHidden = document.getElementById("orderIdHidden");
+const submitButton = document.getElementById("submitButton");
 
-    const HOTPAY_PAYMENT_URL = "https://secure.hotpay.pl/TU_WKLEJ_LINK_HOTPAY_MONTHLY_SUPPORT";
+const HOTPAY_URL = "https://platnosc.hotpay.pl/";
+const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
 
-    function updatePackage() {
-      const selected = packageSelect.options[packageSelect.selectedIndex];
-      const price = parseInt(selected.dataset.price, 10);
-      const label = selected.dataset.label;
+function updatePackage() {
+  const selected = packageSelect.options[packageSelect.selectedIndex];
+  const price = parseInt(selected.dataset.price, 10);
+  const label = selected.dataset.label;
 
-      packageHidden.value = label;
+  packageHidden.value = label;
 
-      if (price > 0) {
-        priceDisplay.textContent = price + " PLN";
-        priceHidden.value = price + " PLN";
-        submitButton.textContent = "Proceed to payment";
-      } else {
-        priceDisplay.textContent = "Quote";
-        priceHidden.value = "Custom quote";
-        submitButton.textContent = "Send request";
-      }
+  if (price > 0) {
+    priceDisplay.textContent = price + " PLN";
+    priceHidden.value = price + " PLN";
+    submitButton.textContent = "Proceed to payment";
+  } else {
+    priceDisplay.textContent = "Custom quote";
+    priceHidden.value = "Custom quote";
+    submitButton.textContent = "Send inquiry";
+  }
+}
+
+function encode(data) {
+  return new URLSearchParams(data).toString();
+}
+
+function addHotpayField(formElement, name, value) {
+  const input = document.createElement("input");
+  input.type = "hidden";
+  input.name = name;
+  input.value = value;
+  formElement.appendChild(input);
+}
+
+packageSelect.addEventListener("change", updatePackage);
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const selected = packageSelect.options[packageSelect.selectedIndex];
+  const price = parseInt(selected.dataset.price, 10);
+  const label = selected.dataset.label;
+  const orderId = "UC-MS-EN-" + Date.now();
+
+  orderIdHidden.value = orderId;
+
+  const formData = new FormData(form);
+  formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Custom quote");
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode(formData)
+  })
+  .then(() => {
+    if (price === 0) {
+      alert("Thank you. Your inquiry has been sent. We will contact you with a custom quote.");
+      form.reset();
+      updatePackage();
+      return;
     }
 
-    function encode(data) {
-      return new URLSearchParams(data).toString();
-    }
+    const hotpayForm = document.createElement("form");
+    hotpayForm.method = "POST";
+    hotpayForm.action = HOTPAY_URL;
 
-    packageSelect.addEventListener("change", updatePackage);
+    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+    addHotpayField(hotpayForm, "KWOTA", price);
+    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Monthly Support - " + label);
+    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/monthly-support/");
+    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
 
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
+    const customerData =
+      document.getElementById("name").value +
+      " | phone: " +
+      document.getElementById("phone").value;
 
-      const selected = packageSelect.options[packageSelect.selectedIndex];
-      const price = parseInt(selected.dataset.price, 10);
-      const label = selected.dataset.label;
-      const orderId = "UC-MS-" + Date.now();
+    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
 
-      orderIdHidden.value = orderId;
+    document.body.appendChild(hotpayForm);
+    hotpayForm.submit();
+  })
+  .catch(() => {
+    alert("Could not send the form. Please try again or contact info@urbanconcierge.pl.");
+  });
+});
 
-      const formData = new FormData(form);
-      formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Custom quote");
+updatePackage();
+</script>
 
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(formData)
-      })
-      .then(() => {
-        if (price === 0) {
-          alert("Thank you. Your request has been sent. We will contact you with a proposed quote.");
-          form.reset();
-          updatePackage();
-          return;
-        }
-
-        const hotpayUrl = new URL(HOTPAY_PAYMENT_URL);
-
-        hotpayUrl.searchParams.set("amount", price);
-        hotpayUrl.searchParams.set("currency", "PLN");
-        hotpayUrl.searchParams.set("description", "Urban Concierge - Monthly Support - " + label);
-        hotpayUrl.searchParams.set("order_id", orderId);
-        hotpayUrl.searchParams.set("email", document.getElementById("email").value);
-        hotpayUrl.searchParams.set("phone", document.getElementById("phone").value);
-
-        window.location.href = hotpayUrl.toString();
-      })
-      .catch(() => {
-        alert("The form could not be submitted. Please try again or write to info@urbanconcierge.pl.");
-      });
-    });
-
-    updatePackage();
-  </script>
 </body>
 </html>
