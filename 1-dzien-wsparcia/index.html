@@ -1008,6 +1008,7 @@
 <script>
 const form = document.getElementById("supportDayForm");
 const packageSelect = document.getElementById("package");
+const dateInput = document.getElementById("date");
 const priceDisplay = document.getElementById("priceDisplay");
 const priceHidden = document.getElementById("priceHidden");
 const packageHidden = document.getElementById("packageHidden");
@@ -1016,6 +1017,12 @@ const submitButton = document.getElementById("submitButton");
 
 const HOTPAY_URL = "https://platnosc.hotpay.pl/";
 const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+
+function isWeekend(dateString) {
+  const selectedDate = new Date(dateString + "T12:00:00");
+  const day = selectedDate.getDay();
+  return day === 0 || day === 6;
+}
 
 function updatePackage() {
   const selected = packageSelect.options[packageSelect.selectedIndex];
@@ -1049,8 +1056,20 @@ function addHotpayField(formElement, name, value) {
 
 packageSelect.addEventListener("change", updatePackage);
 
+dateInput.addEventListener("change", function () {
+  if (isWeekend(dateInput.value)) {
+    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+    dateInput.value = "";
+  }
+});
+
 form.addEventListener("submit", function(e) {
   e.preventDefault();
+
+  if (isWeekend(dateInput.value)) {
+    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+    return;
+  }
 
   const selected = packageSelect.options[packageSelect.selectedIndex];
   const price = parseInt(selected.dataset.price, 10);
@@ -1103,5 +1122,6 @@ form.addEventListener("submit", function(e) {
 
 updatePackage();
 </script>
+
 </body>
 </html>
