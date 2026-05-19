@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Monthly Concierge Support Krakow | Urban Concierge</title>
-  <meta name="description" content="Monthly concierge support by Urban Concierge. Small Package, Large Package or custom quote. Calls, bookings, follow-ups, research, appointments and everyday coordination in Krakow and remotely across Poland." />
+  <title>Monthly Concierge Support Kraków | Urban Concierge</title>
+  <meta name="description" content="Monthly Urban Concierge support in Kraków and remotely across Poland. Small Package, Large Package or custom scope. Calls, bookings, follow-ups, appointments, research and everyday coordination." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/monthly-support/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
@@ -30,7 +33,6 @@
       --gold-soft: #C2A46D;
       --line: #E7DDD2;
       --line-strong: #DDCFBF;
-      --dark: #2B221F;
     }
 
     * { box-sizing: border-box; }
@@ -80,8 +82,6 @@
       color: var(--soft);
       text-decoration: none;
     }
-
-    .mini-nav a:hover { color: var(--gold); }
 
     .brand {
       font-family: "Cormorant Garamond", serif;
@@ -176,6 +176,18 @@
       color: var(--muted);
     }
 
+    .ai-summary {
+      max-width: 920px;
+      margin: 34px auto 0;
+      padding: 24px 28px;
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.28);
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-align: left;
+    }
+
     .offer-strip {
       max-width: 900px;
       margin: 34px auto 34px;
@@ -223,22 +235,10 @@
       border: 1px solid var(--text);
     }
 
-    .btn-primary:hover {
-      background: #473934;
-      border-color: #473934;
-      transform: translateY(-1px);
-    }
-
     .btn-secondary {
       color: var(--text);
       border: 1px solid #CCB8A2;
       background: transparent;
-    }
-
-    .btn-secondary:hover {
-      background: #EEE6DD;
-      border-color: var(--gold);
-      transform: translateY(-1px);
     }
 
     .band {
@@ -303,21 +303,18 @@
       color: var(--muted);
     }
 
-    .grid-2 {
+    .grid-2,
+    .grid-3,
+    .steps {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       max-width: 1040px;
       margin: 0 auto;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(4, 1fr); }
 
     .card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
@@ -383,14 +380,6 @@
       margin-top: 18px;
     }
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-
     .step {
       border-top: 1px solid var(--line-strong);
       padding-top: 18px;
@@ -398,7 +387,6 @@
 
     .step-no {
       font-size: 10px;
-      line-height: 1.6;
       letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--gold);
@@ -497,13 +485,6 @@
     textarea {
       min-height: 150px;
       resize: vertical;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: rgba(194,164,109,0.86);
-      background: rgba(245,241,235,0.10);
     }
 
     .total-box {
@@ -609,8 +590,6 @@
       opacity: 0.92;
     }
 
-    .footer-links a:hover { text-decoration: underline; }
-
     @media (max-width: 1100px) {
       .mini-nav { display: none; }
       .grid-3 { grid-template-columns: 1fr; }
@@ -621,9 +600,6 @@
       .grid-2 { grid-template-columns: 1fr; }
       h1 { font-size: 56px; }
       .offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .offer-item:nth-child(2) { border-right: none; }
-      .offer-item:nth-child(1),
-      .offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
     }
 
     @media (max-width: 768px) {
@@ -645,11 +621,6 @@
       .hero {
         min-height: auto;
         padding: 34px 0 64px;
-      }
-
-      .kicker {
-        letter-spacing: 3px;
-        margin-bottom: 22px;
       }
 
       h1 {
@@ -717,15 +688,12 @@
     <section class="hero">
       <div class="shell">
         <div class="hero-inner">
-          <div class="kicker">Monthly concierge support • Krakow and nearby areas • remote across Poland</div>
+          <div class="kicker">Monthly concierge support • Kraków and surroundings • remote across Poland</div>
 
-          <h1>
-            Ongoing support for matters<br>
-            that keep coming back.
-          </h1>
+          <h1>Ongoing support for things<br>that keep coming back.</h1>
 
           <div class="sub">
-            Monthly Support by Urban Concierge is a monthly hours package for everyday matters: calls, bookings, appointments, follow-ups, research, coordination and practical logistics.
+            Urban Concierge Monthly Support is a monthly package of hours for recurring tasks: calls, bookings, appointments, follow-ups, research, coordination and everyday logistics.
           </div>
 
           <div class="offer-strip">
@@ -746,12 +714,16 @@
 
             <div class="offer-item">
               <div class="offer-label">Support</div>
-              <div class="offer-value">PL + Krakow</div>
+              <div class="offer-value">Remote + Kraków</div>
             </div>
           </div>
 
           <a href="#booking" class="btn btn-primary">Choose monthly support</a>
-          <a href="#scope" class="btn btn-secondary">See the scope</a>
+          <a href="#scope" class="btn btn-secondary">See scope</a>
+
+          <div class="ai-summary">
+            <strong>Urban Concierge Monthly Support</strong> is ongoing monthly concierge support in Kraków and remotely across Poland. We help with calls, bookings, appointments, follow-ups, research, contacting service providers, coordination and everyday logistics. The service is available as a Small Package, Large Package or individually quoted custom scope.
+          </div>
         </div>
       </div>
     </section>
@@ -761,7 +733,7 @@
         <h2>It is not about one task. It is about calm in the background.</h2>
         <div class="rule-light"></div>
         <p>
-          Monthly support works when matters keep returning and you want one calm point of contact to help move them forward.
+          Monthly support works best when tasks come back regularly and you want one calm point of contact to help keep them moving.
         </p>
       </div>
     </section>
@@ -772,7 +744,7 @@
         <div class="rule"></div>
 
         <p class="intro">
-          Monthly Support is a simple monthly hours package. You can start with a smaller scope and increase it later if the cooperation works well.
+          Monthly Support is a simple monthly package of hours. You can start with a smaller scope and increase it later if the cooperation works well.
         </p>
 
         <div class="grid-3">
@@ -780,32 +752,32 @@
             <div class="price-label">Small Package</div>
             <div class="price-value">600 PLN</div>
             <p>
-              5 hours per month for everyday matters: calls, bookings, appointments, short research, follow-ups and basic coordination.
+              5 hours per month for recurring tasks: calls, bookings, appointments, short research, follow-ups and basic coordination.
             </p>
-            <div class="price-note">A good choice when matters come back regularly, but you do not need intensive weekly support.</div>
+            <div class="price-note">A good choice when tasks come back, but you do not need intensive weekly support.</div>
           </div>
 
           <div class="card price-card">
             <div class="price-label">Large Package</div>
             <div class="price-value">1100 PLN</div>
             <p>
-              10 hours per month for more topics, more follow-ups, regular coordination and selected local actions in Krakow.
+              10 hours per month for more topics, more follow-ups, regular coordination and selected local tasks in Kraków.
             </p>
-            <div class="price-note">A good choice when you want to actually take part of everyday logistics off your plate.</div>
+            <div class="price-note">A good choice when you want to truly remove part of daily logistics from your own list.</div>
           </div>
 
           <div class="card price-card">
-            <div class="price-label">Larger scope</div>
+            <div class="price-label">Custom scope</div>
             <div class="price-value">quote</div>
             <p>
-              For clients who need more hours, more complex coordination, local actions or a more continuous premium model.
+              For clients who need more hours, more complex coordination, local support or a more tailored premium model.
             </p>
-            <div class="price-note">Describe your needs in the form — we will prepare a tailored proposal.</div>
+            <div class="price-note">Describe your needs in the form and we will prepare a tailored proposal.</div>
           </div>
         </div>
 
         <p class="intro" style="font-size:12px; margin-top:28px; margin-bottom:0;">
-          External costs, such as purchases, tickets, fees, third-party services, parking or transport, are covered separately by the client.
+          External costs, such as shopping, tickets, fees, service providers, parking or transport, are covered separately by the client.
         </p>
       </div>
     </section>
@@ -816,18 +788,18 @@
         <div class="rule"></div>
 
         <p class="intro">
-          Monthly support is for matters that return regularly and take attention: someone needs to call, follow up, book, compare, pick up, confirm or return to a topic after a few days.
+          Monthly support is for recurring tasks that take attention: something needs to be called, followed up, booked, compared, picked up, confirmed or revisited after a few days.
         </p>
 
         <div class="grid-3">
           <div class="card">
             <h3>Ongoing coordination</h3>
             <ul>
-              <li>coordination of selected matters in the background</li>
+              <li>coordinating selected matters in the background</li>
               <li>contact with service providers within the agreed scope</li>
               <li>confirmations, follow-ups and next-step tracking</li>
               <li>organising current operational topics</li>
-              <li>handling matters through one point of contact</li>
+              <li>handling matters from one point of contact</li>
             </ul>
           </div>
 
@@ -838,17 +810,17 @@
               <li>reservations and confirmations</li>
               <li>coordination of meetings and arrangements</li>
               <li>reminders and important date tracking</li>
-              <li>organising selected calendar-related matters</li>
+              <li>organising the calendar of selected topics</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Local and remote support</h3>
+            <h3>Remote and local support</h3>
             <ul>
               <li>remote coordination across Poland</li>
-              <li>selected actions on site in Krakow and nearby areas</li>
-              <li>local completion of matters requiring presence</li>
-              <li>coordination of selected pickups or access</li>
+              <li>selected local tasks in Kraków and nearby areas</li>
+              <li>local tasks requiring physical presence</li>
+              <li>coordination of selected pick-ups or access</li>
               <li>combining organisational support with local action</li>
             </ul>
           </div>
@@ -858,20 +830,20 @@
 
     <section class="content soft">
       <div class="shell">
-        <h2 class="title">How it works</h2>
+        <h2 class="title">How cooperation works</h2>
         <div class="rule"></div>
 
         <div class="steps">
           <div class="step">
             <div class="step-no">Step 01</div>
             <div class="step-title">Choose a package</div>
-            <p>Select the Small Package, Large Package or a larger scope for a custom quote.</p>
+            <p>Select Small Package, Large Package or custom scope for quotation.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Step 02</div>
             <div class="step-title">Describe your needs</div>
-            <p>Send examples of matters that come back most often and require coordination.</p>
+            <p>Send examples of tasks that come back most often and require coordination.</p>
           </div>
 
           <div class="step">
@@ -882,8 +854,8 @@
 
           <div class="step">
             <div class="step-no">Step 04</div>
-            <div class="step-title">We begin</div>
-            <p>We confirm the contact model and start handling agreed matters in the background.</p>
+            <div class="step-title">We take over</div>
+            <p>We confirm the contact model and start handling the agreed matters in the background.</p>
           </div>
         </div>
       </div>
@@ -891,28 +863,28 @@
 
     <section class="content">
       <div class="shell">
-        <h2 class="title">Who this is for</h2>
+        <h2 class="title">Who monthly support is for</h2>
         <div class="rule"></div>
 
         <div class="grid-2">
           <div class="card">
-            <h3>Busy people</h3>
-            <p>When everyday matters keep returning between meetings, work, family and other responsibilities.</p>
+            <h3>Busy professionals</h3>
+            <p>When everyday matters come back between meetings, work, family and other responsibilities.</p>
           </div>
 
           <div class="card">
-            <h3>People who postpone small matters</h3>
-            <p>When topics are not huge, but they keep taking mental space and return to the list every week.</p>
+            <h3>People who postpone small tasks</h3>
+            <p>When the topics are not huge, but they keep taking space in your mind and return to the list every week.</p>
           </div>
 
           <div class="card">
-            <h3>Clients in Krakow</h3>
-            <p>When, in addition to remote organisation, occasional local completion, pickup, return or on-site coordination is useful.</p>
+            <h3>Clients in Kraków</h3>
+            <p>When, in addition to remote coordination, you sometimes need local handling, pickup, return or on-site coordination.</p>
           </div>
 
           <div class="card">
             <h3>Clients across Poland</h3>
-            <p>When you mainly need calls, research, bookings, offer comparison, emails, arrangements and follow-ups.</p>
+            <p>When you mainly need calls, research, bookings, comparing offers, emails, arrangements and follow-ups.</p>
           </div>
         </div>
       </div>
@@ -924,16 +896,16 @@
           <div class="form-head">
             <div class="form-title">Choose monthly support</div>
             <div class="form-copy">
-              Choose a package, describe the matters that come back most often and provide your preferred start. After submitting the form, you will be redirected to online payment.
+              Choose a package, describe the tasks that come back most often and select your preferred cooperation start. After submitting the form, you will be redirected to online payment.
             </div>
           </div>
 
-          <form name="monthly-support-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="subscriptionForm">
-            <input type="hidden" name="form-name" value="monthly-support-en">
-            <input type="hidden" name="source_page" value="Monthly Support EN">
+          <form name="monthly-support-eng" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="subscriptionForm">
+            <input type="hidden" name="form-name" value="monthly-support-eng">
+            <input type="hidden" name="source_page" value="Monthly Support ENG">
             <input type="hidden" id="priceHidden" name="package_value" value="600 PLN">
             <input type="hidden" id="packageHidden" name="selected_package" value="Small Package">
-            <input type="hidden" id="orderIdHidden" name="order_number" value="">
+            <input type="hidden" id="orderIdHidden" name="order_id" value="">
 
             <p class="hidden">
               <label>Do not fill this field: <input name="bot-field"></label>
@@ -941,8 +913,8 @@
 
             <div class="form-grid">
               <div class="field">
-                <label for="name">First name</label>
-                <input id="name" name="first_name" type="text" placeholder="Your name" required>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
               </div>
 
               <div class="field">
@@ -957,7 +929,7 @@
 
               <div class="field">
                 <label for="location">Location</label>
-                <input id="location" name="location" type="text" placeholder="Krakow / nearby area / remote / all Poland">
+                <input id="location" name="location" type="text" placeholder="Kraków / nearby / remote / Poland">
               </div>
 
               <div class="field">
@@ -965,7 +937,7 @@
                 <select id="package" name="package" required>
                   <option value="small" data-price="600" data-label="Small Package">Small Package — 600 PLN / month</option>
                   <option value="large" data-price="1100" data-label="Large Package">Large Package — 1100 PLN / month</option>
-                  <option value="custom" data-price="0" data-label="Custom quote">Larger scope — custom quote</option>
+                  <option value="custom" data-price="0" data-label="Custom quote">Custom scope — individual quote</option>
                 </select>
               </div>
 
@@ -974,26 +946,26 @@
                 <select id="start" name="preferred_start" required>
                   <option value="">Choose</option>
                   <option value="As soon as possible">As soon as possible</option>
-                  <option value="This month">This month</option>
-                  <option value="Next month">Next month</option>
+                  <option value="From this month">From this month</option>
+                  <option value="From next month">From next month</option>
                   <option value="Flexible">Flexible</option>
                 </select>
               </div>
 
               <div class="field field-full">
-                <label for="frequency">Frequency of matters</label>
-                <select id="frequency" name="frequency_of_matters" required>
+                <label for="frequency">Task frequency</label>
+                <select id="frequency" name="task_frequency" required>
                   <option value="">Choose</option>
-                  <option value="A few matters per month">A few matters per month</option>
-                  <option value="A few matters per week">A few matters per week</option>
+                  <option value="A few tasks per month">A few tasks per month</option>
+                  <option value="A few tasks per week">A few tasks per week</option>
                   <option value="Regular background support">Regular background support</option>
                   <option value="Hard to estimate">Hard to estimate</option>
                 </select>
               </div>
 
               <div class="field field-full">
-                <label for="message">Description of matters</label>
-                <textarea id="message" name="description_of_matters" placeholder="Describe what comes back most often, what you would like to delegate for ongoing coordination and whether you also need local actions." required></textarea>
+                <label for="message">Task description</label>
+                <textarea id="message" name="task_description" placeholder="Describe what comes back most often, what you would like to delegate for ongoing coordination and whether you also need local support." required></textarea>
               </div>
 
               <div class="total-box">
@@ -1008,7 +980,7 @@
                 I agree to be contacted regarding this request. I have read the
                 <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
                 and
-                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms of Service</a>.
+                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms and Conditions</a>.
               </label>
             </div>
 
@@ -1017,7 +989,7 @@
             </div>
 
             <div class="form-note">
-              The form records your request and then redirects you to HotPay payment. Monthly support starts after the package is paid and the scope is confirmed. For a larger scope, we will contact you with a proposed quote.
+              The form saves your request and then redirects you to HotPay payment. Monthly support starts after payment and confirmation of the scope. For custom scope requests, we will contact you with a proposal.
             </div>
           </form>
         </div>
@@ -1027,13 +999,13 @@
 
   <footer>
     <div class="footer-brand">Urban Concierge</div>
-    <div class="footer-sub">Private concierge support | Krakow and nearby areas | remote across Poland</div>
+    <div class="footer-sub">Private concierge support | Kraków and surrounding areas | remote across Poland</div>
 
     <div class="footer-links">
       <a href="/expats-krakow/">Home</a>
-      <a href="/expats-krakow/one-day-support/">One-Day Support</a>
-      <a href="/expats-krakow/in-person-assistance/">In-Person Assistance</a>
-      <a href="/relokacja-krakow/">Relocation to Krakow</a>
+      <a href="/expats-krakow/one-day-support/">One Day Support</a>
+      <a href="/asysty/">Personal Assistance</a>
+      <a href="/relokacja-krakow/">Relocation to Kraków</a>
       <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms</a>
       <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
       <a href="mailto:info@urbanconcierge.pl">Contact</a>
@@ -1041,103 +1013,102 @@
   </footer>
 
   <script>
-const form = document.getElementById("subscriptionForm");
-const packageSelect = document.getElementById("package");
-const priceDisplay = document.getElementById("priceDisplay");
-const priceHidden = document.getElementById("priceHidden");
-const packageHidden = document.getElementById("packageHidden");
-const orderIdHidden = document.getElementById("orderIdHidden");
-const submitButton = document.getElementById("submitButton");
+    const form = document.getElementById("subscriptionForm");
+    const packageSelect = document.getElementById("package");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
 
-const HOTPAY_URL = "https://platnosc.hotpay.pl/";
-const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+    const HOTPAY_URL = "https://platnosc.hotpay.pl/";
+    const HOTPAY_SECRET = "WKLEJ_TUTAJ_SEKRET_HOTPAY";
 
-function updatePackage() {
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
 
-  packageHidden.value = label;
+      packageHidden.value = label;
 
-  if (price > 0) {
-    priceDisplay.textContent = price + " PLN";
-    priceHidden.value = price + " PLN";
-    submitButton.textContent = "Proceed to payment";
-  } else {
-    priceDisplay.textContent = "Custom quote";
-    priceHidden.value = "Custom quote";
-    submitButton.textContent = "Send inquiry";
-  }
-}
-
-function encode(data) {
-  return new URLSearchParams(data).toString();
-}
-
-function addHotpayField(formElement, name, value) {
-  const input = document.createElement("input");
-  input.type = "hidden";
-  input.name = name;
-  input.value = value;
-  formElement.appendChild(input);
-}
-
-packageSelect.addEventListener("change", updatePackage);
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
-  const orderId = "UC-MS-EN-" + Date.now();
-
-  orderIdHidden.value = orderId;
-
-  const formData = new FormData(form);
-  formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Custom quote");
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode(formData)
-  })
-  .then(() => {
-    if (price === 0) {
-      alert("Thank you. Your inquiry has been sent. We will contact you with a custom quote.");
-      form.reset();
-      updatePackage();
-      return;
+      if (price > 0) {
+        priceDisplay.textContent = price + " PLN";
+        priceHidden.value = price + " PLN";
+        submitButton.textContent = "Proceed to payment";
+      } else {
+        priceDisplay.textContent = "Quote";
+        priceHidden.value = "Individual quote";
+        submitButton.textContent = "Send request";
+      }
     }
 
-    const hotpayForm = document.createElement("form");
-    hotpayForm.method = "POST";
-    hotpayForm.action = HOTPAY_URL;
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
 
-    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
-    addHotpayField(hotpayForm, "KWOTA", price);
-    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Monthly Support - " + label);
-    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/monthly-support/");
-    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
-    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+    function addHotpayField(formElement, name, value) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      formElement.appendChild(input);
+    }
 
-    const customerData =
-      document.getElementById("name").value +
-      " | phone: " +
-      document.getElementById("phone").value;
+    packageSelect.addEventListener("change", updatePackage);
 
-    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
 
-    document.body.appendChild(hotpayForm);
-    hotpayForm.submit();
-  })
-  .catch(() => {
-    alert("Could not send the form. Please try again or contact info@urbanconcierge.pl.");
-  });
-});
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-MS-" + Date.now();
 
-updatePackage();
-</script>
+      orderIdHidden.value = orderId;
 
+      const formData = new FormData(form);
+      formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Individual quote");
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        if (price === 0) {
+          alert("Thank you. Your request has been sent. We will contact you with a proposal.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
+        const hotpayForm = document.createElement("form");
+        hotpayForm.method = "POST";
+        hotpayForm.action = HOTPAY_URL;
+
+        addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+        addHotpayField(hotpayForm, "KWOTA", price);
+        addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Monthly Support - " + label);
+        addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/monthly-support/");
+        addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+        addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+
+        const customerData =
+          document.getElementById("name").value +
+          " | phone: " +
+          document.getElementById("phone").value;
+
+        addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+
+        document.body.appendChild(hotpayForm);
+        hotpayForm.submit();
+      })
+      .catch(() => {
+        alert("The form could not be submitted. Please try again or contact us at info@urbanconcierge.pl.");
+      });
+    });
+
+    updatePackage();
+  </script>
 </body>
 </html>
