@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Urban Concierge | Concierge na godziny w Krakowie</title>
-  <meta name="description" content="Urban Concierge — concierge na godziny w Krakowie. Bez abonamentu. Sprawy na mieście, telefony, rezerwacje, odbiory, zakupy i codzienna organizacja. Pierwsze 10 godzin współpracy: 100 zł/h." />
-
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="canonical" href="https://urbanconcierge.pl/">
+  <meta name="description" content="Urban Concierge — concierge na godziny w Krakowie. Bez abonamentu. Telefony, rezerwacje, odbiory, zwroty, zakupy, research, sprawy na mieście i codzienna organizacja. Pierwsze 10 godzin współpracy: 100 zł/h." />
+  <link rel="canonical" href="https://urbanconcierge.pl/" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
 
   <meta name="google-site-verification" content="AAxFEQEICNm5e7gTLla3e9yeV5aEDyHjChOliVF_S7M" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
@@ -20,6 +21,90 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18108841323');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Urban Concierge",
+    "url": "https://urbanconcierge.pl/",
+    "areaServed": [
+      "Kraków",
+      "Małopolska",
+      "Polska"
+    ],
+    "description": "Urban Concierge oferuje concierge na godziny w Krakowie: telefony, rezerwacje, odbiory, zwroty, zakupy, research, sprawy na mieście, asysty osobiste i codzienną organizację spraw.",
+    "priceRange": "od 200 zł",
+    "email": "info@urbanconcierge.pl",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kraków",
+      "addressCountry": "PL"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Usługi Urban Concierge",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Concierge na godziny w Krakowie",
+          "description": "Wsparcie bez abonamentu: telefony, rezerwacje, odbiory, zwroty, zakupy, research, sprawy na mieście i codzienna organizacja."
+        },
+        {
+          "@type": "Offer",
+          "name": "Asysty osobiste",
+          "description": "Wsparcie na miejscu w Krakowie, kiedy potrzebna jest obecność, koordynacja lub reprezentowanie klienta."
+        },
+        {
+          "@type": "Offer",
+          "name": "Relokacja do Krakowa",
+          "description": "Wsparcie przy przeprowadzce do Krakowa, formalnościach, lokalnej organizacji i sprawach po przyjeździe."
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Czym zajmuje się Urban Concierge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Urban Concierge pomaga w Krakowie w załatwianiu codziennych spraw: telefonach, rezerwacjach, odbiorach, zwrotach, zakupach, researchu, porównywaniu ofert, sprawach na mieście i koordynacji tematów, które klient chce przekazać."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy trzeba mieć abonament?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie. Urban Concierge oferuje usługę concierge na godziny bez abonamentu. Minimalna rezerwacja online to 2 godziny."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ile kosztuje concierge na godziny?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pierwsze 10 godzin współpracy kosztuje 100 zł za godzinę. Minimalna rezerwacja online to 2 godziny, czyli 200 zł."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy Urban Concierge działa tylko w Krakowie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sprawy lokalne i asysty realizowane są głównie w Krakowie i okolicach. Część spraw, takich jak telefony, research, rezerwacje i koordynacja, może być realizowana zdalnie w całej Polsce."
+        }
+      }
+    ]
+  }
   </script>
 
   <style>
@@ -206,6 +291,23 @@
       text-wrap: balance;
     }
 
+    .uc-ai-summary {
+      max-width: 920px;
+      margin: 34px auto 0 auto;
+      padding: 24px 28px;
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.28);
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    .uc-ai-summary strong {
+      color: var(--text);
+    }
+
     .uc-offer-strip {
       max-width: 900px;
       margin: 34px auto 34px auto;
@@ -346,6 +448,7 @@
     }
 
     .uc-grid-2,
+    .uc-grid-3,
     .uc-grid-4,
     .uc-steps {
       display: grid;
@@ -355,7 +458,7 @@
     }
 
     .uc-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
+    .uc-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .uc-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .uc-card,
@@ -504,6 +607,35 @@
       font-size: 13px;
       line-height: 1.9;
       color: var(--muted);
+    }
+
+    .uc-faq {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .uc-faq-item {
+      border: 1px solid #E3D8CB;
+      background: rgba(255,255,255,0.25);
+      padding: 24px 28px;
+    }
+
+    .uc-faq-q {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .uc-faq-a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 0;
     }
 
     .uc-form-wrap {
@@ -748,6 +880,7 @@
       .uc-mini-nav { display: none; }
       .uc-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .uc-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .uc-grid-3 { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 980px) {
@@ -772,7 +905,7 @@
       .uc-sub { font-size: 16px; line-height: 1.9; margin: 0 auto 16px auto; }
       .uc-section { padding: 74px 0; }
       .uc-title, .uc-band-title, .uc-form-title { font-size: 36px; }
-      .uc-steps, .uc-form-grid, .uc-grid-4 { grid-template-columns: 1fr; }
+      .uc-steps, .uc-form-grid, .uc-grid-4, .uc-grid-3 { grid-template-columns: 1fr; }
       .uc-offer-strip { grid-template-columns: 1fr; }
       .uc-offer-item { border-right: none; border-bottom: 1px solid #DCCDBB; }
       .uc-offer-item:last-child { border-bottom: none; }
@@ -791,6 +924,7 @@
     <div class="uc-headerbar">
       <nav class="uc-mini-nav" aria-label="Nawigacja główna">
         <a href="#concierge-na-godziny">Concierge na godziny</a>
+        <a href="#co-ogarniamy">Zakres</a>
         <a href="#jak-to-dziala">Jak działa</a>
         <a href="#rezerwacja">Rezerwacja</a>
       </nav>
@@ -813,7 +947,7 @@
         <h1 class="uc-h1">Concierge na godziny<br>w Krakowie</h1>
 
         <div class="uc-sub">
-          Telefony, rezerwacje, odbiory, zwroty, zakupy, research i codzienna organizacja spraw — wtedy, kiedy potrzebujesz wsparcia.
+          Praktyczna pomoc w załatwianiu codziennych spraw: telefony, rezerwacje, odbiory, zwroty, zakupy, research, sprawy na mieście i koordynacja tematów, które nie powinny już wracać na Twoją listę.
         </div>
 
         <div class="uc-offer-strip">
@@ -842,6 +976,10 @@
           <a href="#rezerwacja" class="uc-btn uc-btn-primary">Zarezerwuj slot od 200 zł</a>
           <a href="#co-ogarniamy" class="uc-btn uc-btn-secondary">Zobacz, co możemy załatwić</a>
         </div>
+
+        <div class="uc-ai-summary">
+          <strong>Urban Concierge</strong> to lokalna usługa concierge w Krakowie dla osób, które chcą przekazać część codziennej organizacji komuś z zewnątrz. Pomagamy przy sprawach na mieście, telefonach, rezerwacjach, odbiorach, zwrotach, zakupach, researchu, porównaniu ofert, follow-upach i prostych działaniach organizacyjnych. Usługa działa bez abonamentu — można zarezerwować konkretny slot godzinowy.
+        </div>
       </div>
     </div>
   </section>
@@ -851,7 +989,7 @@
       <div class="uc-band-title">Bez abonamentu. Kiedy potrzebujesz i do czego potrzebujesz.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Urban Concierge to praktyczne wsparcie dla osób, które mają za dużo spraw na głowie i chcą przekazać część codziennej logistyki komuś, kto spokojnie ją zorganizuje.
+        Urban Concierge to praktyczne wsparcie dla osób, które mają za dużo spraw na głowie i chcą przekazać część codziennej logistyki komuś, kto spokojnie ją zorganizuje, dopilnuje i domknie.
       </div>
     </div>
   </section>
@@ -862,7 +1000,7 @@
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        Najlepiej działają konkretne sprawy: coś trzeba znaleźć, zamówić, odebrać, zwrócić, umówić, potwierdzić albo dopilnować.
+        Najlepiej działają konkretne sprawy: coś trzeba znaleźć, zamówić, odebrać, zwrócić, umówić, potwierdzić, porównać albo dopilnować.
       </div>
 
       <div class="uc-grid-2">
@@ -888,10 +1026,44 @@
           </ul>
         </div>
       </div>
+
+      <div class="uc-note">
+        Sprawy lokalne realizujemy głównie w Krakowie i okolicach. Sprawy zdalne — telefony, research, rezerwacje, porównania ofert i koordynację — możemy realizować również na odległość.
+      </div>
     </div>
   </section>
 
   <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Dla kogo jest ta usługa?</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-grid-3">
+        <div class="uc-card">
+          <div class="uc-card-title">Dla osób zapracowanych</div>
+          <p class="uc-card-copy">
+            Gdy prywatne sprawy odkładasz tygodniami, bo zawsze jest coś pilniejszego.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Dla rodzin i opiekunów</div>
+          <p class="uc-card-copy">
+            Gdy trzeba połączyć pracę, dom, terminy, telefony, odbiory i codzienną logistykę.
+          </p>
+        </div>
+
+        <div class="uc-card">
+          <div class="uc-card-title">Dla osób spoza Krakowa</div>
+          <p class="uc-card-copy">
+            Gdy potrzebujesz kogoś lokalnie na miejscu: do sprawdzenia, odbioru, przekazania lub dopilnowania sprawy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">Ile godzin potrzebujesz?</h2>
       <div class="uc-rule"></div>
@@ -926,7 +1098,7 @@
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft" id="jak-to-dziala">
+  <section class="uc-section" id="jak-to-dziala">
     <div class="uc-shell">
       <h2 class="uc-title">Jak to działa</h2>
       <div class="uc-rule"></div>
@@ -935,7 +1107,7 @@
         <div class="uc-step">
           <div class="uc-step-no">Krok 01</div>
           <div class="uc-step-title">Wybierasz godziny</div>
-          <div class="uc-step-copy">Wybierasz licznikowo od 2 do 5 godzin wsparcia.</div>
+          <div class="uc-step-copy">Wybierasz od 2 do 5 godzin wsparcia.</div>
         </div>
 
         <div class="uc-step">
@@ -959,7 +1131,7 @@
     </div>
   </section>
 
-  <section class="uc-section">
+  <section class="uc-section uc-section-soft">
     <div class="uc-shell">
       <h2 class="uc-title">Inne opcje współpracy</h2>
       <div class="uc-rule"></div>
@@ -991,6 +1163,43 @@
           <div class="uc-card-title">Relokacja do Krakowa</div>
           <p class="uc-card-copy">Wsparcie przy przeprowadzce do Krakowa — od przygotowań przed przyjazdem po lokalną koordynację.</p>
           <a href="/relokacja-krakow/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uc-section">
+    <div class="uc-shell">
+      <h2 class="uc-title">Najczęstsze pytania</h2>
+      <div class="uc-rule"></div>
+
+      <div class="uc-faq">
+        <div class="uc-faq-item">
+          <div class="uc-faq-q">Czym zajmuje się Urban Concierge?</div>
+          <p class="uc-faq-a">
+            Pomagamy w załatwianiu codziennych spraw: telefonach, rezerwacjach, odbiorach, zwrotach, zakupach, researchu, porównywaniu ofert, sprawach na mieście i koordynacji tematów, które klient chce przekazać.
+          </p>
+        </div>
+
+        <div class="uc-faq-item">
+          <div class="uc-faq-q">Czy muszę mieć abonament?</div>
+          <p class="uc-faq-a">
+            Nie. Możesz zarezerwować pojedynczy slot godzinowy. Minimalna rezerwacja online to 2 godziny.
+          </p>
+        </div>
+
+        <div class="uc-faq-item">
+          <div class="uc-faq-q">Czy działacie tylko w Krakowie?</div>
+          <p class="uc-faq-a">
+            Sprawy lokalne realizujemy głównie w Krakowie i okolicach. Sprawy zdalne, takie jak telefony, research, rezerwacje i koordynacja, możemy realizować również na odległość.
+          </p>
+        </div>
+
+        <div class="uc-faq-item">
+          <div class="uc-faq-q">Czy cena obejmuje zakupy lub opłaty zewnętrzne?</div>
+          <p class="uc-faq-a">
+            Nie. Cena obejmuje czas pracy Urban Concierge. Koszty zewnętrzne, np. zakupy, bilety, transport, opłaty lub usługi wykonawców, klient pokrywa osobno.
+          </p>
         </div>
       </div>
     </div>
@@ -1112,125 +1321,126 @@
   </section>
 
   <script>
-const form = document.getElementById('ucBookingForm');
-const minusHour = document.getElementById('minusHour');
-const plusHour = document.getElementById('plusHour');
-const hoursCounter = document.getElementById('hoursCounter');
-const hoursHidden = document.getElementById('hoursHidden');
-const priceDisplay = document.getElementById('priceDisplay');
-const priceHidden = document.getElementById('priceHidden');
-const orderIdHidden = document.getElementById('orderIdHidden');
-const dateInput = document.getElementById('date');
+    const form = document.getElementById('ucBookingForm');
+    const minusHour = document.getElementById('minusHour');
+    const plusHour = document.getElementById('plusHour');
+    const hoursCounter = document.getElementById('hoursCounter');
+    const hoursHidden = document.getElementById('hoursHidden');
+    const priceDisplay = document.getElementById('priceDisplay');
+    const priceHidden = document.getElementById('priceHidden');
+    const orderIdHidden = document.getElementById('orderIdHidden');
+    const dateInput = document.getElementById('date');
 
-const PRICE_PER_HOUR = 100;
-const MIN_HOURS = 2;
-const MAX_HOURS = 5;
+    const PRICE_PER_HOUR = 100;
+    const MIN_HOURS = 2;
+    const MAX_HOURS = 5;
 
-const HOTPAY_URL = "https://platnosc.hotpay.pl/";
-const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+    const HOTPAY_URL = "https://platnosc.hotpay.pl/";
+    const HOTPAY_SECRET = "WKLEJ_TUTAJ_SEKRET_HOTPAY";
 
-function isWeekend(dateString) {
-  const selectedDate = new Date(dateString + "T12:00:00");
-  const day = selectedDate.getDay();
-  return day === 0 || day === 6;
-}
+    function isWeekend(dateString) {
+      const selectedDate = new Date(dateString + "T12:00:00");
+      const day = selectedDate.getDay();
+      return day === 0 || day === 6;
+    }
 
-function updatePrice() {
-  const hours = parseInt(hoursCounter.value, 10);
-  const amount = hours * PRICE_PER_HOUR;
+    function updatePrice() {
+      const hours = parseInt(hoursCounter.value, 10);
+      const amount = hours * PRICE_PER_HOUR;
 
-  hoursHidden.value = hours;
-  priceDisplay.textContent = amount + ' zł';
-  priceHidden.value = amount + ' zł';
-}
+      hoursHidden.value = hours;
+      priceDisplay.textContent = amount + ' zł';
+      priceHidden.value = amount + ' zł';
+    }
 
-minusHour.addEventListener('click', function () {
-  let hours = parseInt(hoursCounter.value, 10);
-  if (hours > MIN_HOURS) {
-    hoursCounter.value = hours - 1;
+    minusHour.addEventListener('click', function () {
+      let hours = parseInt(hoursCounter.value, 10);
+
+      if (hours > MIN_HOURS) {
+        hoursCounter.value = hours - 1;
+        updatePrice();
+      }
+    });
+
+    plusHour.addEventListener('click', function () {
+      let hours = parseInt(hoursCounter.value, 10);
+
+      if (hours < MAX_HOURS) {
+        hoursCounter.value = hours + 1;
+        updatePrice();
+      }
+    });
+
+    dateInput.addEventListener("change", function () {
+      if (isWeekend(dateInput.value)) {
+        alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+        dateInput.value = "";
+      }
+    });
+
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
+
+    function addHotpayField(formElement, name, value) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      formElement.appendChild(input);
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (isWeekend(dateInput.value)) {
+        alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+        return;
+      }
+
+      const hours = parseInt(hoursCounter.value, 10);
+      const amount = hours * PRICE_PER_HOUR;
+      const orderId = 'UC-' + Date.now();
+
+      orderIdHidden.value = orderId;
+
+      const formData = new FormData(form);
+      formData.append('kwota_do_zaplaty', amount + ' zł');
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        const hotpayForm = document.createElement("form");
+
+        hotpayForm.method = "POST";
+        hotpayForm.action = HOTPAY_URL;
+
+        addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+        addHotpayField(hotpayForm, "KWOTA", amount);
+        addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - slot " + hours + "h");
+        addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/");
+        addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+        addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+
+        const customerData =
+          document.getElementById("name").value +
+          " | tel: " +
+          document.getElementById("phone").value;
+
+        addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+
+        document.body.appendChild(hotpayForm);
+        hotpayForm.submit();
+      })
+      .catch(() => {
+        alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+      });
+    });
+
     updatePrice();
-  }
-});
-
-plusHour.addEventListener('click', function () {
-  let hours = parseInt(hoursCounter.value, 10);
-  if (hours < MAX_HOURS) {
-    hoursCounter.value = hours + 1;
-    updatePrice();
-  }
-});
-
-dateInput.addEventListener("change", function () {
-  if (isWeekend(dateInput.value)) {
-    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
-    dateInput.value = "";
-  }
-});
-
-function encode(data) {
-  return new URLSearchParams(data).toString();
-}
-
-function addHotpayField(formElement, name, value) {
-  const input = document.createElement("input");
-  input.type = "hidden";
-  input.name = name;
-  input.value = value;
-  formElement.appendChild(input);
-}
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  if (isWeekend(dateInput.value)) {
-    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
-    return;
-  }
-
-  const hours = parseInt(hoursCounter.value, 10);
-  const amount = hours * PRICE_PER_HOUR;
-  const orderId = 'UC-' + Date.now();
-
-  orderIdHidden.value = orderId;
-
-  const formData = new FormData(form);
-  formData.append('kwota_do_zaplaty', amount + ' zł');
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode(formData)
-  })
-  .then(() => {
-    const hotpayForm = document.createElement("form");
-    hotpayForm.method = "POST";
-    hotpayForm.action = HOTPAY_URL;
-
-    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
-    addHotpayField(hotpayForm, "KWOTA", amount);
-    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - slot " + hours + "h");
-    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/");
-    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
-    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
-
-    const customerData =
-      document.getElementById("name").value +
-      " | tel: " +
-      document.getElementById("phone").value;
-
-    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
-
-    document.body.appendChild(hotpayForm);
-    hotpayForm.submit();
-  })
-  .catch(() => {
-    alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
-  });
-});
-
-updatePrice();
-</script>
-
-
+  </script>
 </body>
 </html>
