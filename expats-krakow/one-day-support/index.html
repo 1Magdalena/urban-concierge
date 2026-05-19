@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>One Day Concierge Support Kraków | Urban Concierge</title>
-
-  <meta name="description" content="One Day Concierge Support in Kraków and surrounding areas. Small or Large package for daily logistics, calls, bookings, pickups, coordination, research and practical support. Online booking available." />
+  <meta name="description" content="One Day Concierge Support in Kraków and surrounding areas. Practical concierge help with calls, bookings, pickups, returns, research, coordination and everyday logistics. Online booking available." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/one-day-support/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -27,33 +24,33 @@
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "name":"Urban Concierge One Day Support",
-    "provider":{
-      "@type":"LocalBusiness",
-      "name":"Urban Concierge",
-      "url":"https://urbanconcierge.pl/",
-      "address":{
-        "@type":"PostalAddress",
-        "addressLocality":"Kraków",
-        "addressCountry":"PL"
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "One Day Support Urban Concierge",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Urban Concierge",
+      "url": "https://urbanconcierge.pl/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
       }
     },
-    "areaServed":["Kraków","Poland"],
-    "description":"One Day Concierge Support in Kraków and surrounding areas. Practical help with calls, bookings, pickups, returns, coordination, research and daily logistics.",
-    "offers":[
+    "areaServed": ["Kraków", "Lesser Poland", "Poland"],
+    "description": "One Day Support by Urban Concierge is a one-time concierge service in Kraków for calls, bookings, pickups, returns, research, service provider contact, coordination and follow-ups.",
+    "offers": [
       {
-        "@type":"Offer",
-        "name":"Small Package",
-        "price":"600",
-        "priceCurrency":"PLN"
+        "@type": "Offer",
+        "name": "Small Package",
+        "price": "600",
+        "priceCurrency": "PLN"
       },
       {
-        "@type":"Offer",
-        "name":"Large Package",
-        "price":"1000",
-        "priceCurrency":"PLN"
+        "@type": "Offer",
+        "name": "Large Package",
+        "price": "1000",
+        "priceCurrency": "PLN"
       }
     ]
   }
@@ -86,9 +83,7 @@
       text-rendering: optimizeLegibility;
     }
 
-    body {
-      font-family: "Libre Baskerville", serif;
-    }
+    body { font-family: "Libre Baskerville", serif; }
 
     .topbar {
       height: 14px;
@@ -101,9 +96,7 @@
       padding: 0 40px;
     }
 
-    header {
-      padding: 34px 0 0;
-    }
+    header { padding: 34px 0 0; }
 
     .header-inner {
       display: grid;
@@ -125,9 +118,7 @@
       text-decoration: none;
     }
 
-    .mini-nav a:hover {
-      color: var(--gold);
-    }
+    .mini-nav a:hover { color: var(--gold); }
 
     .brand {
       font-family: "Cormorant Garamond", serif;
@@ -165,9 +156,7 @@
       color: #fff;
     }
 
-    .lang a {
-      color: var(--text);
-    }
+    .lang a { color: var(--text); }
 
     .hero {
       min-height: calc(88vh - 14px);
@@ -224,6 +213,20 @@
       color: var(--muted);
     }
 
+    .ai-summary {
+      max-width: 920px;
+      margin: 34px auto 0;
+      padding: 24px 28px;
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.28);
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    .ai-summary strong { color: var(--text); }
+
     .offer-strip {
       max-width: 900px;
       margin: 34px auto 34px;
@@ -238,9 +241,7 @@
       border-right: 1px solid #DCCDBB;
     }
 
-    .offer-item:last-child {
-      border-right: none;
-    }
+    .offer-item:last-child { border-right: none; }
 
     .offer-label {
       font-size: 10px;
@@ -321,31 +322,398 @@
       color: rgba(245,241,235,0.88);
     }
 
-    @media (max-width: 900px) {
-      h1 {
-        font-size: 56px;
-      }
+    section.content {
+      padding: 96px 0;
+      border-top: 1px solid var(--line);
+    }
 
-      .offer-strip {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    section.soft { background: var(--soft-bg); }
+
+    .title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      line-height: 1.04;
+      font-weight: 500;
+      text-align: center;
+      margin: 0 0 12px;
+    }
+
+    .rule {
+      width: 84px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 24px;
+    }
+
+    .intro {
+      max-width: 860px;
+      margin: 0 auto 40px;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.95;
+      color: var(--muted);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
+      border: 1px solid #E3D8CB;
+      padding: 34px 32px;
+      position: relative;
+      box-shadow: 0 16px 40px rgba(58,47,42,0.04);
+      min-height: 100%;
+    }
+
+    .card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 32px;
+      width: 68px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      line-height: 1.06;
+      font-weight: 500;
+      margin: 10px 0 12px;
+    }
+
+    .card p,
+    .card li {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .price-card { text-align: center; }
+
+    .price-label {
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .price-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .price-note {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--soft);
+      margin-top: 18px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .step {
+      border-top: 1px solid var(--line-strong);
+      padding-top: 18px;
+    }
+
+    .step-no {
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
+      line-height: 1.04;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .form-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 44px;
+      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
+      border: 1px solid rgba(194,164,109,0.42);
+      color: #F5F1EB;
+      box-shadow: 0 20px 54px rgba(43,34,31,0.10);
+    }
+
+    .form-head {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .form-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 46px;
+      line-height: 1.06;
+      font-weight: 500;
+      margin: 0 0 14px;
+    }
+
+    .form-copy {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(245,241,235,0.84);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field-full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 11px;
+      line-height: 1.6;
+      letter-spacing: 0.4px;
+      color: rgba(245,241,235,0.92);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(245,241,235,0.22);
+      background: rgba(245,241,235,0.07);
+      color: #F5F1EB;
+      padding: 15px;
+      font-family: "Libre Baskerville", serif;
+      font-size: 13px;
+      line-height: 1.6;
+      outline: none;
+      border-radius: 0;
+    }
+
+    input::placeholder,
+    textarea::placeholder { color: rgba(245,241,235,0.46); }
+
+    select option {
+      color: #3A2F2A;
+      background: #F5F1EB;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      opacity: 0.75;
+      cursor: pointer;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(194,164,109,0.86);
+      background: rgba(245,241,235,0.10);
+    }
+
+    .small-note {
+      font-size: 10px;
+      line-height: 1.7;
+      color: rgba(245,241,235,0.62);
+      margin-top: 8px;
+    }
+
+    .total-box {
+      grid-column: 1 / -1;
+      border: 1px solid rgba(194,164,109,0.52);
+      padding: 22px;
+      text-align: center;
+      background: rgba(245,241,235,0.06);
+    }
+
+    .total-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,241,235,0.72);
+      margin-bottom: 8px;
+    }
+
+    .total-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      line-height: 1.1;
+      color: #F5F1EB;
+    }
+
+    .consent {
+      margin: 22px 0 26px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .consent input {
+      width: auto;
+      margin-top: 4px;
+      accent-color: var(--gold);
+    }
+
+    .consent a {
+      color: #F5F1EB;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hidden { display: none; }
+
+    .submit-wrap { text-align: center; }
+
+    button {
+      cursor: pointer;
+      border-radius: 0;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #fff;
+      padding: 18px 40px;
+      font-family: "Libre Baskerville", serif;
+      font-size: 12px;
+      letter-spacing: 0.55px;
+    }
+
+    button:hover {
+      background: var(--gold-soft);
+      border-color: var(--gold-soft);
+    }
+
+    .form-note {
+      max-width: 680px;
+      margin: 18px auto 0;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.8;
+      color: rgba(245,241,235,0.62);
+    }
+
+    footer {
+      background: linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
+      padding: 44px 34px 48px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 24px;
+      color: #F5F1EB;
+      margin-bottom: 6px;
+    }
+
+    .footer-sub {
+      font-size: 11px;
+      color: #D9CEC4;
+      margin-bottom: 14px;
+    }
+
+    .footer-links {
+      font-size: 10px;
+      line-height: 1.9;
+    }
+
+    .footer-links a {
+      color: #F5F1EB;
+      text-decoration: none;
+      margin: 0 10px;
+      opacity: 0.92;
+    }
+
+    .footer-links a:hover { text-decoration: underline; }
+
+    @media (max-width: 1100px) {
+      .mini-nav { display: none; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      h1 { font-size: 56px; }
+      .offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .offer-item:nth-child(2) { border-right: none; }
+      .offer-item:nth-child(1),
+      .offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
     }
 
     @media (max-width: 768px) {
-      .shell {
-        padding: 0 20px;
-      }
+      .shell { padding: 0 20px; }
+      header { padding-top: 26px; }
 
       .header-inner {
         grid-template-columns: 1fr;
+        gap: 18px;
       }
 
       .brand {
         justify-self: center;
+        font-size: 28px;
       }
 
-      .lang {
-        justify-self: center;
+      .lang { justify-self: center; }
+
+      .hero {
+        min-height: auto;
+        padding: 34px 0 64px;
+      }
+
+      .kicker {
+        letter-spacing: 3px;
+        margin-bottom: 22px;
       }
 
       h1 {
@@ -353,121 +721,459 @@
         line-height: 1.08;
       }
 
-      .offer-strip {
-        grid-template-columns: 1fr;
+      .sub {
+        font-size: 16px;
+        line-height: 1.9;
       }
+
+      .offer-strip { grid-template-columns: 1fr; }
 
       .offer-item {
         border-right: none;
         border-bottom: 1px solid #DCCDBB;
       }
 
-      .offer-item:last-child {
-        border-bottom: none;
-      }
+      .offer-item:last-child { border-bottom: none; }
 
       .btn {
         display: block;
         max-width: 340px;
         margin: 0 auto 12px;
       }
+
+      section.content { padding: 76px 0; }
+
+      .title,
+      .band h2,
+      .form-title { font-size: 36px; }
+
+      .steps,
+      .form-grid { grid-template-columns: 1fr; }
+
+      .form-wrap { padding: 34px 22px; }
+
+      button { width: 100%; }
     }
   </style>
 </head>
 
 <body>
+  <div class="topbar"></div>
 
-<div class="topbar"></div>
+  <header class="shell">
+    <div class="header-inner">
+      <nav class="mini-nav" aria-label="Navigation">
+        <a href="#packages">Packages</a>
+        <a href="#scope">Scope</a>
+        <a href="#booking">Booking</a>
+      </nav>
 
-<header class="shell">
-  <div class="header-inner">
+      <a href="/expats-krakow/" class="brand">Urban Concierge</a>
 
-    <nav class="mini-nav" aria-label="Navigation">
-      <a href="#packages">Packages</a>
-      <a href="#scope">Scope</a>
-      <a href="#booking">Booking</a>
-    </nav>
-
-    <a href="/expats-krakow/" class="brand">Urban Concierge</a>
-
-    <div class="lang">
-      <a href="/1-dzien-wsparcia/">PL</a>
-      <span>ENG</span>
+      <div class="lang">
+        <a href="/1-dzien-wsparcia/">PL</a>
+        <span>ENG</span>
+      </div>
     </div>
+  </header>
 
-  </div>
-</header>
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <div class="hero-inner">
+          <div class="kicker">One Day Concierge Support • Kraków and surroundings • remote across Poland</div>
 
-<main>
+          <h1>One day.<br>Fewer things on your mind.</h1>
 
-<section class="hero">
+          <div class="sub">
+            One Day Support by Urban Concierge is a focused organisational block for things that need to be properly handled: calls, bookings, pickups, returns, research, arrangements and everyday logistics.
+          </div>
 
-  <div class="shell">
-    <div class="hero-inner">
+          <div class="offer-strip">
+            <div class="offer-item">
+              <div class="offer-label">Small Package</div>
+              <div class="offer-value">600 PLN</div>
+            </div>
 
-      <div class="kicker">
-        One Day Concierge Support • Kraków & surrounding areas • remote across Poland
+            <div class="offer-item">
+              <div class="offer-label">Large Package</div>
+              <div class="offer-value">1000 PLN</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">Booking</div>
+              <div class="offer-value">online</div>
+            </div>
+
+            <div class="offer-item">
+              <div class="offer-label">No subscription</div>
+              <div class="offer-value">one-time</div>
+            </div>
+          </div>
+
+          <a href="#booking" class="btn btn-primary">Book One Day Support</a>
+          <a href="#scope" class="btn btn-secondary">See scope</a>
+
+          <div class="ai-summary">
+            <strong>One Day Support by Urban Concierge</strong> is a one-time concierge service in Kraków and surrounding areas. We help with everyday organisation: calls, bookings, pickups, returns, research, contacting service providers, appointment coordination and follow-ups. The service is available without subscription, as a Small Package or Large Package.
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h1>
-        One day.<br>
-        Fewer things on your mind.
-      </h1>
-
-      <div class="sub">
-        Urban Concierge One Day Support is a focused organizational block for tasks that need to be properly handled: calls, bookings, pickups, returns, research, coordination and everyday logistics.
+    <section class="band">
+      <div class="shell">
+        <h2>Not everything requires ongoing cooperation.</h2>
+        <div class="rule-light"></div>
+        <p>
+          Sometimes one well-organised day is enough to close several pending tasks, reduce mental load and bring order back to things that keep coming back.
+        </p>
       </div>
+    </section>
 
-      <div class="offer-strip">
+    <section class="content soft" id="packages">
+      <div class="shell">
+        <h2 class="title">Choose a package</h2>
+        <div class="rule"></div>
 
-        <div class="offer-item">
-          <div class="offer-label">Small Package</div>
-          <div class="offer-value">600 PLN</div>
+        <p class="intro">
+          One Day Support can be booked as a smaller organisational block or a larger package for a more extended list of tasks.
+        </p>
+
+        <div class="grid-3">
+          <div class="card price-card">
+            <div class="price-label">Small Package</div>
+            <div class="price-value">600 PLN</div>
+            <p>
+              For a few simple tasks to be handled in one day: calls, bookings, pickups, returns, research or basic coordination.
+            </p>
+            <div class="price-note">A good option if you want to try the service or close a specific list of small tasks.</div>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Large Package</div>
+            <div class="price-value">1000 PLN</div>
+            <p>
+              For a larger task list, more intensive coordination, several local errands or a combination of remote and local support.
+            </p>
+            <div class="price-note">A good option when there is more to handle and you want to delegate a larger block of daily logistics.</div>
+          </div>
+
+          <div class="card price-card">
+            <div class="price-label">Custom scope</div>
+            <div class="price-value">quote</div>
+            <p>
+              If you need personal assistance, relocation support, a larger project or several days of help, describe it in the form.
+            </p>
+            <div class="price-note">In that case, we will prepare a proposal based on the scope.</div>
+          </div>
         </div>
 
-        <div class="offer-item">
-          <div class="offer-label">Large Package</div>
-          <div class="offer-value">1000 PLN</div>
-        </div>
-
-        <div class="offer-item">
-          <div class="offer-label">Booking</div>
-          <div class="offer-value">online</div>
-        </div>
-
-        <div class="offer-item">
-          <div class="offer-label">No subscription</div>
-          <div class="offer-value">one-time</div>
-        </div>
-
+        <p class="intro" style="font-size:12px; margin-top:28px; margin-bottom:0;">
+          External costs, such as shopping, tickets, fees, service providers or transport, are covered separately by the client.
+        </p>
       </div>
+    </section>
 
-      <a href="#booking" class="btn btn-primary">Book One Day Support</a>
+    <section class="content" id="scope">
+      <div class="shell">
+        <h2 class="title">What One Day Support includes</h2>
+        <div class="rule"></div>
 
-      <a href="#scope" class="btn btn-secondary">See scope</a>
+        <p class="intro">
+          This is practical help with getting things done in Kraków, nearby areas or remotely — especially when the tasks are not complicated, but require time, calls, arrangements and attention to detail.
+        </p>
 
+        <div class="grid-2">
+          <div class="card">
+            <h3>Everyday tasks</h3>
+            <ul>
+              <li>booking an appointment, service or consultation</li>
+              <li>confirming delivery, assembly or pickup times</li>
+              <li>contacting a service provider, building administration or institution</li>
+              <li>organising a gift, flowers, reservation or transport</li>
+              <li>following up on something that needs to be pushed forward</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Coordination tasks</h3>
+            <ul>
+              <li>finding and comparing several service providers or options</li>
+              <li>arranging times between several people</li>
+              <li>coordinating a repair, visit, pickup or formal process</li>
+              <li>checking availability and gathering information</li>
+              <li>organising several pending items from one list</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="intro" style="font-size:12px; margin-top:24px; margin-bottom:0;">
+          Urban Concierge does not replace a doctor, lawyer, accountant, tax advisor or any other licensed specialist. We help with organisation, coordination, communication and process follow-up.
+        </p>
+      </div>
+    </section>
+
+    <section class="content soft">
+      <div class="shell">
+        <h2 class="title">How it works</h2>
+        <div class="rule"></div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">Step 01</div>
+            <div class="step-title">Choose a package</div>
+            <p>Select Small Package, Large Package or describe a custom scope.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 02</div>
+            <div class="step-title">Choose the day</div>
+            <p>Provide your preferred service day and the list of tasks to organise.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 03</div>
+            <div class="step-title">Pay online</div>
+            <p>After submitting the form, you will be redirected to online payment.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-no">Step 04</div>
+            <div class="step-title">We take over</div>
+            <p>We confirm the scope and start handling the agreed tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" id="booking">
+      <div class="shell">
+        <div class="form-wrap">
+          <div class="form-head">
+            <div class="form-title">Book One Day Support</div>
+            <div class="form-copy">
+              Choose a package, preferred service day and briefly describe the tasks. After submitting the form, you will be redirected to online payment.
+            </div>
+          </div>
+
+          <form name="one-day-support-eng" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="supportDayForm">
+            <input type="hidden" name="form-name" value="one-day-support-eng">
+            <input type="hidden" name="source_page" value="One Day Support ENG">
+            <input type="hidden" id="priceHidden" name="package_value" value="600 PLN">
+            <input type="hidden" id="packageHidden" name="selected_package" value="Small Package">
+            <input type="hidden" id="orderIdHidden" name="order_id" value="">
+
+            <p class="hidden">
+              <label>Do not fill this field: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="email@example.com" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+48..." required>
+              </div>
+
+              <div class="field">
+                <label for="location">Location</label>
+                <input id="location" name="location" type="text" placeholder="Kraków / nearby / remote / other">
+              </div>
+
+              <div class="field">
+                <label for="package">Package</label>
+                <select id="package" name="package" required>
+                  <option value="small" data-price="600" data-label="Small Package">Small Package — 600 PLN</option>
+                  <option value="large" data-price="1000" data-label="Large Package">Large Package — 1000 PLN</option>
+                  <option value="custom" data-price="0" data-label="Custom quote">Custom scope — individual quote</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="date">Preferred service day</label>
+                <input id="date" name="preferred_service_day" type="date" required>
+                <div class="small-note">The booking is for a selected day, not for an exact hour.</div>
+              </div>
+
+              <div class="field field-full">
+                <label for="preferredTime">Notes / preferred time</label>
+                <input id="preferredTime" name="notes_preferred_time" type="text" placeholder="If you prefer a specific time or time window, write it here.">
+              </div>
+
+              <div class="field field-full">
+                <label for="message">Tasks to organise</label>
+                <textarea id="message" name="tasks_to_organise" placeholder="Briefly describe what you would like us to organise. You can list several tasks in points." required></textarea>
+              </div>
+
+              <div class="total-box">
+                <div class="total-label">Total</div>
+                <div class="total-value" id="priceDisplay">600 PLN</div>
+              </div>
+            </div>
+
+            <div class="consent">
+              <input id="consent" name="contact_consent" type="checkbox" required>
+              <label for="consent">
+                I agree to be contacted regarding this request. I have read the
+                <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+                and
+                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms and Conditions</a>.
+              </label>
+            </div>
+
+            <div class="submit-wrap">
+              <button type="submit" id="submitButton">Proceed to payment</button>
+            </div>
+
+            <div class="form-note">
+              The form saves your request and then redirects you to HotPay payment. The booking becomes active after payment. For custom scope requests, we will contact you with a proposal.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">Urban Concierge</div>
+    <div class="footer-sub">Private concierge support | Kraków and surrounding areas | remote across Poland</div>
+
+    <div class="footer-links">
+      <a href="/expats-krakow/">Home</a>
+      <a href="/asysty/">Personal Assistance</a>
+      <a href="/abonament/">Subscription</a>
+      <a href="/relokacja-krakow/">Relocation to Kraków</a>
+      <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms</a>
+      <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="mailto:info@urbanconcierge.pl">Contact</a>
     </div>
-  </div>
+  </footer>
 
-</section>
+  <script>
+    const form = document.getElementById("supportDayForm");
+    const packageSelect = document.getElementById("package");
+    const dateInput = document.getElementById("date");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
 
-<section class="band">
+    const HOTPAY_URL = "https://platnosc.hotpay.pl/";
+    const HOTPAY_SECRET = "WKLEJ_TUTAJ_SEKRET_HOTPAY";
 
-  <div class="shell">
+    function isWeekend(dateString) {
+      const selectedDate = new Date(dateString + "T12:00:00");
+      const day = selectedDate.getDay();
+      return day === 0 || day === 6;
+    }
 
-    <h2>Not everything requires a long-term arrangement.</h2>
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
 
-    <div class="rule-light"></div>
+      packageHidden.value = label;
 
-    <p>
-      Sometimes one well-organized day is enough to close several pending tasks, reduce mental clutter and finally move things forward.
-    </p>
+      if (price > 0) {
+        priceDisplay.textContent = price + " PLN";
+        priceHidden.value = price + " PLN";
+        submitButton.textContent = "Proceed to payment";
+      } else {
+        priceDisplay.textContent = "Quote";
+        priceHidden.value = "Individual quote";
+        submitButton.textContent = "Send request";
+      }
+    }
 
-  </div>
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
 
-</section>
+    function addHotpayField(formElement, name, value) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      formElement.appendChild(input);
+    }
 
-</main>
+    packageSelect.addEventListener("change", updatePackage);
 
+    dateInput.addEventListener("change", function () {
+      if (isWeekend(dateInput.value)) {
+        alert("Online bookings are available from Monday to Friday. Please choose a business day.");
+        dateInput.value = "";
+      }
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      if (isWeekend(dateInput.value)) {
+        alert("Online bookings are available from Monday to Friday. Please choose a business day.");
+        return;
+      }
+
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-ODS-" + Date.now();
+
+      orderIdHidden.value = orderId;
+
+      const formData = new FormData(form);
+      formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Individual quote");
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        if (price === 0) {
+          alert("Thank you. Your request has been sent. We will contact you with a proposal.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
+        const hotpayForm = document.createElement("form");
+        hotpayForm.method = "POST";
+        hotpayForm.action = HOTPAY_URL;
+
+        addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+        addHotpayField(hotpayForm, "KWOTA", price);
+        addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - One Day Support - " + label);
+        addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/one-day-support/");
+        addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+        addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+
+        const customerData =
+          document.getElementById("name").value +
+          " | phone: " +
+          document.getElementById("phone").value;
+
+        addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+
+        document.body.appendChild(hotpayForm);
+        hotpayForm.submit();
+      })
+      .catch(() => {
+        alert("The form could not be submitted. Please try again or contact us at info@urbanconcierge.pl.");
+      });
+    });
+
+    updatePackage();
+  </script>
 </body>
 </html>
