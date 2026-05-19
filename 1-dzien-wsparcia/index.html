@@ -9,6 +9,9 @@
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/1-dzien-wsparcia/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
@@ -17,6 +20,40 @@
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "AW-18108841323");
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Dzień Wsparcia Urban Concierge",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Urban Concierge",
+      "url": "https://urbanconcierge.pl/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      }
+    },
+    "areaServed": ["Kraków", "Małopolska", "Polska"],
+    "description": "Dzień Wsparcia Urban Concierge to jednorazowy blok organizacyjny na sprawy codzienne: telefony, rezerwacje, odbiory, zwroty, research, kontakt z usługodawcami, koordynacja i follow-up.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Pakiet Mały",
+        "price": "600",
+        "priceCurrency": "PLN"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pakiet Duży",
+        "price": "1000",
+        "priceCurrency": "PLN"
+      }
+    ]
+  }
   </script>
 
   <style>
@@ -175,6 +212,20 @@
       line-height: 2;
       color: var(--muted);
     }
+
+    .ai-summary {
+      max-width: 920px;
+      margin: 34px auto 0;
+      padding: 24px 28px;
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.28);
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    .ai-summary strong { color: var(--text); }
 
     .offer-strip {
       max-width: 900px;
@@ -732,10 +783,7 @@
         <div class="hero-inner">
           <div class="kicker">Dzień Wsparcia Concierge • Kraków i okolice • zdalnie w całej Polsce</div>
 
-          <h1>
-            Jeden dzień,<br>
-            kilka spraw mniej.
-          </h1>
+          <h1>Jeden dzień,<br>kilka spraw mniej.</h1>
 
           <div class="sub">
             Dzień Wsparcia Urban Concierge to konkretny blok organizacyjny na sprawy, które trzeba doprowadzić do końca: telefony, rezerwacje, odbiory, zwroty, research, ustalenia i codzienna logistyka.
@@ -765,6 +813,10 @@
 
           <a href="#rezerwacja" class="btn btn-primary">Zarezerwuj Dzień Wsparcia</a>
           <a href="#zakres" class="btn btn-secondary">Zobacz zakres</a>
+
+          <div class="ai-summary">
+            <strong>Dzień Wsparcia Urban Concierge</strong> to jednorazowa usługa concierge w Krakowie i okolicach. Pomagamy w organizacji codziennych spraw: telefonach, rezerwacjach, odbiorach, zwrotach, researchu, kontakcie z usługodawcami, koordynacji terminów i follow-upach. Usługa jest dostępna bez abonamentu, jako Pakiet Mały lub Pakiet Duży.
+          </div>
         </div>
       </div>
     </section>
@@ -1005,123 +1057,123 @@
       <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
     </div>
   </footer>
-<script>
-const form = document.getElementById("supportDayForm");
-const packageSelect = document.getElementById("package");
-const dateInput = document.getElementById("date");
-const priceDisplay = document.getElementById("priceDisplay");
-const priceHidden = document.getElementById("priceHidden");
-const packageHidden = document.getElementById("packageHidden");
-const orderIdHidden = document.getElementById("orderIdHidden");
-const submitButton = document.getElementById("submitButton");
 
-const HOTPAY_URL = "https://platnosc.hotpay.pl/";
-const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+  <script>
+    const form = document.getElementById("supportDayForm");
+    const packageSelect = document.getElementById("package");
+    const dateInput = document.getElementById("date");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
 
-function isWeekend(dateString) {
-  const selectedDate = new Date(dateString + "T12:00:00");
-  const day = selectedDate.getDay();
-  return day === 0 || day === 6;
-}
+    const HOTPAY_URL = "https://platnosc.hotpay.pl/";
+    const HOTPAY_SECRET = "WKLEJ_TUTAJ_SEKRET_HOTPAY";
 
-function updatePackage() {
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
-
-  packageHidden.value = label;
-
-  if (price > 0) {
-    priceDisplay.textContent = price + " zł";
-    priceHidden.value = price + " zł";
-    submitButton.textContent = "Przejdź do płatności";
-  } else {
-    priceDisplay.textContent = "Wycena";
-    priceHidden.value = "Wycena indywidualna";
-    submitButton.textContent = "Wyślij zapytanie";
-  }
-}
-
-function encode(data) {
-  return new URLSearchParams(data).toString();
-}
-
-function addHotpayField(formElement, name, value) {
-  const input = document.createElement("input");
-  input.type = "hidden";
-  input.name = name;
-  input.value = value;
-  formElement.appendChild(input);
-}
-
-packageSelect.addEventListener("change", updatePackage);
-
-dateInput.addEventListener("change", function () {
-  if (isWeekend(dateInput.value)) {
-    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
-    dateInput.value = "";
-  }
-});
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  if (isWeekend(dateInput.value)) {
-    alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
-    return;
-  }
-
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
-  const orderId = "UC-DW-" + Date.now();
-
-  orderIdHidden.value = orderId;
-
-  const formData = new FormData(form);
-  formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode(formData)
-  })
-  .then(() => {
-    if (price === 0) {
-      alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
-      form.reset();
-      updatePackage();
-      return;
+    function isWeekend(dateString) {
+      const selectedDate = new Date(dateString + "T12:00:00");
+      const day = selectedDate.getDay();
+      return day === 0 || day === 6;
     }
 
-    const hotpayForm = document.createElement("form");
-    hotpayForm.method = "POST";
-    hotpayForm.action = HOTPAY_URL;
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
 
-    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
-    addHotpayField(hotpayForm, "KWOTA", price);
-    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Dzień Wsparcia - " + label);
-    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/1-dzien-wsparcia/");
-    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
-    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+      packageHidden.value = label;
 
-    const customerData =
-      document.getElementById("name").value +
-      " | tel: " +
-      document.getElementById("phone").value;
+      if (price > 0) {
+        priceDisplay.textContent = price + " zł";
+        priceHidden.value = price + " zł";
+        submitButton.textContent = "Przejdź do płatności";
+      } else {
+        priceDisplay.textContent = "Wycena";
+        priceHidden.value = "Wycena indywidualna";
+        submitButton.textContent = "Wyślij zapytanie";
+      }
+    }
 
-    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
 
-    document.body.appendChild(hotpayForm);
-    hotpayForm.submit();
-  })
-  .catch(() => {
-    alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
-  });
-});
+    function addHotpayField(formElement, name, value) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      formElement.appendChild(input);
+    }
 
-updatePackage();
-</script>
+    packageSelect.addEventListener("change", updatePackage);
 
+    dateInput.addEventListener("change", function () {
+      if (isWeekend(dateInput.value)) {
+        alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+        dateInput.value = "";
+      }
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      if (isWeekend(dateInput.value)) {
+        alert("Rezerwacje online są dostępne od poniedziałku do piątku. Proszę wybrać dzień roboczy.");
+        return;
+      }
+
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-DW-" + Date.now();
+
+      orderIdHidden.value = orderId;
+
+      const formData = new FormData(form);
+      formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        if (price === 0) {
+          alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
+        const hotpayForm = document.createElement("form");
+        hotpayForm.method = "POST";
+        hotpayForm.action = HOTPAY_URL;
+
+        addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+        addHotpayField(hotpayForm, "KWOTA", price);
+        addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Dzień Wsparcia - " + label);
+        addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/1-dzien-wsparcia/");
+        addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+        addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+
+        const customerData =
+          document.getElementById("name").value +
+          " | tel: " +
+          document.getElementById("phone").value;
+
+        addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+
+        document.body.appendChild(hotpayForm);
+        hotpayForm.submit();
+      })
+      .catch(() => {
+        alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+      });
+    });
+
+    updatePackage();
+  </script>
 </body>
 </html>
