@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>In-Person Assistance Krakow | Urban Concierge</title>
-  <meta name="description" content="In-person assistance by Urban Concierge in Krakow and nearby areas. Small Package, Large Package or custom quote. Discreet support during appointments, formalities, pickups, meetings and situations requiring presence." />
+  <title>In-Person Assistance Kraków | Urban Concierge</title>
+  <meta name="description" content="In-person assistance by Urban Concierge in Kraków and surrounding areas. Small Package, Large Package or custom quote. Discreet support during appointments, formalities, pickups, meetings and situations requiring physical presence." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/in-person-assistance/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
@@ -17,6 +20,40 @@
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "AW-18108841323");
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "In-Person Assistance Urban Concierge",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Urban Concierge",
+      "url": "https://urbanconcierge.pl/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      }
+    },
+    "areaServed": ["Kraków", "Lesser Poland", "Poland"],
+    "description": "In-person assistance by Urban Concierge in Kraków and surrounding areas during appointments, formalities, pickups, handovers, meetings, transport and situations requiring physical presence.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Small Package",
+        "price": "300",
+        "priceCurrency": "PLN"
+      },
+      {
+        "@type": "Offer",
+        "name": "Large Package",
+        "price": "550",
+        "priceCurrency": "PLN"
+      }
+    ]
+  }
   </script>
 
   <style>
@@ -176,6 +213,20 @@
       color: var(--muted);
     }
 
+    .ai-summary {
+      max-width: 920px;
+      margin: 34px auto 0;
+      padding: 24px 28px;
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.28);
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    .ai-summary strong { color: var(--text); }
+
     .offer-strip {
       max-width: 900px;
       margin: 34px auto 34px;
@@ -303,21 +354,18 @@
       color: var(--muted);
     }
 
-    .grid-2 {
+    .grid-2,
+    .grid-3,
+    .steps {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       max-width: 1040px;
       margin: 0 auto;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(4, 1fr); }
 
     .card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
@@ -381,14 +429,6 @@
       line-height: 1.8;
       color: var(--soft);
       margin-top: 18px;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
     }
 
     .step {
@@ -510,13 +550,6 @@
     textarea:focus {
       border-color: rgba(194,164,109,0.86);
       background: rgba(245,241,235,0.10);
-    }
-
-    .small-note {
-      font-size: 10px;
-      line-height: 1.7;
-      color: rgba(245,241,235,0.62);
-      margin-top: 8px;
     }
 
     .total-box {
@@ -730,15 +763,12 @@
     <section class="hero">
       <div class="shell">
         <div class="hero-inner">
-          <div class="kicker">In-person assistance • Krakow and nearby areas • private concierge support</div>
+          <div class="kicker">In-person assistance • Kraków and surroundings • private concierge support</div>
 
-          <h1>
-            In-person assistance<br>
-            when presence matters.
-          </h1>
+          <h1>In-person assistance<br>when presence makes the difference.</h1>
 
           <div class="sub">
-            Private, discreet assistance in Krakow and nearby areas — during appointments, formalities, pickups, meetings, transfers and situations that require presence, calm coordination and real support.
+            Private, discreet assistance in Kraków and surrounding areas — during appointments, formalities, pickups, meetings, transport and situations that require presence, calm coordination and real support on site.
           </div>
 
           <div class="offer-strip">
@@ -758,13 +788,17 @@
             </div>
 
             <div class="offer-item">
-              <div class="offer-label">Krakow</div>
+              <div class="offer-label">Kraków</div>
               <div class="offer-value">and nearby</div>
             </div>
           </div>
 
           <a href="#booking" class="btn btn-primary">Book assistance</a>
-          <a href="#scope" class="btn btn-secondary">See the scope</a>
+          <a href="#scope" class="btn btn-secondary">See scope</a>
+
+          <div class="ai-summary">
+            <strong>In-person assistance by Urban Concierge</strong> is private concierge support in Kraków and surrounding areas during appointments, formalities, pickups, handovers, meetings, transport and situations requiring physical presence. The service is available as a Small Package, Large Package or individually quoted custom scope.
+          </div>
         </div>
       </div>
     </section>
@@ -774,7 +808,7 @@
         <h2>It is not only about being there.</h2>
         <div class="rule-light"></div>
         <p>
-          Assistance is useful when it matters who is present, who follows the situation, keeps the process calm and helps complete the matter in an organised way.
+          In-person assistance is useful when what matters is not only what needs to be done, but also who is present, who follows the process and who calmly handles the situation on site.
         </p>
       </div>
     </section>
@@ -785,7 +819,7 @@
         <div class="rule"></div>
 
         <p class="intro">
-          In-person assistance can be booked as shorter support on site or as a larger block involving longer presence, transfer or broader coordination.
+          You can book in-person assistance as shorter on-site support or a larger block covering longer presence, transport or broader coordination.
         </p>
 
         <div class="grid-3">
@@ -793,71 +827,71 @@
             <div class="price-label">Small Package</div>
             <div class="price-value">300 PLN</div>
             <p>
-              Short assistance for one specific situation in Krakow: pickup, handover, selected formality, presence during an appointment or basic on-site coordination.
+              Short assistance for one specific situation in Kraków: pickup, handover, selected formal matter, presence during an appointment or basic on-site coordination.
             </p>
-            <div class="price-note">A good choice when presence and calm supervision of one matter are needed.</div>
+            <div class="price-note">A good choice when presence and calm handling of one matter are needed.</div>
           </div>
 
           <div class="card price-card">
             <div class="price-label">Large Package</div>
             <div class="price-value">550 PLN</div>
             <p>
-              Longer on-site assistance, several points, a more extended process, transfer between locations or support requiring broader coordination.
+              Longer on-site assistance, several locations, a more extended situation, transport between places or support requiring broader coordination.
             </p>
-            <div class="price-note">A good choice when the situation requires more time, presence and flexible handling.</div>
+            <div class="price-note">A good choice when the situation requires more time, presence and flexible action.</div>
           </div>
 
           <div class="card price-card">
-            <div class="price-label">Larger scope</div>
+            <div class="price-label">Custom scope</div>
             <div class="price-value">quote</div>
             <p>
-              For longer, unusual or non-standard assistance, more responsibility or a larger number of points.
+              For longer, non-standard assistance, outside the regular scope, with greater responsibility or more locations involved.
             </p>
-            <div class="price-note">Describe the situation in the form — we will prepare a tailored proposal.</div>
+            <div class="price-note">Describe the situation in the form and we will prepare a tailored proposal.</div>
           </div>
         </div>
 
         <p class="intro" style="font-size:12px; margin-top:28px; margin-bottom:0;">
-          External costs, such as fees, tickets, parking, purchases, third-party services or additional transport, are covered separately by the client.
+          External costs, such as fees, tickets, parking, shopping, service providers or additional transport, are covered separately by the client.
         </p>
       </div>
     </section>
 
     <section class="content" id="scope">
       <div class="shell">
-        <h2 class="title">When to use in-person assistance</h2>
+        <h2 class="title">When in-person assistance makes sense</h2>
         <div class="rule"></div>
 
         <p class="intro">
-          In-person assistance is the right option when remote organisation is not enough — presence, punctuality, communication and calm supervision are needed.
+          In-person assistance is the right choice when remote organisation is not enough — physical presence, punctuality, communication and calm handling of the situation are needed.
         </p>
 
         <div class="grid-2">
           <div class="card">
             <h3>Presence on site</h3>
             <p>
-              For matters where someone needs to be physically present: during an appointment, pickup, formality, handover, meeting or situation that requires supervision.
+              For matters where someone needs to be physically present: during an appointment, pickup, formal process, handover, meeting or any situation requiring on-site attention.
             </p>
           </div>
 
           <div class="card">
-            <h3>Less operational pressure</h3>
+            <h3>Less operational tension</h3>
             <p>
-              You do not have to manage everything in a rush. Assistance brings order to the process, confirmations, presence and communication where real support is needed.
+              The client does not have to manage everything in a rush. Assistance helps organise the flow, confirmations, presence and communication where real support is needed.
             </p>
           </div>
 
           <div class="card">
             <h3>Discreet premium support</h3>
             <p>
-              A private form of support for clients who value calm, discretion, appropriate conduct and careful completion of matters on site.
+              A private form of support for clients who value calm, discretion, proper conduct and well-handled matters on site.
             </p>
           </div>
 
           <div class="card">
             <h3>Also with transport</h3>
             <p>
-              Depending on the situation, assistance may also include transport or transfer between points within the agreed scope.
+              Depending on the situation, assistance may also include transport or moving between locations within the agreed scope.
             </p>
           </div>
         </div>
@@ -874,27 +908,27 @@
             <h3>Appointments and formalities</h3>
             <ul>
               <li>assistance during selected appointments</li>
-              <li>presence during formalities requiring support</li>
-              <li>calm handling of an agreed matter</li>
+              <li>presence during formal matters requiring support</li>
+              <li>calm handling of the agreed situation</li>
               <li>confirmations and on-site coordination</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Meetings, pickups and transfers</h3>
+            <h3>Meetings, pickups and transport</h3>
             <ul>
               <li>assistance during selected meetings</li>
               <li>presence during pickups and handovers</li>
               <li>transport within the agreed scope</li>
-              <li>local completion of matters requiring presence</li>
+              <li>local handling of matters requiring presence</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Client or close person</h3>
             <ul>
-              <li>assistance directly for the client</li>
-              <li>selected support for a close person</li>
+              <li>direct assistance for the client</li>
+              <li>selected support for a close person of the client</li>
               <li>presence when the client cannot be there personally</li>
               <li>a calm point of contact on site</li>
             </ul>
@@ -905,19 +939,19 @@
 
     <section class="content">
       <div class="shell">
-        <h2 class="title">How it works</h2>
+        <h2 class="title">How cooperation works</h2>
         <div class="rule"></div>
 
         <div class="steps">
           <div class="step">
             <div class="step-no">Step 01</div>
             <div class="step-title">Choose a package</div>
-            <p>Select the Small Package, Large Package or describe a larger scope.</p>
+            <p>Select Small Package, Large Package or describe a custom scope.</p>
           </div>
 
           <div class="step">
             <div class="step-no">Step 02</div>
-            <div class="step-title">Choose a day</div>
+            <div class="step-title">Select day and place</div>
             <p>Provide your preferred day, time and place of assistance.</p>
           </div>
 
@@ -929,7 +963,7 @@
 
           <div class="step">
             <div class="step-no">Step 04</div>
-            <div class="step-title">We handle it</div>
+            <div class="step-title">We take over</div>
             <p>We confirm the scope and provide assistance at the agreed place.</p>
           </div>
         </div>
@@ -942,16 +976,16 @@
           <div class="form-head">
             <div class="form-title">Book assistance</div>
             <div class="form-copy">
-              Choose a package, preferred service day and describe the situation. After submitting the form, you will be redirected to online payment.
+              Choose a package, preferred day and describe the situation. After submitting the form, you will be redirected to online payment.
             </div>
           </div>
 
-          <form name="in-person-assistance-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="assistanceForm">
-            <input type="hidden" name="form-name" value="in-person-assistance-en">
-            <input type="hidden" name="source_page" value="In-Person Assistance EN">
+          <form name="in-person-assistance-eng" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="assistanceForm">
+            <input type="hidden" name="form-name" value="in-person-assistance-eng">
+            <input type="hidden" name="source_page" value="In-Person Assistance ENG">
             <input type="hidden" id="priceHidden" name="package_value" value="300 PLN">
             <input type="hidden" id="packageHidden" name="selected_package" value="Small Package">
-            <input type="hidden" id="orderIdHidden" name="order_number" value="">
+            <input type="hidden" id="orderIdHidden" name="order_id" value="">
 
             <p class="hidden">
               <label>Do not fill this field: <input name="bot-field"></label>
@@ -959,8 +993,8 @@
 
             <div class="form-grid">
               <div class="field">
-                <label for="name">First name</label>
-                <input id="name" name="first_name" type="text" placeholder="Your name" required>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
               </div>
 
               <div class="field">
@@ -975,7 +1009,7 @@
 
               <div class="field">
                 <label for="location">Place of assistance</label>
-                <input id="location" name="place_of_assistance" type="text" placeholder="Krakow / nearby area / specific place">
+                <input id="location" name="place_of_assistance" type="text" placeholder="Kraków / nearby / specific place">
               </div>
 
               <div class="field">
@@ -983,7 +1017,7 @@
                 <select id="package" name="package" required>
                   <option value="small" data-price="300" data-label="Small Package">Small Package — 300 PLN</option>
                   <option value="large" data-price="550" data-label="Large Package">Large Package — 550 PLN</option>
-                  <option value="custom" data-price="0" data-label="Custom quote">Larger scope — custom quote</option>
+                  <option value="custom" data-price="0" data-label="Custom quote">Custom scope — individual quote</option>
                 </select>
               </div>
 
@@ -1007,13 +1041,13 @@
                   <option value="Meeting requiring presence">Meeting requiring presence</option>
                   <option value="Assistance for a close person">Assistance for a close person</option>
                   <option value="Assistance with transport">Assistance with transport</option>
-                  <option value="I am not sure">I am not sure — please suggest the right form</option>
+                  <option value="Not sure">Not sure — please suggest the right form</option>
                 </select>
               </div>
 
               <div class="field field-full">
                 <label for="message">Situation description</label>
-                <textarea id="message" name="situation_description" placeholder="Briefly describe what the assistance is about: place, date, situation, expected scope, whether transport is needed." required></textarea>
+                <textarea id="message" name="situation_description" placeholder="Briefly describe what the assistance is about: place, date, situation, expected scope and whether transport is needed." required></textarea>
               </div>
 
               <div class="total-box">
@@ -1028,7 +1062,7 @@
                 I agree to be contacted regarding this request. I have read the
                 <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
                 and
-                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms of Service</a>.
+                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms and Conditions</a>.
               </label>
             </div>
 
@@ -1037,7 +1071,7 @@
             </div>
 
             <div class="form-note">
-              The form records your request and then redirects you to HotPay payment. The booking becomes active after the package is paid. For a larger scope, we will contact you with a proposed quote.
+              The form saves your request and then redirects you to HotPay payment. The booking becomes active after payment. For custom scope requests, we will contact you with a proposal.
             </div>
           </form>
         </div>
@@ -1047,13 +1081,13 @@
 
   <footer>
     <div class="footer-brand">Urban Concierge</div>
-    <div class="footer-sub">Private concierge support | Krakow and nearby areas | remote across Poland</div>
+    <div class="footer-sub">Private concierge support | Kraków and surrounding areas | remote across Poland</div>
 
     <div class="footer-links">
       <a href="/expats-krakow/">Home</a>
-      <a href="/expats-krakow/one-day-support/">One-Day Support</a>
-      <a href="/abonament/">Retainer</a>
-      <a href="/relokacja-krakow/">Relocation to Krakow</a>
+      <a href="/expats-krakow/one-day-support/">One Day Support</a>
+      <a href="/expats-krakow/monthly-support/">Monthly Support</a>
+      <a href="/relokacja-krakow/">Relocation to Kraków</a>
       <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Terms</a>
       <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Privacy Policy</a>
       <a href="mailto:info@urbanconcierge.pl">Contact</a>
@@ -1061,122 +1095,121 @@
   </footer>
 
   <script>
-const form = document.getElementById("assistanceForm");
-const packageSelect = document.getElementById("package");
-const dateInput = document.getElementById("date");
-const priceDisplay = document.getElementById("priceDisplay");
-const priceHidden = document.getElementById("priceHidden");
-const packageHidden = document.getElementById("packageHidden");
-const orderIdHidden = document.getElementById("orderIdHidden");
-const submitButton = document.getElementById("submitButton");
+    const form = document.getElementById("assistanceForm");
+    const packageSelect = document.getElementById("package");
+    const dateInput = document.getElementById("date");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
 
-const HOTPAY_URL = "https://platnosc.hotpay.pl/";
-const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+    const HOTPAY_URL = "https://platnosc.hotpay.pl/";
+    const HOTPAY_SECRET = "WKLEJ_TUTAJ_SEKRET_HOTPAY";
 
-function isWeekend(dateString) {
-  const selectedDate = new Date(dateString + "T12:00:00");
-  const day = selectedDate.getDay();
-  return day === 0 || day === 6;
-}
-
-function updatePackage() {
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
-
-  packageHidden.value = label;
-
-  if (price > 0) {
-    priceDisplay.textContent = price + " PLN";
-    priceHidden.value = price + " PLN";
-    submitButton.textContent = "Proceed to payment";
-  } else {
-    priceDisplay.textContent = "Custom quote";
-    priceHidden.value = "Custom quote";
-    submitButton.textContent = "Send inquiry";
-  }
-}
-
-function encode(data) {
-  return new URLSearchParams(data).toString();
-}
-
-function addHotpayField(formElement, name, value) {
-  const input = document.createElement("input");
-  input.type = "hidden";
-  input.name = name;
-  input.value = value;
-  formElement.appendChild(input);
-}
-
-packageSelect.addEventListener("change", updatePackage);
-
-dateInput.addEventListener("change", function () {
-  if (isWeekend(dateInput.value)) {
-    alert("Online bookings are available Monday to Friday only. Please select a weekday.");
-    dateInput.value = "";
-  }
-});
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  if (isWeekend(dateInput.value)) {
-    alert("Online bookings are available Monday to Friday only. Please select a weekday.");
-    return;
-  }
-
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
-  const orderId = "UC-AS-EN-" + Date.now();
-
-  orderIdHidden.value = orderId;
-
-  const formData = new FormData(form);
-  formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Custom quote");
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode(formData)
-  })
-  .then(() => {
-    if (price === 0) {
-      alert("Thank you. Your inquiry has been sent. We will contact you with a custom quote.");
-      form.reset();
-      updatePackage();
-      return;
+    function isWeekend(dateString) {
+      const selectedDate = new Date(dateString + "T12:00:00");
+      const day = selectedDate.getDay();
+      return day === 0 || day === 6;
     }
 
-    const hotpayForm = document.createElement("form");
-    hotpayForm.method = "POST";
-    hotpayForm.action = HOTPAY_URL;
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
 
-    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
-    addHotpayField(hotpayForm, "KWOTA", price);
-    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - In-Person Assistance - " + label);
-    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/in-person-assistance/");
-    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
-    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+      packageHidden.value = label;
 
-    const customerData =
-      document.getElementById("name").value +
-      " | phone: " +
-      document.getElementById("phone").value;
+      if (price > 0) {
+        priceDisplay.textContent = price + " PLN";
+        priceHidden.value = price + " PLN";
+        submitButton.textContent = "Proceed to payment";
+      } else {
+        priceDisplay.textContent = "Quote";
+        priceHidden.value = "Individual quote";
+        submitButton.textContent = "Send request";
+      }
+    }
 
-    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
 
-    document.body.appendChild(hotpayForm);
-    hotpayForm.submit();
-  })
-  .catch(() => {
-    alert("Could not send the form. Please try again or contact info@urbanconcierge.pl.");
-  });
-});
+    function addHotpayField(formElement, name, value) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      formElement.appendChild(input);
+    }
 
-updatePackage();
-</script>
+    packageSelect.addEventListener("change", updatePackage);
 
+    dateInput.addEventListener("change", function () {
+      if (isWeekend(dateInput.value)) {
+        alert("Online bookings are available from Monday to Friday. Please choose a business day.");
+        dateInput.value = "";
+      }
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      if (isWeekend(dateInput.value)) {
+        alert("Online bookings are available from Monday to Friday. Please choose a business day.");
+        return;
+      }
+
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-IPA-" + Date.now();
+
+      orderIdHidden.value = orderId;
+
+      const formData = new FormData(form);
+      formData.append("amount_to_pay", price > 0 ? price + " PLN" : "Individual quote");
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        if (price === 0) {
+          alert("Thank you. Your request has been sent. We will contact you with a proposal.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
+        const hotpayForm = document.createElement("form");
+        hotpayForm.method = "POST";
+        hotpayForm.action = HOTPAY_URL;
+
+        addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+        addHotpayField(hotpayForm, "KWOTA", price);
+        addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - In-Person Assistance - " + label);
+        addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/expats-krakow/in-person-assistance/");
+        addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+        addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+
+        const customerData =
+          document.getElementById("name").value +
+          " | phone: " +
+          document.getElementById("phone").value;
+
+        addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+
+        document.body.appendChild(hotpayForm);
+        hotpayForm.submit();
+      })
+      .catch(() => {
+        alert("The form could not be submitted. Please try again or contact us at info@urbanconcierge.pl.");
+      });
+    });
+
+    updatePackage();
+  </script>
 </body>
 </html>
