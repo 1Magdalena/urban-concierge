@@ -1,22 +1,62 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Abonament Concierge Kraków | Urban Concierge</title>
-  <meta name="description" content="Abonament Urban Concierge: stałe wsparcie concierge w Krakowie i zdalnie. Pakiet Mały, Pakiet Duży lub wycena indywidualna. Rezerwacje, telefony, follow-upy, terminy i koordynacja spraw." />
+  <title>One Day Concierge Support Kraków | Urban Concierge</title>
+
+  <meta name="description" content="One Day Concierge Support in Kraków and surrounding areas. Small or Large package for daily logistics, calls, bookings, pickups, coordination, research and practical support. Online booking available." />
 
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="canonical" href="https://urbanconcierge.pl/abonament/">
+  <link rel="canonical" href="https://urbanconcierge.pl/expats-krakow/one-day-support/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "AW-18108841323");
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Urban Concierge One Day Support",
+    "provider":{
+      "@type":"LocalBusiness",
+      "name":"Urban Concierge",
+      "url":"https://urbanconcierge.pl/",
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"Kraków",
+        "addressCountry":"PL"
+      }
+    },
+    "areaServed":["Kraków","Poland"],
+    "description":"One Day Concierge Support in Kraków and surrounding areas. Practical help with calls, bookings, pickups, returns, coordination, research and daily logistics.",
+    "offers":[
+      {
+        "@type":"Offer",
+        "name":"Small Package",
+        "price":"600",
+        "priceCurrency":"PLN"
+      },
+      {
+        "@type":"Offer",
+        "name":"Large Package",
+        "price":"1000",
+        "priceCurrency":"PLN"
+      }
+    ]
+  }
   </script>
 
   <style>
@@ -28,9 +68,9 @@
       --soft: #7B6C61;
       --gold: #B8955A;
       --gold-soft: #C2A46D;
+      --dark: #2B221F;
       --line: #E7DDD2;
       --line-strong: #DDCFBF;
-      --dark: #2B221F;
     }
 
     * { box-sizing: border-box; }
@@ -46,7 +86,9 @@
       text-rendering: optimizeLegibility;
     }
 
-    body { font-family: "Libre Baskerville", serif; }
+    body {
+      font-family: "Libre Baskerville", serif;
+    }
 
     .topbar {
       height: 14px;
@@ -59,7 +101,9 @@
       padding: 0 40px;
     }
 
-    header { padding: 34px 0 0; }
+    header {
+      padding: 34px 0 0;
+    }
 
     .header-inner {
       display: grid;
@@ -81,7 +125,9 @@
       text-decoration: none;
     }
 
-    .mini-nav a:hover { color: var(--gold); }
+    .mini-nav a:hover {
+      color: var(--gold);
+    }
 
     .brand {
       font-family: "Cormorant Garamond", serif;
@@ -119,7 +165,9 @@
       color: #fff;
     }
 
-    .lang a { color: var(--text); }
+    .lang a {
+      color: var(--text);
+    }
 
     .hero {
       min-height: calc(88vh - 14px);
@@ -169,7 +217,7 @@
     }
 
     .sub {
-      max-width: 890px;
+      max-width: 870px;
       margin: 0 auto 24px;
       font-size: 18px;
       line-height: 2;
@@ -190,7 +238,9 @@
       border-right: 1px solid #DCCDBB;
     }
 
-    .offer-item:last-child { border-right: none; }
+    .offer-item:last-child {
+      border-right: none;
+    }
 
     .offer-label {
       font-size: 10px;
@@ -264,392 +314,38 @@
     }
 
     .band p {
-      max-width: 830px;
+      max-width: 800px;
       margin: 0 auto;
       font-size: 15px;
       line-height: 1.95;
       color: rgba(245,241,235,0.88);
     }
 
-    section.content {
-      padding: 96px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    section.soft { background: var(--soft-bg); }
-
-    .title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 52px;
-      line-height: 1.04;
-      font-weight: 500;
-      text-align: center;
-      margin: 0 0 12px;
-    }
-
-    .rule {
-      width: 84px;
-      height: 1px;
-      background: var(--gold);
-      margin: 0 auto 24px;
-    }
-
-    .intro {
-      max-width: 860px;
-      margin: 0 auto 40px;
-      text-align: center;
-      font-size: 15px;
-      line-height: 1.95;
-      color: var(--muted);
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
-      border: 1px solid #E3D8CB;
-      padding: 34px 32px;
-      position: relative;
-      box-shadow: 0 16px 40px rgba(58,47,42,0.04);
-      min-height: 100%;
-    }
-
-    .card:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 32px;
-      width: 68px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .card h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 34px;
-      line-height: 1.06;
-      font-weight: 500;
-      margin: 10px 0 12px;
-    }
-
-    .card p,
-    .card li {
-      font-size: 14px;
-      line-height: 1.9;
-      color: var(--muted);
-    }
-
-    .card ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .price-card { text-align: center; }
-
-    .price-label {
-      font-size: 10px;
-      line-height: 1.6;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .price-value {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 42px;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .price-note {
-      font-size: 12px;
-      line-height: 1.8;
-      color: var(--soft);
-      margin-top: 18px;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-
-    .step {
-      border-top: 1px solid var(--line-strong);
-      padding-top: 18px;
-    }
-
-    .step-no {
-      font-size: 10px;
-      line-height: 1.6;
-      letter-spacing: 2.2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .step-title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 30px;
-      line-height: 1.04;
-      margin-bottom: 10px;
-    }
-
-    .step p {
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .form-wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 44px;
-      background: linear-gradient(180deg, #332925 0%, #241C19 100%);
-      border: 1px solid rgba(194,164,109,0.42);
-      color: #F5F1EB;
-      box-shadow: 0 20px 54px rgba(43,34,31,0.10);
-    }
-
-    .form-head {
-      text-align: center;
-      margin-bottom: 34px;
-    }
-
-    .form-title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 46px;
-      line-height: 1.06;
-      font-weight: 500;
-      margin: 0 0 14px;
-    }
-
-    .form-copy {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 14px;
-      line-height: 1.9;
-      color: rgba(245,241,235,0.84);
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .field-full { grid-column: 1 / -1; }
-
-    label {
-      font-size: 11px;
-      line-height: 1.6;
-      letter-spacing: 0.4px;
-      color: rgba(245,241,235,0.92);
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid rgba(245,241,235,0.22);
-      background: rgba(245,241,235,0.07);
-      color: #F5F1EB;
-      padding: 15px;
-      font-family: "Libre Baskerville", serif;
-      font-size: 13px;
-      line-height: 1.6;
-      outline: none;
-      border-radius: 0;
-    }
-
-    input::placeholder,
-    textarea::placeholder { color: rgba(245,241,235,0.46); }
-
-    select option {
-      color: #3A2F2A;
-      background: #F5F1EB;
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: rgba(194,164,109,0.86);
-      background: rgba(245,241,235,0.10);
-    }
-
-    .total-box {
-      grid-column: 1 / -1;
-      border: 1px solid rgba(194,164,109,0.52);
-      padding: 22px;
-      text-align: center;
-      background: rgba(245,241,235,0.06);
-    }
-
-    .total-label {
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(245,241,235,0.72);
-      margin-bottom: 8px;
-    }
-
-    .total-value {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 38px;
-      line-height: 1.1;
-      color: #F5F1EB;
-    }
-
-    .consent {
-      margin: 22px 0 26px;
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .consent input {
-      width: auto;
-      margin-top: 4px;
-      accent-color: var(--gold);
-    }
-
-    .consent a {
-      color: #F5F1EB;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .hidden { display: none; }
-
-    .submit-wrap { text-align: center; }
-
-    button {
-      cursor: pointer;
-      border-radius: 0;
-      border: 1px solid var(--gold);
-      background: var(--gold);
-      color: #fff;
-      padding: 18px 40px;
-      font-family: "Libre Baskerville", serif;
-      font-size: 12px;
-      letter-spacing: 0.55px;
-    }
-
-    button:hover {
-      background: var(--gold-soft);
-      border-color: var(--gold-soft);
-    }
-
-    .form-note {
-      max-width: 680px;
-      margin: 18px auto 0;
-      text-align: center;
-      font-size: 11px;
-      line-height: 1.8;
-      color: rgba(245,241,235,0.62);
-    }
-
-    footer {
-      background: linear-gradient(180deg, #261E1B 0%, #1E1714 100%);
-      padding: 44px 34px 48px;
-      text-align: center;
-    }
-
-    .footer-brand {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 24px;
-      color: #F5F1EB;
-      margin-bottom: 6px;
-    }
-
-    .footer-sub {
-      font-size: 11px;
-      color: #D9CEC4;
-      margin-bottom: 14px;
-    }
-
-    .footer-links {
-      font-size: 10px;
-      line-height: 1.9;
-    }
-
-    .footer-links a {
-      color: #F5F1EB;
-      text-decoration: none;
-      margin: 0 10px;
-      opacity: 0.92;
-    }
-
-    .footer-links a:hover { text-decoration: underline; }
-
-    @media (max-width: 1100px) {
-      .mini-nav { display: none; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: repeat(2, 1fr); }
-    }
-
     @media (max-width: 900px) {
-      .grid-2 { grid-template-columns: 1fr; }
-      h1 { font-size: 56px; }
-      .offer-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .offer-item:nth-child(2) { border-right: none; }
-      .offer-item:nth-child(1),
-      .offer-item:nth-child(2) { border-bottom: 1px solid #DCCDBB; }
+      h1 {
+        font-size: 56px;
+      }
+
+      .offer-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
-      .shell { padding: 0 20px; }
-      header { padding-top: 26px; }
+      .shell {
+        padding: 0 20px;
+      }
 
       .header-inner {
         grid-template-columns: 1fr;
-        gap: 18px;
       }
 
       .brand {
         justify-self: center;
-        font-size: 28px;
       }
 
-      .lang { justify-self: center; }
-
-      .hero {
-        min-height: auto;
-        padding: 34px 0 64px;
-      }
-
-      .kicker {
-        letter-spacing: 3px;
-        margin-bottom: 22px;
+      .lang {
+        justify-self: center;
       }
 
       h1 {
@@ -657,487 +353,121 @@
         line-height: 1.08;
       }
 
-      .sub {
-        font-size: 16px;
-        line-height: 1.9;
+      .offer-strip {
+        grid-template-columns: 1fr;
       }
-
-      .offer-strip { grid-template-columns: 1fr; }
 
       .offer-item {
         border-right: none;
         border-bottom: 1px solid #DCCDBB;
       }
 
-      .offer-item:last-child { border-bottom: none; }
+      .offer-item:last-child {
+        border-bottom: none;
+      }
 
       .btn {
         display: block;
         max-width: 340px;
         margin: 0 auto 12px;
       }
-
-      section.content { padding: 76px 0; }
-
-      .title,
-      .band h2,
-      .form-title { font-size: 36px; }
-
-      .steps,
-      .form-grid { grid-template-columns: 1fr; }
-
-      .form-wrap { padding: 34px 22px; }
-
-      button { width: 100%; }
     }
   </style>
 </head>
 
 <body>
-  <div class="topbar"></div>
 
-  <header class="shell">
-    <div class="header-inner">
-      <nav class="mini-nav" aria-label="Nawigacja">
-        <a href="#pakiety">Pakiety</a>
-        <a href="#zakres">Zakres</a>
-        <a href="#rezerwacja">Rezerwacja</a>
-      </nav>
+<div class="topbar"></div>
 
-      <a href="/" class="brand">Urban Concierge</a>
+<header class="shell">
+  <div class="header-inner">
 
-      <div class="lang">
-        <span>PL</span>
-        <a href="/expats-krakow/monthly-support/">ENG</a>
-      </div>
+    <nav class="mini-nav" aria-label="Navigation">
+      <a href="#packages">Packages</a>
+      <a href="#scope">Scope</a>
+      <a href="#booking">Booking</a>
+    </nav>
+
+    <a href="/expats-krakow/" class="brand">Urban Concierge</a>
+
+    <div class="lang">
+      <a href="/1-dzien-wsparcia/">PL</a>
+      <span>ENG</span>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="shell">
-        <div class="hero-inner">
-          <div class="kicker">Abonament concierge • Kraków i okolice • zdalnie w całej Polsce</div>
+  </div>
+</header>
 
-          <h1>
-            Stałe wsparcie dla spraw,<br>
-            które wracają regularnie.
-          </h1>
+<main>
 
-          <div class="sub">
-            Abonament Urban Concierge to miesięczny pakiet godzin na bieżące sprawy: telefony, rezerwacje, terminy, follow-upy, research, koordynację i codzienną logistykę.
-          </div>
+<section class="hero">
 
-          <div class="offer-strip">
-            <div class="offer-item">
-              <div class="offer-label">Pakiet Mały</div>
-              <div class="offer-value">600 zł</div>
-            </div>
+  <div class="shell">
+    <div class="hero-inner">
 
-            <div class="offer-item">
-              <div class="offer-label">Pakiet Duży</div>
-              <div class="offer-value">1100 zł</div>
-            </div>
-
-            <div class="offer-item">
-              <div class="offer-label">Model</div>
-              <div class="offer-value">miesięczny</div>
-            </div>
-
-            <div class="offer-item">
-              <div class="offer-label">Wsparcie</div>
-              <div class="offer-value">PL + Kraków</div>
-            </div>
-          </div>
-
-          <a href="#rezerwacja" class="btn btn-primary">Wybierz abonament</a>
-          <a href="#zakres" class="btn btn-secondary">Zobacz zakres</a>
-        </div>
+      <div class="kicker">
+        One Day Concierge Support • Kraków & surrounding areas • remote across Poland
       </div>
-    </section>
 
-    <section class="band">
-      <div class="shell">
-        <h2>Nie chodzi o jedną sprawę. Chodzi o spokój w tle.</h2>
-        <div class="rule-light"></div>
-        <p>
-          Abonament sprawdza się wtedy, gdy sprawy wracają regularnie i chcesz mieć jeden spokojny punkt kontaktu, który pomaga je prowadzić dalej.
-        </p>
+      <h1>
+        One day.<br>
+        Fewer things on your mind.
+      </h1>
+
+      <div class="sub">
+        Urban Concierge One Day Support is a focused organizational block for tasks that need to be properly handled: calls, bookings, pickups, returns, research, coordination and everyday logistics.
       </div>
-    </section>
 
-    <section class="content soft" id="pakiety">
-      <div class="shell">
-        <h2 class="title">Wybierz pakiet</h2>
-        <div class="rule"></div>
+      <div class="offer-strip">
 
-        <p class="intro">
-          Abonament to prosty miesięczny pakiet godzin. Możesz zacząć od mniejszego zakresu i zwiększyć go później, jeśli współpraca będzie dobrze działać.
-        </p>
-
-        <div class="grid-3">
-          <div class="card price-card">
-            <div class="price-label">Pakiet Mały</div>
-            <div class="price-value">600 zł</div>
-            <p>
-              5 godzin miesięcznie na bieżące sprawy: telefony, rezerwacje, terminy, krótkie researche, follow-upy i podstawową koordynację.
-            </p>
-            <div class="price-note">Dobry wybór, gdy sprawy wracają, ale nie potrzebujesz intensywnej obsługi co tydzień.</div>
-          </div>
-
-          <div class="card price-card">
-            <div class="price-label">Pakiet Duży</div>
-            <div class="price-value">1100 zł</div>
-            <p>
-              10 godzin miesięcznie na większą liczbę tematów, więcej follow-upów, regularną koordynację i wybrane działania lokalne w Krakowie.
-            </p>
-            <div class="price-note">Dobry wybór, gdy chcesz realnie zdjąć z siebie część codziennej logistyki.</div>
-          </div>
-
-          <div class="card price-card">
-            <div class="price-label">Większy zakres</div>
-            <div class="price-value">wycena</div>
-            <p>
-              Dla klientów, którzy potrzebują większej liczby godzin, bardziej złożonej koordynacji, działań lokalnych lub stałego modelu premium.
-            </p>
-            <div class="price-note">Opisz potrzeby w formularzu — przygotujemy dopasowaną propozycję.</div>
-          </div>
+        <div class="offer-item">
+          <div class="offer-label">Small Package</div>
+          <div class="offer-value">600 PLN</div>
         </div>
 
-        <p class="intro" style="font-size:12px; margin-top:28px; margin-bottom:0;">
-          Koszty zewnętrzne, np. zakupy, bilety, opłaty, usługi wykonawców, parking lub transport, klient pokrywa osobno.
-        </p>
-      </div>
-    </section>
-
-    <section class="content" id="zakres">
-      <div class="shell">
-        <h2 class="title">Co może obejmować abonament</h2>
-        <div class="rule"></div>
-
-        <p class="intro">
-          Abonament jest dla spraw, które wracają regularnie i zabierają uwagę: trzeba zadzwonić, dopilnować, umówić, porównać, odebrać, potwierdzić albo wrócić do tematu po kilku dniach.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Bieżąca koordynacja</h3>
-            <ul>
-              <li>koordynacja wybranych spraw w tle</li>
-              <li>kontakt z usługodawcami w ustalonym zakresie</li>
-              <li>potwierdzenia, follow-upy i pilnowanie dalszych kroków</li>
-              <li>porządkowanie bieżących tematów operacyjnych</li>
-              <li>prowadzenie spraw z jednego punktu kontaktu</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Terminy i ustalenia</h3>
-            <ul>
-              <li>umawianie wybranych terminów</li>
-              <li>rezerwacje i potwierdzenia</li>
-              <li>koordynację spotkań i ustaleń</li>
-              <li>przypomnienia i pilnowanie ważnych dat</li>
-              <li>porządkowanie kalendarza wybranych tematów</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Wsparcie lokalne i zdalne</h3>
-            <ul>
-              <li>zdalną koordynację w całej Polsce</li>
-              <li>wybrane działania na miejscu w Krakowie i okolicach</li>
-              <li>lokalne dopięcia wymagające obecności</li>
-              <li>koordynację wybranych odbiorów lub dostępów</li>
-              <li>połączenie wsparcia organizacyjnego z działaniem lokalnym</li>
-            </ul>
-          </div>
+        <div class="offer-item">
+          <div class="offer-label">Large Package</div>
+          <div class="offer-value">1000 PLN</div>
         </div>
-      </div>
-    </section>
 
-    <section class="content soft">
-      <div class="shell">
-        <h2 class="title">Jak wygląda współpraca</h2>
-        <div class="rule"></div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-no">Krok 01</div>
-            <div class="step-title">Wybierasz pakiet</div>
-            <p>Wybierasz Pakiet Mały, Pakiet Duży albo większy zakres do wyceny.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-no">Krok 02</div>
-            <div class="step-title">Opisujesz potrzeby</div>
-            <p>Wysyłasz przykłady spraw, które najczęściej wracają i wymagają koordynacji.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-no">Krok 03</div>
-            <div class="step-title">Opłacasz miesiąc</div>
-            <p>Po wysłaniu formularza przechodzisz do płatności online za wybrany pakiet.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-no">Krok 04</div>
-            <div class="step-title">Działamy</div>
-            <p>Potwierdzamy model kontaktu i zaczynamy prowadzić ustalone sprawy w tle.</p>
-          </div>
+        <div class="offer-item">
+          <div class="offer-label">Booking</div>
+          <div class="offer-value">online</div>
         </div>
-      </div>
-    </section>
 
-    <section class="content">
-      <div class="shell">
-        <h2 class="title">Dla kogo jest abonament</h2>
-        <div class="rule"></div>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Dla zapracowanych osób</h3>
-            <p>Gdy codzienne sprawy wracają między spotkaniami, pracą, rodziną i innymi obowiązkami.</p>
-          </div>
-
-          <div class="card">
-            <h3>Dla osób, które odkładają drobne sprawy</h3>
-            <p>Gdy tematy nie są ogromne, ale stale zajmują miejsce w głowie i co tydzień wracają na listę.</p>
-          </div>
-
-          <div class="card">
-            <h3>Dla klientów w Krakowie</h3>
-            <p>Gdy oprócz organizacji zdalnej czasem potrzebne jest lokalne dopięcie sprawy, odbiór, zwrot lub koordynacja na miejscu.</p>
-          </div>
-
-          <div class="card">
-            <h3>Dla klientów z całej Polski</h3>
-            <p>Gdy potrzebujesz głównie telefonów, researchu, rezerwacji, porównania ofert, maili, ustaleń i follow-upów.</p>
-          </div>
+        <div class="offer-item">
+          <div class="offer-label">No subscription</div>
+          <div class="offer-value">one-time</div>
         </div>
+
       </div>
-    </section>
 
-    <section class="content soft" id="rezerwacja">
-      <div class="shell">
-        <div class="form-wrap">
-          <div class="form-head">
-            <div class="form-title">Wybierz abonament</div>
-            <div class="form-copy">
-              Wybierz pakiet, opisz sprawy, które wracają najczęściej, i podaj preferowany start współpracy. Po wysłaniu formularza przejdziesz do płatności online.
-            </div>
-          </div>
+      <a href="#booking" class="btn btn-primary">Book One Day Support</a>
 
-          <form name="abonament-pl" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="subscriptionForm">
-            <input type="hidden" name="form-name" value="abonament-pl">
-            <input type="hidden" name="source_page" value="Abonament PL">
-            <input type="hidden" id="priceHidden" name="wartosc_pakietu" value="600 zł">
-            <input type="hidden" id="packageHidden" name="wybrany_pakiet" value="Pakiet Mały">
-            <input type="hidden" id="orderIdHidden" name="numer_zamowienia" value="">
+      <a href="#scope" class="btn btn-secondary">See scope</a>
 
-            <p class="hidden">
-              <label>Nie wypełniaj tego pola: <input name="bot-field"></label>
-            </p>
-
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Imię</label>
-                <input id="name" name="imie" type="text" placeholder="Twoje imię" required>
-              </div>
-
-              <div class="field">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="adres@email.pl" required>
-              </div>
-
-              <div class="field">
-                <label for="phone">Telefon</label>
-                <input id="phone" name="telefon" type="tel" placeholder="+48..." required>
-              </div>
-
-              <div class="field">
-                <label for="location">Lokalizacja</label>
-                <input id="location" name="lokalizacja" type="text" placeholder="Kraków / okolice / zdalnie / cała Polska">
-              </div>
-
-              <div class="field">
-                <label for="package">Pakiet</label>
-                <select id="package" name="pakiet" required>
-                  <option value="small" data-price="600" data-label="Pakiet Mały">Pakiet Mały — 600 zł / miesiąc</option>
-                  <option value="large" data-price="1100" data-label="Pakiet Duży">Pakiet Duży — 1100 zł / miesiąc</option>
-                  <option value="custom" data-price="0" data-label="Wycena indywidualna">Większy zakres — wycena indywidualna</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="start">Preferowany start</label>
-                <select id="start" name="preferowany_start" required>
-                  <option value="">Wybierz</option>
-                  <option value="Jak najszybciej">Jak najszybciej</option>
-                  <option value="Od tego miesiąca">Od tego miesiąca</option>
-                  <option value="Od kolejnego miesiąca">Od kolejnego miesiąca</option>
-                  <option value="Elastycznie">Elastycznie</option>
-                </select>
-              </div>
-
-              <div class="field field-full">
-                <label for="frequency">Częstotliwość spraw</label>
-                <select id="frequency" name="czestotliwosc_spraw" required>
-                  <option value="">Wybierz</option>
-                  <option value="Kilka spraw miesięcznie">Kilka spraw miesięcznie</option>
-                  <option value="Kilka spraw tygodniowo">Kilka spraw tygodniowo</option>
-                  <option value="Regularne wsparcie w tle">Regularne wsparcie w tle</option>
-                  <option value="Trudno określić">Trudno określić</option>
-                </select>
-              </div>
-
-              <div class="field field-full">
-                <label for="message">Opis spraw</label>
-                <textarea id="message" name="opis_spraw" placeholder="Opisz, jakie sprawy wracają najczęściej, co chcesz przekazać do stałej koordynacji i czy potrzebujesz również działań lokalnych." required></textarea>
-              </div>
-
-              <div class="total-box">
-                <div class="total-label">Do zapłaty</div>
-                <div class="total-value" id="priceDisplay">600 zł</div>
-              </div>
-            </div>
-
-            <div class="consent">
-              <input id="consent" name="zgoda_na_kontakt" type="checkbox" required>
-              <label for="consent">
-                Wyrażam zgodę na kontakt w celu obsługi zgłoszenia. Zapoznałam/em się z
-                <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">polityką prywatności</a>
-                oraz
-                <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">regulaminem</a>.
-              </label>
-            </div>
-
-            <div class="submit-wrap">
-              <button type="submit" id="submitButton">Przejdź do płatności</button>
-            </div>
-
-            <div class="form-note">
-              Formularz zapisuje zgłoszenie, a następnie przekierowuje do płatności HotPay. Abonament startuje po opłaceniu pakietu i potwierdzeniu zakresu. Dla większego zakresu skontaktujemy się z propozycją wyceny.
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-brand">Urban Concierge</div>
-    <div class="footer-sub">Prywatne wsparcie concierge | Kraków i okolice | zdalnie w całej Polsce</div>
-
-    <div class="footer-links">
-      <a href="/">Strona główna</a>
-      <a href="/1-dzien-wsparcia/">Dzień Wsparcia</a>
-      <a href="/asysty/">Asysty na miejscu</a>
-      <a href="/relokacja-krakow/">Relokacja do Krakowa</a>
-      <a href="/Regulamin%20UC.pdf" target="_blank" rel="noopener">Regulamin</a>
-      <a href="/polityka%20prywatnosci%20UC.pdf" target="_blank" rel="noopener">Polityka prywatności</a>
-      <a href="mailto:info@urbanconcierge.pl">Kontakt</a>
     </div>
-  </footer>
+  </div>
 
-  <script>
-const form = document.getElementById("subscriptionForm");
-const packageSelect = document.getElementById("package");
-const priceDisplay = document.getElementById("priceDisplay");
-const priceHidden = document.getElementById("priceHidden");
-const packageHidden = document.getElementById("packageHidden");
-const orderIdHidden = document.getElementById("orderIdHidden");
-const submitButton = document.getElementById("submitButton");
+</section>
 
-const HOTPAY_URL = "https://platnosc.hotpay.pl/";
-const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+<section class="band">
 
-function updatePackage() {
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
+  <div class="shell">
 
-  packageHidden.value = label;
+    <h2>Not everything requires a long-term arrangement.</h2>
 
-  if (price > 0) {
-    priceDisplay.textContent = price + " zł";
-    priceHidden.value = price + " zł";
-    submitButton.textContent = "Przejdź do płatności";
-  } else {
-    priceDisplay.textContent = "Wycena";
-    priceHidden.value = "Wycena indywidualna";
-    submitButton.textContent = "Wyślij zapytanie";
-  }
-}
+    <div class="rule-light"></div>
 
-function encode(data) {
-  return new URLSearchParams(data).toString();
-}
+    <p>
+      Sometimes one well-organized day is enough to close several pending tasks, reduce mental clutter and finally move things forward.
+    </p>
 
-function addHotpayField(formElement, name, value) {
-  const input = document.createElement("input");
-  input.type = "hidden";
-  input.name = name;
-  input.value = value;
-  formElement.appendChild(input);
-}
+  </div>
 
-packageSelect.addEventListener("change", updatePackage);
+</section>
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
-  const orderId = "UC-AB-" + Date.now();
-
-  orderIdHidden.value = orderId;
-
-  const formData = new FormData(form);
-  formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode(formData)
-  })
-  .then(() => {
-    if (price === 0) {
-      alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
-      form.reset();
-      updatePackage();
-      return;
-    }
-
-    const hotpayForm = document.createElement("form");
-    hotpayForm.method = "POST";
-    hotpayForm.action = HOTPAY_URL;
-
-    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
-    addHotpayField(hotpayForm, "KWOTA", price);
-    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Abonament - " + label);
-    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/abonament/");
-    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
-    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
-
-    const customerData =
-      document.getElementById("name").value +
-      " | tel: " +
-      document.getElementById("phone").value;
-
-    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
-
-    document.body.appendChild(hotpayForm);
-    hotpayForm.submit();
-  })
-  .catch(() => {
-    alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
-  });
-});
-
-updatePackage();
-</script>
+</main>
 
 </body>
 </html>
