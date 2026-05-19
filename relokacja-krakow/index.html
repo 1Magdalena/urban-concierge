@@ -9,6 +9,9 @@
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://urbanconcierge.pl/relokacja-krakow/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18108841323"></script>
@@ -176,6 +179,20 @@
       color: var(--muted);
     }
 
+    .ai-summary {
+      max-width: 920px;
+      margin: 34px auto 0;
+      padding: 24px 28px;
+      border: 1px solid #DCCDBB;
+      background: rgba(255,255,255,0.28);
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    .ai-summary strong { color: var(--text); }
+
     .offer-strip {
       max-width: 900px;
       margin: 34px auto 34px;
@@ -303,21 +320,18 @@
       color: var(--muted);
     }
 
-    .grid-2 {
+    .grid-2,
+    .grid-3,
+    .steps {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       max-width: 1040px;
       margin: 0 auto;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(4, 1fr); }
 
     .card {
       background: linear-gradient(180deg, #F8F4EE 0%, #F4EEE6 100%);
@@ -381,14 +395,6 @@
       line-height: 1.8;
       color: var(--soft);
       margin-top: 18px;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
     }
 
     .step {
@@ -497,12 +503,6 @@
     textarea {
       min-height: 150px;
       resize: vertical;
-    }
-
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      filter: invert(1);
-      opacity: 0.75;
-      cursor: pointer;
     }
 
     input:focus,
@@ -725,10 +725,7 @@
         <div class="hero-inner">
           <div class="kicker">Relokacja do Krakowa • ekspaci • rodziny • klienci międzynarodowi</div>
 
-          <h1>
-            Relokacja do Krakowa<br>
-            bez chaosu.
-          </h1>
+          <h1>Relokacja do Krakowa<br>bez chaosu.</h1>
 
           <div class="sub">
             Praktyczne wsparcie relokacyjne dla ekspatów, klientów międzynarodowych, par i rodzin: przygotowanie pierwszych spraw, lokalna koordynacja i spokojniejsze wejście w życie na miejscu.
@@ -758,6 +755,10 @@
 
           <a href="#rezerwacja" class="btn btn-primary">Zarezerwuj wsparcie</a>
           <a href="#zakres" class="btn btn-secondary">Zobacz zakres</a>
+
+          <div class="ai-summary">
+            <strong>Relokacja do Krakowa z Urban Concierge</strong> to praktyczne wsparcie dla ekspatów, rodzin, par i klientów międzynarodowych. Pomagamy w lokalnej koordynacji, pierwszych formalnościach, sprawach mieszkaniowych, terminach, dostawach, kontakcie z usługodawcami i organizacji pierwszych dni po przyjeździe.
+          </div>
         </div>
       </div>
     </section>
@@ -1062,103 +1063,102 @@
   </footer>
 
   <script>
-const form = document.getElementById("relocationForm");
-const packageSelect = document.getElementById("package");
-const priceDisplay = document.getElementById("priceDisplay");
-const priceHidden = document.getElementById("priceHidden");
-const packageHidden = document.getElementById("packageHidden");
-const orderIdHidden = document.getElementById("orderIdHidden");
-const submitButton = document.getElementById("submitButton");
+    const form = document.getElementById("relocationForm");
+    const packageSelect = document.getElementById("package");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const priceHidden = document.getElementById("priceHidden");
+    const packageHidden = document.getElementById("packageHidden");
+    const orderIdHidden = document.getElementById("orderIdHidden");
+    const submitButton = document.getElementById("submitButton");
 
-const HOTPAY_URL = "https://platnosc.hotpay.pl/";
-const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+    const HOTPAY_URL = "https://platnosc.hotpay.pl/";
+    const HOTPAY_SECRET = "WKLEJ_TUTAJ_SEKRET_HOTPAY";
 
-function updatePackage() {
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
+    function updatePackage() {
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
 
-  packageHidden.value = label;
+      packageHidden.value = label;
 
-  if (price > 0) {
-    priceDisplay.textContent = price + " zł";
-    priceHidden.value = price + " zł";
-    submitButton.textContent = "Przejdź do płatności";
-  } else {
-    priceDisplay.textContent = "Wycena";
-    priceHidden.value = "Wycena indywidualna";
-    submitButton.textContent = "Wyślij zapytanie";
-  }
-}
-
-function encode(data) {
-  return new URLSearchParams(data).toString();
-}
-
-function addHotpayField(formElement, name, value) {
-  const input = document.createElement("input");
-  input.type = "hidden";
-  input.name = name;
-  input.value = value;
-  formElement.appendChild(input);
-}
-
-packageSelect.addEventListener("change", updatePackage);
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const selected = packageSelect.options[packageSelect.selectedIndex];
-  const price = parseInt(selected.dataset.price, 10);
-  const label = selected.dataset.label;
-  const orderId = "UC-REL-" + Date.now();
-
-  orderIdHidden.value = orderId;
-
-  const formData = new FormData(form);
-  formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode(formData)
-  })
-  .then(() => {
-    if (price === 0) {
-      alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
-      form.reset();
-      updatePackage();
-      return;
+      if (price > 0) {
+        priceDisplay.textContent = price + " zł";
+        priceHidden.value = price + " zł";
+        submitButton.textContent = "Przejdź do płatności";
+      } else {
+        priceDisplay.textContent = "Wycena";
+        priceHidden.value = "Wycena indywidualna";
+        submitButton.textContent = "Wyślij zapytanie";
+      }
     }
 
-    const hotpayForm = document.createElement("form");
-    hotpayForm.method = "POST";
-    hotpayForm.action = HOTPAY_URL;
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
 
-    addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
-    addHotpayField(hotpayForm, "KWOTA", price);
-    addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Relokacja - " + label);
-    addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/relokacja-krakow/");
-    addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
-    addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+    function addHotpayField(formElement, name, value) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      formElement.appendChild(input);
+    }
 
-    const customerData =
-      document.getElementById("name").value +
-      " | tel: " +
-      document.getElementById("phone").value;
+    packageSelect.addEventListener("change", updatePackage);
 
-    addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
 
-    document.body.appendChild(hotpayForm);
-    hotpayForm.submit();
-  })
-  .catch(() => {
-    alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
-  });
-});
+      const selected = packageSelect.options[packageSelect.selectedIndex];
+      const price = parseInt(selected.dataset.price, 10);
+      const label = selected.dataset.label;
+      const orderId = "UC-REL-" + Date.now();
 
-updatePackage();
-</script>
+      orderIdHidden.value = orderId;
 
+      const formData = new FormData(form);
+      formData.append("kwota_do_zaplaty", price > 0 ? price + " zł" : "Wycena indywidualna");
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      })
+      .then(() => {
+        if (price === 0) {
+          alert("Dziękujemy. Zgłoszenie zostało wysłane. Skontaktujemy się z propozycją wyceny.");
+          form.reset();
+          updatePackage();
+          return;
+        }
+
+        const hotpayForm = document.createElement("form");
+        hotpayForm.method = "POST";
+        hotpayForm.action = HOTPAY_URL;
+
+        addHotpayField(hotpayForm, "SEKRET", HOTPAY_SECRET);
+        addHotpayField(hotpayForm, "KWOTA", price);
+        addHotpayField(hotpayForm, "NAZWA_USLUGI", "Urban Concierge - Relokacja - " + label);
+        addHotpayField(hotpayForm, "ADRES_WWW", "https://urbanconcierge.pl/relokacja-krakow/");
+        addHotpayField(hotpayForm, "ID_ZAMOWIENIA", orderId);
+        addHotpayField(hotpayForm, "EMAIL", document.getElementById("email").value);
+
+        const customerData =
+          document.getElementById("name").value +
+          " | tel: " +
+          document.getElementById("phone").value;
+
+        addHotpayField(hotpayForm, "DANE_OSOBOWE", customerData);
+
+        document.body.appendChild(hotpayForm);
+        hotpayForm.submit();
+      })
+      .catch(() => {
+        alert("Nie udało się wysłać formularza. Spróbuj ponownie albo napisz na info@urbanconcierge.pl.");
+      });
+    });
+
+    updatePackage();
+  </script>
 </body>
 </html>
