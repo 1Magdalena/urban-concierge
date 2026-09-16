@@ -1,18 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://urbanconcierge.pl/</loc>
-  </url>
-  <url>
-    <loc>https://urbanconcierge.pl/1-dzien-wsparcia/</loc>
-  </url>
-  <url>
-    <loc>https://urbanconcierge.pl/relokacja-krakow/</loc>
-  </url>
-  <url>
-    <loc>https://urbanconcierge.pl/expats-krakow/</loc>
-  </url>
-  <url>
-    <loc>https://urbanconcierge.pl/expats-krakow/relocation/</loc>
-  </url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://urbanconcierge.pl/</loc></url><url><loc>https://urbanconcierge.pl/asysty/</loc></url><url><loc>https://urbanconcierge.pl/relokacja-krakow/</loc></url><url><loc>https://urbanconcierge.pl/1-dzien-wsparcia/</loc></url><url><loc>https://urbanconcierge.pl/abonament/</loc></url><url><loc>https://urbanconcierge.pl/expats-krakow/</loc></url><url><loc>https://urbanconcierge.pl/expats-krakow/in-person-assistance/</loc></url><url><loc>https://urbanconcierge.pl/expats-krakow/relocation/</loc></url><url><loc>https://urbanconcierge.pl/expats-krakow/one-day-support/</loc></url><url><loc>https://urbanconcierge.pl/expats-krakow/monthly-support/</loc></url></urlset>
