@@ -710,6 +710,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 @media(max-width:600px){.site-nav{gap:15px;font-size:11px}.hero h1,.uc-h1{overflow-wrap:normal;word-break:normal}.offer-strip,.uc-offer-strip{overflow:hidden}.service-photo-section{padding:30px 0}.content,section.content{padding-top:52px!important;padding-bottom:52px!important}}
 </style>
   <link rel="stylesheet" href="/assets/urban-2026.css">
+  <link rel="stylesheet" href="/assets/hotpay-config.css">
 </head>
 
 <body>
@@ -1082,7 +1083,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
     const submitButton = document.getElementById("submitButton");
 
     const HOTPAY_URL = "https://platnosc.hotpay.pl/";
-    const HOTPAY_SECRET = "enVmOGdnWnB5MEk2SlhqQkJPQkJEaTlxbnplYzZQNUJKUnVBSzhySWsyaz0,";
+    const HOTPAY_SECRET = getComputedStyle(document.documentElement).getPropertyValue("--uc-hotpay-secret").trim().replace(/^"|"$/g, "");
 
     function updatePackage() {
       const selected = packageSelect.options[packageSelect.selectedIndex];
