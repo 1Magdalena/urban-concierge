@@ -847,6 +847,18 @@
       .uc-submit { width: 100%; }
     }
   </style>
+
+<style id="uc-system-refresh">
+:root{--uc-ink:#151515;--uc-paper:#f4f1ea;--uc-line:rgba(21,21,21,.16)}
+html{scroll-behavior:smooth}body{overflow-x:hidden}
+.site-nav{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;font-size:12px;letter-spacing:.04em;text-transform:uppercase}.site-nav a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;padding:5px 0}.site-nav a:hover{border-color:currentColor}
+.header-inner,.uc-headerbar{grid-template-columns:1fr auto 1fr!important;align-items:center!important}.header-inner>.site-nav,.uc-headerbar>.site-nav{justify-self:start}.brand,.uc-brand{white-space:nowrap}.lang,.uc-lang-switch{justify-self:end}
+.hero{position:relative}.hero .shell,.uc-hero .uc-shell{position:relative}.hero-inner{max-width:900px}.sub,.intro,.band p,.form-copy,.card p,.card li{line-height:1.65!important}.content{overflow:hidden}.card{min-width:0}
+.uc-photo img,.service-photo img{width:100%;height:auto;display:block}.service-photo{margin:0;overflow:hidden}.service-photo.wide{max-width:1180px;margin:0 auto}.service-photo.inset{max-width:720px;margin:0 auto}.service-photo-section{padding:clamp(34px,5vw,76px) 0}.service-photo-section.dark{background:#171717}.service-photo-section.dark img{opacity:.92}
+.service-editorial{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,76px);align-items:center}.service-editorial.reverse .service-photo{order:2}.service-editorial .service-copy{max-width:600px}.service-eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:16px}.service-copy h2{font-size:clamp(34px,5vw,68px);line-height:1;letter-spacing:-.035em;margin:0 0 20px}.service-copy p{font-size:clamp(16px,1.5vw,20px);line-height:1.6;margin:0}
+@media(max-width:900px){.header-inner,.uc-headerbar{grid-template-columns:1fr auto!important}.site-nav{grid-column:1/-1;grid-row:2;justify-self:stretch!important;justify-content:flex-start!important;overflow-x:auto;flex-wrap:nowrap;padding:10px 0 2px}.site-nav a{white-space:nowrap}.brand,.uc-brand{justify-self:start}.lang,.uc-lang-switch{justify-self:end}.service-editorial,.service-editorial.reverse{grid-template-columns:1fr}.service-editorial.reverse .service-photo{order:initial}}
+@media(max-width:600px){.site-nav{gap:15px;font-size:11px}.hero h1,.uc-h1{overflow-wrap:normal;word-break:normal}.offer-strip,.uc-offer-strip{overflow:hidden}.service-photo-section{padding:30px 0}.content,section.content{padding-top:52px!important;padding-bottom:52px!important}}
+</style>
 </head>
 
 <body>
@@ -854,12 +866,7 @@
 
   <section class="uc-shell uc-brandbar">
     <div class="uc-headerbar">
-      <nav class="uc-mini-nav" aria-label="Main navigation">
-        <a href="#hourly-concierge">Hourly concierge</a>
-        <a href="#what-we-handle">Services</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#booking">Booking</a>
-      </nav>
+      <nav class="site-nav" aria-label="Site navigation"><a href="/expats-krakow/">Home</a><a href="/expats-krakow/one-day-support/">One-Day Support</a><a href="/expats-krakow/in-person-assistance/">Assistance</a><a href="/expats-krakow/monthly-support/">Monthly Support</a><a href="/expats-krakow/relocation/">Relocation</a></nav>
 
       <a href="/expats-krakow/" class="uc-brand">Urban Concierge</a>
 
@@ -926,7 +933,8 @@
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft" id="what-we-handle">
+  <section class="service-photo-section"><div class="uc-shell service-editorial"><figure class="service-photo"><img src="/assets/photos/krakow-04.jpg" alt="Kraków in motion"></figure><div class="service-copy"><div class="service-eyebrow">KRAKÓW, EVERY DAY</div><h2>A city is easier when someone is already here.</h2><p>Local errands, practical coordination and a person on the ground when you need one.</p></div></div></section>
+<section class="uc-section uc-section-soft" id="what-we-handle">
     <div class="uc-shell">
       <h2 class="uc-title">What you can delegate</h2>
       <div class="uc-rule"></div>
@@ -1030,7 +1038,8 @@
     </div>
   </section>
 
-  <section class="uc-section" id="how-it-works">
+  <section class="service-photo-section dark"><div class="uc-shell"><figure class="service-photo wide"><img src="/assets/photos/krakow-08.jpg" alt="Kraków after dark"></figure></div></section>
+<section class="uc-section" id="how-it-works">
     <div class="uc-shell">
       <h2 class="uc-title">How it works</h2>
       <div class="uc-rule"></div>
@@ -1137,7 +1146,8 @@
     </div>
   </section>
 
-  <section class="uc-section uc-section-soft" id="booking">
+  <section class="service-photo-section"><div class="uc-shell service-editorial reverse"><figure class="service-photo"><img src="/assets/photos/krakow-06.jpg" alt="Kraków by the river"></figure><div class="service-copy"><div class="service-eyebrow">NEED SOMETHING HANDLED?</div><h2>Start with the actual situation.</h2><p>Tell us what you need. We will confirm the scope, timing and the simplest way to handle it.</p></div></div></section>
+<section class="uc-section uc-section-soft" id="booking">
     <div class="uc-shell">
       <div class="uc-form-wrap">
         <div class="uc-form-head">

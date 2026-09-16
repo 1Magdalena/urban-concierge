@@ -937,15 +937,18 @@
   .uc-ai-summary{display:none!important}
   @media(max-width:760px){.uc-hero-grid,.uc-photo-split,.uc-photo-split.reverse,.uc-editorial-break .uc-shell{grid-template-columns:1fr}.uc-photo-split.reverse .uc-photo,.uc-photo-split.reverse .uc-photo-copy{order:initial}.uc-h1{font-size:clamp(43px,13vw,66px)!important}.uc-hero-photo{margin-top:8px}.uc-editorial-big{max-width:12ch}}
 
+</style>
 
-  /* Core-aligned cleanup: modern urban, readable, no overlaps */
-  body,.uc-sub,.uc-intro,.uc-card-copy,.uc-step-copy,.uc-note,.uc-band-copy,.uc-form-copy,.uc-faq-a,.uc-price-copy,.uc-small-note,.uc-footer-sub,.uc-footer-links{font-family:Arial,Helvetica,sans-serif!important}
-  .uc-brand,.uc-h1,.uc-title,.uc-band-title,.uc-form-title,.uc-card-title,.uc-price-value,.uc-editorial-big{font-family:Arial,Helvetica,sans-serif!important}
-  .uc-brand,.uc-h1,.uc-title,.uc-band-title,.uc-editorial-big{font-weight:700}
-  .uc-photo,.uc-hero-photo,.uc-photo-split,.uc-editorial-break{position:relative;z-index:1}
-  .uc-photo img,.uc-hero-photo img{max-width:100%;object-fit:contain!important;position:static!important}
-  .uc-photo-copy,.uc-hero-inner{position:relative;z-index:2;min-width:0}
-  @media(max-width:768px){.uc-photo,.uc-hero-photo{width:100%;max-width:100%;margin-left:0!important;margin-right:0!important}.uc-photo img,.uc-hero-photo img{width:100%;height:auto!important;max-height:none!important}.uc-editorial-break{overflow:hidden}}
+<style id="uc-system-refresh">
+:root{--uc-ink:#151515;--uc-paper:#f4f1ea;--uc-line:rgba(21,21,21,.16)}
+html{scroll-behavior:smooth}body{overflow-x:hidden}
+.site-nav{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;font-size:12px;letter-spacing:.04em;text-transform:uppercase}.site-nav a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;padding:5px 0}.site-nav a:hover{border-color:currentColor}
+.header-inner,.uc-headerbar{grid-template-columns:1fr auto 1fr!important;align-items:center!important}.header-inner>.site-nav,.uc-headerbar>.site-nav{justify-self:start}.brand,.uc-brand{white-space:nowrap}.lang,.uc-lang-switch{justify-self:end}
+.hero{position:relative}.hero .shell,.uc-hero .uc-shell{position:relative}.hero-inner{max-width:900px}.sub,.intro,.band p,.form-copy,.card p,.card li{line-height:1.65!important}.content{overflow:hidden}.card{min-width:0}
+.uc-photo img,.service-photo img{width:100%;height:auto;display:block}.service-photo{margin:0;overflow:hidden}.service-photo.wide{max-width:1180px;margin:0 auto}.service-photo.inset{max-width:720px;margin:0 auto}.service-photo-section{padding:clamp(34px,5vw,76px) 0}.service-photo-section.dark{background:#171717}.service-photo-section.dark img{opacity:.92}
+.service-editorial{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,76px);align-items:center}.service-editorial.reverse .service-photo{order:2}.service-editorial .service-copy{max-width:600px}.service-eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:16px}.service-copy h2{font-size:clamp(34px,5vw,68px);line-height:1;letter-spacing:-.035em;margin:0 0 20px}.service-copy p{font-size:clamp(16px,1.5vw,20px);line-height:1.6;margin:0}
+@media(max-width:900px){.header-inner,.uc-headerbar{grid-template-columns:1fr auto!important}.site-nav{grid-column:1/-1;grid-row:2;justify-self:stretch!important;justify-content:flex-start!important;overflow-x:auto;flex-wrap:nowrap;padding:10px 0 2px}.site-nav a{white-space:nowrap}.brand,.uc-brand{justify-self:start}.lang,.uc-lang-switch{justify-self:end}.service-editorial,.service-editorial.reverse{grid-template-columns:1fr}.service-editorial.reverse .service-photo{order:initial}}
+@media(max-width:600px){.site-nav{gap:15px;font-size:11px}.hero h1,.uc-h1{overflow-wrap:normal;word-break:normal}.offer-strip,.uc-offer-strip{overflow:hidden}.service-photo-section{padding:30px 0}.content,section.content{padding-top:52px!important;padding-bottom:52px!important}}
 </style>
 </head>
 
@@ -954,12 +957,7 @@
 
   <section class="uc-shell uc-brandbar">
     <div class="uc-headerbar">
-      <nav class="uc-mini-nav" aria-label="Nawigacja główna">
-        <a href="#concierge-na-godziny">Concierge na godziny</a>
-        <a href="#co-ogarniamy">Zakres</a>
-        <a href="#jak-to-dziala">Jak działa</a>
-        <a href="#rezerwacja">Rezerwacja</a>
-      </nav>
+      <nav class="site-nav" aria-label="Nawigacja serwisu"><a href="/">Start</a><a href="/1-dzien-wsparcia/">Dzień Wsparcia</a><a href="/asysty/">Asysty</a><a href="/abonament/">Abonament</a><a href="/relokacja-krakow/">Relokacja</a></nav>
 
       <a href="/" class="uc-brand">Urban Concierge</a>
 
@@ -979,7 +977,7 @@
         <h1 class="uc-h1">Miasto ma swoje tempo.</h1>
 
         <div class="uc-sub">
-          Masz sprawę do załatwienia w Krakowie? Przekaż ją nam. Od telefonu i rezerwacji, przez odbiór, zakupy czy znalezienie wykonawcy, po osobistą asystę, pomoc bliskiej osobie i relokację. Urban Concierge jest po to, żeby realne życie było prostsze.
+          Praktyczna pomoc w załatwianiu codziennych spraw: telefony, rezerwacje, odbiory, zwroty, zakupy, research, sprawy na mieście i koordynacja tematów, które nie powinny już wracać na Twoją listę.
         </div>
 
         <div class="uc-offer-strip">
@@ -1019,10 +1017,10 @@
 
   <section class="uc-band" id="concierge-na-godziny">
     <div class="uc-shell">
-      <div class="uc-band-title">Nie musisz mieć concierge na co dzień. Wystarczy, że masz sprawę.</div>
+      <div class="uc-band-title">Bez abonamentu. Kiedy potrzebujesz i do czego potrzebujesz.</div>
       <div class="uc-band-rule"></div>
       <div class="uc-band-copy">
-        Urban Concierge działa w zwykłym życiu: kiedy brakuje Ci czasu, nie możesz być gdzieś osobiście, potrzebujesz kogoś na miejscu albo po prostu nie chcesz poświęcać kolejnego popołudnia na telefony, dojazdy i ustalenia. Opisujesz sytuację — my organizujemy resztę w uzgodnionym zakresie.
+        Urban Concierge to praktyczne wsparcie dla osób, które mają za dużo spraw na głowie i chcą przekazać część codziennej logistyki komuś, kto spokojnie ją zorganizuje, dopilnuje i domknie.
       </div>
     </div>
   </section>
@@ -1070,28 +1068,28 @@
 
   <section class="uc-section">
     <div class="uc-shell">
-      <h2 class="uc-title">Sytuacje, w których możemy Cię odciążyć</h2>
+      <h2 class="uc-title">Dla kogo jest ta usługa?</h2>
       <div class="uc-rule"></div>
 
       <div class="uc-grid-3">
         <div class="uc-card">
-          <div class="uc-card-title">Kiedy nie masz czasu być wszędzie</div>
+          <div class="uc-card-title">Dla osób zapracowanych</div>
           <p class="uc-card-copy">
-            Trzeba odebrać zamówienie, znaleźć fachowca, zawieźć coś, zrobić research, umówić termin albo dopilnować sprawy na miejscu. Nie musisz układać pod to całego dnia.
+            Gdy prywatne sprawy odkładasz tygodniami, bo zawsze jest coś pilniejszego.
           </p>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Kiedy ktoś bliski potrzebuje wsparcia</div>
+          <div class="uc-card-title">Dla rodzin i opiekunów</div>
           <p class="uc-card-copy">
-            Możemy towarzyszyć bliskiej osobie podczas wizyty, pomóc seniorowi w dotarciu na miejsce, odebrać kogoś po zabiegu albo zorganizować bezpieczny powrót i potrzebne sprawy po drodze.
+            Gdy trzeba połączyć pracę, dom, terminy, telefony, odbiory i codzienną logistykę.
           </p>
         </div>
 
         <div class="uc-card">
-          <div class="uc-card-title">Kiedy potrzebujesz swojego człowieka w Krakowie</div>
+          <div class="uc-card-title">Dla osób spoza Krakowa</div>
           <p class="uc-card-copy">
-            Jesteś poza miastem, dopiero się przeprowadzasz albo po prostu potrzebujesz lokalnej obecności. Sprawdzimy, odbierzemy, przekażemy, skoordynujemy i damy Ci znać, co zostało zrobione.
+            Gdy potrzebujesz kogoś lokalnie na miejscu: do sprawdzenia, odbioru, przekazania lub dopilnowania sprawy.
           </p>
         </div>
       </div>
@@ -1178,7 +1176,7 @@
       <div class="uc-rule"></div>
 
       <div class="uc-intro">
-        Nie musisz najpierw wiedzieć, jak nazwać usługę. Zacznij od swojej sytuacji. Jeśli potrzebujesz obecności drugiej osoby, wybierz Asystę. Jeśli masz większą listę spraw — Dzień Wsparcia. Jeśli tematy wracają regularnie — Abonament. Jeśli przenosisz życie do Krakowa — Relokację.
+        Concierge na godziny to najprostszy pierwszy krok. Jeśli potrzebujesz innego rodzaju wsparcia, możesz przejść do wybranej usługi.
       </div>
 
       <div class="uc-grid-4">
@@ -1190,7 +1188,7 @@
 
         <div class="uc-card">
           <div class="uc-card-title">Asysty osobiste</div>
-          <p class="uc-card-copy">Druga osoba wtedy, kiedy naprawdę jej potrzebujesz: przy wizycie, dla seniora lub bliskiej osoby, po zabiegu, podczas formalności, odbioru albo sytuacji, której nie chcesz przechodzić czy organizować samodzielnie.</p>
+          <p class="uc-card-copy">Wsparcie na miejscu tam, gdzie potrzebna jest obecność, koordynacja albo reprezentowanie klienta.</p>
           <a href="/asysty/" class="uc-btn uc-btn-secondary" style="margin:22px 0 0 0;">Zobacz szczegóły</a>
         </div>
 
@@ -1209,7 +1207,7 @@
     </div>
   </section>
 
-  <section class="uc-editorial-break"><div class="uc-shell"><figure class="uc-photo"><img src="/assets/photos/krakow-08.jpg" alt="Kraków wieczorem"></figure><div><div class="uc-editorial-big">Miasto prawie nigdy nie zasypia. My też nie zawsze.</div><div class="uc-editorial-small">Standardowe godziny to 8:00–18:00. Wieczory i weekendy są możliwe zależnie od dostępności i rodzaju sprawy, według podwyższonej stawki.</div></div></div></section>
+  <section class="uc-editorial-break"><div class="uc-shell"><figure class="uc-photo"><img src="/assets/photos/krakow-08.jpg" alt="Kraków wieczorem"></figure><div><div class="uc-editorial-big">Miasto nie kończy się o 18:00.</div><div class="uc-editorial-small">Wieczory i weekendy też są częścią życia. Dostępność zależy od terminu i rodzaju sprawy.</div></div></div></section>
 
   <section class="uc-section">
     <div class="uc-shell">
